@@ -1,4 +1,5 @@
-| Nr | Category | Name || ------------- |:-------------:| :-----:|
+| Nr | Category | Name |
+| ------------- |:-------------:| :-----:|
 1|FreeSoftware &gt; Adobe.md|ADOBE|
 2|FreeSoftware &gt; Avid.md|Avid|
 3|FreeSoftware &gt; Cisco.md|Cisco|
