@@ -1,31 +1,31 @@
 <table id="tbData"  class="display" style="width:90%"> <thead><tr> <th>Nr</th> <th> Category  </th><th>SubCategory  </th><th>Name</th> </tr>/<thead> <tbody>
 
-<tr><td>1</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#adobe">Adobe</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Adobe.md">Improve</a>) </td><td><a href="adobe-connect-conferencing"> Adobe Connect conferencing</a></td> </tr>
-<tr><td>2</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#avid">Avid</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Avid.md">Improve</a>) </td><td><a href="media-composer-and-others"> Media Composer and others</a></td> </tr>
-<tr><td>3</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#cisco">Cisco</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cisco.md">Improve</a>) </td><td><a href="cisco-webex-free"> Cisco WebEx free</a></td> </tr>
-<tr><td>4</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#cloudflare">Cloudflare</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cloudflare.md">Improve</a>) </td><td><a href="cloudflare"> Cloudflare</a></td> </tr>
-<tr><td>5</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#discord">Discord</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Discord.md">Improve</a>) </td><td><a href="go-live"> Go Live</a></td> </tr>
-<tr><td>6</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#google">Google</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Google.md">Improve</a>) </td><td><a href="g-suite"> G Suite</a></td> </tr>
-<tr><td>7</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#logmein">Logmein</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Logmein.md">Improve</a>) </td><td><a href="gotomeeting"> GotoMeeting</a></td> </tr>
-<tr><td>8</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#loom">Loom</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Loom.md">Improve</a>) </td><td><a href="loom"> Loom</a></td> </tr>
-<tr><td>9</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#microsoft">Microsoft</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Microsoft.md">Improve</a>) </td><td><a href="teams"> Teams</a></td> </tr>
-<tr><td>10</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#zoho">Zoho</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Zoho.md">Improve</a>) </td><td><a href="zoho-remotely"> Zoho remotely</a></td> </tr>
-<tr><td>11</td><td> <a href="#country">Country</a> </td><td><a href="#china">China</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/China.md">Improve</a>) </td><td><a href="zoom"> Zoom</a></td> </tr>
-<tr><td>12</td><td> <a href="#country">Country</a> </td><td><a href="#france">France</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/France.md">Improve</a>) </td><td><a href="pornhub"> Pornhub</a></td> </tr>
-<tr><td>13</td><td> <a href="#country">Country</a> </td><td><a href="#italy">Italy</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Italy.md">Improve</a>) </td><td><a href="pornhub"> Pornhub</a></td> </tr>
-<tr><td>14</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="copii"> Copii</a></td> </tr>
-<tr><td>15</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="muzee"> Muzee</a></td> </tr>
-<tr><td>16</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="diagnosticare-online"> Diagnosticare online</a></td> </tr>
-<tr><td>17</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="carti-audio-gratuite"> Carti audio gratuite</a></td> </tr>
-<tr><td>18</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="livrare-mincare"> Livrare mincare</a></td> </tr>
-<tr><td>19</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="geografie"> Geografie</a></td> </tr>
-<tr><td>20</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve</a>) </td><td><a href="idei-creative"> Idei creative</a></td> </tr>
-<tr><td>21</td><td> <a href="#country">Country</a> </td><td><a href="#spain">Spain</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Spain.md">Improve</a>) </td><td><a href="pornhub"> Pornhub</a></td> </tr>
-<tr><td>22</td><td> <a href="#kids">Kids</a> </td><td><a href="#english">English</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Kids/English.md">Improve</a>) </td><td><a href="nasa"> NASA</a></td> </tr>
-<tr><td>23</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve</a>) </td><td><a href="www.freecodecamp.org"> www.freecodecamp.org</a></td> </tr>
-<tr><td>24</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve</a>) </td><td><a href="description"> Description</a></td> </tr>
-<tr><td>25</td><td> <a href="#learn">Learn</a> </td><td><a href="#museums">Museums</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve</a>) </td><td><a href="multiple"> Multiple</a></td> </tr>
-<tr><td>26</td><td> <a href="#mapsanddata">MapsAndData</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve</a>) </td><td><a href="harta"> Harta</a></td> </tr></tbody></table>
+<tr><td>1</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#adobe">Adobe</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Adobe.md">Improve this</a>) </td><td><a href="adobe-connect-conferencing"> Adobe Connect conferencing</a></td> </tr>
+<tr><td>2</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#avid">Avid</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Avid.md">Improve this</a>) </td><td><a href="media-composer-and-others"> Media Composer and others</a></td> </tr>
+<tr><td>3</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#cisco">Cisco</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cisco.md">Improve this</a>) </td><td><a href="cisco-webex-free"> Cisco WebEx free</a></td> </tr>
+<tr><td>4</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#cloudflare">Cloudflare</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cloudflare.md">Improve this</a>) </td><td><a href="cloudflare"> Cloudflare</a></td> </tr>
+<tr><td>5</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#discord">Discord</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Discord.md">Improve this</a>) </td><td><a href="go-live"> Go Live</a></td> </tr>
+<tr><td>6</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#google">Google</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Google.md">Improve this</a>) </td><td><a href="g-suite"> G Suite</a></td> </tr>
+<tr><td>7</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#logmein">Logmein</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Logmein.md">Improve this</a>) </td><td><a href="gotomeeting"> GotoMeeting</a></td> </tr>
+<tr><td>8</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#loom">Loom</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Loom.md">Improve this</a>) </td><td><a href="loom"> Loom</a></td> </tr>
+<tr><td>9</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#microsoft">Microsoft</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Microsoft.md">Improve this</a>) </td><td><a href="teams"> Teams</a></td> </tr>
+<tr><td>10</td><td> <a href="#freesoftware">FreeSoftware</a> </td><td><a href="#zoho">Zoho</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Zoho.md">Improve this</a>) </td><td><a href="zoho-remotely"> Zoho remotely</a></td> </tr>
+<tr><td>11</td><td> <a href="#country">Country</a> </td><td><a href="#china">China</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/China.md">Improve this</a>) </td><td><a href="zoom"> Zoom</a></td> </tr>
+<tr><td>12</td><td> <a href="#country">Country</a> </td><td><a href="#france">France</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/France.md">Improve this</a>) </td><td><a href="pornhub"> Pornhub</a></td> </tr>
+<tr><td>13</td><td> <a href="#country">Country</a> </td><td><a href="#italy">Italy</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Italy.md">Improve this</a>) </td><td><a href="pornhub"> Pornhub</a></td> </tr>
+<tr><td>14</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="copii"> Copii</a></td> </tr>
+<tr><td>15</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="muzee"> Muzee</a></td> </tr>
+<tr><td>16</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="diagnosticare-online"> Diagnosticare online</a></td> </tr>
+<tr><td>17</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="carti-audio-gratuite"> Carti audio gratuite</a></td> </tr>
+<tr><td>18</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="livrare-mincare"> Livrare mincare</a></td> </tr>
+<tr><td>19</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="geografie"> Geografie</a></td> </tr>
+<tr><td>20</td><td> <a href="#country">Country</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>) </td><td><a href="idei-creative"> Idei creative</a></td> </tr>
+<tr><td>21</td><td> <a href="#country">Country</a> </td><td><a href="#spain">Spain</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Spain.md">Improve this</a>) </td><td><a href="pornhub"> Pornhub</a></td> </tr>
+<tr><td>22</td><td> <a href="#kids">Kids</a> </td><td><a href="#english">English</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Kids/English.md">Improve this</a>) </td><td><a href="nasa"> NASA</a></td> </tr>
+<tr><td>23</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="www.freecodecamp.org"> www.freecodecamp.org</a></td> </tr>
+<tr><td>24</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="description"> Description</a></td> </tr>
+<tr><td>25</td><td> <a href="#learn">Learn</a> </td><td><a href="#museums">Museums</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve this</a>) </td><td><a href="multiple"> Multiple</a></td> </tr>
+<tr><td>26</td><td> <a href="#mapsanddata">MapsAndData</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>) </td><td><a href="harta"> Harta</a></td> </tr></tbody></table>
 
 # FreeSoftware
 # Adobe
@@ -42,6 +42,8 @@ schools
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Adobe.md">Improve this</a>
 # Avid
 ## Media Composer and others
 
@@ -56,6 +58,8 @@ Media Composer | Ultimate, Pro Tools, Pro Tools | Ultimate and Sibelius | Ultima
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Avid.md">Improve this</a>
 # Cisco
 ## Cisco WebEx free
 
@@ -75,6 +79,8 @@ Offers toll dial-in (in addition to existing VoIP capabilities).
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cisco.md">Improve this</a>
 # Cloudflare
 ## Cloudflare
 
@@ -89,6 +95,8 @@ https://blog.cloudflare.com/cloudflare-for-teams-free-for-small-businesses-durin
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cloudflare.md">Improve this</a>
 # Discord
 ## Go Live
 
@@ -103,6 +111,8 @@ Go Live to 50 people
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Discord.md">Improve this</a>
 # Google
 ## G Suite 
 
@@ -117,6 +127,8 @@ Live streaming for up to 100,000 viewers within a domain
 The ability to record meetings and save them to Google Drive
 
 ### Tags
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Google.md">Improve this</a>
 # Logmein
 ## GotoMeeting
 
@@ -131,6 +143,8 @@ conferencing
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Logmein.md">Improve this</a>
 # Loom
 ## Loom
 
@@ -141,6 +155,8 @@ https://www.loom.com/blog/coronavirus-response
 If you’re a teacher or a student at a K-12 school, university, or educational institution using Loom for classroom work, you can use Loom Pro for free, forever.
 
 ### Tags
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Loom.md">Improve this</a>
 # Microsoft
 ## Teams
 
@@ -151,6 +167,8 @@ https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/05/our-commitment-to-
 Making Teams available for everyone
 
 ### Tags
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Microsoft.md">Improve this</a>
 # Zoho
 ## Zoho remotely
 
@@ -161,6 +179,8 @@ https://www.zoho.com/remotely/
 Zoho remotely
 
 ### Tags
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Zoho.md">Improve this</a>
 # Country
 # China
 ## Zoom
@@ -172,6 +192,8 @@ https://blog.zoom.us/wordpress/2020/02/26/zoom-commitment-user-support-business-
 For our Basic (free) users in China, we’ve lifted the 40-minute limit on meetings with more than two participants, providing unlimited time to collaborate.
 
 ### Tags
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/China.md">Improve this</a>
 # France
 ## Pornhub
 
@@ -183,6 +205,8 @@ Free Premium
 
 ### Tags
 porn
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/France.md">Improve this</a>
 # Italy
 ## Pornhub
 
@@ -194,6 +218,8 @@ Free Premium
 
 ### Tags
 porn
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Italy.md">Improve this</a>
 # Romania
 ## Copii
 
@@ -264,6 +290,8 @@ http://www.creatissimo.ro/
 
 ### Tags
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Romania.md">Improve this</a>
 # Spain
 ## Pornhub
 
@@ -275,6 +303,8 @@ Free Premium
 
 ### Tags
 porn
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Country/Spain.md">Improve this</a>
 # Kids
 # English
 ## NASA
@@ -285,6 +315,8 @@ https://www.nasa.gov/kidsclub/index.html
 ### Description
 
 ### Tags
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Kids/English.md">Improve this</a>
 # Learn
 # Courses
 ## www.freecodecamp.org
@@ -300,6 +332,8 @@ schools
 
 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>
 # Museums
 ## Multiple
 
@@ -309,6 +343,8 @@ https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virt
 
 ### Description 
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve this</a>
 # MapsAndData
 # Romania
 ## Harta
@@ -321,6 +357,8 @@ Harta interactiva
 
 #### Tags
 
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>
 # WFH_Resources
 
 Work from Home Resources
