@@ -25,7 +25,7 @@
 
   <script>
       $(document).ready( function () {
-        window.alert('tst');
+        //window.alert('tst');
         $('#tbData').DataTable(
           {
             paging: false
@@ -37,37 +37,34 @@
 <header id="title-block-header">
 <h1 class="title">WFH</h1>
 </header>
-<h1 id="wfh_resources">WFH_Resources</h1>
-<p>Work from Home Resources Please see <a href="https://ignatandrei.github.io/WFH_Resources/">https://ignatandrei.github.io/WFH_Resources/</a></p>
-<p>( for adding resources, please see <a href="https://github.com/ignatandrei/WFH_Resources">https://github.com/ignatandrei/WFH_Resources</a>)</p>
-<table id="tbData"  class="display" style="width:90%"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
+<table id="tbData"  class="display" style="width:90%"> <thead><tr> <th>Nr</th> <th> Category  </th><th>SubCategory  </th><th>Name</th> </tr>/<thead> <tbody>
 
-<tr><td>1</td><td> FreeSoftware &gt; Adobe </td><td> Adobe Connect conferencing</td> </tr>
-<tr><td>2</td><td> FreeSoftware &gt; Avid </td><td> Media Composer and others</td> </tr>
-<tr><td>3</td><td> FreeSoftware &gt; Cisco </td><td> Cisco WebEx free</td> </tr>
-<tr><td>4</td><td> FreeSoftware &gt; Cloudflare </td><td> Cloudflare</td> </tr>
-<tr><td>5</td><td> FreeSoftware &gt; Discord </td><td> Go Live</td> </tr>
-<tr><td>6</td><td> FreeSoftware &gt; Google </td><td> G Suite</td> </tr>
-<tr><td>7</td><td> FreeSoftware &gt; Logmein </td><td> GotoMeeting</td> </tr>
-<tr><td>8</td><td> FreeSoftware &gt; Loom </td><td> Loom</td> </tr>
-<tr><td>9</td><td> FreeSoftware &gt; Microsoft </td><td> Teams</td> </tr>
-<tr><td>10</td><td> FreeSoftware &gt; Zoho </td><td> Zoho remotely</td> </tr>
-<tr><td>11</td><td> Country &gt; China </td><td> Zoom</td> </tr>
-<tr><td>12</td><td> Country &gt; France </td><td> Pornhub</td> </tr>
-<tr><td>13</td><td> Country &gt; Italy </td><td> Pornhub</td> </tr>
-<tr><td>14</td><td> Country &gt; Romania </td><td> Copii</td> </tr>
-<tr><td>15</td><td> Country &gt; Romania </td><td> Muzee</td> </tr>
-<tr><td>16</td><td> Country &gt; Romania </td><td> Diagnosticare online</td> </tr>
-<tr><td>17</td><td> Country &gt; Romania </td><td> Carti audio gratuite</td> </tr>
-<tr><td>18</td><td> Country &gt; Romania </td><td> Livrare mincare</td> </tr>
-<tr><td>19</td><td> Country &gt; Romania </td><td> Geografie</td> </tr>
-<tr><td>20</td><td> Country &gt; Romania </td><td> Idei creative</td> </tr>
-<tr><td>21</td><td> Country &gt; Spain </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Kids &gt; English </td><td> NASA</td> </tr>
-<tr><td>23</td><td> Learn &gt; Courses </td><td> www.freecodecamp.org</td> </tr>
-<tr><td>24</td><td> Learn &gt; Courses </td><td> Description</td> </tr>
-<tr><td>25</td><td> Learn &gt; Museums </td><td> Multiple</td> </tr>
-<tr><td>26</td><td> MapsAndData &gt; Romania </td><td> Harta</td> </tr></tbody></table>
+<tr><td>1</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Adobe">Adobe</a> </td><td> Adobe Connect conferencing</td> </tr>
+<tr><td>2</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Avid">Avid</a> </td><td> Media Composer and others</td> </tr>
+<tr><td>3</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Cisco">Cisco</a> </td><td> Cisco WebEx free</td> </tr>
+<tr><td>4</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Cloudflare">Cloudflare</a> </td><td> Cloudflare</td> </tr>
+<tr><td>5</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Discord">Discord</a> </td><td> Go Live</td> </tr>
+<tr><td>6</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Google">Google</a> </td><td> G Suite</td> </tr>
+<tr><td>7</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Logmein">Logmein</a> </td><td> GotoMeeting</td> </tr>
+<tr><td>8</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Loom">Loom</a> </td><td> Loom</td> </tr>
+<tr><td>9</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Microsoft">Microsoft</a> </td><td> Teams</td> </tr>
+<tr><td>10</td><td> <a href="#FreeSoftware">FreeSoftware</a> </td><td><a href="#Zoho">Zoho</a> </td><td> Zoho remotely</td> </tr>
+<tr><td>11</td><td> <a href="#Country">Country</a> </td><td><a href="#China">China</a> </td><td> Zoom</td> </tr>
+<tr><td>12</td><td> <a href="#Country">Country</a> </td><td><a href="#France">France</a> </td><td> Pornhub</td> </tr>
+<tr><td>13</td><td> <a href="#Country">Country</a> </td><td><a href="#Italy">Italy</a> </td><td> Pornhub</td> </tr>
+<tr><td>14</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Copii</td> </tr>
+<tr><td>15</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Muzee</td> </tr>
+<tr><td>16</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Diagnosticare online</td> </tr>
+<tr><td>17</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Carti audio gratuite</td> </tr>
+<tr><td>18</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Livrare mincare</td> </tr>
+<tr><td>19</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Geografie</td> </tr>
+<tr><td>20</td><td> <a href="#Country">Country</a> </td><td><a href="#Romania">Romania</a> </td><td> Idei creative</td> </tr>
+<tr><td>21</td><td> <a href="#Country">Country</a> </td><td><a href="#Spain">Spain</a> </td><td> Pornhub</td> </tr>
+<tr><td>22</td><td> <a href="#Kids">Kids</a> </td><td><a href="#English">English</a> </td><td> NASA</td> </tr>
+<tr><td>23</td><td> <a href="#Learn">Learn</a> </td><td><a href="#Courses">Courses</a> </td><td> www.freecodecamp.org</td> </tr>
+<tr><td>24</td><td> <a href="#Learn">Learn</a> </td><td><a href="#Courses">Courses</a> </td><td> Description</td> </tr>
+<tr><td>25</td><td> <a href="#Learn">Learn</a> </td><td><a href="#Museums">Museums</a> </td><td> Multiple</td> </tr>
+<tr><td>26</td><td> <a href="#MapsAndData">MapsAndData</a> </td><td><a href="#Romania">Romania</a> </td><td> Harta</td> </tr></tbody></table>
 
 <h1 id="freesoftware">FreeSoftware</h1>
 <h2 id="adobe-connect-conferencing">Adobe Connect conferencing</h2>
@@ -222,5 +219,8 @@
 <h4 id="description-22">Description</h4>
 <p>Harta interactiva</p>
 <h4 id="tags-23">Tags</h4>
+<h1 id="wfh_resources">WFH_Resources</h1>
+<p>Work from Home Resources Please see <a href="https://ignatandrei.github.io/WFH_Resources/">https://ignatandrei.github.io/WFH_Resources/</a></p>
+<p>( for adding resources, please see <a href="https://github.com/ignatandrei/WFH_Resources">https://github.com/ignatandrei/WFH_Resources</a>)</p>
 </body>
 </html>
