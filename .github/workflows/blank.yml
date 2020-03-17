@@ -20,7 +20,7 @@ jobs:
     - name: generate all
       run: |
         chmod +x ./makeData/compile.bat
-        cd compile        
+        cd makeData        
         ./compile.bat
         mv ./all.md ../obj/all.md
 
