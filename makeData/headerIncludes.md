@@ -11,6 +11,6 @@ verbosity: INFO
 standalone: true
 from: gfm
 to: html
-output-file: output/output.html
+output-file: output.html
 input-files: 
 - obj/all.md

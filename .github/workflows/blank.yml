@@ -37,6 +37,7 @@ jobs:
       
     - name: modifying final files
       run: |
+        find . -name \*output.html
         cp ./output/output.html ./docs/index.html        
         rm -rf ./output
         rm ./all.md
