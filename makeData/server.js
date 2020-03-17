@@ -23,6 +23,7 @@ async function main() {
   var folders = ["FreeSoftware", "Country"];
   let iContent=1;
   let contentTable= '| Nr | Category | Name |';
+  contentTable+= "\r\n";
   contentTable += '| ------------- |:-------------:| :-----:|';
   let content ='';
   for (let folder of folders) {
