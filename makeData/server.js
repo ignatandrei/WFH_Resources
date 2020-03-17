@@ -22,7 +22,7 @@ async function main() {
   const rra = require("recursive-readdir-async");
   var folders = ["FreeSoftware", "Country","Kids","Learn"];
   let iContent=1;
-  let contentTable='<table id="tbData">';
+  let contentTable='<table id="tbData"  class="display" style="width:90%">';
   contentTable +=" <thead>";
   contentTable+= '<tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>';
   contentTable +="/<thead>";
