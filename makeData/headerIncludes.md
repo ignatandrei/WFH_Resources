@@ -2,7 +2,7 @@ css:
 - https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css
 
 metadata:
-  author:
+  author-meta:
   - Andrei Ignat
   - Others
   title: WFH
