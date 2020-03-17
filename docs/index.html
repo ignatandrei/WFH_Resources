@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>WorkFromHome_Resources</title>
+  <meta name="author" content="Andrei Ignat" />
+  <meta name="author" content="Others" />
+  <title>WFH</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -13,19 +15,20 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css" />
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">WorkFromHome_Resources</h1>
+<h1 class="title">WFH</h1>
+<p class="author">Andrei Ignat</p>
+<p class="author">Others</p>
 </header>
-<h2 id="wfh_resources">WFH_Resources</h2>
+<h1 id="wfh_resources">WFH_Resources</h1>
 <p>Work from Home Resources Please see <a href="https://ignatandrei.github.io/WFH_Resources/">https://ignatandrei.github.io/WFH_Resources/</a></p>
-<h2 id="-for-adding-resources-please-see-httpsgithubcomignatandreiwfh_resources">( for adding resources, please see <a href="https://github.com/ignatandrei/WFH_Resources">https://github.com/ignatandrei/WFH_Resources</a>)</h2>
-<p>header-includes: | <script src="https://code.jquery.com/jquery-3.3.1.js"></script> <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script> <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"></p>
-<hr />
+<p>( for adding resources, please see <a href="https://github.com/ignatandrei/WFH_Resources">https://github.com/ignatandrei/WFH_Resources</a>)</p>
 <table id="tbData"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
 <tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
@@ -49,7 +52,11 @@
 <tr><td>19</td><td> Country &gt; Romania.md </td><td> Geografie</td> </tr>
 <tr><td>20</td><td> Country &gt; Romania.md </td><td> Idei creative</td> </tr>
 <tr><td>21</td><td> Country &gt; Spain.md </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr></tbody></table>
+<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr>
+<tr><td>23</td><td> Kids &gt; English.md </td><td> NASA</td> </tr>
+<tr><td>24</td><td> Learn &gt; Courses.md </td><td> www.freecodecamp.org</td> </tr>
+<tr><td>25</td><td> Learn &gt; Courses.md </td><td> Description</td> </tr>
+<tr><td>26</td><td> Learn &gt; Museums.md </td><td> Multiple</td> </tr></tbody></table>
 
 <h1 id="freesoftware">FreeSoftware</h1>
 <h2 id="adobe">ADOBE</h2>
@@ -187,14 +194,35 @@
 <h4 id="description-19">Description</h4>
 <p>Harta interactiva</p>
 <h4 id="tags-21">Tags</h4>
-<script>
-    $(document).ready( function () {
-      window.alert('tst');
-      $('#tbData').DataTable(
-        {
-          paging: false
-        }
-      );
-      } );</script>
+<h1 id="kids">Kids</h1>
+<h2 id="nasa">NASA</h2>
+<h3 id="links-22">Links</h3>
+<p><a href="https://www.nasa.gov/kidsclub/index.html">https://www.nasa.gov/kidsclub/index.html</a></p>
+<h3 id="description-20">Description</h3>
+<h3 id="tags-22">Tags</h3>
+<h1 id="learn">Learn</h1>
+<h2 id="wwwfreecodecamporg"><a href="http://www.freecodecamp.org">www.freecodecamp.org</a></h2>
+<h3 id="links-23">Links</h3>
+<p><a href="https://www.freecodecamp.org/news/here-are-380-ivy-league-courses-you-can-take-online-right-now-for-free-9b3ffcbd7b8c/">https://www.freecodecamp.org/news/here-are-380-ivy-league-courses-you-can-take-online-right-now-for-free-9b3ffcbd7b8c/</a></p>
+<h2 id="description-21">Description</h2>
+<p>Here are 450 Ivy League courses you can take online right now for free</p>
+<h3 id="tags-23">Tags</h3>
+<p>schools</p>
+<h2 id="multiple">Multiple</h2>
+<h3 id="links-24">Links</h3>
+<p><a href="https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours">https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours</a></p>
+<h3 id="description-22">Description</h3>
+<pre><code>&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready( function () {
+  window.alert(&#39;tst&#39;);
+  $(&#39;#tbData&#39;).DataTable(
+    {
+      paging: false
+    }
+  );
+  } );&lt;/script&gt;
+</code></pre>
 </body>
 </html>
