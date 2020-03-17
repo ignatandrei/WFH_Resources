@@ -5,7 +5,7 @@ Work from Home Resources
 Please see https://ignatandrei.github.io/WFH_Resources/
 
 ( for adding resources, please see https://github.com/ignatandrei/WFH_Resources)
-<table id="tbData"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
+<table id="tbData"  class="display" style="width:90%"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
 <tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
 <tr><td>2</td><td> FreeSoftware &gt; Avid.md </td><td> Avid</td> </tr>
