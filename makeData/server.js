@@ -39,6 +39,9 @@ async function main() {
     content +="\r\n";
     content += `# ${folder}`;
     for(let f of list){
+        const nameNoExtension=path.parse(f.name).name;
+        content +="\r\n";
+        content +=`# ${nameNoExtension}`;
         content +="\r\n";
         //console.log(f);
         var fileContents= fs.readFileSync(f.fullname, 'utf8');
@@ -52,8 +55,8 @@ async function main() {
             continue;
           
           contentTable +="\r\n";
-          const nameNoExtension=path.parse(f.name).name;
-          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${folder}">${folder}</a> </td><td><a href="#${nameNoExtension}">${nameNoExtension}</a> </td><td> ${token.text}</td> </tr>`;
+          const idGoto=nameNoExtension.replace(/\s+/g, '-').toLowerCase();
+          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${folder.toLowerCase()}">${folder}</a> </td><td><a href="#${idGoto}">${nameNoExtension}</a> </td><td> ${token.text}</td> </tr>`;
               
         }
         
