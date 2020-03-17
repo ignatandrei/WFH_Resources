@@ -22,8 +22,8 @@ async function main() {
   const rra = require("recursive-readdir-async");
   var folders = ["FreeSoftware", "Country"];
   let iContent=1;
-  let contentTable='';
-  contentTable+= ' Nr  Category  Name ';
+  let contentTable='<table>';
+  contentTable+= '<tr> <td>Nr</td> <td> Category  </td><td>Name</td> </tr>';
   contentTable+= "\r\n";
   contentTable+='-------     ------ ---------- ';
   contentTable+= "\r\n";
@@ -47,14 +47,14 @@ async function main() {
             continue;
           
           contentTable +="\r\n";
-          contentTable +=`${iContent++} ${folder} &gt; ${f.name} ${token.text}|`;
+          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} &gt; ${f.name} </td><td> ${token.text}</td> </tr>`;
               
         }
         
 
         
     }
-    contentTable+='-------     ------ ---------- ';
+    contentTable+='</table>';
     // console.log(contentTable);
     
   }
