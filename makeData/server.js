@@ -22,10 +22,11 @@ async function main() {
   const rra = require("recursive-readdir-async");
   var folders = ["FreeSoftware", "Country"];
   let iContent=1;
-  let contentTable='<table>';
-  contentTable+= '<tr> <td>Nr</td> <td> Category  </td><td>Name</td> </tr>';
-  contentTable+= "\r\n";
-  contentTable+='-------     ------ ---------- ';
+  let contentTable='<table id="tbData">';
+  contentTable +=" <thead>";
+  contentTable+= '<tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>';
+  contentTable +="/<thead>";
+  contentTable +=" <tbody>";
   contentTable+= "\r\n";
   let content ='';
   for (let folder of folders) {
@@ -54,12 +55,24 @@ async function main() {
 
         
     }
+    contentTable +="/<tbody>";
+
     contentTable+='</table>';
     // console.log(contentTable);
     
   }
+  var jscss='<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">';
+  jscss+='<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>';
+
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
-   content =contentTable +"\r\n"+ content;
+   content =jscss+ "\r\n"+ contentTable +"\r\n"+ content;
+
+    var script=`<script>
+    $(document).ready( function () {
+      $('#myTable').DataTable();
+      } );</script>`;
+   
+   content+=script;
    fs.writeFileSync(directoryPathWrite,content);
 }
 //   var folders = ["FreeSoftware", "Country"];
