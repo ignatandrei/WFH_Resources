@@ -1,0 +1,8 @@
+FROM node:10
+WORKDIR /usr/src/
+COPY makeData/package.json ./makeData/
+RUN npm install ./makeData/
+COPY . .
+RUN ls -l makeData/*.* 
+RUN node makeData/server.js
+CMD tail -f /dev/null
