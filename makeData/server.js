@@ -29,6 +29,7 @@ async function main() {
   contentTable +=" <tbody>";
   contentTable+= "\r\n";
   let content ='';
+  const declarations = fs.readFileSync(path.join(__dirname + "/..", "makeData","headerIncludes.md"), 'utf8');
   for (let folder of folders) {
     const directoryPath = path.join(__dirname + "/..", folder);
     const list = await rra.list(directoryPath);
@@ -62,18 +63,18 @@ async function main() {
 
   contentTable+='</table>';
 
-  var jscss='';
-  //jscss=+'<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">';
-  //jscss=+'<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js" ></script>';
-  //jscss+='<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>';
-
+  
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
-   content =jscss+ "\r\n"+ contentTable +"\r\n"+ content;
+   content =declarations + "\r\n"+ contentTable +"\r\n"+ content;
 
     var script=`<script>
     $(document).ready( function () {
       window.alert('tst');
-      $('#tbData').DataTable();
+      $('#tbData').DataTable(
+        {
+          paging: false
+        }
+      );
       } );</script>`;
    
    content+=script;
