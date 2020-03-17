@@ -23,13 +23,15 @@ jobs:
         chmod +x ./makeData/compile.bat
         cd makeData        
         ./compile.bat
+        rm ../obj/all.md
         cp ./all.md ../obj/all.md
+        ls -l ../obj/all.md
         echo 'finish generate all'
 
     - name: generate html
       uses: docker://pandoc/latex:2.9
       with: ## needs a README in your repo root!          
-        args: "all.md --standalone -f gfm -t html -o output/output.html --metadata title=WorkFromHome_Resources"
+        args: "obj/all.md --standalone -f gfm -t html -o output/output.html --metadata title=WorkFromHome_Resources"
       
     - name: modifying final files
       run: |
