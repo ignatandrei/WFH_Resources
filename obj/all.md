@@ -10,7 +10,7 @@
 <tr><td>7</td><td> FreeSoftware &gt; Logmein.md </td><td> Logmein</td> </tr>
 <tr><td>8</td><td> FreeSoftware &gt; Loom.md </td><td> Loom</td> </tr>
 <tr><td>9</td><td> FreeSoftware &gt; Microsoft.md </td><td> Microsoft</td> </tr>
-<tr><td>10</td><td> FreeSoftware &gt; Zoho.md </td><td> Zoho</td> </tr>/<tbody></table>
+<tr><td>10</td><td> FreeSoftware &gt; Zoho.md </td><td> Zoho</td> </tr>
 <tr><td>11</td><td> Country &gt; China.md </td><td> Zoom</td> </tr>
 <tr><td>12</td><td> Country &gt; France.md </td><td> Pornhub</td> </tr>
 <tr><td>13</td><td> Country &gt; Italy.md </td><td> Pornhub</td> </tr>
@@ -22,7 +22,7 @@
 <tr><td>19</td><td> Country &gt; Romania.md </td><td> Geografie</td> </tr>
 <tr><td>20</td><td> Country &gt; Romania.md </td><td> Idei creative</td> </tr>
 <tr><td>21</td><td> Country &gt; Spain.md </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr>/<tbody></table>
+<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr></tbody></table>
 
 # FreeSoftware
 ## ADOBE
