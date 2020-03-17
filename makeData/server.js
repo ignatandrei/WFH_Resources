@@ -13,7 +13,9 @@ console.log(`start print`);
     console.log("Error" + JSON.stringify(e));
   }
 })();
-
+function getId(v){
+  return v.replace(/\s+/g, '-').toLowerCase();
+}
 async function main() {
   const marked = require('marked');
   const path = require("path");
@@ -55,8 +57,8 @@ async function main() {
             continue;
           
           contentTable +="\r\n";
-          const idGoto=nameNoExtension.replace(/\s+/g, '-').toLowerCase();
-          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${folder.toLowerCase()}">${folder}</a> </td><td><a href="#${idGoto}">${nameNoExtension}</a> </td><td> ${token.text}</td> </tr>`;
+          
+          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> </td><td><a href="${getId(token.text)}"> ${token.text}</a></td> </tr>`;
               
         }
         
