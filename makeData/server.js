@@ -69,7 +69,8 @@ async function main() {
 
     var script=`<script>
     $(document).ready( function () {
-      $('#myTable').DataTable();
+      window.alert('tst');
+      $('#tbData').DataTable();
       } );</script>`;
    
    content+=script;
