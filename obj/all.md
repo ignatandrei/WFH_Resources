@@ -28,11 +28,11 @@ Please see https://ignatandrei.github.io/WFH_Resources/
 <tr><td>19</td><td> Country &gt; Romania </td><td> Geografie</td> </tr>
 <tr><td>20</td><td> Country &gt; Romania </td><td> Idei creative</td> </tr>
 <tr><td>21</td><td> Country &gt; Spain </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Country &gt; Romania </td><td> Harta</td> </tr>
-<tr><td>23</td><td> Kids &gt; English </td><td> NASA</td> </tr>
-<tr><td>24</td><td> Learn &gt; Courses </td><td> www.freecodecamp.org</td> </tr>
-<tr><td>25</td><td> Learn &gt; Courses </td><td> Description</td> </tr>
-<tr><td>26</td><td> Learn &gt; Museums </td><td> Multiple</td> </tr></tbody></table>
+<tr><td>22</td><td> Kids &gt; English </td><td> NASA</td> </tr>
+<tr><td>23</td><td> Learn &gt; Courses </td><td> www.freecodecamp.org</td> </tr>
+<tr><td>24</td><td> Learn &gt; Courses </td><td> Description</td> </tr>
+<tr><td>25</td><td> Learn &gt; Museums </td><td> Multiple</td> </tr>
+<tr><td>26</td><td> MapsAndData &gt; Romania </td><td> Harta</td> </tr></tbody></table>
 
 # FreeSoftware
 ## Adobe Connect conferencing
@@ -267,16 +267,6 @@ Free Premium
 
 ### Tags
 porn
-## Harta
-
-#### Links
-https://instnsp.maps.arcgis.com/apps/opsdashboard/index.html#/5eced796595b4ee585bcdba03e30c127
-
-#### Description
-Harta interactiva
-
-#### Tags
-
 # Kids
 ## NASA
 
@@ -307,3 +297,14 @@ schools
 https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours
 
 ### Description 
+
+# MapsAndData
+## Harta
+
+#### Links
+https://instnsp.maps.arcgis.com/apps/opsdashboard/index.html#/5eced796595b4ee585bcdba03e30c127
+
+#### Description
+Harta interactiva
+
+#### Tags
