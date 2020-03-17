@@ -61,7 +61,9 @@ async function main() {
     // console.log(contentTable);
     
   }
-  var jscss='<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">';
+  var jscss='';
+  jscss=+'<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">';
+  jscss=+'<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js" ></script>';
   jscss+='<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>';
 
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
