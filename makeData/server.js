@@ -20,7 +20,7 @@ async function main() {
   const fs = require("fs");
   const { promisify } = require("util");
   const rra = require("recursive-readdir-async");
-  var folders = ["FreeSoftware", "Country"];
+  var folders = ["FreeSoftware", "Country","Kids","Learn"];
   let iContent=1;
   let contentTable='<table id="tbData">';
   contentTable +=" <thead>";
