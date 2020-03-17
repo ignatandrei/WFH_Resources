@@ -24,13 +24,13 @@ async function main() {
   let iContent=1;
   let contentTable='<table id="tbData"  class="display" style="width:90%">';
   contentTable +=" <thead>";
-  contentTable+= '<tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>';
+  contentTable+= '<tr> <th>Nr</th> <th> Category  </th><th>SubCategory  </th><th>Name</th> </tr>';
   contentTable +="/<thead>";
   contentTable +=" <tbody>";
   contentTable+= "\r\n";
   let content ='';
   //const declarations = fs.readFileSync(path.join(__dirname + "/..", "makeData","headerIncludes.md"), 'utf8');
-  const declarations ='';
+  //const declarations ='';
   const readMe = fs.readFileSync(path.join(__dirname + "/..", "README.md"), 'utf8');
 
   for (let folder of folders) {
@@ -53,7 +53,7 @@ async function main() {
           
           contentTable +="\r\n";
           const nameNoExtension=path.parse(f.name).name;
-          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} &gt; ${nameNoExtension} </td><td> ${token.text}</td> </tr>`;
+          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${folder}">${folder}</a> </td><td><a href="#${nameNoExtension}">${nameNoExtension}</a> </td><td> ${token.text}</td> </tr>`;
               
         }
         
@@ -69,7 +69,7 @@ async function main() {
 
   
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
-   content = declarations + "\r\n"+ readMe +"\r\n" + contentTable +"\r\n"+ content;
+   content = contentTable +"\r\n"+ content + "\r\n"+ readMe ; 
 
     // var script=`
     // <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

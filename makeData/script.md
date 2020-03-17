@@ -4,7 +4,7 @@
 
 <script>
     $(document).ready( function () {
-      window.alert('tst');
+      //window.alert('tst');
       $('#tbData').DataTable(
         {
           paging: false
