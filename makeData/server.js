@@ -55,12 +55,13 @@ async function main() {
 
         
     }
-    contentTable +="/<tbody>";
-
-    contentTable+='</table>';
     // console.log(contentTable);
     
   }
+  contentTable +="</tbody>";
+
+  contentTable+='</table>';
+
   var jscss='';
   //jscss=+'<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">';
   //jscss=+'<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js" ></script>';
