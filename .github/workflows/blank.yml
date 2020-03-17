@@ -13,23 +13,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: |
-          echo generate help file
+
+    - name: generating necessary folders
+      run: |
           mkdir output
-          git pull
+          
     - name: generate all
       run: |
         chmod +x ./makeData/compile.bat
         cd makeData        
         ./compile.bat
         cp ./all.md ../obj/all.md
+        echo 'finish generate all'
 
     - name: generate html
       uses: docker://pandoc/latex:2.9
       with: ## needs a README in your repo root!          
-        args: "./all.md --standalone -f gfm -t html -o output/output.html --metadata title=WorkFromHome_Resources"
+        args: "all.md --standalone -f gfm -t html -o output/output.html --metadata title=WorkFromHome_Resources"
       
-    - run: |
+    - name: modifying final files
+      run: |
         cp ./output/output.html ./docs/index.html        
         rm -rf ./output
         rm ./all.md
