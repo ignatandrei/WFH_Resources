@@ -26,6 +26,8 @@ jobs:
         rm ../obj/all.md
         cp ./all.md ../obj/all.md
         ls -l ../obj/all.md
+        chmod 777 ../obj/all.md
+        ls -l ../obj/all.md
         echo 'finish generate all'
 
     - name: generate html
