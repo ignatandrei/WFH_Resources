@@ -1,4 +1,4 @@
-NaN<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
 <table id="tbData"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
 <tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
