@@ -30,6 +30,8 @@ async function main() {
   contentTable+= "\r\n";
   let content ='';
   const declarations = fs.readFileSync(path.join(__dirname + "/..", "makeData","headerIncludes.md"), 'utf8');
+  const readMe = fs.readFileSync(path.join(__dirname + "/..", "README.md"), 'utf8');
+
   for (let folder of folders) {
     const directoryPath = path.join(__dirname + "/..", folder);
     const list = await rra.list(directoryPath);
@@ -65,7 +67,7 @@ async function main() {
 
   
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
-   content =declarations + "\r\n"+ contentTable +"\r\n"+ content;
+   content = declarations + "\r\n"+ readMe +"\r\n" + contentTable +"\r\n"+ content;
 
     var script=`<script>
     $(document).ready( function () {
