@@ -33,7 +33,7 @@ jobs:
     - name: generate html
       uses: docker://pandoc/latex:2.9
       with: ## needs a README in your repo root!          
-        args: "-d headerIncludes.md"
+        args: "-d makeData/headerIncludes.md"
       
     - name: modifying final files
       run: |
