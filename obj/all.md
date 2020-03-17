@@ -1,4 +1,10 @@
-
+---
+header-includes: |
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+	 
+---
 <table id="tbData"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
 <tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
@@ -274,5 +280,9 @@ Harta interactiva
 <script>
     $(document).ready( function () {
       window.alert('tst');
-      $('#tbData').DataTable();
+      $('#tbData').DataTable(
+        {
+          paging: false
+        }
+      );
       } );</script>
