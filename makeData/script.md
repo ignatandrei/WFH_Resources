@@ -9,7 +9,11 @@
       $('#tbData').DataTable(
         {
           paging: false,
-          order: [[1, 'asc']],
+          order: [
+              [1, 'asc'],
+              [2, 'asc'],
+              [3, 'asc']  
+                ],
         rowGroup: {
             dataSrc: 1
         }
