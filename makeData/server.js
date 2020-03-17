@@ -58,7 +58,7 @@ async function main() {
           
           contentTable +="\r\n";
           
-          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> </td><td><a href="${getId(token.text)}"> ${token.text}</a></td> </tr>`;
+          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> <a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}.md">Improve</a> </td><td><a href="${getId(token.text)}"> ${token.text}</a></td> </tr>`;
               
         }
         
