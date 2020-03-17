@@ -1,4 +1,4 @@
-## Logmein
+## GotoMeeting
 
 ### Links
 https://blog.gotomeeting.com/coronavirus-disruptions-and-support/

@@ -1,4 +1,4 @@
-## Google
+## G Suite 
 
 ### Links
 https://cloud.google.com/blog/products/g-suite/helping-businesses-and-schools-stay-connected-in-response-to-coronavirus

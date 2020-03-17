@@ -1,4 +1,4 @@
-## Avid
+## Media Composer and others
 
 ### Links
 https://www.avid.com/covid-19

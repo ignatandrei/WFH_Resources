@@ -1,4 +1,4 @@
-## ADOBE
+## Adobe Connect conferencing
 
 ### Links
 https://theblog.adobe.com/adobe-enables-distance-learning-globally-schools-impacted-covid-19/

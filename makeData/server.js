@@ -52,7 +52,8 @@ async function main() {
             continue;
           
           contentTable +="\r\n";
-          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} &gt; ${f.name} </td><td> ${token.text}</td> </tr>`;
+          const nameNoExtension=path.parse(f.name).name;
+          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} &gt; ${nameNoExtension} </td><td> ${token.text}</td> </tr>`;
               
         }
         

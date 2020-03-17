@@ -1,4 +1,4 @@
-## Zoho
+## Zoho remotely
 
 ### Links
 https://www.zoho.com/remotely/
