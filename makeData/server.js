@@ -22,9 +22,11 @@ async function main() {
   const rra = require("recursive-readdir-async");
   var folders = ["FreeSoftware", "Country"];
   let iContent=1;
-  let contentTable= '| Nr | Category | Name |';
+  let contentTable='';
+  contentTable+= ' Nr  Category  Name ';
   contentTable+= "\r\n";
-  contentTable += '| ------------- |:-------------:| :-----:|';
+  contentTable+='-------     ------ ---------- ';
+  contentTable+= "\r\n";
   let content ='';
   for (let folder of folders) {
     const directoryPath = path.join(__dirname + "/..", folder);
@@ -45,14 +47,15 @@ async function main() {
             continue;
           
           contentTable +="\r\n";
-          contentTable +=`${iContent++}|${folder} &gt; ${f.name}|${token.text}|`;
+          contentTable +=`${iContent++} ${folder} &gt; ${f.name} ${token.text}|`;
               
         }
         
 
         
     }
-    console.log(contentTable);
+    contentTable+='-------     ------ ---------- ';
+    // console.log(contentTable);
     
   }
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
