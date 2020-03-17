@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "markdown-pdf": "10.0.0",
+    "marked": "0.8.0",
     "recursive-readdir-async": "1.1.6"
   }
 }

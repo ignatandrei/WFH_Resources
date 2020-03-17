@@ -3,20 +3,27 @@ console.log(`start print`);
 
 //var markdownpdf = require("markdown-pdf")
 (async () => {
-  try {
+  try
+   {
     await main();
     console.log("done");
-  } catch (e) {
+  } 
+  catch (e) 
+  {
     console.log("Error" + JSON.stringify(e));
   }
 })();
 
 async function main() {
+  const marked = require('marked');
   const path = require("path");
   const fs = require("fs");
   const { promisify } = require("util");
   const rra = require("recursive-readdir-async");
   var folders = ["FreeSoftware", "Country"];
+  let iContent=1;
+  let contentTable= '| Nr | Category | Name |';
+  contentTable += '| ------------- |:-------------:| :-----:|';
   let content ='';
   for (let folder of folders) {
     const directoryPath = path.join(__dirname + "/..", folder);
@@ -25,12 +32,30 @@ async function main() {
     content += `# ${folder}`;
     for(let f of list){
         content +="\r\n";
-        content += fs.readFileSync(f.fullname, 'utf8');
+        //console.log(f);
+        var fileContents= fs.readFileSync(f.fullname, 'utf8');
+        content+=fileContents;
+
+        const tokens = marked.lexer(fileContents);
+        for(let token of tokens){
+          if(token.type != 'heading')
+            continue;
+          if(token.depth !=2)
+            continue;
+          
+          contentTable +="\r\n";
+          contentTable +=`${iContent++}|${folder} &gt; ${f.name}|${token.text}|`;
+              
+        }
+        
+
+        
     }
-    
+    console.log(contentTable);
     
   }
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
+   content =contentTable +"\r\n"+ content;
    fs.writeFileSync(directoryPathWrite,content);
 }
 //   var folders = ["FreeSoftware", "Country"];
