@@ -19,7 +19,7 @@ jobs:
           git pull
     - name: generate all
       run: |
-        chmod +x ./print/compile.bat
+        chmod +x ./makeData/compile.bat
         cd compile        
         ./compile.bat
         mv ./all.md ../obj/all.md
