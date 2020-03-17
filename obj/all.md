@@ -273,5 +273,6 @@ Harta interactiva
 #### Tags
 <script>
     $(document).ready( function () {
-      $('#myTable').DataTable();
+      window.alert('tst');
+      $('#tbData').DataTable();
       } );</script>
