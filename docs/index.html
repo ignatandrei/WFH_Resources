@@ -22,10 +22,10 @@
 <h1 class="title">WorkFromHome_Resources</h1>
 </header>
 <h2 id="wfh_resources">WFH_Resources</h2>
-<p>Work from Home Resources</p>
-<p><a href="https://ignatandrei.github.io/WFH_Resources/">https://ignatandrei.github.io/WFH_Resources/</a></p>
-<table><tr> <td>Nr</td> <td> Category  </td><td>Name</td> </tr>
--------     ------ ---------- 
+<p>Work from Home Resources Please see <a href="https://ignatandrei.github.io/WFH_Resources/">https://ignatandrei.github.io/WFH_Resources/</a></p>
+<p>( for adding resources, please see <a href="https://github.com/ignatandrei/WFH_Resources">https://github.com/ignatandrei/WFH_Resources</a>)</p>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"><script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<table id="tbData"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
 <tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
 <tr><td>2</td><td> FreeSoftware &gt; Avid.md </td><td> Avid</td> </tr>
@@ -36,7 +36,7 @@
 <tr><td>7</td><td> FreeSoftware &gt; Logmein.md </td><td> Logmein</td> </tr>
 <tr><td>8</td><td> FreeSoftware &gt; Loom.md </td><td> Loom</td> </tr>
 <tr><td>9</td><td> FreeSoftware &gt; Microsoft.md </td><td> Microsoft</td> </tr>
-<tr><td>10</td><td> FreeSoftware &gt; Zoho.md </td><td> Zoho</td> </tr></table>
+<tr><td>10</td><td> FreeSoftware &gt; Zoho.md </td><td> Zoho</td> </tr>/<tbody></table>
 <tr><td>11</td><td> Country &gt; China.md </td><td> Zoom</td> </tr>
 <tr><td>12</td><td> Country &gt; France.md </td><td> Pornhub</td> </tr>
 <tr><td>13</td><td> Country &gt; Italy.md </td><td> Pornhub</td> </tr>
@@ -48,7 +48,7 @@
 <tr><td>19</td><td> Country &gt; Romania.md </td><td> Geografie</td> </tr>
 <tr><td>20</td><td> Country &gt; Romania.md </td><td> Idei creative</td> </tr>
 <tr><td>21</td><td> Country &gt; Spain.md </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr></table>
+<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr>/<tbody></table>
 
 <h1 id="freesoftware">FreeSoftware</h1>
 <h2 id="adobe">ADOBE</h2>
@@ -186,5 +186,9 @@
 <h4 id="description-19">Description</h4>
 <p>Harta interactiva</p>
 <h4 id="tags-21">Tags</h4>
+<script>
+    $(document).ready( function () {
+      $('#myTable').DataTable();
+      } );</script>
 </body>
 </html>
