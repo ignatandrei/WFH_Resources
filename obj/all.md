@@ -1,10 +1,9 @@
----
-header-includes: |
-     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
-	 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
-	 
----
+
+# WFH_Resources
+Work from Home Resources
+Please see https://ignatandrei.github.io/WFH_Resources/
+
+( for adding resources, please see https://github.com/ignatandrei/WFH_Resources)
 <table id="tbData"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
 <tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
@@ -28,7 +27,11 @@ header-includes: |
 <tr><td>19</td><td> Country &gt; Romania.md </td><td> Geografie</td> </tr>
 <tr><td>20</td><td> Country &gt; Romania.md </td><td> Idei creative</td> </tr>
 <tr><td>21</td><td> Country &gt; Spain.md </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr></tbody></table>
+<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr>
+<tr><td>23</td><td> Kids &gt; English.md </td><td> NASA</td> </tr>
+<tr><td>24</td><td> Learn &gt; Courses.md </td><td> www.freecodecamp.org</td> </tr>
+<tr><td>25</td><td> Learn &gt; Courses.md </td><td> Description</td> </tr>
+<tr><td>26</td><td> Learn &gt; Museums.md </td><td> Multiple</td> </tr></tbody></table>
 
 # FreeSoftware
 ## ADOBE
@@ -277,6 +280,37 @@ https://instnsp.maps.arcgis.com/apps/opsdashboard/index.html#/5eced796595b4ee585
 Harta interactiva
 
 #### Tags
+
+# Kids
+## NASA
+
+### Links
+https://www.nasa.gov/kidsclub/index.html
+
+### Description
+
+### Tags
+# Learn
+## www.freecodecamp.org
+
+### Links
+https://www.freecodecamp.org/news/here-are-380-ivy-league-courses-you-can-take-online-right-now-for-free-9b3ffcbd7b8c/
+
+## Description
+Here are 450 Ivy League courses you can take online right now for free
+
+### Tags
+schools
+
+
+
+## Multiple
+
+### Links
+
+https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours
+
+### Description 
 <script>
     $(document).ready( function () {
       window.alert('tst');

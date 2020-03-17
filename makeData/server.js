@@ -29,7 +29,8 @@ async function main() {
   contentTable +=" <tbody>";
   contentTable+= "\r\n";
   let content ='';
-  const declarations = fs.readFileSync(path.join(__dirname + "/..", "makeData","headerIncludes.md"), 'utf8');
+  //const declarations = fs.readFileSync(path.join(__dirname + "/..", "makeData","headerIncludes.md"), 'utf8');
+  const declarations ='';
   const readMe = fs.readFileSync(path.join(__dirname + "/..", "README.md"), 'utf8');
 
   for (let folder of folders) {
