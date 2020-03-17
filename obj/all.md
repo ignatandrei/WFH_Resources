@@ -7,35 +7,35 @@ Please see https://ignatandrei.github.io/WFH_Resources/
 ( for adding resources, please see https://github.com/ignatandrei/WFH_Resources)
 <table id="tbData"  class="display" style="width:90%"> <thead><tr> <th>Nr</th> <th> Category  </th><th>Name</th> </tr>/<thead> <tbody>
 
-<tr><td>1</td><td> FreeSoftware &gt; Adobe.md </td><td> ADOBE</td> </tr>
-<tr><td>2</td><td> FreeSoftware &gt; Avid.md </td><td> Avid</td> </tr>
-<tr><td>3</td><td> FreeSoftware &gt; Cisco.md </td><td> Cisco</td> </tr>
-<tr><td>4</td><td> FreeSoftware &gt; Cloudflare.md </td><td> Cloudflare</td> </tr>
-<tr><td>5</td><td> FreeSoftware &gt; Discord.md </td><td> Discord</td> </tr>
-<tr><td>6</td><td> FreeSoftware &gt; Google.md </td><td> Google</td> </tr>
-<tr><td>7</td><td> FreeSoftware &gt; Logmein.md </td><td> Logmein</td> </tr>
-<tr><td>8</td><td> FreeSoftware &gt; Loom.md </td><td> Loom</td> </tr>
-<tr><td>9</td><td> FreeSoftware &gt; Microsoft.md </td><td> Microsoft</td> </tr>
-<tr><td>10</td><td> FreeSoftware &gt; Zoho.md </td><td> Zoho</td> </tr>
-<tr><td>11</td><td> Country &gt; China.md </td><td> Zoom</td> </tr>
-<tr><td>12</td><td> Country &gt; France.md </td><td> Pornhub</td> </tr>
-<tr><td>13</td><td> Country &gt; Italy.md </td><td> Pornhub</td> </tr>
-<tr><td>14</td><td> Country &gt; Romania.md </td><td> Copii</td> </tr>
-<tr><td>15</td><td> Country &gt; Romania.md </td><td> Muzee</td> </tr>
-<tr><td>16</td><td> Country &gt; Romania.md </td><td> Diagnosticare online</td> </tr>
-<tr><td>17</td><td> Country &gt; Romania.md </td><td> Carti audio gratuite</td> </tr>
-<tr><td>18</td><td> Country &gt; Romania.md </td><td> Livrare mincare</td> </tr>
-<tr><td>19</td><td> Country &gt; Romania.md </td><td> Geografie</td> </tr>
-<tr><td>20</td><td> Country &gt; Romania.md </td><td> Idei creative</td> </tr>
-<tr><td>21</td><td> Country &gt; Spain.md </td><td> Pornhub</td> </tr>
-<tr><td>22</td><td> Country &gt; Romania.md </td><td> Harta</td> </tr>
-<tr><td>23</td><td> Kids &gt; English.md </td><td> NASA</td> </tr>
-<tr><td>24</td><td> Learn &gt; Courses.md </td><td> www.freecodecamp.org</td> </tr>
-<tr><td>25</td><td> Learn &gt; Courses.md </td><td> Description</td> </tr>
-<tr><td>26</td><td> Learn &gt; Museums.md </td><td> Multiple</td> </tr></tbody></table>
+<tr><td>1</td><td> FreeSoftware &gt; Adobe </td><td> Adobe Connect conferencing</td> </tr>
+<tr><td>2</td><td> FreeSoftware &gt; Avid </td><td> Media Composer and others</td> </tr>
+<tr><td>3</td><td> FreeSoftware &gt; Cisco </td><td> Cisco WebEx free</td> </tr>
+<tr><td>4</td><td> FreeSoftware &gt; Cloudflare </td><td> Cloudflare</td> </tr>
+<tr><td>5</td><td> FreeSoftware &gt; Discord </td><td> Go Live</td> </tr>
+<tr><td>6</td><td> FreeSoftware &gt; Google </td><td> G Suite</td> </tr>
+<tr><td>7</td><td> FreeSoftware &gt; Logmein </td><td> GotoMeeting</td> </tr>
+<tr><td>8</td><td> FreeSoftware &gt; Loom </td><td> Loom</td> </tr>
+<tr><td>9</td><td> FreeSoftware &gt; Microsoft </td><td> Teams</td> </tr>
+<tr><td>10</td><td> FreeSoftware &gt; Zoho </td><td> Zoho remotely</td> </tr>
+<tr><td>11</td><td> Country &gt; China </td><td> Zoom</td> </tr>
+<tr><td>12</td><td> Country &gt; France </td><td> Pornhub</td> </tr>
+<tr><td>13</td><td> Country &gt; Italy </td><td> Pornhub</td> </tr>
+<tr><td>14</td><td> Country &gt; Romania </td><td> Copii</td> </tr>
+<tr><td>15</td><td> Country &gt; Romania </td><td> Muzee</td> </tr>
+<tr><td>16</td><td> Country &gt; Romania </td><td> Diagnosticare online</td> </tr>
+<tr><td>17</td><td> Country &gt; Romania </td><td> Carti audio gratuite</td> </tr>
+<tr><td>18</td><td> Country &gt; Romania </td><td> Livrare mincare</td> </tr>
+<tr><td>19</td><td> Country &gt; Romania </td><td> Geografie</td> </tr>
+<tr><td>20</td><td> Country &gt; Romania </td><td> Idei creative</td> </tr>
+<tr><td>21</td><td> Country &gt; Spain </td><td> Pornhub</td> </tr>
+<tr><td>22</td><td> Country &gt; Romania </td><td> Harta</td> </tr>
+<tr><td>23</td><td> Kids &gt; English </td><td> NASA</td> </tr>
+<tr><td>24</td><td> Learn &gt; Courses </td><td> www.freecodecamp.org</td> </tr>
+<tr><td>25</td><td> Learn &gt; Courses </td><td> Description</td> </tr>
+<tr><td>26</td><td> Learn &gt; Museums </td><td> Multiple</td> </tr></tbody></table>
 
 # FreeSoftware
-## ADOBE
+## Adobe Connect conferencing
 
 ### Links
 https://theblog.adobe.com/adobe-enables-distance-learning-globally-schools-impacted-covid-19/
@@ -48,7 +48,7 @@ schools
 
 
 
-## Avid
+## Media Composer and others
 
 ### Links
 https://www.avid.com/covid-19
@@ -61,7 +61,7 @@ Media Composer | Ultimate, Pro Tools, Pro Tools | Ultimate and Sibelius | Ultima
 
 
 
-## Cisco
+## Cisco WebEx free
 
 ### Links
 https://help.webex.com/en-us/n80v1rcb/Cisco-Webex-Available-Free-in-These-Countries-COVID-19-Response
@@ -85,11 +85,6 @@ Offers toll dial-in (in addition to existing VoIP capabilities).
 https://blog.cloudflare.com/cloudflare-for-teams-free-for-small-businesses-during-coronavirus-emergency/
 
 ### Description
-Cisco WebEx free :
-
-Unlimited usage (no time restrictions)
-Supports up to 100 participants
-Offers toll dial-in (in addition to existing VoIP capabilities).
 
 ### Tags
 
@@ -97,7 +92,7 @@ Offers toll dial-in (in addition to existing VoIP capabilities).
 
 
 
-## Discord
+## Go Live
 
 ### Links
 https://blog.discordapp.com/helping-out-where-we-can-3a5fb7bac77a?gi=c308eedc43a1
@@ -110,7 +105,7 @@ Go Live to 50 people
 
 
 
-## Google
+## G Suite 
 
 ### Links
 https://cloud.google.com/blog/products/g-suite/helping-businesses-and-schools-stay-connected-in-response-to-coronavirus
@@ -123,7 +118,7 @@ Live streaming for up to 100,000 viewers within a domain
 The ability to record meetings and save them to Google Drive
 
 ### Tags
-## Logmein
+## GotoMeeting
 
 ### Links
 https://blog.gotomeeting.com/coronavirus-disruptions-and-support/
@@ -145,7 +140,7 @@ https://www.loom.com/blog/coronavirus-response
 If you’re a teacher or a student at a K-12 school, university, or educational institution using Loom for classroom work, you can use Loom Pro for free, forever.
 
 ### Tags
-## Microsoft
+## Teams
 
 ### Links
 https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/05/our-commitment-to-customers-during-covid-19/
@@ -154,7 +149,7 @@ https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/05/our-commitment-to-
 Making Teams available for everyone
 
 ### Tags
-## Zoho
+## Zoho remotely
 
 ### Links
 https://www.zoho.com/remotely/
