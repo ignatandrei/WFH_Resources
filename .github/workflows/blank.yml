@@ -24,7 +24,7 @@ jobs:
         cd makeData        
         ./compile.bat
         rm ../obj/all.md
-        cp ./all.md ../obj/all.md
+        mv ./all.md ../obj/all.md
         ls -l ../obj/all.md
         chmod 777 ../obj/all.md
         ls -l ../obj/all.md
@@ -40,7 +40,7 @@ jobs:
         find . -name \*output.html
         cp ./output/output.html ./docs/index.html        
         rm -rf ./output
-        rm ./all.md
+        
     
     - name: Commit files
       run: |
