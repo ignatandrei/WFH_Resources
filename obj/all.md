@@ -1,27 +1,28 @@
-| Nr | Category | Name |
-| ------------- |:-------------:| :-----:|
-1|FreeSoftware &gt; Adobe.md|ADOBE|
-2|FreeSoftware &gt; Avid.md|Avid|
-3|FreeSoftware &gt; Cisco.md|Cisco|
-4|FreeSoftware &gt; Cloudflare.md|Cloudflare|
-5|FreeSoftware &gt; Discord.md|Discord|
-6|FreeSoftware &gt; Google.md|Google|
-7|FreeSoftware &gt; Logmein.md|Logmein|
-8|FreeSoftware &gt; Loom.md|Loom|
-9|FreeSoftware &gt; Microsoft.md|Microsoft|
-10|FreeSoftware &gt; Zoho.md|Zoho|
-11|Country &gt; China.md|Zoom|
-12|Country &gt; France.md|Pornhub|
-13|Country &gt; Italy.md|Pornhub|
-14|Country &gt; Romania.md|Copii|
-15|Country &gt; Romania.md|Muzee|
-16|Country &gt; Romania.md|Diagnosticare online|
-17|Country &gt; Romania.md|Carti audio gratuite|
-18|Country &gt; Romania.md|Livrare mincare|
-19|Country &gt; Romania.md|Geografie|
-20|Country &gt; Romania.md|Idei creative|
-21|Country &gt; Spain.md|Pornhub|
-22|Country &gt; Romania.md|Harta|
+ Nr  Category  Name 
+-------     ------ ---------- 
+
+1 FreeSoftware &gt; Adobe.md ADOBE|
+2 FreeSoftware &gt; Avid.md Avid|
+3 FreeSoftware &gt; Cisco.md Cisco|
+4 FreeSoftware &gt; Cloudflare.md Cloudflare|
+5 FreeSoftware &gt; Discord.md Discord|
+6 FreeSoftware &gt; Google.md Google|
+7 FreeSoftware &gt; Logmein.md Logmein|
+8 FreeSoftware &gt; Loom.md Loom|
+9 FreeSoftware &gt; Microsoft.md Microsoft|
+10 FreeSoftware &gt; Zoho.md Zoho|-------     ------ ---------- 
+11 Country &gt; China.md Zoom|
+12 Country &gt; France.md Pornhub|
+13 Country &gt; Italy.md Pornhub|
+14 Country &gt; Romania.md Copii|
+15 Country &gt; Romania.md Muzee|
+16 Country &gt; Romania.md Diagnosticare online|
+17 Country &gt; Romania.md Carti audio gratuite|
+18 Country &gt; Romania.md Livrare mincare|
+19 Country &gt; Romania.md Geografie|
+20 Country &gt; Romania.md Idei creative|
+21 Country &gt; Spain.md Pornhub|
+22 Country &gt; Romania.md Harta|-------     ------ ---------- 
 
 # FreeSoftware
 ## ADOBE
