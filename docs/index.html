@@ -19,6 +19,19 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  
+     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+       <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+  <script>
+      $(document).ready( function () {
+        window.alert('tst');
+        $('#tbData').DataTable(
+          {
+            paging: false
+          }
+        );
+        } );</script>
 </head>
 <body>
 <header id="title-block-header">
@@ -212,17 +225,5 @@
 <h3 id="links-24">Links</h3>
 <p><a href="https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours">https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours</a></p>
 <h3 id="description-22">Description</h3>
-<pre><code>&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;
-$(document).ready( function () {
-  window.alert(&#39;tst&#39;);
-  $(&#39;#tbData&#39;).DataTable(
-    {
-      paging: false
-    }
-  );
-  } );&lt;/script&gt;
-</code></pre>
 </body>
 </html>
