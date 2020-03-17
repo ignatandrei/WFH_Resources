@@ -48,6 +48,10 @@ async function main() {
         //console.log(f);
         var fileContents= fs.readFileSync(f.fullname, 'utf8');
         content+=fileContents;
+        content +="\r\n";
+        content +="\r\n";
+        
+        content +=`<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>`;
 
         const tokens = marked.lexer(fileContents);
         for(let token of tokens){
@@ -58,7 +62,7 @@ async function main() {
           
           contentTable +="\r\n";
           
-          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve</a>) </td><td><a href="${getId(token.text)}"> ${token.text}</a></td> </tr>`;
+          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="${getId(token.text)}"> ${token.text}</a></td> </tr>`;
               
         }
         
