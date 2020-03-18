@@ -16,8 +16,13 @@ console.log(`start print`);
 function getId(v){
   return v.replace(/\s+/g, '-').toLowerCase();
 }
-function lineToBR(str){
-  return str.replace(/(?:\r\n|\r|\n)/g, '<br>');
+function lineToBRAndLinks(str){
+  var content = "";
+  var lines= str.replace(/(?:\r\n|\r|\n)/g, '<br/>').split("<br/>");
+  for(let line of lines){
+    content+= line.link(line).replace(/<a/g,"<a target='_blank'") +"<br/>";
+  }
+  return content;
  }
 async function main() {
   const marked = require('marked');
@@ -77,7 +82,7 @@ async function main() {
             if('depth' in tLinks){
               if(tLinks.depth ==3){
                 if(tLinks.text=="Links")
-                links=lineToBR(tokens[findLinks+1].text);
+                links=lineToBRAndLinks(tokens[findLinks+1].text);
                 continue;
               }
             }
