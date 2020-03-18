@@ -30,8 +30,10 @@
 <tr><td>28</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="#www.freecodecamp.org"> www.freecodecamp.org</a></td> </tr>
 <tr><td>29</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="#description"> Description</a></td> </tr>
 <tr><td>30</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="#udemy"> Udemy</a></td> </tr>
-<tr><td>31</td><td> <a href="#learn">Learn</a> </td><td><a href="#museums">Museums</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve this</a>) </td><td><a href="#multiple"> Multiple</a></td> </tr>
-<tr><td>32</td><td> <a href="#mapsanddata">MapsAndData</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>) </td><td><a href="#harta"> Harta</a></td> </tr></tbody></table>
+<tr><td>31</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#world-digital-library"> World digital library</a></td> </tr>
+<tr><td>32</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#description"> Description</a></td> </tr>
+<tr><td>33</td><td> <a href="#learn">Learn</a> </td><td><a href="#museums">Museums</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve this</a>) </td><td><a href="#multiple"> Multiple</a></td> </tr>
+<tr><td>34</td><td> <a href="#mapsanddata">MapsAndData</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>) </td><td><a href="#harta"> Harta</a></td> </tr></tbody></table>
 
 # FreeSoftware
 # Adobe
@@ -419,6 +421,20 @@ Udemy
 
 
 <a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>
+# DigitalLibrary
+## World digital library
+
+### Links
+https://www.wdl.org/en/
+
+## Description
+World digital library
+
+### Tags
+Unescu
+
+
+<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>
 # Museums
 ## Multiple
 
