@@ -88,3 +88,12 @@ Scoala pe net
 ### Tags
 scoala;copii;
 
+## consultatii pro bono
+### Links
+https://andreicismaru.ro/o-mana-de-ajutor/
+
+### Description
+Consultanta, audit, strategie
+
+### Tags
+
