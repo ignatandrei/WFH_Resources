@@ -108,3 +108,13 @@ https://www.facebook.com/myatlasapp/photos/a.1577589982500915/2510672452525992/?
 
 ### Description
 Telefoane 
+
+## Conferinte inregistrate
+
+### Links
+https://techweek.ro/2019/colectia-de-sesiuni-business-summits-2018-2019/
+
+### Description
+techweek
+
+### Tags
