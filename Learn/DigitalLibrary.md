@@ -7,4 +7,16 @@ https://www.wdl.org/en/
 World digital library
 
 ### Tags
-Unescu
+Unesco
+
+## ITShare
+
+### Links
+https://itshare.ro/download
+
+## Description
+IT related books to read and learn 
+
+### Tags
+
+
