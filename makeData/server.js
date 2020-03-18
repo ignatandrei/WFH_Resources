@@ -3,12 +3,12 @@ console.log(`start print`);
 
 //var markdownpdf = require("markdown-pdf")
 (async () => {
-  try
+  //try
    {
     await main();
     console.log("done");
   } 
-  catch (e) 
+  //catch (e) 
   {
     console.log("Error" + JSON.stringify(e));
   }
@@ -26,7 +26,7 @@ async function main() {
   let iContent=1;
   let contentTable='<table id="tbData"  class="display" style="width:90%">';
   contentTable +=" <thead>";
-  contentTable+= '<tr> <th>Nr</th> <th> Category  </th><th>SubCategory  </th><th>Name</th> </tr>';
+  contentTable+= '<tr> <th>Nr</th> <th> Category  </th><th>SubCategory  </th><th>Name</th><th>Links</th> </tr>';
   contentTable +="/<thead>";
   contentTable +=" <tbody>";
   contentTable+= "\r\n";
@@ -42,6 +42,8 @@ async function main() {
     content += `# ${folder}`;
     for(let f of list){
         const nameNoExtension=path.parse(f.name).name;
+        // if(nameNoExtension.indexOf("omania")<0)
+        //   continue;
         content +="\r\n";
         content +=`# ${nameNoExtension}`;
         content +="\r\n";
@@ -54,19 +56,42 @@ async function main() {
         content +=`<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>`;
 
         const tokens = marked.lexer(fileContents);
-        for(let token of tokens){
+        var links = '';
+        for(let iToken=0;iToken<tokens.length;iToken++){
+          let token=tokens[iToken];
           if(token.type != 'heading')
             continue;
+          
+          
           if(token.depth !=2)
             continue;
           
+          var findLinks=iToken;
+          while(findLinks<tokens.length-2){
+            findLinks++;
+
+            const tLinks = tokens[findLinks];
+            if('depth' in tLinks){
+              if(tLinks.depth ==3){
+                if(tLinks.text=="Links")
+                links=tokens[findLinks+1].text;
+                continue;
+              }
+            }
+            
+          }
+          console.log("LINKS"+ links);
           contentTable +="\r\n";
           
-          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td> </tr>`;
+          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td><td>${links}</td> </tr>`;
               
         }
         
-
+        if(links.length == 0){
+          var str=`no links for ${nameNoExtension}  `;
+          console.log(str);
+          //throw  str;
+        }
         
     }
     // console.log(contentTable);
