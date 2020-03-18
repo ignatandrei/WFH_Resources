@@ -77,3 +77,14 @@ Inițiative civice/private gratuite din România care ajută pe durata Coronavir
 ### Tags
 google docs;
 
+## Scoala pe net
+
+### Links
+https://scoalapenet.ro/
+
+### Description
+Scoala pe net
+
+### Tags
+scoala;copii;
+
