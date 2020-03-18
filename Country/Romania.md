@@ -91,9 +91,9 @@ scoala;copii;
 ## consultatii pro bono
 ### Links
 https://andreicismaru.ro/o-mana-de-ajutor/
-
+https://www.facebook.com/AsociatiaRomanaDePsihoterapieIntegrativa/photos/a.1480599812161667/2610736969147940/?type=3&theater
 ### Description
-Consultanta, audit, strategie
+Consultanta, audit, strategie, psihoterapie
 
 ### Tags
 
