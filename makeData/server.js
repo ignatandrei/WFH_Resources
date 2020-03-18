@@ -3,12 +3,12 @@ console.log(`start print`);
 
 //var markdownpdf = require("markdown-pdf")
 (async () => {
-  //try
+  try
    {
     await main();
     console.log("done");
   } 
-  //catch (e) 
+  catch (e) 
   {
     console.log("Error" + JSON.stringify(e));
   }
@@ -20,7 +20,7 @@ function lineToBRAndLinks(str){
   var content = "";
   var lines= str.replace(/(?:\r\n|\r|\n)/g, '<br/>').split("<br/>");
   for(let line of lines){
-    content+= line.link(line).replace(/<a/g,"<a target='_blank'") +"<br/>";
+    content += line.link(line).replace(/<a/g,"<a target='_blank'") +"<br/>";
   }
   return content;
  }
@@ -50,8 +50,8 @@ async function main() {
     content += `# ${folder}`;
     for(let f of list){
         const nameNoExtension=path.parse(f.name).name;
-        // if(nameNoExtension.indexOf("omania")<0)
-        //   continue;
+        //  if(nameNoExtension.indexOf("omania")<0)
+        //    continue;
         content +="\r\n";
         content +=`# ${nameNoExtension}`;
         content +="\r\n";
@@ -64,8 +64,9 @@ async function main() {
         content +=`<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>`;
 
         const tokens = marked.lexer(fileContents);
-        var links = '';
+        
         for(let iToken=0;iToken<tokens.length;iToken++){
+          var links = '';
           let token=tokens[iToken];
           if(token.type != 'heading')
             continue;
@@ -81,14 +82,15 @@ async function main() {
             const tLinks = tokens[findLinks];
             if('depth' in tLinks){
               if(tLinks.depth ==3){
-                if(tLinks.text=="Links")
-                links=lineToBRAndLinks(tokens[findLinks+1].text);
-                continue;
+                if(tLinks.text.indexOf("inks")>0){
+                  links=lineToBRAndLinks(tokens[findLinks+1].text);
+                  break;
+                }
               }
             }
             
           }
-          console.log("LINKS"+ links);
+          //console.log("LINKS"+ links);
           contentTable +="\r\n";
           
           contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td><td>${links}</td> </tr>`;

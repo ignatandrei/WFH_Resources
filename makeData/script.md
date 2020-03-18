@@ -10,6 +10,7 @@
       $('#tbData').DataTable(
         {
           paging: false,
+          responsive: true,
           order: [
               [1, 'asc'],
               [2, 'asc'],
