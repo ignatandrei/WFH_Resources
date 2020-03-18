@@ -17,11 +17,12 @@ function getId(v){
   return v.replace(/\s+/g, '-').toLowerCase();
 }
 function lineToBRAndLinks(str){
-  var content = "";
+  var content = "<ol>";
   var lines= str.replace(/(?:\r\n|\r|\n)/g, '<br/>').split("<br/>");
   for(let line of lines){
-    content += line.link(line).replace(/<a/g,"<a target='_blank'") +"<br/>";
+    content +="<li>" +line.link(line).replace(/<a/g,"<a target='_blank'") +"</li><br/>";
   }
+  content+="</ol>";
   return content;
  }
 async function main() {
