@@ -94,7 +94,8 @@ async function main() {
           //console.log("LINKS"+ links);
           contentTable +="\r\n";
           
-          contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td><td>${links}</td> </tr>`;
+          //contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td><td>${links}</td> </tr>`;
+          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} </td><td>${nameNoExtension} (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td> ${token.text}</td><td>${links}</td> </tr>`;
               
         }
         
@@ -114,8 +115,8 @@ async function main() {
 
   
    const directoryPathWrite = path.join(__dirname + "/..", "obj","all.md");
-   content = contentTable +"\r\n"+ content + "\r\n"+ readMe ; 
-
+   //content = contentTable +"\r\n"+ content + "\r\n"+ readMe ; 
+   content = contentTable +"\r\n"+  readMe ; 
     // var script=`
     // <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     // <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
