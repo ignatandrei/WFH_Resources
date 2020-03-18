@@ -66,3 +66,14 @@ http://www.creatissimo.ro/
 ### Description
 
 ### Tags
+
+## Inițiative civice/private gratuite din România care ajută pe durata Coronavirus
+
+### Links
+https://docs.google.com/document/d/1pX4V6hTx9f4Oe8aNofhx_ePeDAE8PNEYRjox4NhnW6w/edit?fbclid=IwAR2ECHo23Hgh0WEGY-Jhsy05yM2oUZ10FrQSbOThslveaEoiru-1qBkDuPo
+
+### Description
+Inițiative civice/private gratuite din România care ajută pe durata Coronavirus
+### Tags
+google docs;
+
