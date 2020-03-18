@@ -4,3 +4,4 @@ Work from Home Resources
 Please see https://ignatandrei.github.io/WFH_Resources/
 
 ( for adding resources, please see https://github.com/ignatandrei/WFH_Resources)
+![CI](https://github.com/ignatandrei/WFH_Resources/workflows/CI/badge.svg)
