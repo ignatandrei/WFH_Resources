@@ -341,8 +341,10 @@ scoala;copii;
 ### Links
 https://andreicismaru.ro/o-mana-de-ajutor/
 https://www.facebook.com/AsociatiaRomanaDePsihoterapieIntegrativa/photos/a.1480599812161667/2610736969147940/?type=3&theater
+http://xn--mlin-0sa.ro/asistenta-covid-19
+
 ### Description
-Consultanta, audit, strategie, psihoterapie
+Consultanta, audit, strategie, psihoterapie, configurare it,
 
 ### Tags
 
