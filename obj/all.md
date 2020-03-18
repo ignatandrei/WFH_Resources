@@ -31,10 +31,12 @@
 <tr><td>29</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="#www.freecodecamp.org"> www.freecodecamp.org</a></td><td>https://docs.google.com/spreadsheets/d/1OqdaJVNcqZSK0RaNvoty8S2HtqThTY8vTEybJsBmmIg/edit#gid=485968471</td> </tr>
 <tr><td>30</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="#description"> Description</a></td><td>https://docs.google.com/spreadsheets/d/1OqdaJVNcqZSK0RaNvoty8S2HtqThTY8vTEybJsBmmIg/edit#gid=485968471</td> </tr>
 <tr><td>31</td><td> <a href="#learn">Learn</a> </td><td><a href="#courses">Courses</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Courses.md">Improve this</a>) </td><td><a href="#udemy"> Udemy</a></td><td>https://docs.google.com/spreadsheets/d/1OqdaJVNcqZSK0RaNvoty8S2HtqThTY8vTEybJsBmmIg/edit#gid=485968471</td> </tr>
-<tr><td>32</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#world-digital-library"> World digital library</a></td><td>https://www.wdl.org/en/</td> </tr>
-<tr><td>33</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#description"> Description</a></td><td>https://www.wdl.org/en/</td> </tr>
-<tr><td>34</td><td> <a href="#learn">Learn</a> </td><td><a href="#museums">Museums</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve this</a>) </td><td><a href="#multiple"> Multiple</a></td><td>https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours</td> </tr>
-<tr><td>35</td><td> <a href="#mapsanddata">MapsAndData</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>) </td><td><a href="#harta"> Harta</a></td><td></td> </tr></tbody></table>
+<tr><td>32</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#world-digital-library"> World digital library</a></td><td>https://itshare.ro/download</td> </tr>
+<tr><td>33</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#description"> Description</a></td><td>https://itshare.ro/download</td> </tr>
+<tr><td>34</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#itshare"> ITShare</a></td><td>https://itshare.ro/download</td> </tr>
+<tr><td>35</td><td> <a href="#learn">Learn</a> </td><td><a href="#digitallibrary">DigitalLibrary</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>) </td><td><a href="#description"> Description</a></td><td>https://itshare.ro/download</td> </tr>
+<tr><td>36</td><td> <a href="#learn">Learn</a> </td><td><a href="#museums">Museums</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/Museums.md">Improve this</a>) </td><td><a href="#multiple"> Multiple</a></td><td>https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours</td> </tr>
+<tr><td>37</td><td> <a href="#mapsanddata">MapsAndData</a> </td><td><a href="#romania">Romania</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>) </td><td><a href="#harta"> Harta</a></td><td></td> </tr></tbody></table>
 
 # FreeSoftware
 # Adobe
@@ -440,7 +442,19 @@ https://www.wdl.org/en/
 World digital library
 
 ### Tags
-Unescu
+Unesco
+
+## ITShare
+
+### Links
+https://itshare.ro/download
+
+## Description
+IT related books to read and learn 
+
+### Tags
+
+
 
 
 <a href="https://github.com/ignatandrei/WFH_Resources/edit/master/Learn/DigitalLibrary.md">Improve this</a>
