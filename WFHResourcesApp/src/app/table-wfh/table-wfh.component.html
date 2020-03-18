@@ -1,0 +1,47 @@
+<form>
+  <div class="form-group form-inline">
+    Full text search:
+    <input class="form-control ml-2" type="text" [formControl]="filter" />
+  </div>
+</form>
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tags</th>
+      <th scope="col">Category</th>
+      <th scope="col">SubCategory</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Links</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of categories$ | async">
+      <th scope="row">{{ category.id }}</th>
+      <td>
+        {{ category.tags }}
+      </td>
+      <td>
+        <ngb-highlight
+          [result]="category.category"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td>
+        <ngb-highlight
+          [result]="category.subCategory"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td>
+        <ngb-highlight
+          [result]="category.name"
+          [term]="filter.value"
+        ></ngb-highlight>
+      </td>
+      <td>{{ category.description }}</td>
+      <td>{{ category.link }}</td>
+    </tr>
+  </tbody>
+</table>
