@@ -16,6 +16,9 @@ console.log(`start print`);
 function getId(v){
   return v.replace(/\s+/g, '-').toLowerCase();
 }
+function lineToBR(str){
+  return str.replace(/(?:\r\n|\r|\n)/g, '<br>');
+ }
 async function main() {
   const marked = require('marked');
   const path = require("path");
@@ -74,7 +77,7 @@ async function main() {
             if('depth' in tLinks){
               if(tLinks.depth ==3){
                 if(tLinks.text=="Links")
-                links=tokens[findLinks+1].text;
+                links=lineToBR(tokens[findLinks+1].text);
                 continue;
               }
             }
