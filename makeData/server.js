@@ -9,7 +9,8 @@ class data {
     this.name='';
     this.links=[];
     this.dateCreated=new Date();
-
+    this.description='';
+    
   }
   
   get id() {
@@ -191,7 +192,12 @@ async function main() {
    var js=(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
 
    fs.writeFileSync(directoryJS,js);
-   
+  //angular
+  const directoryAngular = path.join(__dirname + "/..", "WFHResourcesApp","src","app","table-wfh","data.ts");
+  fs.writeFileSync(directoryAngular,
+    `import { Category } from './Category';
+  export const allData: Category[] =`+js);
+    
    
 }
 //   var folders = ["FreeSoftware", "Country"];

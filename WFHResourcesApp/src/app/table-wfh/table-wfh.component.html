@@ -18,7 +18,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let category of categories$ | async">
-      <th scope="row">{{ category.id }}</th>
+      <th scope="row">{{ category.name }}</th>
       <td>
         {{ category.tags }}
       </td>
@@ -41,7 +41,7 @@
         ></ngb-highlight>
       </td>
       <td>{{ category.description }}</td>
-      <td>{{ category.link }}</td>
+      <td>{{ category.links | json }}</td>
     </tr>
   </tbody>
 </table>

@@ -1,9 +1,10 @@
 export interface Category {
-  id: number;
+  id: string;
   tags: string;
   category: string;
   subCategory: string;
   name: string;
   description: string;
-  link: string;
+  links: string[];
+  dateCreated: string;
 }

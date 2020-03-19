@@ -1,5 +1,4 @@
-import { Category } from './Category';
-  export const allData: Category[] =[
+[
 	{
 		tags: "",
 		category: "Country",
