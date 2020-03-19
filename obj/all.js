@@ -7,7 +7,8 @@
 		links: [
 			"https://blog.zoom.us/wordpress/2020/02/26/zoom-commitment-user-support-business-continuity-during-coronavirus-outbreak/"
 		],
-		dateCreated: "2020-03-19T21:00:52.213Z"
+		dateCreated: "2020-03-19T21:11:43.578Z",
+		id: "ZOOM_CHINA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -17,7 +18,8 @@
 		links: [
 			"https://twitter.com/Pornhub/status/1239724008322539522"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.592Z",
+		id: "PORNHUB_FRANCE_COUNTRY"
 	},
 	{
 		tags: "",
@@ -27,7 +29,8 @@
 		links: [
 			"https://twitter.com/Pornhub/status/1238130264477491200"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.592Z",
+		id: "PORNHUB_ITALY_COUNTRY"
 	},
 	{
 		tags: "",
@@ -37,7 +40,8 @@
 		links: [
 			"https://tikaboo.ro/jocuri-pentru-copii-in-casa/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "COPII_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -49,7 +53,8 @@
 			"https://www.mnar.arts.ro/descopera/galerii-permanente",
 			"http://www.cimec.ro/muzee/muzee-cu-tur-virtual.html"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "MUZEE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -59,7 +64,8 @@
 		links: [
 			"https://spitalul-colentina.medicentrum.ro/solicita-evaluare/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "DIAGNOSTICARE ONLINE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -70,7 +76,8 @@
 			"https://laurentiumihai.ro/carti-audio-online-gratuite/",
 			"http://1cartepesaptamana.ro/carti-audio-audiobook-uri-gratuite/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "CARTI AUDIO GRATUITE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -80,7 +87,8 @@
 		links: [
 			"https://backtoromania.com/2020/03/11/hipermarketuri-care-livreaza-acasa/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "LIVRARE MINCARE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -90,7 +98,8 @@
 		links: [
 			"https://geogra.ro/joc/ro/index.php"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "GEOGRAFIE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -100,7 +109,8 @@
 		links: [
 			"http://www.creatissimo.ro/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "IDEI CREATIVE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -110,7 +120,8 @@
 		links: [
 			"https://docs.google.com/document/d/1pX4V6hTx9f4Oe8aNofhx_ePeDAE8PNEYRjox4NhnW6w/edit?fbclid=IwAR2ECHo23Hgh0WEGY-Jhsy05yM2oUZ10FrQSbOThslveaEoiru-1qBkDuPo"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "INIȚIATIVE CIVICE/PRIVATE GRATUITE DIN ROMÂNIA CARE AJUTĂ PE DURATA CORONAVIRUS_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -120,7 +131,8 @@
 		links: [
 			"https://scoalapenet.ro/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "SCOALA PE NET_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -132,7 +144,8 @@
 			"https://www.facebook.com/AsociatiaRomanaDePsihoterapieIntegrativa/photos/a.1480599812161667/2610736969147940/?type=3&theater",
 			"http://xn--mlin-0sa.ro/asistenta-covid-19"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "CONSULTATII PRO BONO_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -144,7 +157,8 @@
 			"https://www.facebook.com/Fundatia.Sensiblu/photos/a.469191036467190/2996699150383020/?type=3&theater",
 			"https://www.facebook.com/myatlasapp/photos/a.1577589982500915/2510672452525992/?type=3&theater"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "SUPORT TELEFONIC PSIHOEMOTIONAL_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -154,7 +168,8 @@
 		links: [
 			"https://techweek.ro/2019/colectia-de-sesiuni-business-summits-2018-2019/"
 		],
-		dateCreated: "2020-03-19T21:00:52.229Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "CONFERINTE INREGISTRATE_ROMANIA_COUNTRY"
 	},
 	{
 		tags: "",
@@ -164,7 +179,8 @@
 		links: [
 			"https://twitter.com/Pornhub/status/1239724235133718528"
 		],
-		dateCreated: "2020-03-19T21:00:52.230Z"
+		dateCreated: "2020-03-19T21:11:43.593Z",
+		id: "PORNHUB_SPAIN_COUNTRY"
 	},
 	{
 		tags: "",
@@ -174,7 +190,8 @@
 		links: [
 			"http://www.openculture.com/freemoviesonline"
 		],
-		dateCreated: "2020-03-19T21:00:52.230Z"
+		dateCreated: "2020-03-19T21:11:43.594Z",
+		id: "OPEN CULTURE_MOVIES_ENTERTAINMENT"
 	},
 	{
 		tags: "",
@@ -184,7 +201,8 @@
 		links: [
 			"https://theblog.adobe.com/adobe-enables-distance-learning-globally-schools-impacted-covid-19/"
 		],
-		dateCreated: "2020-03-19T21:00:52.232Z"
+		dateCreated: "2020-03-19T21:11:43.595Z",
+		id: "ADOBE CONNECT CONFERENCING_ADOBE_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -194,7 +212,8 @@
 		links: [
 			"https://www.avid.com/covid-19"
 		],
-		dateCreated: "2020-03-19T21:00:52.232Z"
+		dateCreated: "2020-03-19T21:11:43.595Z",
+		id: "MEDIA COMPOSER AND OTHERS_AVID_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -204,7 +223,8 @@
 		links: [
 			"https://help.webex.com/en-us/n80v1rcb/Cisco-Webex-Available-Free-in-These-Countries-COVID-19-Response"
 		],
-		dateCreated: "2020-03-19T21:00:52.232Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "CISCO WEBEX FREE_CISCO_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -214,7 +234,8 @@
 		links: [
 			"https://blog.cloudflare.com/cloudflare-for-teams-free-for-small-businesses-during-coronavirus-emergency/"
 		],
-		dateCreated: "2020-03-19T21:00:52.233Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "CLOUDFLARE_CLOUDFLARE_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -224,7 +245,8 @@
 		links: [
 			"https://blog.discordapp.com/helping-out-where-we-can-3a5fb7bac77a?gi=c308eedc43a1"
 		],
-		dateCreated: "2020-03-19T21:00:52.233Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "GO LIVE_DISCORD_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -234,7 +256,8 @@
 		links: [
 			"https://cloud.google.com/blog/products/g-suite/helping-businesses-and-schools-stay-connected-in-response-to-coronavirus"
 		],
-		dateCreated: "2020-03-19T21:00:52.233Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "G SUITE_GOOGLE_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -244,7 +267,8 @@
 		links: [
 			"https://blog.gotomeeting.com/coronavirus-disruptions-and-support/"
 		],
-		dateCreated: "2020-03-19T21:00:52.233Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "GOTOMEETING_LOGMEIN_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -254,7 +278,8 @@
 		links: [
 			"https://www.loom.com/blog/coronavirus-response"
 		],
-		dateCreated: "2020-03-19T21:00:52.234Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "LOOM_LOOM_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -264,7 +289,8 @@
 		links: [
 			"https://www.microsoft.com/en-us/microsoft-365/blog/2020/03/05/our-commitment-to-customers-during-covid-19/"
 		],
-		dateCreated: "2020-03-19T21:00:52.234Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "TEAMS_MICROSOFT_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -274,7 +300,8 @@
 		links: [
 			"https://swazm.com/ro/launchpad"
 		],
-		dateCreated: "2020-03-19T21:00:52.234Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "SWAZM_SWAZM_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -284,7 +311,8 @@
 		links: [
 			"https://www.toonboom.com/covid19"
 		],
-		dateCreated: "2020-03-19T21:00:52.234Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "HARMONY & STORYBOARD PRO_TOONBOOM_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -294,7 +322,8 @@
 		links: [
 			"https://www.zoho.com/remotely/"
 		],
-		dateCreated: "2020-03-19T21:00:52.235Z"
+		dateCreated: "2020-03-19T21:11:43.596Z",
+		id: "ZOHO REMOTELY_ZOHO_FREESOFTWARE"
 	},
 	{
 		tags: "",
@@ -304,7 +333,8 @@
 		links: [
 			"https://www.nasa.gov/kidsclub/index.html"
 		],
-		dateCreated: "2020-03-19T21:00:52.235Z"
+		dateCreated: "2020-03-19T21:11:43.598Z",
+		id: "NASA_ENGLISH_KIDS"
 	},
 	{
 		tags: "",
@@ -314,7 +344,8 @@
 		links: [
 			"https://ecommercegrowthsummit.com/"
 		],
-		dateCreated: "2020-03-19T21:00:52.236Z"
+		dateCreated: "2020-03-19T21:11:43.599Z",
+		id: "ECOMMERCE_CONFERENCES_LEARN"
 	},
 	{
 		tags: "",
@@ -324,7 +355,8 @@
 		links: [
 			"https://www.exoworld.live/"
 		],
-		dateCreated: "2020-03-19T21:00:52.236Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "GENERAL_CONFERENCES_LEARN"
 	},
 	{
 		tags: "",
@@ -334,7 +366,8 @@
 		links: [
 			"https://www.freecodecamp.org/news/here-are-380-ivy-league-courses-you-can-take-online-right-now-for-free-9b3ffcbd7b8c/"
 		],
-		dateCreated: "2020-03-19T21:00:52.236Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "WWW.FREECODECAMP.ORG_COURSES_LEARN"
 	},
 	{
 		tags: "",
@@ -344,7 +377,8 @@
 		links: [
 			"https://docs.google.com/spreadsheets/d/1OqdaJVNcqZSK0RaNvoty8S2HtqThTY8vTEybJsBmmIg/edit#gid=485968471"
 		],
-		dateCreated: "2020-03-19T21:00:52.236Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "UDEMY_COURSES_LEARN"
 	},
 	{
 		tags: "",
@@ -354,7 +388,8 @@
 		links: [
 			"https://365datascience.com/courses/"
 		],
-		dateCreated: "2020-03-19T21:00:52.236Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "365 DATA SCIENCE_COURSES_LEARN"
 	},
 	{
 		tags: "",
@@ -365,7 +400,8 @@
 			"https://www.coursera.org/courses?query=free",
 			"https://www.coursera.org/collections/popular-free-courses"
 		],
-		dateCreated: "2020-03-19T21:00:52.236Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "COURSERA_COURSES_LEARN"
 	},
 	{
 		tags: "",
@@ -375,7 +411,8 @@
 		links: [
 			"https://www.wdl.org/en/"
 		],
-		dateCreated: "2020-03-19T21:00:52.237Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "WORLD DIGITAL LIBRARY_DIGITALLIBRARY_LEARN"
 	},
 	{
 		tags: "",
@@ -385,7 +422,8 @@
 		links: [
 			"https://itshare.ro/download"
 		],
-		dateCreated: "2020-03-19T21:00:52.237Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "ITSHARE_DIGITALLIBRARY_LEARN"
 	},
 	{
 		tags: "",
@@ -395,7 +433,8 @@
 		links: [
 			"https://artsandculture.google.com/"
 		],
-		dateCreated: "2020-03-19T21:00:52.237Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "ARTS AND CULTURE_DIGITALLIBRARY_LEARN"
 	},
 	{
 		tags: "",
@@ -405,7 +444,8 @@
 		links: [
 			"https://www.cambridge.org/core/what-we-publish/textbooks"
 		],
-		dateCreated: "2020-03-19T21:00:52.237Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "CAMBRIDGE_DIGITALLIBRARY_LEARN"
 	},
 	{
 		tags: "",
@@ -415,7 +455,8 @@
 		links: [
 			"https://www.travelandleisure.com/attractions/museums-galleries/museums-with-virtual-tours"
 		],
-		dateCreated: "2020-03-19T21:00:52.237Z"
+		dateCreated: "2020-03-19T21:11:43.600Z",
+		id: "MULTIPLE_MUSEUMS_LEARN"
 	},
 	{
 		tags: "",
@@ -425,6 +466,7 @@
 		links: [
 			""
 		],
-		dateCreated: "2020-03-19T21:00:52.237Z"
+		dateCreated: "2020-03-19T21:11:43.601Z",
+		id: "HARTA_ROMANIA_MAPSANDDATA"
 	}
 ]
