@@ -44,8 +44,9 @@
 <tr><td>42</td><td> MapsAndData </td><td>Romania (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/MapsAndData/Romania.md">Improve this</a>) </td><td> Harta</td><td></td> </tr></tbody></table>
 # WFH_Resources
 
-Work from Home Resources
-Please see https://ignatandrei.github.io/WFH_Resources/
+Work from Home Resources made by Andrei Ignat, edited by Bogdan Bobe
 
-( for adding resources, please see https://github.com/ignatandrei/WFH_Resources)
-![CI](https://github.com/ignatandrei/WFH_Resources/workflows/CI/badge.svg)
+Check out the edited version at https://shdow.github.io/WFH_Resources/
+
+Please see https://ignatandrei.github.io/WFH_Resources/ for full version
+
