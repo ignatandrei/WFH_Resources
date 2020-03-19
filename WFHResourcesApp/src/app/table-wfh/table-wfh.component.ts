@@ -3,17 +3,8 @@ import { FormControl } from "@angular/forms";
 import { DecimalPipe } from "@angular/common";
 import { map, startWith } from "rxjs/operators";
 import { Observable } from "rxjs";
-
-interface Category {
-  id: number;
-  tags: string;
-  category: string;
-  subCategory: string;
-  name: string;
-  description: string;
-  link: string;
-}
-
+import { Category } from './Category';
+import { allData } from './data';
 @Component({
   selector: "app-table-wfh",
   templateUrl: "./table-wfh.component.html",
@@ -21,44 +12,10 @@ interface Category {
   providers: [DecimalPipe]
 })
 export class TableWFHComponent implements OnInit {
-  category: Category[] = [
-    {
-      id: 1,
-      tags: "Canada",
-      category: "Free Software",
-      subCategory: "Adobe",
-      name: "Adobe Connect conferencing",
-      description: "a",
-      link: "https://google.ro"
-    },
-    {
-      id: 2,
-      tags: "Canada",
-      category: "Free Software",
-      subCategory: "9976140",
-      name: "Canada",
-      description: "a",
-      link: "https://google.ro"
-    },
-    {
-      id: 3,
-      tags: "Canada",
-      category: "Free Software",
-      subCategory: "9976140",
-      name: "Canada",
-      description: "a",
-      link: "https://google.ro"
-    },
-    {
-      id: 4,
-      tags: "Canada",
-      category: "Free Software",
-      subCategory: "9976140",
-      name: "Canada",
-      description: "a",
-      link: "https://google.ro"
-    }
-  ];
+  category: Category[];
+  categories$: Observable<Category[]>;
+  filter = new FormControl("");
+
   search(text: string, pipe: PipeTransform): Category[] {
     return this.category.filter(category => {
       const term = text.toLowerCase();
@@ -70,9 +27,7 @@ export class TableWFHComponent implements OnInit {
     });
   }
 
-  categories$: Observable<Category[]>;
-  filter = new FormControl("");
-
+  
   constructor(pipe: DecimalPipe) {
     this.categories$ = this.filter.valueChanges.pipe(
       startWith(""),
@@ -80,5 +35,7 @@ export class TableWFHComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+      this.category = allData;
+  }
 }
