@@ -1,7 +1,7 @@
 "use strict";
 console.log(`start print`);
 
-//todo: make json
+//make json
 (async () => {
   try
    {
