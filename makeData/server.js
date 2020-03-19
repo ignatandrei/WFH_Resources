@@ -46,6 +46,7 @@ class data {
   } 
   catch (e) 
   {
+    console.log(e);
     console.log("Error" + JSON.stringify(e));
   }
 })();
@@ -175,8 +176,20 @@ async function main() {
    
    //content+=script;
    fs.writeFileSync(directoryPathWrite,content);
-   var js=(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
+   
    const directoryJS = path.join(__dirname + "/..", "obj","all.js");
+   
+   var rawData = fs.readFileSync(directoryJS);
+   let existing = eval('(' + rawData + ')');;
+   for(let f of existing){
+     console.log('??' + f.id);
+     var found = arrData.find(it=>it.id == f.id);
+     if(found != null)
+        found.dateCreated= f.dateCreated;
+   }
+
+   var js=(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
+
    fs.writeFileSync(directoryJS,js);
    
    
