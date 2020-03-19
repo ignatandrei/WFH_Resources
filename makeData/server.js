@@ -1,5 +1,22 @@
 "use strict";
 console.log(`start print`);
+class data {
+  constructor(){
+    this.id=0;
+    this.tags='';
+    this.category='';
+    this.subCategory='';
+    this.name='';
+    this.links=[];
+  }
+  // id: number;
+  // tags: string;
+  // category: string;
+  // subCategory: string;
+  // name: string;
+  // description: string;
+  // link: string;
+}
 
 //make json
 (async () => {
@@ -40,6 +57,7 @@ async function main() {
   contentTable +=" <tbody>";
   contentTable+= "\r\n";
   let content ='';
+  var arrData=[];
   //const declarations = fs.readFileSync(path.join(__dirname + "/..", "makeData","headerIncludes.md"), 'utf8');
   //const declarations ='';
   const readMe = fs.readFileSync(path.join(__dirname + "/..", "README.md"), 'utf8');
@@ -84,7 +102,7 @@ async function main() {
             if('depth' in tLinks){
               if(tLinks.depth ==3){
                 if(tLinks.text.indexOf("inks")>0){
-                  links=lineToBRAndLinks(tokens[findLinks+1].text);
+                  links=tokens[findLinks+1].text;
                   break;
                 }
               }
@@ -93,9 +111,15 @@ async function main() {
           }
           //console.log("LINKS"+ links);
           contentTable +="\r\n";
-          
-          //contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td><td>${links}</td> </tr>`;
-          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} </td><td>${nameNoExtension} (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td> ${token.text}</td><td>${links}</td> </tr>`;
+          var newData= new data();
+          newData.id=iContent;
+          newData.category=folder;
+          newData.subCategory=nameNoExtension;
+          newData.name=token.text;
+          newData.links=links.split(/(?:\r\n|\r|\n)/g);
+          arrData.push(newData);
+          //contentTable +=`<tr><td>${iContent++}</td><td> <a href="#${getId(folder)}">${folder}</a> </td><td><a href="#${getId(nameNoExtension)}">${nameNoExtension}</a> (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td><a href="#${getId(token.text)}"> ${token.text}</a></td><td>${lineToBRAndLinks(links)}</td> </tr>`;
+          contentTable +=`<tr><td>${iContent++}</td><td> ${folder} </td><td>${nameNoExtension} (<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>) </td><td> ${token.text}</td><td>${lineToBRAndLinks(links)}</td> </tr>`;
               
         }
         
@@ -132,6 +156,7 @@ async function main() {
    
    //content+=script;
    fs.writeFileSync(directoryPathWrite,content);
+   console.log(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
 }
 //   var folders = ["FreeSoftware", "Country"];
 //   for(let folder in folders) {
