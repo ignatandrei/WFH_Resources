@@ -25,9 +25,12 @@ jobs:
         ./compile.bat
         rm ../obj/all.md
         mv ./all.md ../obj/all.md
+        echo "copy js"
+        mv ./all.js ../obj/all.js
+        echo "copied js"
         ls -l ../obj/all.md
         chmod 777 ../obj/all.md
-        ls -l ../obj/all.md
+        ls -l ../obj/all.*
         echo 'finish generate all'
 
     - name: generate html
