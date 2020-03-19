@@ -295,6 +295,17 @@
 	{
 		tags: "",
 		category: "FreeSoftware",
+		subCategory: "MultipleLinks",
+		name: "Tech Against Covid",
+		links: [
+			"https://techagainstcoronavirus.com/"
+		],
+		dateCreated: "2020-03-19T21:28:52.128Z",
+		id: "TECH AGAINST COVID_MULTIPLELINKS_FREESOFTWARE"
+	},
+	{
+		tags: "",
+		category: "FreeSoftware",
 		subCategory: "Swazm",
 		name: "Swazm",
 		links: [
