@@ -50,10 +50,11 @@ jobs:
       
     - name: modifying final files
       run: |
+        ls -lh ./docs/*
         find . -name \*output.html
         cp ./output/output.html ./docs/output.html        
         rm -rf ./output
-        ls -lh ../docs/*
+        ls -lh ./docs/*
     
     - name: Commit files
       run: |
