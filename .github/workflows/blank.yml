@@ -32,8 +32,11 @@ jobs:
         ls -l ../obj/all.*
         chmod 777 ../obj/all.md
         ls -l ../obj/all.*
+        ls -lh ../docs/*
         rm ../docs/*
-        cp ./WFHAng/* ../docs/ 
+        ls -lh ../docs/*
+        ls -lh WFHAng/*
+        cp WFHAng/* ../docs/ 
         echo 'finish generate all'
 
     - name: generate html
