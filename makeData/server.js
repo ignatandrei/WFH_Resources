@@ -15,6 +15,17 @@ class data {
   get id() {
     return this.name.toUpperCase() + '_' + this.subCategory.toUpperCase() +'_'+ this.category.toUpperCase();
   }
+  //for json stringify id
+  toJSON() {
+    var x= Object.getOwnPropertyNames(this).reduce((a, b) => {
+      a[b] = this[b];
+      return a;
+    }, {});
+
+    x["id"]=this.id;
+    return x;
+
+  }
 
   
   // id: number;
