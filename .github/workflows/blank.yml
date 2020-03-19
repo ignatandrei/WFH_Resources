@@ -33,7 +33,10 @@ jobs:
         chmod 777 ../obj/all.md
         ls -l ../obj/all.*
         ls -lh ../docs/*
-        rm ../docs/*.*
+        rm ../docs/*.js
+        rm ../docs/*.txt
+        rm ../docs/*.css
+        rm ../docs/*.html
         ls -lh ../docs/*
         ls -lh WFHAng/*
         cp WFHAng/* ../docs/ 
