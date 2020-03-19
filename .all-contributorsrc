@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "shdow",
+      "name": "Bogdan Bobe",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/33196341?v=4",
+      "profile": "https://aenyx-designs.com/",
+      "contributions": [
+        "content"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "WFH_Resources",
+  "projectOwner": "ignatandrei",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
