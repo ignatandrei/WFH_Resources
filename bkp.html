@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <meta name="author" content="Andrei Ignat" />
+    <meta name="author" content="Others" />
+    <title>WFH</title>
+    <style>
+      code {
+        white-space: pre-wrap;
+      }
+
+      span.smallcaps {
+        font-variant: small-caps;
+      }
+
+      span.underline {
+        text-decoration: underline;
+      }
+
+      div.column {
+        display: inline-block;
+        vertical-align: top;
+        width: 50%;
+      }
+
+      div.hanging-indent {
+        margin-left: 1.5em;
+        text-indent: -1.5em;
+      }
+
+      ul.task-list {
+        list-style: none;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/rowgroup/1.1.1/js/dataTables.rowGroup.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(document).ready(function() {
+        //window.alert('tst');
+        $("#tbData").DataTable({
+          paging: false,
+          order: [
+            [1, "asc"],
+            [2, "asc"],
+            [3, "asc"]
+          ],
+          rowGroup: {
+            dataSrc: 1
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark text-center">
+      <header id="title-block-header" class="">
+        <h1 class="title text-light">
+          Work From Home Resources
+        </h1>
+        <form class="form-inline my-2 my-lg-0 float-right">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </form>
+      </header>
+    </nav>
+
+    <div class="table-responsive text-center">
+      <table id="tbData" class="table display">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tags</th>
+            <th scope="col">Category</th>
+            <th scope="col">SubCategory</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td id="tags">schools</td>
+            <td><a href="#freesoftware">Free Software</a></td>
+            <td>
+              <a href="#adobe">Adobe</a> <br />
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Adobe.md"
+                ><button type="button" class="btn btn-link">
+                  (Improve this)
+                </button></a
+              >
+            </td>
+            <td>
+              <a href="#adobe-connect-conferencing">
+                Adobe Connect conferencing</a
+              >
+            </td>
+            <td id="description">Adobe Connect conferencing</td>
+            <td>
+              <a
+                target="_blank"
+                href="https://theblog.adobe.com/adobe-enables-distance-learning-globally-schools-impacted-covid-19/"
+                ><button type="button" class="btn btn-outline-dark">
+                  Access
+                </button></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td id="tags-1">
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Avid.md"
+                >Improve this</a
+              >
+            </td>
+            <td><a href="#freesoftware">Free Software</a></td>
+            <td>
+              <a href="#cisco">Cisco</a> <br />
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cisco.md"
+                ><button type="button" class="btn btn-link">
+                  (Improve this)
+                </button></a
+              >
+            </td>
+            <td><a href="#cisco-webex-free"> Cisco WebEx free</a></td>
+            <td id="description-1">
+              Media Composer | Ultimate, Pro Tools, Pro Tools | Ultimate and
+              Sibelius | Ultimate
+            </td>
+            <td>
+              <a
+                target="_blank"
+                href="https://help.webex.com/en-us/n80v1rcb/Cisco-Webex-Available-Free-in-These-Countries-COVID-19-Response"
+                ><button type="button" class="btn btn-outline-dark">
+                  Access
+                </button></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td id="tags-2">
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cisco.md"
+                >Improve this</a
+              >
+            </td>
+            <td><a href="#freesoftware">Free Software</a></td>
+            <td>
+              <a href="#avid">Avid</a> <br />
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Avid.md"
+                ><button type="button" class="btn btn-link">
+                  (Improve this)
+                </button></a
+              >
+            </td>
+            <td>
+              <a href="#media-composer-and-others">
+                Media Composer and others</a
+              >
+            </td>
+            <td id="description-2">
+              Cisco WebEx free: <br />
+              Unlimited usage (no time restrictions), supports up to 100
+              participants, offers toll dial-in (in addition to existing VoIP
+              capabilities).
+            </td>
+            <td>
+              <a target="_blank" href="https://www.avid.com/covid-19"
+                ><button type="button" class="btn btn-outline-dark">
+                  Access
+                </button></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td id="tags-3">
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cloudflare.md"
+                >Improve this</a
+              >
+            </td>
+            <td><a href="#freesoftware">Free Software</a></td>
+            <td>
+              <a href="#cloudflare">Cloudflare</a> <br /><a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Cloudflare.md"
+                ><button type="button" class="btn btn-link">
+                  (Improve this)
+                </button></a
+              >
+            </td>
+            <td><a href="#cloudflare"> Cloudflare</a></td>
+            <td id="description-3">Null</td>
+            <td>
+              <a
+                target="_blank"
+                href="https://blog.cloudflare.com/cloudflare-for-teams-free-for-small-businesses-during-coronavirus-emergency/"
+                ><button type="button" class="btn btn-outline-dark">
+                  Access
+                </button></a
+              >
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td id="tags-4">
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Discord.md"
+                >Improve this</a
+              >
+            </td>
+            <td><a href="#freesoftware">Free Software</a></td>
+            <td>
+              <a href="#discord">Discord</a> <br />
+              <a
+                href="https://github.com/ignatandrei/WFH_Resources/edit/master/FreeSoftware/Discord.md"
+                ><button type="button" class="btn btn-link">
+                  (Improve this)
+                </button></a
+              >
+            </td>
+            <td><a href="#go-live"> Go Live</a></td>
+            <td id="description-4">Go Live to 50 people</td>
+            <td>
+              <a
+                target="_blank"
+                href="https://blog.discordapp.com/helping-out-where-we-can-3a5fb7bac77a?gi=c308eedc43a1"
+                ><button type="button" class="btn btn-outline-dark">
+                  Access
+                </button></a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="text-center text-light bg-dark p-2">
+      <h1 id="wfh_resources">WFH_Resources</h1>
+      <p>
+        Work from Home Resources Please see
+        <a
+          class="text-warning"
+          href="https://ignatandrei.github.io/WFH_Resources/"
+          >https://ignatandrei.github.io/WFH_Resources/</a
+        >
+      </p>
+      <p>
+        ( for adding resources, please see
+        <a
+          class="text-warning"
+          href="https://github.com/ignatandrei/WFH_Resources"
+          >https://github.com/ignatandrei/WFH_Resources</a
+        >)
+        <img
+          src="https://github.com/ignatandrei/WFH_Resources/workflows/CI/badge.svg"
+          alt="CI"
+        />
+      </p>
+    </footer>
+  </body>
+</html>
