@@ -8,7 +8,7 @@ RUN (cd WFHResourcesApp  && npm install )
 COPY . .
 RUN ls -l makeData/*.* 
 RUN node makeData/server.js
-RUN ls -lh WFHResourcesApp/*.* 
-RUN ls -R WFHResourcesApp/ 
+# RUN ls -lh WFHResourcesApp/*.* 
+# RUN ls -R WFHResourcesApp/ 
 RUN (cd WFHResourcesApp  && ng build  --aot=true --buildOptimizer=true --configuration=production --outputPath=../obj/WFHAng)
 CMD tail -f /dev/null
