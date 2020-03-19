@@ -156,7 +156,11 @@ async function main() {
    
    //content+=script;
    fs.writeFileSync(directoryPathWrite,content);
-   console.log(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
+   var js=(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
+   const directoryJS = path.join(__dirname + "/..", "obj","all.js");
+   fs.writeFileSync(directoryJS,content);
+   
+   
 }
 //   var folders = ["FreeSoftware", "Country"];
 //   for(let folder in folders) {
