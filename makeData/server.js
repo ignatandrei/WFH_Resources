@@ -183,7 +183,7 @@ async function main() {
    var rawData = fs.readFileSync(directoryJS);
    let existing = eval('(' + rawData + ')');;
    for(let f of existing){
-     console.log('??' + f.id);
+     //console.log('??' + f.id);
      var found = arrData.find(it=>it.id == f.id);
      if(found != null)
         found.dateCreated= f.dateCreated;

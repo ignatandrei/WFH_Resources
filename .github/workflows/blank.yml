@@ -40,6 +40,7 @@ jobs:
         ls -lh ../docs/*
         ls -lh WFHAng/*
         cp WFHAng/* ../docs/ 
+        ls -lh ../docs/*
         echo 'finish generate all'
 
     - name: generate html
@@ -52,7 +53,7 @@ jobs:
         find . -name \*output.html
         cp ./output/output.html ./docs/output.html        
         rm -rf ./output
-        
+        ls -lh ../docs/*
     
     - name: Commit files
       run: |
