@@ -2,13 +2,21 @@
 console.log(`start print`);
 class data {
   constructor(){
-    this.id=0;
+    
     this.tags='';
     this.category='';
     this.subCategory='';
     this.name='';
     this.links=[];
+    this.dateCreated=new Date();
+
   }
+  
+  get id() {
+    return this.name.toUpperCase() + '_' + this.subCategory.toUpperCase() +'_'+ this.category.toUpperCase();
+  }
+
+  
   // id: number;
   // tags: string;
   // category: string;
@@ -112,7 +120,7 @@ async function main() {
           //console.log("LINKS"+ links);
           contentTable +="\r\n";
           var newData= new data();
-          newData.id=iContent;
+          //newData.id=iContent;
           newData.category=folder;
           newData.subCategory=nameNoExtension;
           newData.name=token.text;
