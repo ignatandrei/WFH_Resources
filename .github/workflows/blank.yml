@@ -28,7 +28,7 @@ jobs:
         echo "copy js"
         mv ./all.js ../obj/all.js
         echo "copied js"
-        ls -l ../obj/all.md
+        ls -l ../obj/all.*
         chmod 777 ../obj/all.md
         ls -l ../obj/all.*
         echo 'finish generate all'

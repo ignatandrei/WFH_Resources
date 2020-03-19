@@ -158,7 +158,7 @@ async function main() {
    fs.writeFileSync(directoryPathWrite,content);
    var js=(JSON.stringify(arrData, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:"));
    const directoryJS = path.join(__dirname + "/..", "obj","all.js");
-   fs.writeFileSync(directoryJS,content);
+   fs.writeFileSync(directoryJS,js);
    
    
 }
