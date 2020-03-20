@@ -43,24 +43,24 @@ jobs:
         ls -lh ../docs/*
         echo 'finish generate all'
 
-    - name: generate html
-      uses: docker://pandoc/latex:2.9
-      with: ## needs a README in your repo root!          
-        args: "-d makeData/headerIncludes.md"
+    # - name: generate html
+    #   uses: docker://pandoc/latex:2.9
+    #   with: ## needs a README in your repo root!          
+    #     args: "-d makeData/headerIncludes.md"
       
-    - name: modifying final files
-      run: |
-        ls -lh ./docs/*
-        find . -name \*output.html
-        cp ./output/output.html ./docs/output.html        
-        rm -rf ./output
-        ls -lh ./docs/*
+    # - name: modifying final files
+    #   run: |
+    #     ls -lh ./docs/*
+    #     find . -name \*output.html
+    #     cp ./output/output.html ./docs/output.html        
+    #     rm -rf ./output
+    #     ls -lh ./docs/*
     
     - name: Commit files
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add
+        git add --all
         git commit -m "generate html" -a --allow-empty
           
     - name: Push changes
