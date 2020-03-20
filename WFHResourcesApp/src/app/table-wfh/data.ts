@@ -334,6 +334,18 @@ import { Category } from './Category';
 	{
 		tags: "",
 		category: "FreeSoftware",
+		subCategory: "MultipleLinks",
+		name: "Ultimate Guide",
+		links: [
+			"https://www.lifewire.com/the-ultimate-guide-to-online-learning-at-home-4800273"
+		],
+		dateCreated: "2020-03-20T13:19:08.286Z",
+		description: "",
+		id: "ULTIMATE GUIDE_MULTIPLELINKS_FREESOFTWARE"
+	},
+	{
+		tags: "",
+		category: "FreeSoftware",
 		subCategory: "Swazm",
 		name: "Swazm",
 		links: [
@@ -523,5 +535,20 @@ import { Category } from './Category';
 		dateCreated: "2020-03-19T21:11:43.601Z",
 		description: "",
 		id: "HARTA_ROMANIA_MAPSANDDATA"
+	},
+	{
+		tags: "",
+		category: "NotParsed",
+		subCategory: "Multiple",
+		name: "Multiple",
+		links: [
+			"https://chatterpack.net/blogs/blog/list-of-online-resources-for-anyone-who-is-isolated-at-home",
+			"http://www.openculture.com/2020/03/use-your-time-in-isolation-to-learn-everything-youve-always-wanted-to.html",
+			"https://www.cnet.com/news/free-entertainment-to-help-you-survive-coronavirus-social-distancing/",
+			"https://www.freecodecamp.org/news/coronavirus-academy/"
+		],
+		dateCreated: "2020-03-20T08:22:25.029Z",
+		description: "",
+		id: "MULTIPLE_MULTIPLE_NOTPARSED"
 	}
 ]
