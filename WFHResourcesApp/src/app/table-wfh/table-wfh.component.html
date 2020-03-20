@@ -45,7 +45,12 @@
         ></ngb-highlight>
       </td>
       <td>{{ category.description }}</td>
-      <td>{{ category.links | json }}</td>
+      <td>
+        <ol>
+            <li *ngFor="let f of category.links">
+             <a href="{{f}}" target="_blank">{{f}}</a> 
+            </li>
+        </ol>
     </tr>
   </tbody>
 </table>
