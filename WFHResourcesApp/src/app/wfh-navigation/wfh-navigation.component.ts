@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { LoadDataService } from '../load-data.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-wfh-navigation',
@@ -11,7 +12,8 @@ import { LoadDataService } from '../load-data.service';
 })
 export class WfhNavigationComponent implements OnInit {
 
-  public Dates: Date[];
+  public Dates: moment.Moment[];
+  public Categories: Map<string, string[]>;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -21,7 +23,11 @@ export class WfhNavigationComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver, private Cat: LoadDataService) {}
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
-    this.Cat.Category$.subscribe(it => this.Dates = it.Dates());
+    this.Cat.Category$.subscribe(it => {
+      this.Dates = it.Dates();
+      this.Categories = it.Categories();
+      
+    });
   }
 
 }

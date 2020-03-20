@@ -1,13 +1,32 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
     <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list >
-      <a mat-list-item href="#" *ngFor="let date of Dates">{{date}}</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+    <mat-nav-list>
+      <a mat-list-item>Dates</a>
+      <a
+        mat-list-item
+        href="{{ date.format('YYYYMMDD') }}"
+        *ngFor="let date of Dates"
+        >{{ date.fromNow() }}</a
+      >
+
+      <span *ngFor="let cat of Categories.keys()">
+        <b><a mat-list-item href="{{ cat }}">
+          {{ cat }}
+        </a></b>
+        <span *ngFor="let subCat of Categories.get(cat).sort()">
+          <a mat-list-item href="{{ subCat }}">
+            -- {{ subCat }}
+          </a>
+        </span>
+      </span>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -17,12 +36,13 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        *ngIf="isHandset$ | async"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Work from Home resources</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <app-table-wfh></app-table-wfh> 
+    <app-table-wfh></app-table-wfh>
   </mat-sidenav-content>
 </mat-sidenav-container>
