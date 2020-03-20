@@ -1,22 +1,28 @@
-import { Component, OnInit, PipeTransform } from "@angular/core";
-import { FormControl } from "@angular/forms";
-import { DecimalPipe } from "@angular/common";
-import { map, startWith } from "rxjs/operators";
-import { Observable } from "rxjs";
+import { Component, OnInit, PipeTransform } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { DecimalPipe } from '@angular/common';
+import { map, startWith } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 import { Category } from './Category';
 import { allData } from './data';
+import { LoadDataService } from '../load-data.service';
+import { ThrowStmt } from '@angular/compiler';
 @Component({
-  selector: "app-table-wfh",
-  templateUrl: "./table-wfh.component.html",
-  styleUrls: ["./table-wfh.component.css"],
+  selector: 'app-table-wfh',
+  templateUrl: './table-wfh.component.html',
+  styleUrls: ['./table-wfh.component.css'],
   providers: [DecimalPipe]
 })
 export class TableWFHComponent implements OnInit {
   category: Category[];
   categories$: Observable<Category[]>;
-  filter = new FormControl("");
+  filter = new FormControl('');
 
   search(text: string, pipe: PipeTransform): Category[] {
+    if (this.category == null) {
+      return null;
+    }
+
     return this.category.filter(category => {
       const term = text.toLowerCase();
       return (
@@ -27,15 +33,15 @@ export class TableWFHComponent implements OnInit {
     });
   }
 
-  
-  constructor(pipe: DecimalPipe) {
+
+  constructor(pipe: DecimalPipe, private loadCategory: LoadDataService) {
     this.categories$ = this.filter.valueChanges.pipe(
-      startWith(""),
+      startWith(''),
       map(text => this.search(text, pipe))
     );
   }
 
   ngOnInit(): void {
-      this.category = allData;
+      this.loadCategory.Category$.subscribe(it => this.category = it.Cat);
   }
 }

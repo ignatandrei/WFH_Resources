@@ -17,10 +17,11 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let category of categories$ | async">
-      <th scope="row">{{ category.name }}</th>
+    <tr *ngFor="let category of (categories$ | async); let i=index">
+      <th scope="row">{{i+1}}) {{ category.name }}</th>
+      
       <td>
-        {{ category.tags }}
+        {{ category.tags }} 
       </td>
       <td>
         <ngb-highlight

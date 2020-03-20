@@ -69,7 +69,7 @@ async function main() {
   const fs = require("fs");
   const { promisify } = require("util");
   const rra = require("recursive-readdir-async");
-  var folders = ["Country","Entertainment","FreeSoftware", "Kids","Learn","MapsAndData"];
+  var folders = ["Country","Entertainment","FreeSoftware", "Kids","Learn","MapsAndData","NotParsed"];
   let iContent=1;
   let contentTable='<table id="tbData"  class="display" style="width:90%">';
   contentTable +=" <thead>";
