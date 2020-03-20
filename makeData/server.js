@@ -101,7 +101,7 @@ async function main() {
         content +="\r\n";
         content +="\r\n";
 
-        content +=`<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}">Improve this</a>`;
+        content +=`<a href="https://github.com/ignatandrei/WFH_Resources/edit/master/${folder}/${f.name}" target="_blank">Improve this</a>`;
 
         const tokens = marked.lexer(fileContents);
         
