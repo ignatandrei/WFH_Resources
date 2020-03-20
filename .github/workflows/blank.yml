@@ -19,10 +19,10 @@ jobs:
           mkdir output
           
     - name: generate all
-      run: |
-        rm -rf ./WFHAng
+      run: |        
         chmod +x ./makeData/compile.bat
         cd makeData        
+        rm -rf ./WFHAng
         ./compile.bat
         rm ../obj/all.md
         mv ./all.md ../obj/all.md
@@ -40,6 +40,7 @@ jobs:
         ls -lh ../docs/*
         ls -lh WFHAng/*
         cp WFHAng/* ../docs/ 
+        cp ../docs/index.html ../docs/404.html  
         ls -lh ../docs/*
         echo 'finish generate all'
 
