@@ -238,6 +238,18 @@ import { Category } from './Category';
 	{
 		tags: "",
 		category: "FreeSoftware",
+		subCategory: "BitDefender",
+		name: "BitDefender free",
+		links: [
+			"https://www.bitdefender.com/business/help-healthcare-fight-coronavirus.html"
+		],
+		dateCreated: "2020-03-21T13:15:21.442Z",
+		description: "",
+		id: "BITDEFENDER FREE_BITDEFENDER_FREESOFTWARE"
+	},
+	{
+		tags: "",
+		category: "FreeSoftware",
 		subCategory: "Cisco",
 		name: "Cisco WebEx free",
 		links: [
