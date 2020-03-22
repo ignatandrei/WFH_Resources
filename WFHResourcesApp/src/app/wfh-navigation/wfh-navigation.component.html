@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav-container">
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav
     #drawer
     class="sidenav"
@@ -30,7 +30,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
+    <mat-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -43,6 +43,131 @@
       <span>Work from Home resources</span>
     </mat-toolbar>
     <!-- Add Content Here -->
-    <app-table-wfh></app-table-wfh>
+<!--<app-table-wfh></app-table-wfh>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+<div class="row width-100 ml-0 mr-0">
+  <div class="col-sm-2 pl-0 pr-0 border-right">
+    <div class="">
+      <div class="card border-0">
+        <button
+          class="btn btn-secondary card-header active text-left border-0 rounded-0"
+          id="headingOne"
+          type="button"
+          (click)="isDatesCollapsed = !isDatesCollapsed"
+          [attr.aria-expanded]="!isDatesCollapsed"
+          aria-controls="collapseDates"
+          aria-pressed="true"
+        >
+          Dates
+        </button>
+
+        <div id="collapseDates" [ngbCollapse]="isDatesCollapsed">
+          <div class="card-body">
+            <a
+              class="list-group-item list-group-item-action"
+              href="{{ date.format('YYYYMMDD') }}"
+              *ngFor="let date of Dates"
+              role="tab"
+              ><svg
+                class="bi bi-stop"
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
+                  clip-rule="evenodd"
+                /></svg
+              >{{ date.fromNow() }}</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <button
+          class="btn btn-secondary card-header active text-left border-0 rounded-0"
+          id="headingTwo"
+          type="button"
+          (click)="isCategoriesCollapsed = !isCategoriesCollapsed"
+          [attr.aria-expanded]="!isCategoriesCollapsed"
+          aria-controls="collapseCategories"
+        >
+          Categories
+        </button>
+
+        <div id="collapseCategories" [ngbCollapse]="isCategoriesCollapsed">
+          <div class="card-body">
+            <a
+              class="list-group-item list-group-item-action"
+              *ngFor="let cat of Categories.keys()"
+              role="tab"
+              href="{{ cat }}"
+              ><svg
+                class="bi bi-stop"
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
+                  clip-rule="evenodd"
+                /></svg
+              >{{ cat }}</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <button
+          class="btn btn-secondary card-header active text-left border-0 rounded-0"
+          id="headingThree"
+          type="button"
+          (click)="isSubCategoriesCollapsed = !isSubCategoriesCollapsed"
+          [attr.aria-expanded]="!isSubCategoriesCollapsed"
+          aria-controls="collapseSubCategories"
+        >
+          Subcategory
+        </button>
+
+        <div
+          id="collapseSubCategories"
+          class=""
+          [ngbCollapse]="isSubCategoriesCollapsed"
+        >
+          <div class="card-body" *ngFor="let cat of Categories.keys()">
+            <a
+              class="list-group-item list-group-item-action"
+              *ngFor="let subCat of Categories.get(cat).sort()"
+              role="tab"
+              href="{{ subCat }}"
+              ><svg
+                class="bi bi-stop"
+                width="2em"
+                height="2em"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
+                  clip-rule="evenodd"
+                /></svg
+              >{{ subCat }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-10 pl-0 pr-0 width-100">
+    <app-table-wfh></app-table-wfh>
+  </div>
+</div>

@@ -11,7 +11,28 @@
 }
 
 .mat-toolbar.mat-primary {
-  position: sticky;
   top: 0;
   z-index: 1;
+}
+.list-group-item {
+  border: none;
+}
+
+.btn-secondary,
+.btn-secondary:focus,
+.btn-secondary:active {
+  background-color: #343a40;
+  box-shadow: none;
+}
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #343a40;
+  border-color: none;
 }
