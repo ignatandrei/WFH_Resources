@@ -48,7 +48,12 @@
       <td>
         <ol>
             <li *ngFor="let f of category.links">
-             <a href="{{f}}" target="_blank">{{f}}</a> 
+             <a href="{{f}}" target="_blank">
+              <ngb-highlight
+              [result]="f"
+              [term]="filter.value"
+            ></ngb-highlight>   
+            </a> 
             </li>
         </ol>
     </tr>

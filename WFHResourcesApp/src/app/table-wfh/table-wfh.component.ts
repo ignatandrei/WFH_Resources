@@ -22,8 +22,7 @@ export class TableWFHComponent implements OnInit {
     if (this.category == null) {
       return null;
     }
-
-    return this.category.filter(category => {
+    const data = this.category.filter(category => {
       const term = text.toLowerCase();
       return (
         category.name.toLowerCase().includes(term) ||
@@ -31,6 +30,7 @@ export class TableWFHComponent implements OnInit {
         category.category.toLowerCase().includes(term)
       );
     });
+    return data.sort((a, b) => (a.name.localeCompare(b.name)));
   }
 
 
