@@ -18,11 +18,11 @@
       >
 
       <span *ngFor="let cat of Categories.keys()">
-        <b><a mat-list-item href="{{ cat }}">
+        <b><a mat-list-item [routerLink]="" [queryParams]="{category : cat }">
           {{ cat }}
         </a></b>
         <span *ngFor="let subCat of Categories.get(cat).sort()">
-          <a mat-list-item href="{{ subCat }}">
+          <a mat-list-item [routerLink]="" [queryParams]="{subCategory : subCat }" >
             -- {{ subCat }}
           </a>
         </span>
