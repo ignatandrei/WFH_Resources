@@ -118,3 +118,8 @@ https://techweek.ro/2019/colectia-de-sesiuni-business-summits-2018-2019/
 techweek
 
 ### Tags
+
+## Ebooks
+
+### Links
+https://www.libhumanitas.ro/ebookuri-gratuite.html
