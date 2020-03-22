@@ -104,8 +104,8 @@
             <a
               class="list-group-item list-group-item-action"
               *ngFor="let cat of Categories.keys()"
-              role="tab"
-              href="{{ cat }}"
+              role="tab" [routerLink]=""
+              [queryParams]="{category: cat }"
               ><svg
                 class="bi bi-stop"
                 width="2em"
@@ -145,8 +145,8 @@
             <a
               class="list-group-item list-group-item-action"
               *ngFor="let subCat of Categories.get(cat).sort()"
-              role="tab"
-              href="{{ subCat }}"
+              role="tab" [routerLink]=""
+              [queryParams]="{ subcategory: subCat }"
               ><svg
                 class="bi bi-stop"
                 width="2em"
