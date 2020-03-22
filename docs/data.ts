@@ -479,6 +479,18 @@ import { Category } from './Category';
 	{
 		tags: "",
 		category: "Learn",
+		subCategory: "Courses",
+		name: "Harvard and others",
+		links: [
+			"https://www.businessinsider.com/free-online-courses-from-best-colleges"
+		],
+		dateCreated: "2020-03-22T08:30:56.522Z",
+		description: "",
+		id: "HARVARD AND OTHERS_COURSES_LEARN"
+	},
+	{
+		tags: "",
+		category: "Learn",
 		subCategory: "DigitalLibrary",
 		name: "World digital library",
 		links: [
