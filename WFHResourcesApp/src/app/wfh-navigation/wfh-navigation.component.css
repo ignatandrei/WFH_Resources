@@ -36,3 +36,6 @@
   background-color: #343a40;
   border-color: none;
 }
+.card-header {
+  padding: 0.82rem 1.25rem;
+}
