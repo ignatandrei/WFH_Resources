@@ -123,3 +123,6 @@ techweek
 
 ### Links
 https://www.libhumanitas.ro/ebookuri-gratuite.html
+
+### Description
+Humanitas ebooks
