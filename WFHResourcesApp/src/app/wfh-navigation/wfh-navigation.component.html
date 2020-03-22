@@ -52,44 +52,6 @@
       <div class="card border-0">
         <button
           class="btn btn-secondary card-header active text-left border-0 rounded-0"
-          id="headingOne"
-          type="button"
-          (click)="isDatesCollapsed = !isDatesCollapsed"
-          [attr.aria-expanded]="!isDatesCollapsed"
-          aria-controls="collapseDates"
-          aria-pressed="true"
-        >
-          Dates
-        </button>
-
-        <div id="collapseDates" [ngbCollapse]="isDatesCollapsed">
-          <div class="card-body">
-            <a
-              class="list-group-item list-group-item-action"
-              href="{{ date.format('YYYYMMDD') }}"
-              *ngFor="let date of Dates"
-              role="tab"
-              ><svg
-                class="bi bi-stop"
-                width="2em"
-                height="2em"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
-                  clip-rule="evenodd"
-                /></svg
-              >{{ date.fromNow() }}</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="card border-0">
-        <button
-          class="btn btn-secondary card-header active text-left border-0 rounded-0"
           id="headingTwo"
           type="button"
           (click)="isCategoriesCollapsed = !isCategoriesCollapsed"
@@ -104,8 +66,9 @@
             <a
               class="list-group-item list-group-item-action"
               *ngFor="let cat of Categories.keys()"
-              role="tab" [routerLink]=""
-              [queryParams]="{category: cat }"
+              role="tab"
+              [routerLink]=""
+              [queryParams]="{ category: cat }"
               ><svg
                 class="bi bi-stop"
                 width="2em"
@@ -145,7 +108,8 @@
             <a
               class="list-group-item list-group-item-action"
               *ngFor="let subCat of Categories.get(cat).sort()"
-              role="tab" [routerLink]=""
+              role="tab"
+              [routerLink]=""
               [queryParams]="{ subcategory: subCat }"
               ><svg
                 class="bi bi-stop"

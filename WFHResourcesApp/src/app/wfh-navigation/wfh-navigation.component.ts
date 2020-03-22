@@ -11,7 +11,6 @@ import * as moment from "moment";
   styleUrls: ["./wfh-navigation.component.css"]
 })
 export class WfhNavigationComponent implements OnInit {
-  public isDatesCollapsed = false;
   public isCategoriesCollapsed = true;
   public isSubCategoriesCollapsed = true;
   public Dates: moment.Moment[];
