@@ -59,11 +59,12 @@
         <a
           *ngFor="let f of category.links; let i = index"
           href="{{ f }}"
-          class="btn text-center white btn-danger ml-2"
+          [ngClass]="buttonChanger"
+          class="btn text-center white ml-2 mb-2"
           role="button"
           ngbTooltip="{{ f }}"
         >
-          Access Link {{ i + 1 }}</a
+          {{ getLinkName(f) }}</a
         >
       </td>
     </tr>

@@ -1,25 +1,35 @@
-import { Component, OnInit, PipeTransform } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { DecimalPipe } from '@angular/common';
-import { map, startWith } from 'rxjs/operators';
-import { Observable, merge } from 'rxjs';
-import { Category } from './Category';
-import { allData } from './data';
-import { LoadDataService } from '../load-data.service';
-import { ThrowStmt } from '@angular/compiler';
-import { ActivatedRoute } from '@angular/router';
-import { FilterData } from './filterData';
+import { Component, OnInit, PipeTransform } from "@angular/core";
+import { FormControl } from "@angular/forms";
+import { DecimalPipe } from "@angular/common";
+import { map, startWith } from "rxjs/operators";
+import { Observable, merge } from "rxjs";
+import { Category } from "./Category";
+import { allData } from "./data";
+import { LoadDataService } from "../load-data.service";
+import { ThrowStmt } from "@angular/compiler";
+import {
+  ActivatedRoute,
+  UrlTree,
+  Router,
+  PRIMARY_OUTLET,
+  UrlSegmentGroup,
+  UrlSegment
+} from "@angular/router";
+import { FilterData } from "./filterData";
 @Component({
-  selector: 'app-table-wfh',
-  templateUrl: './table-wfh.component.html',
-  styleUrls: ['./table-wfh.component.css'],
+  selector: "app-table-wfh",
+  templateUrl: "./table-wfh.component.html",
+  styleUrls: ["./table-wfh.component.css"],
   providers: []
 })
 export class TableWFHComponent implements OnInit {
   category: Category[];
+  buttonChanger: string;
+  linkPath: any;
   categories$: Observable<Category[]>;
-  filter = new FormControl('');
+  filter = new FormControl("");
   filterdata: FilterData;
+
   search(text: string): Category[] {
     if (this.category == null) {
       return null;
@@ -40,25 +50,50 @@ export class TableWFHComponent implements OnInit {
 
   constructor(
     private loadCategory: LoadDataService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.filterdata = new FilterData(route);
-
-
   }
   ngOnInit(): void {
     this.loadCategory.Category$.subscribe(it => (this.category = it.Cat));
     const changeFirst = this.filterdata.pipe(
-      startWith(''),
+      startWith(""),
       map(it => this.filter.value)
-    )
-    const changeSecond = this.filter.valueChanges.pipe(
-      startWith(''));
+    );
+    const changeSecond = this.filter.valueChanges.pipe(startWith(""));
 
     this.categories$ = merge(changeFirst, changeSecond).pipe(
-
       map(text => this.search(text))
-     );
+    );
+  }
 
+  // getLinks(link: string) {
+  //   const tree: UrlTree = this.router.parseUrl(link);
+  //   const g: UrlSegmentGroup = tree.root.children[PRIMARY_OUTLET];
+  //   const s: UrlSegment[] = g.segments;
+  //   return s[0].path;
+  // }
+  getLinkName(link: string) {
+    const url = link;
+    const urlParts = /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url);
+    const urlPart = /^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/.exec(
+      url
+    );
+
+    if (link !== null && link.length > 1) {
+      const host = urlPart[2];
+      this.buttonChanger = "btn-outline-dark";
+      console.log(urlPart);
+
+      return "Available @" + host;
+    }
+    // } else if ((host = host && link !== null && link.length > 1)) {
+    //   return "tesst";
+    // }
+    else {
+      return "Link not available";
+      // this.buttonChanger = "btn-danger"
+    }
   }
 }
