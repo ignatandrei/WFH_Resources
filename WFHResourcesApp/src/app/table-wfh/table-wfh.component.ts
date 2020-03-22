@@ -18,7 +18,7 @@ export class TableWFHComponent implements OnInit {
   categories$: Observable<Category[]>;
   filter = new FormControl('');
 
-  search(text: string, pipe: PipeTransform): Category[] {
+  search(text: string): Category[] {
     if (this.category == null) {
       return null;
     }
@@ -27,17 +27,17 @@ export class TableWFHComponent implements OnInit {
       const term = text.toLowerCase();
       return (
         category.name.toLowerCase().includes(term) ||
-        pipe.transform(category.subCategory).includes(term) ||
-        pipe.transform(category.category).includes(term)
+        category.subCategory.toLowerCase().includes(term) ||
+        category.category.toLowerCase().includes(term)
       );
     });
   }
 
 
-  constructor(pipe: DecimalPipe, private loadCategory: LoadDataService) {
+  constructor( private loadCategory: LoadDataService) {
     this.categories$ = this.filter.valueChanges.pipe(
       startWith(''),
-      map(text => this.search(text, pipe))
+      map(text => this.search(text))
     );
   }
 
