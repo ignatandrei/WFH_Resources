@@ -29,6 +29,7 @@ https://365datascience.com/courses/
 
 ### Tags
 
+
 ## Coursera
 
 ### Links
@@ -40,3 +41,7 @@ https://www.coursera.org/collections/popular-free-courses
 
 ### Tags
 
+## Harvard and others
+
+### Links
+https://www.businessinsider.com/free-online-courses-from-best-colleges
