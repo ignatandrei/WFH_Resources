@@ -213,6 +213,18 @@
 	{
 		tags: "",
 		category: "Entertainment",
+		subCategory: "AudioBooks",
+		name: "Audio Books",
+		links: [
+			"https://stories.audible.com/discovery"
+		],
+		dateCreated: "2020-03-23T14:45:29.094Z",
+		description: "",
+		id: "AUDIO BOOKS_AUDIOBOOKS_ENTERTAINMENT"
+	},
+	{
+		tags: "",
+		category: "Entertainment",
 		subCategory: "Movies",
 		name: "Open Culture",
 		links: [
