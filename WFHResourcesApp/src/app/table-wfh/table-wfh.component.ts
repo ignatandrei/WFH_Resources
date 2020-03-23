@@ -28,9 +28,9 @@ export class TableWFHComponent implements OnInit {
   linkPath: any;
   urlStatus: string;
   categories$: Observable<Category[]>;
-  filter = new FormControl("");
+  filter = new FormControl('');
   filterdata: FilterData;
-  darkMode: string = "";
+  darkMode: string = '';
 
   search(text: string): Category[] {
     if (this.category == null) {
@@ -42,7 +42,8 @@ export class TableWFHComponent implements OnInit {
       return (
         category.name.toLowerCase().includes(term) ||
         category.subCategory.toLowerCase().includes(term) ||
-        category.category.toLowerCase().includes(term)
+        category.category.toLowerCase().includes(term) ||
+        category.links.join('').toLowerCase().includes(term)
       );
     });
     data = this.filterdata.filter(data);
@@ -60,7 +61,7 @@ export class TableWFHComponent implements OnInit {
   ngOnInit(): void {
     this.loadCategory.Category$.subscribe(it => (this.category = it.Cat));
     const changeFirst = this.filterdata.pipe(
-      startWith(""),
+      startWith(''),
       map(it => this.filter.value)
     );
     const changeSecond = this.filter.valueChanges.pipe(startWith(""));
