@@ -574,10 +574,22 @@
 	{
 		tags: "",
 		category: "MapsAndData",
+		subCategory: "Earth",
+		name: "Map Corona",
+		links: [
+			"https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html"
+		],
+		dateCreated: "2020-03-23T13:34:27.115Z",
+		description: "",
+		id: "MAP CORONA_EARTH_MAPSANDDATA"
+	},
+	{
+		tags: "",
+		category: "MapsAndData",
 		subCategory: "Romania",
 		name: "Harta",
 		links: [
-			""
+			"https://instnsp.maps.arcgis.com/apps/opsdashboard/index.html#/5eced796595b4ee585bcdba03e30c127"
 		],
 		dateCreated: "2020-03-19T21:11:43.601Z",
 		description: "",
