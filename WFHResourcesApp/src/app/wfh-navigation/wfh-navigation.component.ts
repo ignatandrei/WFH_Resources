@@ -17,9 +17,6 @@ export class WfhNavigationComponent implements OnInit {
   public isCategoriesCollapsed = true;
   public isSubCategoriesCollapsed = true;
   public Dates: moment.Moment[];
-  public coronaData: CovidData;
-  public coronaDate: string;
-  public coronaOverallStatusData: CovidOverallStatus;
   public Categories: Map<string, string[]>;
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -30,8 +27,7 @@ export class WfhNavigationComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private Cat: LoadDataService,
-    private covidDataService: CovidDataService
+    private Cat: LoadDataService
   ) {}
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
@@ -39,23 +35,6 @@ export class WfhNavigationComponent implements OnInit {
       this.Dates = it.Dates();
       this.Categories = it.Categories();
     });
-    this.getCovidData();
-    this.getCovidOverallStatus();
-  }
-  getCovidData() {
-    this.covidDataService.getCovidData().subscribe(data => {
-      //just see  the latest
-      const last = data.length - 1;
-      this.coronaData = data[last];
+      }
 
-      this.coronaDate = moment(this.coronaData.Date).format(
-        "MMMM Do YYYY, HH:mm"
-      );
-    });
-  }
-  getCovidOverallStatus() {
-    this.covidDataService.getCovidStatusData().subscribe(data => {
-      this.coronaOverallStatusData = data;
-    });
-  }
 }

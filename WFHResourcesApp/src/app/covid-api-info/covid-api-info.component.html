@@ -1,0 +1,35 @@
+
+<div
+  class="card text-white bg-dark border-0 rounded-0"
+  *ngFor="let corona of coronaOverallStatusData.results"
+>
+  <div class="card-header font-weight-bold">
+    COVID-19 Daily Tracker
+  </div>
+  <div class="card-body">
+    <p class="card-text">There are {{ corona.total_cases }} total cases.</p>
+    <p class="card-text">{{ corona.total_recovered }} people have recovered.</p>
+    <p class="card-text">
+      There are {{ corona.total_unresolved }} unresolved cases.
+    </p>
+    <p class="card-text">{{ corona.total_deaths }} people have died.</p>
+    <p class="card-text">
+      There are {{ corona.total_new_cases_today }} new cases today.
+    </p>
+    <p class="card-text">
+      {{ corona.total_new_deaths_today }} people have died today.
+    </p>
+    <p class="card-text">Total active cases: {{ corona.total_active_cases }}</p>
+    <p class="card-text">
+      Total serious cases: {{ corona.total_serious_cases }}
+    </p>
+    <p class="card-text">
+      <a
+        class="text-white font-weight-bold"
+        href="{{ corona.source.url }}"
+        target="_blank"
+        >Source</a
+      >
+    </p>
+  </div>
+</div>
