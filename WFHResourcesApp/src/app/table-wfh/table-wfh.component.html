@@ -28,7 +28,7 @@
     <tr *ngFor="let category of categories$ | async; let i = index">
       <th scope="row" class="text-center">{{ i + 1 }}</th>
 
-      <td class="text-center">{{ category.tags }} tags {{ i + 1 }}</td>
+      <!-- <td class="text-center">{{ category.tags }} tags {{ i + 1 }}</td> -->
       <td class="text-center">
         <ngb-highlight
           [result]="category.category"
@@ -43,9 +43,7 @@
 
         <a
           target="_blank"
-          href="https://github.com/ignatandrei/WFH_Resources/edit/master/{{
-            category.category
-          }}/{{ category.subCategory }}.md"
+          href="https://github.com/ignatandrei/WFH_Resources/edit/master/{{category.category}}/{{category.subCategory}}.md"
         >
           <br />
           Edit
@@ -57,7 +55,7 @@
           [term]="filter.value"
         ></ngb-highlight>
       </td>
-      <td>{{ category.description }} desc {{ i + 1 }}</td>
+      <!-- <td>{{ category.description }} desc {{ i + 1 }}</td> -->
       <td>
         <a
           *ngFor="let f of category.links; let i = index"
