@@ -24,11 +24,13 @@ import { FilterData } from "./filterData";
 })
 export class TableWFHComponent implements OnInit {
   category: Category[];
-  buttonChanger: string;
+  buttonChanger: string = "";
   linkPath: any;
+  urlStatus: string;
   categories$: Observable<Category[]>;
   filter = new FormControl("");
   filterdata: FilterData;
+  darkMode: string = "";
 
   search(text: string): Category[] {
     if (this.category == null) {
@@ -84,16 +86,21 @@ export class TableWFHComponent implements OnInit {
     if (link !== null && link.length > 1) {
       const host = urlPart[2];
       this.buttonChanger = "btn-outline-dark";
-      console.log(urlPart);
+      // console.log(urlPart);
 
-      return "Available @" + host;
+      this.urlStatus = "Available @" + host;
     }
     // } else if ((host = host && link !== null && link.length > 1)) {
     //   return "tesst";
     // }
     else {
-      return "Link not available";
-      // this.buttonChanger = "btn-danger"
+      this.buttonChanger = "btn-danger";
+
+      this.urlStatus = "Link not available";
     }
+  }
+  changeDarkMode() {
+    this.buttonChanger = "btn-outline-light";
+    this.darkMode = "table-dark";
   }
 }

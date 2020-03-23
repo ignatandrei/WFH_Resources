@@ -1,6 +1,9 @@
 <form>
   <nav class="form-inline navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">Work From Home: Resources</a>
+
+    <button class="btn btn-dark" (click)="changeDarkMode()"></button>
+
     <input
       class="form-control"
       type="text"
@@ -9,7 +12,7 @@
     />
   </nav>
 </form>
-<table class="table pa-2">
+<table class="table pa-2 table-hover" [ngClass]="darkMode">
   <thead class="thead-dark">
     <tr>
       <th scope="col" class="text-center">#</th>
@@ -48,7 +51,7 @@
           Edit
         </a>
       </td>
-      <td class="text-center">
+      <td class="text-center font-weight-bold">
         <ngb-highlight
           [result]="category.name"
           [term]="filter.value"
@@ -64,7 +67,7 @@
           role="button"
           ngbTooltip="{{ f }}"
         >
-          {{ getLinkName(f) }}</a
+          {{ getLinkName(f) }} {{ urlStatus }}</a
         >
       </td>
     </tr>
