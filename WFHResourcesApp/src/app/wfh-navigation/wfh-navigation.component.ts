@@ -42,9 +42,12 @@ export class WfhNavigationComponent implements OnInit {
   getCovidData() {
     this.covidDataService.getCovidData().subscribe(data => {
       //just see  the latest
-      const last = data.length-1;
-      this.coronaData=data[last];
-      
+      const last = data.length - 1;
+      this.coronaData = data[last];
+
+      this.coronaDate = moment(this.coronaData.Date).format(
+        "MMMM Do YYYY, HH:mm"
+      );
     });
   }
 }
