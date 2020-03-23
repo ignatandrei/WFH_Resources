@@ -4,6 +4,8 @@ import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
 import { LoadDataService } from "../load-data.service";
 import * as moment from "moment";
+import { CovidDataService } from "src/covid-data.service";
+import { CovidData } from "src/codvid";
 
 @Component({
   selector: "app-wfh-navigation",
@@ -14,6 +16,8 @@ export class WfhNavigationComponent implements OnInit {
   public isCategoriesCollapsed = true;
   public isSubCategoriesCollapsed = true;
   public Dates: moment.Moment[];
+  public coronaData: CovidData;
+  public coronaDate: string;
   public Categories: Map<string, string[]>;
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -24,13 +28,23 @@ export class WfhNavigationComponent implements OnInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private Cat: LoadDataService
+    private Cat: LoadDataService,
+    private covidDataService: CovidDataService
   ) {}
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
     this.Cat.Category$.subscribe(it => {
       this.Dates = it.Dates();
       this.Categories = it.Categories();
+    });
+    this.getCovidData();
+  }
+  getCovidData() {
+    this.covidDataService.getCovidData().subscribe(data => {
+      this.coronaData = data;
+      for (const date of this.coronaData.Date.slice(-1)) {
+        this.coronaDate = moment(date).format("MMMM Do YYYY, HH:mm:ss");
+      }
     });
   }
 }
