@@ -502,6 +502,18 @@
 	{
 		tags: "",
 		category: "Learn",
+		subCategory: "Courses",
+		name: "Osherove TDD",
+		links: [
+			"https://osherove.com/blog/2020/3/19/covid19-free-unit-testing-training"
+		],
+		dateCreated: "2020-03-23T07:04:38.877Z",
+		description: "",
+		id: "OSHEROVE TDD_COURSES_LEARN"
+	},
+	{
+		tags: "",
+		category: "Learn",
 		subCategory: "DigitalLibrary",
 		name: "World digital library",
 		links: [
