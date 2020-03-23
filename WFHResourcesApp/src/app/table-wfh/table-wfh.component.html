@@ -60,13 +60,13 @@
         <a
           *ngFor="let f of category.links; let i = index"
           href="{{ f }}" target="_blank"
-          [ngClass]="buttonChanger"
+          [ngClass]="getClassLink(f)"
           class="btn text-center white ml-2 mb-2"
           role="button"
           ngbTooltip="{{ f }}"
         >
-          {{ getLinkName(f) }} {{ urlStatus }}</a
-        >
+          {{ getLinkName(f) }} 
+        </a>
       </td>
     </tr>
   </tbody>

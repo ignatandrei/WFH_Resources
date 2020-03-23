@@ -15,13 +15,15 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from "./about/about.component";
+import { CovidApiInfoComponent } from './covid-api-info/covid-api-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableWFHComponent,
     WfhNavigationComponent,
-    AboutComponent
+    AboutComponent,
+    CovidApiInfoComponent
   ],
   imports: [
     BrowserModule,
