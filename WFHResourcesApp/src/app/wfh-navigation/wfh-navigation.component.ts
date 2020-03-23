@@ -41,10 +41,10 @@ export class WfhNavigationComponent implements OnInit {
   }
   getCovidData() {
     this.covidDataService.getCovidData().subscribe(data => {
-      this.coronaData = data;
-      for (const date of this.coronaData.Date.slice(-1)) {
-        this.coronaDate = moment(date).format("MMMM Do YYYY, HH:mm:ss");
-      }
+      //just see  the latest
+      const last = data.length-1;
+      this.coronaData=data[last];
+      
     });
   }
 }

@@ -10,7 +10,7 @@ export class CovidDataService {
   covidApi = "https://api.covid19api.com/country/romania/status/confirmed/live";
   constructor(private http: HttpClient) {}
 
-  getCovidData(): Observable<CovidData> {
-    return this.http.get<CovidData>(this.covidApi);
+  getCovidData(): Observable<CovidData[]> {
+    return this.http.get<CovidData[]>(this.covidApi);
   }
 }
