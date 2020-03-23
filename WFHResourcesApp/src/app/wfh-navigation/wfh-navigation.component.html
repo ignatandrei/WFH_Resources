@@ -1,53 +1,5 @@
-<!-- <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav
-    #drawer
-    class="sidenav"
-    fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
-    [opened]="(isHandset$ | async) === false"
-  >
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item>Dates</a>
-      <a
-        mat-list-item
-        href="{{ date.format('YYYYMMDD') }}"
-        *ngFor="let date of Dates"
-        >{{ date.fromNow() }}</a
-      >
-
-      <span *ngFor="let cat of Categories.keys()">
-        <b><a mat-list-item [routerLink]="" [queryParams]="{category : cat }">
-          {{ cat }}
-        </a></b>
-        <span *ngFor="let subCat of Categories.get(cat).sort()">
-          <a mat-list-item [routerLink]="" [queryParams]="{subCategory : subCat }" >
-            -- {{ subCat }}
-          </a>
-        </span>
-      </span>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async"
-      >
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Work from Home resources</span>
-    </mat-toolbar>
-    <!-- Add Content Here -->
-<!--<app-table-wfh></app-table-wfh>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->
 <div class="row width-100 ml-0 mr-0">
-  <div class="col-sm-2 pl-0 pr-0 border-right">
+  <div class="col-sm-1 pl-0 pr-0 border-right">
     <div class="">
       <div class="card border-0">
         <a
@@ -175,7 +127,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-10 pl-0 pr-0 width-100">
+  <div class="col-sm-11 pl-0 pr-0 width-100">
     <router-outlet></router-outlet>
   </div>
 </div>
