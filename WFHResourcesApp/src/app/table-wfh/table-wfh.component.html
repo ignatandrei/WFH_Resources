@@ -1,6 +1,6 @@
 <form>
   <nav class="form-inline navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Work From Home: Resources</a>
+    <a class="navbar-brand" routerLink="/">Work From Home: Resources</a>
 
     <button class="btn btn-dark" (click)="changeDarkMode()"></button>
 
@@ -16,11 +16,11 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col" class="text-center">#</th>
-      <th scope="col" class="text-center">Tags</th>
+      <!-- <th scope="col" class="text-center">Tags</th> -->
       <th scope="col" class="text-center">Category</th>
       <th scope="col" class="text-center">Subcategory</th>
       <th scope="col" class="text-center">Resource Name</th>
-      <th scope="col">Description</th>
+      <!-- <th scope="col">Description</th> -->
       <th scope="col">Links</th>
     </tr>
   </thead>
@@ -28,7 +28,7 @@
     <tr *ngFor="let category of categories$ | async; let i = index">
       <th scope="row" class="text-center">{{ i + 1 }}</th>
 
-      <td class="text-center">{{ category.tags }} tags {{ i + 1 }}</td>
+      <!-- <td class="text-center">{{ category.tags }} tags {{ i + 1 }}</td> -->
       <td class="text-center">
         <ngb-highlight
           [result]="category.category"
@@ -43,9 +43,7 @@
 
         <a
           target="_blank"
-          href="https://github.com/ignatandrei/WFH_Resources/edit/master/{{
-            category.category
-          }}/{{ category.subCategory }}.md"
+          href="https://github.com/ignatandrei/WFH_Resources/edit/master/{{category.category}}/{{category.subCategory}}.md"
         >
           <br />
           Edit
@@ -57,7 +55,7 @@
           [term]="filter.value"
         ></ngb-highlight>
       </td>
-      <td>{{ category.description }} desc {{ i + 1 }}</td>
+      <!-- <td>{{ category.description }} desc {{ i + 1 }}</td> -->
       <td>
         <a
           *ngFor="let f of category.links; let i = index"
