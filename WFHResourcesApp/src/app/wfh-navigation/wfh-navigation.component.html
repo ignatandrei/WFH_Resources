@@ -134,19 +134,44 @@
           </div>
         </div>
       </div>
-      <div *ngFor="let corona of coronaOverallStatusData.results">
-        <h2 class="font-weight-bold">
+      <div
+        class="card text-white bg-dark border-0 rounded-0"
+        *ngFor="let corona of coronaOverallStatusData.results"
+      >
+        <div class="card-header font-weight-bold">
           COVID-19 Daily Tracker
-        </h2>
-        <h2>There are {{ corona.total_cases }} total cases.</h2>
-        <h2>{{ corona.total_recovered }} people have recovered.</h2>
-        <h2>There are {{ corona.total_unresolved }} unresolved cases.</h2>
-        <h2>{{ corona.total_unresolved }} people have died.</h2>
-        <h2>There are {{ corona.total_new_cases_today }} new cases today.</h2>
-        <h2>{{ corona.total_new_deaths_today }} people have died today.</h2>
-        <h2>Total active cases: {{ corona.total_active_cases }}</h2>
-        <h2>Total serious cases: {{ corona.total_serious_cases }}</h2>
-        <a href="{{ corona.source.url }}">Source</a>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            There are {{ corona.total_cases }} total cases.
+          </p>
+          <p class="card-text">
+            {{ corona.total_recovered }} people have recovered.
+          </p>
+          <p class="card-text">
+            There are {{ corona.total_unresolved }} unresolved cases.
+          </p>
+          <p class="card-text">{{ corona.total_deaths }} people have died.</p>
+          <p class="card-text">
+            There are {{ corona.total_new_cases_today }} new cases today.
+          </p>
+          <p class="card-text">
+            {{ corona.total_new_deaths_today }} people have died today.
+          </p>
+          <p class="card-text">
+            Total active cases: {{ corona.total_active_cases }}
+          </p>
+          <p class="card-text">
+            Total serious cases: {{ corona.total_serious_cases }}
+          </p>
+          <p class="card-text">
+            <a
+              class="text-white font-weight-bold"
+              href="{{ corona.source.url }}"
+              >Source</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
