@@ -6,6 +6,7 @@ import { LoadDataService } from "../load-data.service";
 import * as moment from "moment";
 import { CovidDataService } from "src/covid-data.service";
 import { CovidData } from "src/codvid";
+import { CovidOverallStatus } from "src/covidOverallStatus";
 
 @Component({
   selector: "app-wfh-navigation",
@@ -18,6 +19,7 @@ export class WfhNavigationComponent implements OnInit {
   public Dates: moment.Moment[];
   public coronaData: CovidData;
   public coronaDate: string;
+  public coronaOverallStatusData: CovidOverallStatus;
   public Categories: Map<string, string[]>;
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -38,6 +40,7 @@ export class WfhNavigationComponent implements OnInit {
       this.Categories = it.Categories();
     });
     this.getCovidData();
+    this.getCovidOverallStatus();
   }
   getCovidData() {
     this.covidDataService.getCovidData().subscribe(data => {
@@ -48,6 +51,11 @@ export class WfhNavigationComponent implements OnInit {
       this.coronaDate = moment(this.coronaData.Date).format(
         "MMMM Do YYYY, HH:mm"
       );
+    });
+  }
+  getCovidOverallStatus() {
+    this.covidDataService.getCovidStatusData().subscribe(data => {
+      this.coronaOverallStatusData = data;
     });
   }
 }

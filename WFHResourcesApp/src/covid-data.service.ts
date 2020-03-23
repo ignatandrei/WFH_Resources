@@ -2,15 +2,20 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { CovidData } from "./codvid";
 import { Observable } from "rxjs";
+import { CovidOverallStatus } from "./covidOverallStatus";
 
 @Injectable({
   providedIn: "root"
 })
 export class CovidDataService {
   covidApi = "https://api.covid19api.com/country/romania/status/confirmed/live";
+  covidStatusApi = "https://thevirustracker.com/free-api?global=stats";
   constructor(private http: HttpClient) {}
 
   getCovidData(): Observable<CovidData[]> {
     return this.http.get<CovidData[]>(this.covidApi);
+  }
+  getCovidStatusData(): Observable<CovidOverallStatus> {
+    return this.http.get<CovidOverallStatus>(this.covidStatusApi);
   }
 }
