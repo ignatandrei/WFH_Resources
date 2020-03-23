@@ -39,3 +39,11 @@
 .card-header {
   padding: 0.83rem 1.25rem;
 }
+
+/* Media queries */
+
+@media only screen and (max-width: 768px) {
+  .phoneMenu {
+    width: fit-content;
+  }
+}

@@ -1,0 +1,8 @@
+@media only screen and (max-width: 768px) {
+  .removeField {
+    display: none;
+  }
+  .sizeText {
+    font-size: 0.8rem;
+  }
+}

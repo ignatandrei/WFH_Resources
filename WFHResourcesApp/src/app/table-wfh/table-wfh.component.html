@@ -15,10 +15,10 @@
 <table class="table pa-2 table-hover" [ngClass]="darkMode">
   <thead class="thead-dark">
     <tr>
-      <th scope="col" class="text-center">#</th>
+      <th scope="col" class="text-center removeField">#</th>
       <!-- <th scope="col" class="text-center">Tags</th> -->
-      <th scope="col" class="text-center">Category</th>
-      <th scope="col" class="text-center">Subcategory</th>
+      <th scope="col" class="text-center removeField">Category</th>
+      <th scope="col" class="text-center removeField">Subcategory</th>
       <th scope="col" class="text-center">Resource Name</th>
       <!-- <th scope="col">Description</th> -->
       <th scope="col">Links</th>
@@ -26,16 +26,16 @@
   </thead>
   <tbody>
     <tr *ngFor="let category of categories$ | async; let i = index">
-      <th scope="row" class="text-center">{{ i + 1 }}</th>
+      <th scope="row" class="text-center removeField">{{ i + 1 }}</th>
 
       <!-- <td class="text-center">{{ category.tags }} tags {{ i + 1 }}</td> -->
-      <td class="text-center">
+      <td class="text-center removeField">
         <ngb-highlight
           [result]="category.category"
           [term]="filter.value"
         ></ngb-highlight>
       </td>
-      <td class="text-center">
+      <td class="text-center removeField">
         <ngb-highlight
           [result]="category.subCategory"
           [term]="filter.value"
@@ -43,13 +43,15 @@
 
         <a
           target="_blank"
-          href="https://github.com/ignatandrei/WFH_Resources/edit/master/{{category.category}}/{{category.subCategory}}.md"
+          href="https://github.com/ignatandrei/WFH_Resources/edit/master/{{
+            category.category
+          }}/{{ category.subCategory }}.md"
         >
           <br />
           Edit
         </a>
       </td>
-      <td class="text-center font-weight-bold">
+      <td class="text-center sizeText font-weight-bold">
         <ngb-highlight
           [result]="category.name"
           [term]="filter.value"
@@ -59,13 +61,14 @@
       <td>
         <a
           *ngFor="let f of category.links; let i = index"
-          href="{{ f }}" target="_blank"
+          href="{{ f }}"
+          target="_blank"
           [ngClass]="getClassLink(f)"
-          class="btn text-center white ml-2 mb-2"
+          class="btn text-center sizeText white ml-2 mb-2"
           role="button"
           ngbTooltip="{{ f }}"
         >
-          {{ getLinkName(f) }} 
+          {{ getLinkName(f) }}
         </a>
       </td>
     </tr>
