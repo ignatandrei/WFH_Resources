@@ -76,9 +76,9 @@ ngAfterViewInit(): void {
 
       this.chartData = {
         labels: [...Array(min).keys()].map(it => {
-            return this.coronaDataFirst[it].Country[0] + ':' + moment(this.coronaDataFirst[it].Date).format('MM DD')
+            return this.coronaDataFirst[it].Country[0] + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD')
             + '-' +
-            this.coronaDataSecond[it].Country[0] + ':' + moment(this.coronaDataSecond[it].Date).format('MM DD')
+            this.coronaDataSecond[it].Country[0] + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD')
             ;
           }
           ),
@@ -90,7 +90,7 @@ ngAfterViewInit(): void {
       this.lineChart = new Chart(ctx, {
         type: 'line',
         data: this.chartData,
-        options: this.getChartOptions(maxValue, 'same number of days')
+        options: this.getChartOptions(maxValue, 'confirmed cases from the start - same number of days')
       });
 
 
@@ -110,7 +110,19 @@ ngAfterViewInit(): void {
       };
 
       this.chartData1 = {
-        labels: [...Array(max).keys()],
+        labels: [...Array(max).keys()].map(it => {
+          let first = '--';
+          if (this.coronaDataFirst.length > it) {
+            first =  this.coronaDataFirst[it].Country[0] + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD');
+          }
+
+          let second = '---';
+          if (this.coronaDataSecond.length > it) {
+            second = this.coronaDataSecond[it].Country[0] + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD');
+          }
+          return first +'-'+ second;
+        }),
+
         datasets: [dataFirst1, dataSecond1]
       };
 
@@ -120,7 +132,7 @@ ngAfterViewInit(): void {
       this.lineChart1 = new Chart(ctx1, {
         type: 'line',
         data: this.chartData1,
-        options: this.getChartOptions(maxValue, 'all data')
+        options: this.getChartOptions(maxValue, 'confirmed cases : all days ')
       });
 
 
@@ -131,7 +143,7 @@ ngAfterViewInit(): void {
       responsive: true,
       title: {
         display: true,
-        text: title
+        text: title ,
       },
       legend: {
         display: true,
