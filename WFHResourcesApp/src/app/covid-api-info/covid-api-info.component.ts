@@ -64,6 +64,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   removeCountry(i: number) {
     this.countrySelected.splice(i, 1);
     this.getCovidData(this.countrySelected.map(it => it.Slug));
+    
     this.currentLink = this.generateURL();
   }
   private generateURL() {
@@ -71,7 +72,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     // const url = this.router.url;
     const url = this.route.routeConfig.path;
     const path =  this.countrySelected.filter(it => it != null).map(it => it.Country).join('-');
-    return '/' + url.replace(':id?', path) ;
+    const baseRoot= document.getElementsByTagName('base')[0].href;
+    
+    return baseRoot+  url.replace(':id?', path) ;
   }
   canAdd(): boolean {
     return this.countrySelected.length < this.colors.length;
@@ -222,7 +225,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
         const dataFirst = {
-          label: dataValue[0].Country,
+          label: dataValue[0].Country +`(${dataValue.length} days)`,
           data: dataValue.map(it => it.Cases),
           lineTension: 0,
           fill: false,
@@ -232,7 +235,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
 
       this.chartData1 = {
-        labels: [...Array(max).keys()],
+        labels: [...Array(max).keys()].map(it=>`day {it}`),
 
         datasets: dataForChart
       };
