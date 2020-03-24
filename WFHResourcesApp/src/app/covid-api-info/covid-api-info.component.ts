@@ -41,14 +41,14 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
     this.covidDataService.getCovid19ApiCountries().subscribe(
       it => {
         this.AllCountries1 = it ;
-        this.AllCountries2 =  JSON.parse(JSON.stringify(it)) ;
+        this.AllCountries2 =  it;
       }
 
     );
 
 }
-public changeSelection(nr:int ,c:CountryCovid19) {
-  this['country' + nr]=c;
+public changeSelection(nr: number, c: CountryCovid19) {
+  this['country' + nr ] = c;
   if (this.country1 != null && this.country2 != null) {
     this.getCovidData(this.country1.Slug, this.country2.Slug);
   }
