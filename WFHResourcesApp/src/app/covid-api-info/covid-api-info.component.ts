@@ -32,7 +32,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
   public chartData1: any;
 
-  private colors: string[] = ['red', 'blue', 'black', 'yellow', 'green'];
+  private colors: string[] = ['red', 'blue', 'black', 'orange', 'green'];
   public AllCorona: Array<CovidData[]>;
   public coronaOverallStatusData: CovidOverallStatus;
   public coronaDate: string;
@@ -65,8 +65,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   }
   changeStatus(s: string) {
     this.statusSelected = s;
-    window.alert(this.statusSelected);
-    this.getCovidData(this.countrySelected.map(it => it.Slug));
+    //window.alert(this.statusSelected);
+      this.getCovidData(this.countrySelected.map(it => it.Slug));
 
   }
   removeCountry(i: number) {
