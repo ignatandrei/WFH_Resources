@@ -17,8 +17,8 @@ export class CovidDataService {
     const url = this.covidApi + `countries`;
     return this.http.get<CountryCovid19[]>(url);
   }
-  getCovidData(country: string): Observable<CovidData[]> {
-    const url = this.covidApi + `total/country/${country}/status/confirmed`;
+  getCovidData(country: string, status: string): Observable<CovidData[]> {
+    const url = this.covidApi + `total/country/${country}/status/${status}`;
     return this.http.get<CovidData[]>(url)
     .pipe(
       map(t => [...t.map(it=>new CovidData(it))])

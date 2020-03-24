@@ -43,6 +43,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   private countries: CountryCovid19[];
   private countriesFromQuery: string[];
   public currentLink: string;
+  public status = ['confirmed', 'recovered', 'deaths'];
+  public statusSelected = 'confirmed';
+
   constructor(
     private covidDataService: CovidDataService,
     private route: ActivatedRoute,
@@ -60,11 +63,16 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
     });
   }
+  changeStatus(s: string) {
+    this.statusSelected = s;
+    window.alert(this.statusSelected);
+    this.getCovidData(this.countrySelected.map(it => it.Slug));
 
+  }
   removeCountry(i: number) {
     this.countrySelected.splice(i, 1);
     this.getCovidData(this.countrySelected.map(it => it.Slug));
-    
+
     this.currentLink = this.generateURL();
   }
   private generateURL() {
@@ -72,9 +80,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     // const url = this.router.url;
     const url = this.route.routeConfig.path;
     const path =  this.countrySelected.filter(it => it != null).map(it => it.Country).join('-');
-    const baseRoot= document.getElementsByTagName('base')[0].href;
-    
-    return baseRoot+  url.replace(':id?', path) ;
+    const baseRoot = document.getElementsByTagName('base')[0].href;
+
+    return baseRoot +  url.replace(':id?', path) ;
   }
   canAdd(): boolean {
     return this.countrySelected.length < this.colors.length;
@@ -130,7 +138,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     // const obs1 = this.covidDataService.getCovidData(slugs[0]);
     // const obs2 = this.covidDataService.getCovidData(slugs[1]);
     this.AllCorona = [];
-    const obs = slugs.map(it => this.covidDataService.getCovidData(it));
+    const obs = slugs.map(it => this.covidDataService.getCovidData(it, this.statusSelected));
     const obs1 = obs[0];
     const obs2 = obs[1];
     zip(...obs).subscribe(arr => {
@@ -216,7 +224,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         data: this.chartData,
         options: this.getChartOptions(
           maxValue,
-          `confirmed cases from the day 0 to day :${min} `
+          `${this.statusSelected} cases from the day 0 to day :${min} `
         )
       });
 
@@ -225,7 +233,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
         const dataFirst = {
-          label: dataValue[0].Country +`(${dataValue.length} days)`,
+          label: dataValue[0].Country + `(${dataValue.length} days)`,
           data: dataValue.map(it => it.Cases),
           lineTension: 0,
           fill: false,
@@ -235,7 +243,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
 
       this.chartData1 = {
-        labels: [...Array(max).keys()].map(it=>`day {it}`),
+        labels: [...Array(max).keys()].map(it => `day ${it}`),
 
         datasets: dataForChart
       };
@@ -250,7 +258,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         data: this.chartData1,
         options: this.getChartOptions(
           maxValue,
-          `confirmed cases : day 0 to ${max}`
+          `${this.statusSelected} cases : day 0 to ${max}`
         )
       });
     });
