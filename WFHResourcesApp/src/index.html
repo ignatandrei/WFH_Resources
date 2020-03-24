@@ -5,24 +5,35 @@
     <title>WFHResourcesApp</title>
     <!-- <base href="/" /> -->
     <script>
- 
+
       var isCordovaApp = !!window.cordova;
       var isWindowApp = !!window.MSApp;
       if (isCordovaApp) {
-          hrefApp = ".";
+        hrefApp = ".";
       }
       if (isWindowApp) {
-          hrefApp = "./";
+        hrefApp = "./";
       }
-  
+
       if (!(isCordovaApp || isWindowApp)) {
-          var baseHref = window.location.href.split('/');
+        var baseHref = window.location.href.split("/");
+        while (true) {
           baseHref.pop();
-          hrefApp = baseHref.join('/') + '/';
-          //window.alert(hrefApp);
+          hrefApp = baseHref.join("/") + "/";
+          // window.alert(hrefApp);
+          var request = new XMLHttpRequest();
+          request.open("GET", hrefApp + "favicon.ico", false); // `false` makes the request synchronous
+          request.send(null);
+
+          if (request.status === 200) {
+            // window.alert("found");
+            break;
+          }
+        }
       }
-      document.write('<base href="' + hrefApp+ '" />');
-  </script>
+      // window.alert("scriu " + hrefApp + "-- " + isLoadedok);
+      document.write('<base href="' + hrefApp + '" />');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link
@@ -31,9 +42,15 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
   <body class="mat-typography">
     <app-root></app-root>
   </body>

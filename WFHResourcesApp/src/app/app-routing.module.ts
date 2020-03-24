@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/resources', pathMatch: 'full' },
   { path: 'resources', component: TableWFHComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'covidData', component: CovidApiInfoComponent},
+  {path: 'covidData', redirectTo: 'covidData/', pathMatch: 'full'},
+  { path: 'covidData/:id?', component: CovidApiInfoComponent},
 
 ];
 

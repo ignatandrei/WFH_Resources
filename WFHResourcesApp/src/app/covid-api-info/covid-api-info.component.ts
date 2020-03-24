@@ -8,6 +8,7 @@ import { zip } from 'rxjs';
 import { CountryCovid19 } from 'src/CountryCovid19';
 import { JsonPipe } from '@angular/common';
 import { ThrowStmt } from '@angular/compiler';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-covid-api-info',
   templateUrl: './covid-api-info.component.html',
@@ -38,12 +39,18 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
   public countrySelected: CountryCovid19[];
   public AllCountries: Array<CountryCovid19[]>;
   private countries: CountryCovid19[];
-  constructor(    private covidDataService: CovidDataService) {
+  private countriesFromQuery:string[];
+  constructor(    private covidDataService: CovidDataService, private route:ActivatedRoute) {
 
 
     this.countrySelected = [];
     this.AllCountries = [];
-
+    this.route.queryParams.subscribe(it=>{
+      if(it.id){
+        this.countriesFromQuery=it.id.toString().split('-');
+        window.alert(JSON.stringify(this.countriesFromQuery));
+      }
+    })
 
   }
   removeCountry(i: number) {
@@ -63,6 +70,7 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
     this.covidDataService.getCovid19ApiCountries().subscribe(
       it => {
         this.countries = it;
+        
         this.addCountry(it.find(c => c.Country === 'Italy'));
         this.addCountry(it.find(c => c.Country === 'Romania'));
         // this.addCountry(it.find(c => c.Country === 'Austria'));
