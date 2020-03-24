@@ -575,6 +575,18 @@ import { Category } from './Category';
 	{
 		tags: "",
 		category: "Learn",
+		subCategory: "DigitalLibrary",
+		name: "Scribd",
+		links: [
+			"https://www.scribd.com/readfree"
+		],
+		dateCreated: "2020-03-24T11:39:41.248Z",
+		description: "",
+		id: "SCRIBD_DIGITALLIBRARY_LEARN"
+	},
+	{
+		tags: "",
+		category: "Learn",
 		subCategory: "Museums",
 		name: "Multiple",
 		links: [
