@@ -1,4 +1,10 @@
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  ViewChild,
+  AfterViewInit
+} from '@angular/core';
 import { CovidDataService } from 'src/covid-data.service';
 import { CovidData } from 'src/codvid';
 import { CovidOverallStatus } from 'src/covidOverallStatus';
@@ -8,20 +14,19 @@ import { zip } from 'rxjs';
 import { CountryCovid19 } from 'src/CountryCovid19';
 import { JsonPipe } from '@angular/common';
 import { ThrowStmt } from '@angular/compiler';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+
 @Component({
   selector: 'app-covid-api-info',
   templateUrl: './covid-api-info.component.html',
   styleUrls: ['./covid-api-info.component.css']
 })
-export class CovidApiInfoComponent implements OnInit , AfterViewInit {
-
+export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   @ViewChild('chartCompare')
   public refChart: ElementRef;
 
   @ViewChild('chartBoth')
   public refChart1: ElementRef;
-
 
   public chartData: any;
 
@@ -39,64 +44,83 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
   public countrySelected: CountryCovid19[];
   public AllCountries: Array<CountryCovid19[]>;
   private countries: CountryCovid19[];
-  private countriesFromQuery:string[];
-  constructor(    private covidDataService: CovidDataService, private route:ActivatedRoute) {
+  private countriesFromQuery: string[];
+  private currentLink: string;
+  constructor(
+    private covidDataService: CovidDataService,
+    private route: ActivatedRoute,
+    private router: Router
 
-
+  ) {
     this.countrySelected = [];
     this.AllCountries = [];
-    this.route.queryParams.subscribe(it=>{
-      if(it.id){
-        this.countriesFromQuery=it.id.toString().split('-');
-        window.alert(JSON.stringify(this.countriesFromQuery));
+    this.route.paramMap.subscribe(it => {
+      if (it.has('id?')) {
+        this.countriesFromQuery = it
+          .get('id?')
+          .toString()
+          .split('-');
       }
-    })
-
+    });
   }
-  removeCountry(i: number) {
 
+  removeCountry(i: number) {
     this.countrySelected.splice(i, 1);
     this.getCovidData(this.countrySelected.map(it => it.Slug));
+    this.currentLink = this.generateURL();
+  }
+  private generateURL() {
 
+    // const url = this.router.url;
+    const url = this.route.routeConfig.path;
+    const path =  this.countrySelected.filter(it => it != null).map(it => it.Country).join('-');
+    return '/' + url.replace(':id?', path) ;
   }
   canAdd(): boolean {
     return this.countrySelected.length < this.colors.length;
   }
   addCountry(c: CountryCovid19) {
-    this.AllCountries.push(this.countries) ;
+    this.AllCountries.push(this.countries);
     this.countrySelected.push(c);
+    this.currentLink = this.generateURL();
   }
   public ngOnInit() {
-    this.covidDataService.getCovid19ApiCountries().subscribe(
-      it => {
-        this.countries = it;
-        
-        this.addCountry(it.find(c => c.Country === 'Italy'));
-        this.addCountry(it.find(c => c.Country === 'Romania'));
-        // this.addCountry(it.find(c => c.Country === 'Austria'));
-        // this.addCountry(it.find(c => c.Country === 'Germany'));
-        
-        // this.addCountry(it[10]);
-        // this.addCountry(it[68]);
-        this.getCovidData(this.countrySelected.map( c => c.Slug));
+    this.covidDataService.getCovid19ApiCountries().subscribe(it => {
+      this.countries = it;
+      // window.alert(this.countriesFromQuery.length);
+      if (this.countriesFromQuery.length > 0) {
+        const fromQuery = it.filter(
+          a =>
+            this.countriesFromQuery.filter(
+              c => c.toLowerCase() === a.Country.toLowerCase()
+            ).length > 0
+        );
 
+        for (const f of fromQuery) {
+          if (this.canAdd()) {
+              this.addCountry(f);
+          }
+        }
       }
+      if (this.countrySelected.length == 0) {
+        this.addCountry(null);
+      }
+      // this.addCountry(it.find(c => c.Country === 'Austria'));
+      // this.addCountry(it.find(c => c.Country === 'Germany'));
 
-    );
-
-}
-public changeSelection(nr: number, c: CountryCovid19) {
-  this.countrySelected[ nr ] = c;
-  // window.alert(JSON.stringify(this.countrySelected));
-  // if (this.countrySelected.every(it => it != null)) {
-  this.getCovidData(this.countrySelected.map(it => it.Slug));
-  // }
-}
-ngAfterViewInit(): void {
-
+      // this.addCountry(it[10]);
+      // this.addCountry(it[68]);
+      this.getCovidData(this.countrySelected.map(c => c.Slug));
+    });
+  }
+  public changeSelection(nr: number, c: CountryCovid19) {
+    this.countrySelected[nr] = c;
+    this.getCovidData(this.countrySelected.map(it => it.Slug));
+    this.currentLink = this.generateURL();
+  }
+  ngAfterViewInit(): void {
     // this.getCovidData('romania', 'italy');
     this.getCovidOverallStatus();
-
   }
 
   getCovidData(slugs: string[]) {
@@ -109,11 +133,14 @@ ngAfterViewInit(): void {
     const obs = slugs.map(it => this.covidDataService.getCovidData(it));
     const obs1 = obs[0];
     const obs2 = obs[1];
-    zip(...obs).subscribe( (arr) => {
+    zip(...obs).subscribe(arr => {
       for (let i = 0; i < arr.length; i++) {
-
         const f = arr[i];
-        this.AllCorona.push( f.filter(it => it.Cases > 0).sort((a, b) => a.Date.localeCompare(b.Date)));
+        this.AllCorona.push(
+          f
+            .filter(it => (it.Cases > 0 ) && (it.Province === ''))
+            .sort((a, b) => a.Date.localeCompare(b.Date))
+        );
       }
 
       this.coronaDataFirst = this.AllCorona[0];
@@ -121,13 +148,18 @@ ngAfterViewInit(): void {
 
       const lengthsArray = this.AllCorona.map(it => it.length);
 
-      const min =   Math.min(...lengthsArray);
+      const min = Math.min(...lengthsArray);
       const max = Math.max(...lengthsArray);
 
-      const slicedDataCases = this.AllCorona.map(it => it.slice(0, min).map(c => c.Cases));
-      const maxminValues = slicedDataCases.map(it => ({max: Math.max(...it), min: Math.min(...it)}) );
+      const slicedDataCases = this.AllCorona.map(it =>
+        it.slice(0, min).map(c => c.Cases)
+      );
+      const maxminValues = slicedDataCases.map(it => ({
+        max: Math.max(...it),
+        min: Math.min(...it)
+      }));
 
-      const maxValue = Math.max(...(maxminValues.map(it => it.max) )) ;
+      const maxValue = Math.max(...maxminValues.map(it => it.max));
       const dataForChartFromDay0: Array<any> = [];
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
@@ -141,23 +173,32 @@ ngAfterViewInit(): void {
         dataForChartFromDay0.push(dataFirst);
       }
 
-
       this.chartData = {
         labels: [...Array(min).keys()].map(it => {
-
-            const all = this.AllCorona.map(data => data[it].Country.slice(0, 2) + ':' + moment(data[it].Date).format('MM DD'));
-            return all.join('-');
-          }
-          ),
+          const all = this.AllCorona.map(
+            data =>
+              data[it].Country.slice(0, 2) +
+              ':' +
+              moment(data[it].Date).format('MM DD')
+          );
+          return all.join('-');
+        }),
         datasets: dataForChartFromDay0
       };
+      if (this.lineChart) {
+        this.lineChart.destroy();
+      }
+
       const chart = this.refChart.nativeElement;
       const ctx = chart.getContext('2d');
 
       this.lineChart = new Chart(ctx, {
         type: 'line',
         data: this.chartData,
-        options: this.getChartOptions(maxValue, `confirmed cases from the day 0 to day :${min} `)
+        options: this.getChartOptions(
+          maxValue,
+          `confirmed cases from the day 0 to day :${min} `
+        )
       });
 
       const dataForChart: Array<any> = [];
@@ -165,7 +206,7 @@ ngAfterViewInit(): void {
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
         const dataFirst = {
-          label: dataValue[0].Country ,
+          label: dataValue[0].Country,
           data: dataValue.map(it => it.Cases),
           lineTension: 0,
           fill: false,
@@ -179,17 +220,20 @@ ngAfterViewInit(): void {
 
         datasets: dataForChart
       };
-
+      if (this.lineChart1) {
+        this.lineChart1.destroy();
+      }
       const chart1 = this.refChart1.nativeElement;
       const ctx1 = chart1.getContext('2d');
 
       this.lineChart1 = new Chart(ctx1, {
         type: 'line',
         data: this.chartData1,
-        options: this.getChartOptions(maxValue, `confirmed cases : day 0 to ${max}`)
+        options: this.getChartOptions(
+          maxValue,
+          `confirmed cases : day 0 to ${max}`
+        )
       });
-
-
     });
   }
   getChartOptions(maxValueY: number, title: string): any {
@@ -197,7 +241,7 @@ ngAfterViewInit(): void {
       responsive: true,
       title: {
         display: true,
-        text: title ,
+        text: title
       },
       legend: {
         display: true,
@@ -209,29 +253,32 @@ ngAfterViewInit(): void {
       },
       scaleShowValues: true,
       scales: {
-        yAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Number'
-          },
-          ticks: {
-            beginAtZero: true,
-            suggestedMin: 0,
-            suggestedMax: maxValueY + 1
+        yAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: 'Number'
+            },
+            ticks: {
+              beginAtZero: true,
+              suggestedMin: 0,
+              suggestedMax: maxValueY + 1
+            }
           }
-        }],
-        xAxes: [{
-          scaleLabel: {
-            display: true,
-            labelString: 'Days'
-          },
-          ticks: {
-            autoSkip: false
+        ],
+        xAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: 'Days'
+            },
+            ticks: {
+              autoSkip: false
+            }
           }
-        }]
+        ]
       }
     };
-
   }
   getCovidOverallStatus() {
     this.covidDataService.getCovidStatusData().subscribe(data => {
