@@ -32,20 +32,17 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
   public chartData1: any;
 
-  public coronaDataFirst: CovidData[];
-  public coronaDataSecond: CovidData[];
   private colors: string[] = ['red', 'blue', 'black', 'yellow', 'green'];
   public AllCorona: Array<CovidData[]>;
   public coronaOverallStatusData: CovidOverallStatus;
   public coronaDate: string;
   private lineChart: Chart;
   private lineChart1: Chart;
-  private lineChart2: Chart;
   public countrySelected: CountryCovid19[];
   public AllCountries: Array<CountryCovid19[]>;
   private countries: CountryCovid19[];
   private countriesFromQuery: string[];
-  private currentLink: string;
+  public currentLink: string;
   constructor(
     private covidDataService: CovidDataService,
     private route: ActivatedRoute,
@@ -136,15 +133,34 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     zip(...obs).subscribe(arr => {
       for (let i = 0; i < arr.length; i++) {
         const f = arr[i];
-        this.AllCorona.push(
-          f
-            .filter(it => (it.Cases > 0 ) && (it.Province === ''))
+        const f1 = (
+          f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
         );
+        const arrDel = [];
+        for (let j = 0; j < f1.length - 1; j++) {
+          f1[j].RealDate = moment(f1[j].Date).toDate();
+          f1[j + 1].RealDate = moment(f1[j + 1].Date).toDate();
+          const diffTime = Math.abs(f1[j + 1].RealDate.setHours(0, 0, 0, 0) - f1[j ].RealDate.setHours(0, 0, 0, 0) );
+          const diffDays = (diffTime / (1000 * 60 * 60 * 24));
+          if (diffDays > 1) {
+            console.log('gap' + diffDays);
+            console.log(f1[j]);
+            console.log(f1[j + 1]);
+          }
+          if (diffDays < 1) {
+            console.log('duplicate date');
+            console.log(f1[j]);
+            console.log(f1[j + 1]);
+
+            arrDel.push(f1[j]);
+          }
+
+        }
+        arrDel.forEach(it => f1.splice(f1.indexOf(it), 1));
+        this.AllCorona.push(f1);
       }
 
-      this.coronaDataFirst = this.AllCorona[0];
-      this.coronaDataSecond = this.AllCorona[1];
 
       const lengthsArray = this.AllCorona.map(it => it.length);
 
