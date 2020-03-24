@@ -76,9 +76,9 @@ ngAfterViewInit(): void {
 
       this.chartData = {
         labels: [...Array(min).keys()].map(it => {
-            return this.coronaDataFirst[it].Country[0] + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD')
+            return this.coronaDataFirst[it].Country.slice(0,2) + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD')
             + '-' +
-            this.coronaDataSecond[it].Country[0] + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD')
+            this.coronaDataSecond[it].Country.slice(0,2) + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD')
             ;
           }
           ),
@@ -113,12 +113,12 @@ ngAfterViewInit(): void {
         labels: [...Array(max).keys()].map(it => {
           let first = '--';
           if (this.coronaDataFirst.length > it) {
-            first =  this.coronaDataFirst[it].Country[0] + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD');
+            first =  this.coronaDataFirst[it].Country.slice(0,2) + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD');
           }
 
           let second = '---';
           if (this.coronaDataSecond.length > it) {
-            second = this.coronaDataSecond[it].Country[0] + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD');
+            second = this.coronaDataSecond[it].Country[0].slice(0,2) + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD');
           }
           return first +'-'+ second;
         }),
