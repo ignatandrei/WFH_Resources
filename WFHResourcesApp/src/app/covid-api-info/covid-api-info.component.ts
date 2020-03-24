@@ -6,6 +6,8 @@ import * as moment from 'moment';
 import Chart from 'chart.js';
 import { zip } from 'rxjs';
 import { CountryCovid19 } from 'src/CountryCovid19';
+import { JsonPipe } from '@angular/common';
+import { ThrowStmt } from '@angular/compiler';
 @Component({
   selector: 'app-covid-api-info',
   templateUrl: './covid-api-info.component.html',
@@ -26,26 +28,39 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
 
   public coronaDataFirst: CovidData[];
   public coronaDataSecond: CovidData[];
+  private colors: string[] = ['red', 'blue', 'black', 'yellow', 'green'];
+  public AllCorona: Array<CovidData[]>;
   public coronaOverallStatusData: CovidOverallStatus;
   public coronaDate: string;
   private lineChart: Chart;
   private lineChart1: Chart;
   private lineChart2: Chart;
   public countrySelected: CountryCovid19[];
-  public AllCountries1: CountryCovid19[];
-  public AllCountries2: CountryCovid19[];
+  public AllCountries: Array<CountryCovid19[]>;
+  private countries: CountryCovid19[];
   constructor(    private covidDataService: CovidDataService) {
 
-    this.countrySelected = [];
-    this.countrySelected.push(null);
-    this.countrySelected.push(null);
-  }
 
+    this.countrySelected = [];
+    this.AllCountries = [];
+
+
+  }
+  canAdd(): boolean {
+    return this.AllCountries.length < this.colors.length;
+  }
+  addCountry(c: CountryCovid19) {
+    this.AllCountries.push(this.countries) ;
+    this.countrySelected.push(c);
+  }
   public ngOnInit() {
     this.covidDataService.getCovid19ApiCountries().subscribe(
       it => {
-        this.AllCountries1 = it ;
-        this.AllCountries2 =  it;
+        this.countries = it;
+        this.addCountry(it[142]);
+        this.addCountry(it[87]);
+        this.getCovidData(this.countrySelected.map( c => c.Slug));
+
       }
 
     );
@@ -53,57 +68,71 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
 }
 public changeSelection(nr: number, c: CountryCovid19) {
   this.countrySelected[ nr ] = c;
-  window.alert(JSON.stringify(this.countrySelected));
-  if (this.countrySelected.every(it => it != null)) {
-    this.getCovidData(this.countrySelected[0].Slug, this.countrySelected[1].Slug);
-  }
+  // window.alert(JSON.stringify(this.countrySelected));
+  // if (this.countrySelected.every(it => it != null)) {
+  this.getCovidData(this.countrySelected.map(it => it.Slug));
+  // }
 }
 ngAfterViewInit(): void {
-    this.getCovidData('romania', 'italy');
+
+    // this.getCovidData('romania', 'italy');
     this.getCovidOverallStatus();
 
   }
 
-  getCovidData(first: string, second: string) {
-    const obs1 = this.covidDataService.getCovidData(first);
-    const obs2 = this.covidDataService.getCovidData(second);
-    zip(obs1, obs2).subscribe( ([f , s ]) => {
-      this.coronaDataFirst = f.filter(it => it.Cases > 0).sort((a, b) => a.Date.localeCompare(b.Date));
-      this.coronaDataSecond = s.filter(it => it.Cases > 0).sort((a, b) => a.Date.localeCompare(b.Date));
-      const min = Math.min(this.coronaDataFirst.length, this.coronaDataSecond.length);
-      const max = Math.max(this.coronaDataFirst.length, this.coronaDataSecond.length);
+  getCovidData(slugs: string[]) {
+    if (!slugs.every(it => it != null)) {
+      return;
+    }
+    // const obs1 = this.covidDataService.getCovidData(slugs[0]);
+    // const obs2 = this.covidDataService.getCovidData(slugs[1]);
+    this.AllCorona = [];
+    const obs = slugs.map(it => this.covidDataService.getCovidData(it));
+    const obs1 = obs[0];
+    const obs2 = obs[1];
+    zip(...obs).subscribe( (arr) => {
+      for (let i = 0; i < arr.length; i++) {
 
-      // window.alert(min);
-      const data1 = this.coronaDataFirst.slice(0, min).map(it => it.Cases);
-      const data2 = this.coronaDataSecond.slice(0, min).map(it => it.Cases);
-      const maxValue1 = Math.max(...data1 ) ;
-      const maxValue2 =  Math.max(...data2 ) ;
-      const maxValue = Math.max(maxValue1, maxValue2) ;
+        const f = arr[i];
+        this.AllCorona.push( f.filter(it => it.Cases > 0).sort((a, b) => a.Date.localeCompare(b.Date)));
+      }
 
-      const dataFirst = {
-        label: f[0].Country,
-        data: this.coronaDataFirst.slice(0, min).map(it => it.Cases),
-        lineTension: 0,
-        fill: false,
-        borderColor: 'red'
-      };
-      const dataSecond = {
-        label: s[0].Country,
-        data:  this.coronaDataSecond.slice(0, min).map(it => it.Cases),
-        lineTension: 0,
-        fill: false,
-      borderColor: 'blue'
-      };
+      this.coronaDataFirst = this.AllCorona[0];
+      this.coronaDataSecond = this.AllCorona[1];
+
+      const lengthsArray = this.AllCorona.map(it => it.length);
+
+      const min =   Math.min(...lengthsArray);
+      const max = Math.max(...lengthsArray);
+
+      const slicedDataCases = this.AllCorona.map(it => it.slice(0, min).map(c => c.Cases));
+      const maxminValues = slicedDataCases.map(it => ({max: Math.max(...it), min: Math.min(...it)}) );
+
+      const maxValue = Math.max(...(maxminValues.map(it => it.max) )) ;
+      const dataForChart: Array<any> = [];
+      for (let data = 0; data < this.AllCorona.length; data++) {
+        const dataValue = this.AllCorona[data];
+        const dataFirst = {
+          label: dataValue[0].Country,
+          data: dataValue.slice(0, min).map(it => it.Cases),
+          lineTension: 0,
+          fill: false,
+          borderColor: this.colors[data]
+        };
+        dataForChart.push(dataFirst);
+      }
+
 
       this.chartData = {
         labels: [...Array(min).keys()].map(it => {
+
             return this.coronaDataFirst[it].Country.slice(0, 2) + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD')
             + '-' +
             this.coronaDataSecond[it].Country.slice(0, 2) + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD')
             ;
           }
           ),
-        datasets: [dataFirst, dataSecond]
+        datasets: dataForChart
       };
       const chart = this.refChart.nativeElement;
       const ctx = chart.getContext('2d');
@@ -116,14 +145,14 @@ ngAfterViewInit(): void {
 
 
       const dataFirst1 = {
-        label: f[0].Country,
+        label: this.coronaDataFirst[0].Country,
         data: this.coronaDataFirst.map(it => it.Cases),
         lineTension: 0,
         fill: false,
         borderColor: 'red'
       };
       const dataSecond1 = {
-        label: s[0].Country,
+        label: this.coronaDataSecond[0].Country,
         data:  this.coronaDataSecond.map(it => it.Cases),
         lineTension: 0,
         fill: false,

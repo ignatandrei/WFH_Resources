@@ -1,14 +1,21 @@
-Country1:
-<select name="countriesFirst" [ngModel]="country1" (ngModelChange)='changeSelection(0,$event)'>
-  <option *ngFor="let c1 of AllCountries1" [ngValue]="c1" > {{c1.Country}} </option>
-</select> 
+<span *ngFor="let c of countrySelected; let i = index">
+  Country {{ i +1 }}:
+  <select
+    name="countriesFirst"
+    [ngModel]="countrySelected[i]"
+    (ngModelChange)="changeSelection(i, $event)"
+  >
+   <option [ngValue]="null">Please select</option>
+    <option *ngFor="let c1 of AllCountries[i];let j=index" [ngValue]="c1">
+      {{c1.Country}} {{j}}
+    </option>
+  </select>
+  
+</span>
 
-Country 2: 
-<select name="countriesSecond" [ngModel]="country2" (ngModelChange)='changeSelection(1,$event)' >
-
-  <option *ngFor="let c2 of AllCountries2" [ngValue]="c2"> {{c2.Country}} </option>
-</select> 
-
+<div>
+  <button (click)="addCountry(null)" *ngIf="canAdd()" >Add</button>
+</div>
 <div id="content">
   <canvas #chartCompare></canvas>
 </div>
