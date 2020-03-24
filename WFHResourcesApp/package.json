@@ -25,6 +25,7 @@
     "@ng-bootstrap/ng-bootstrap": "^6.0.0",
     "@siderite/linqer": "^1.2.2",
     "bootstrap-icons": "^1.0.0-alpha3",
+    "chart.js": "^2.9.3",
     "moment": "^2.24.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",

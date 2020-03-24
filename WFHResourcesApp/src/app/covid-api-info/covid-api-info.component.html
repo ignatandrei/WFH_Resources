@@ -1,7 +1,13 @@
+<div id="content">
+  <canvas #chartCompare></canvas>
+</div>
+<div id="content1" style="width:90%">
+  <canvas #chartBoth></canvas>
+</div>
 
 <div
   class="card text-white bg-dark border-0 rounded-0"
-  *ngFor="let corona of coronaOverallStatusData.results"
+  *ngFor="let corona of coronaOverallStatusData?.results"
 >
   <div class="card-header font-weight-bold">
     COVID-19 Daily Tracker

@@ -8,12 +8,13 @@ import { CovidOverallStatus } from "./covidOverallStatus";
   providedIn: "root"
 })
 export class CovidDataService {
-  covidApi = "https://api.covid19api.com/country/romania/status/confirmed/live";
+  covidApi = "https://api.covid19api.com/country/0/status/confirmed/live";
   covidStatusApi = "https://thevirustracker.com/free-api?global=stats";
   constructor(private http: HttpClient) {}
 
-  getCovidData(): Observable<CovidData[]> {
-    return this.http.get<CovidData[]>(this.covidApi);
+  getCovidData(country: string): Observable<CovidData[]> {
+    var url = this.covidApi.replace('0', country);
+    return this.http.get<CovidData[]>(url);
   }
   getCovidStatusData(): Observable<CovidOverallStatus> {
     return this.http.get<CovidOverallStatus>(this.covidStatusApi);
