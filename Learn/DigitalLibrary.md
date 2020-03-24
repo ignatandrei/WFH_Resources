@@ -38,3 +38,14 @@ https://www.cambridge.org/core/what-we-publish/textbooks
 
 ### Tags
 books
+
+
+## Scribd
+
+### Links
+https://www.scribd.com/readfree
+
+### Description
+
+### Tags
+books
