@@ -46,8 +46,14 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
 
 
   }
+  removeCountry(i: number) {
+
+    this.countrySelected.splice(i, 1);
+    this.getCovidData(this.countrySelected.map(it => it.Slug));
+
+  }
   canAdd(): boolean {
-    return this.AllCountries.length < this.colors.length;
+    return this.countrySelected.length < this.colors.length;
   }
   addCountry(c: CountryCovid19) {
     this.AllCountries.push(this.countries) ;
@@ -57,8 +63,13 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
     this.covidDataService.getCovid19ApiCountries().subscribe(
       it => {
         this.countries = it;
-        this.addCountry(it[142]);
-        this.addCountry(it[87]);
+        this.addCountry(it.find(c => c.Country === 'Italy'));
+        this.addCountry(it.find(c => c.Country === 'Romania'));
+        // this.addCountry(it.find(c => c.Country === 'Austria'));
+        // this.addCountry(it.find(c => c.Country === 'Germany'));
+        
+        // this.addCountry(it[10]);
+        // this.addCountry(it[68]);
         this.getCovidData(this.countrySelected.map( c => c.Slug));
 
       }
@@ -109,7 +120,7 @@ ngAfterViewInit(): void {
       const maxminValues = slicedDataCases.map(it => ({max: Math.max(...it), min: Math.min(...it)}) );
 
       const maxValue = Math.max(...(maxminValues.map(it => it.max) )) ;
-      const dataForChart: Array<any> = [];
+      const dataForChartFromDay0: Array<any> = [];
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
         const dataFirst = {
@@ -119,20 +130,18 @@ ngAfterViewInit(): void {
           fill: false,
           borderColor: this.colors[data]
         };
-        dataForChart.push(dataFirst);
+        dataForChartFromDay0.push(dataFirst);
       }
 
 
       this.chartData = {
         labels: [...Array(min).keys()].map(it => {
 
-            return this.coronaDataFirst[it].Country.slice(0, 2) + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD')
-            + '-' +
-            this.coronaDataSecond[it].Country.slice(0, 2) + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD')
-            ;
+            const all = this.AllCorona.map(data => data[it].Country.slice(0, 2) + ':' + moment(data[it].Date).format('MM DD'));
+            return all.join('-');
           }
           ),
-        datasets: dataForChart
+        datasets: dataForChartFromDay0
       };
       const chart = this.refChart.nativeElement;
       const ctx = chart.getContext('2d');
@@ -140,40 +149,27 @@ ngAfterViewInit(): void {
       this.lineChart = new Chart(ctx, {
         type: 'line',
         data: this.chartData,
-        options: this.getChartOptions(maxValue, 'confirmed cases from the start - same number of days')
+        options: this.getChartOptions(maxValue, `confirmed cases from the day 0 to day :${min} `)
       });
 
+      const dataForChart: Array<any> = [];
 
-      const dataFirst1 = {
-        label: this.coronaDataFirst[0].Country,
-        data: this.coronaDataFirst.map(it => it.Cases),
-        lineTension: 0,
-        fill: false,
-        borderColor: 'red'
-      };
-      const dataSecond1 = {
-        label: this.coronaDataSecond[0].Country,
-        data:  this.coronaDataSecond.map(it => it.Cases),
-        lineTension: 0,
-        fill: false,
-      borderColor: 'blue'
-      };
+      for (let data = 0; data < this.AllCorona.length; data++) {
+        const dataValue = this.AllCorona[data];
+        const dataFirst = {
+          label: dataValue[0].Country ,
+          data: dataValue.map(it => it.Cases),
+          lineTension: 0,
+          fill: false,
+          borderColor: this.colors[data]
+        };
+        dataForChart.push(dataFirst);
+      }
 
       this.chartData1 = {
-        labels: [...Array(max).keys()].map(it => {
-          let first = '--';
-          if (this.coronaDataFirst.length > it) {
-            first =  this.coronaDataFirst[it].Country.slice(0, 2) + ':' + moment(this.coronaDataFirst[it].Date).format('MMM DD');
-          }
+        labels: [...Array(max).keys()],
 
-          let second = '---';
-          if (this.coronaDataSecond.length > it) {
-            second = this.coronaDataSecond[it].Country[0].slice(0, 2) + ':' + moment(this.coronaDataSecond[it].Date).format('MMM DD');
-          }
-          return first + '-' + second;
-        }),
-
-        datasets: [dataFirst1, dataSecond1]
+        datasets: dataForChart
       };
 
       const chart1 = this.refChart1.nativeElement;
@@ -182,7 +178,7 @@ ngAfterViewInit(): void {
       this.lineChart1 = new Chart(ctx1, {
         type: 'line',
         data: this.chartData1,
-        options: this.getChartOptions(maxValue, 'confirmed cases : all days ')
+        options: this.getChartOptions(maxValue, `confirmed cases : day 0 to ${max}`)
       });
 
 
