@@ -1,8 +1,10 @@
-<select name="countriesFirst" [ngModel]="country1" (ngModelChange)='changeSelection(1,$event)'>
+Country1:
+<select name="countriesFirst" [ngModel]="country1" (ngModelChange)='changeSelection(0,$event)'>
   <option *ngFor="let c1 of AllCountries1" [ngValue]="c1" > {{c1.Country}} </option>
 </select> 
 
-<select name="countriesSecond" [ngModel]="country2" (ngModelChange)='changeSelection(2,$event)' >
+Country 2: 
+<select name="countriesSecond" [ngModel]="country2" (ngModelChange)='changeSelection(1,$event)' >
 
   <option *ngFor="let c2 of AllCountries2" [ngValue]="c2"> {{c2.Country}} </option>
 </select> 

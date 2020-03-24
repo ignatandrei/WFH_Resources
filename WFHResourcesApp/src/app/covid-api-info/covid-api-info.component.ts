@@ -31,11 +31,15 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
   private lineChart: Chart;
   private lineChart1: Chart;
   private lineChart2: Chart;
-  public country1: CountryCovid19;
-  public country2: CountryCovid19;
+  public countrySelected: CountryCovid19[];
   public AllCountries1: CountryCovid19[];
   public AllCountries2: CountryCovid19[];
-  constructor(    private covidDataService: CovidDataService) { }
+  constructor(    private covidDataService: CovidDataService) {
+
+    this.countrySelected = [];
+    this.countrySelected.push(null);
+    this.countrySelected.push(null);
+  }
 
   public ngOnInit() {
     this.covidDataService.getCovid19ApiCountries().subscribe(
@@ -48,9 +52,10 @@ export class CovidApiInfoComponent implements OnInit , AfterViewInit {
 
 }
 public changeSelection(nr: number, c: CountryCovid19) {
-  this['country' + nr ] = c;
-  if (this.country1 != null && this.country2 != null) {
-    this.getCovidData(this.country1.Slug, this.country2.Slug);
+  this.countrySelected[ nr ] = c;
+  window.alert(JSON.stringify(this.countrySelected));
+  if (this.countrySelected.every(it => it != null)) {
+    this.getCovidData(this.countrySelected[0].Slug, this.countrySelected[1].Slug);
   }
 }
 ngAfterViewInit(): void {
