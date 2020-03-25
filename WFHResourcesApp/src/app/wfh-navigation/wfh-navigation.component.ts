@@ -8,7 +8,7 @@ import { CovidDataService } from "src/covid-data.service";
 import { CovidData } from "src/codvid";
 import { CovidOverallStatus } from "src/covidOverallStatus";
 import { FormControl } from "@angular/forms";
-// import { formControl } from "../table-wfh/table-wfh.component";
+import { NagivationTableControlService } from "src/nagivation-table-control.service";
 
 @Component({
   selector: "app-wfh-navigation",
@@ -29,11 +29,13 @@ export class WfhNavigationComponent implements OnInit {
       shareReplay()
     );
   covidTickerData: any;
+  public filterSource: any;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
     private Cat: LoadDataService,
-    private covidDataService: CovidDataService
+    private covidDataService: CovidDataService,
+    private navTableSource: NagivationTableControlService
   ) {}
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
@@ -42,6 +44,9 @@ export class WfhNavigationComponent implements OnInit {
       this.Categories = it.Categories();
     });
     this.getCovidTickerData();
+    this.navTableSource.navTableObservable.subscribe(
+      filterSource => (this.filterSource = filterSource)
+    );
   }
 
   getCovidTickerData() {

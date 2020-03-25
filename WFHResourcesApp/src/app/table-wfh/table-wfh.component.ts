@@ -1,12 +1,12 @@
-import { Component, OnInit, PipeTransform } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { DecimalPipe } from '@angular/common';
-import { map, startWith } from 'rxjs/operators';
-import { Observable, merge } from 'rxjs';
-import { Category } from './Category';
-import { allData } from './data';
-import { LoadDataService } from '../load-data.service';
-import { ThrowStmt } from '@angular/compiler';
+import { Component, OnInit, PipeTransform } from "@angular/core";
+import { FormControl } from "@angular/forms";
+import { DecimalPipe } from "@angular/common";
+import { map, startWith } from "rxjs/operators";
+import { Observable, merge } from "rxjs";
+import { Category } from "./Category";
+import { allData } from "./data";
+import { LoadDataService } from "../load-data.service";
+import { ThrowStmt } from "@angular/compiler";
 import {
   ActivatedRoute,
   UrlTree,
@@ -14,21 +14,23 @@ import {
   PRIMARY_OUTLET,
   UrlSegmentGroup,
   UrlSegment
-} from '@angular/router';
-import { FilterData } from './filterData';
+} from "@angular/router";
+import { FilterData } from "./filterData";
+import { NagivationTableControlService } from "src/nagivation-table-control.service";
 @Component({
-  selector: 'app-table-wfh',
-  templateUrl: './table-wfh.component.html',
-  styleUrls: ['./table-wfh.component.css'],
+  selector: "app-table-wfh",
+  templateUrl: "./table-wfh.component.html",
+  styleUrls: ["./table-wfh.component.css"],
   providers: []
 })
 export class TableWFHComponent implements OnInit {
   category: Category[];
   linkPath: any;
   categories$: Observable<Category[]>;
-  filter = new FormControl('');
+  filter = new FormControl("");
   filterdata: FilterData;
-  darkMode = '';
+  public filterSource: any;
+  darkMode = "";
 
   search(text: string): Category[] {
     if (this.category == null) {
@@ -41,7 +43,10 @@ export class TableWFHComponent implements OnInit {
         category.name.toLowerCase().includes(term) ||
         category.subCategory.toLowerCase().includes(term) ||
         category.category.toLowerCase().includes(term) ||
-        category.links.join('').toLowerCase().includes(term)
+        category.links
+          .join("")
+          .toLowerCase()
+          .includes(term)
       );
     });
     data = this.filterdata.filter(data);
@@ -52,22 +57,30 @@ export class TableWFHComponent implements OnInit {
   constructor(
     private loadCategory: LoadDataService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private navTableSource: NagivationTableControlService
   ) {
     this.filterdata = new FilterData(route);
   }
   ngOnInit(): void {
     this.loadCategory.Category$.subscribe(it => (this.category = it.Cat));
     const changeFirst = this.filterdata.pipe(
-      startWith(''),
+      startWith(""),
       map(it => this.filter.value)
     );
-    const changeSecond = this.filter.valueChanges.pipe(startWith(''));
+    const changeSecond = this.filter.valueChanges.pipe(startWith(""));
 
     this.categories$ = merge(changeFirst, changeSecond).pipe(
       map(text => this.search(text))
     );
+    this.navTableSource.navTableObservable.subscribe(
+      filterSource => (this.filterSource = filterSource)
+    );
   }
+
+  // updateFilterSource() {
+  //   this.navTableSource.navTableAnnounce(this.search(this.filterSource));
+  // }
 
   // getLinks(link: string) {
   //   const tree: UrlTree = this.router.parseUrl(link);
@@ -76,19 +89,15 @@ export class TableWFHComponent implements OnInit {
   //   return s[0].path;
   // }
   getClassLink(link: string): string {
-    if (link == null || link.length < 1 ) {
-      return  'btn-danger';
+    if (link == null || link.length < 1) {
+      return "btn-danger";
     }
-    return 'btn-outline-dark';
-
+    return "btn-outline-dark";
   }
   getLinkName(link: string): string {
-
     const url = link;
-    if (url == null || url.length < 1 ) {
-
-      return  'Link not available';
-
+    if (url == null || url.length < 1) {
+      return "Link not available";
     }
     const urlParts = /^(?:\w+\:\/\/)?([^\/]+)(.*)$/.exec(url);
     const urlPart = /^(https?\:)\/\/(([^:\/?#]*)(?:\:([0-9]+))?)([\/]{0,1}[^?#]*)(\?[^#]*|)(#.*|)$/.exec(
@@ -96,11 +105,11 @@ export class TableWFHComponent implements OnInit {
     );
 
     const host = urlPart[2];
-      // console.log(urlPart);
+    // console.log(urlPart);
 
-    return  'Available @' + host;
+    return "Available @" + host;
   }
   changeDarkMode() {
-    this.darkMode = 'table-dark';
+    this.darkMode = "table-dark";
   }
 }
