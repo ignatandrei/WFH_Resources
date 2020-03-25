@@ -1,8 +1,3 @@
-<nav class="form-inline navbar navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/" id="wfh">Work From Home: Resources</a>
-
-  <!-- <button class="btn btn-dark" (click)="changeDarkMode()"></button> -->
-</nav>
 <div class="row mt-2">
   <div class="col-sm-12">
     <select
@@ -12,7 +7,7 @@
     >
       <option *ngFor="let s of status" [ngValue]="s">{{ s }}</option>
     </select>
-    <div>
+    <div class="width-100">
       <a href="{{ currentLink }}" id="copyLink">{{ currentLink }} </a>
     </div>
     <span id="allCountries">
