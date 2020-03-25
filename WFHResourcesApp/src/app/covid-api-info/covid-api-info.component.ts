@@ -10,11 +10,13 @@ import { CovidData } from 'src/codvid';
 import { CovidOverallStatus } from 'src/covidOverallStatus';
 import * as moment from 'moment';
 import Chart from 'chart.js';
-import { zip } from 'rxjs';
+import { zip, Observable } from 'rxjs';
 import { CountryCovid19 } from 'src/CountryCovid19';
 import { JsonPipe } from '@angular/common';
 import { ThrowStmt } from '@angular/compiler';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { shareReplay, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-covid-api-info',
@@ -49,7 +51,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   constructor(
     private covidDataService: CovidDataService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private breakpointObserver: BreakpointObserver
 
   ) {
     this.countrySelected = [];
@@ -63,6 +66,13 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
+
   changeStatus(s: string) {
     this.statusSelected = s;
     //window.alert(this.statusSelected);

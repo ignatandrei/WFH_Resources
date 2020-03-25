@@ -16,6 +16,7 @@ import { MatListModule } from "@angular/material/list";
 import { HttpClientModule } from "@angular/common/http";
 import { AboutComponent } from "./about/about.component";
 import { CovidApiInfoComponent } from './covid-api-info/covid-api-info.component';
+import { NvComponent } from './nv/nv.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CovidApiInfoComponent } from './covid-api-info/covid-api-info.component
     TableWFHComponent,
     WfhNavigationComponent,
     AboutComponent,
-    CovidApiInfoComponent
+    CovidApiInfoComponent,
+    NvComponent
   ],
   imports: [
     BrowserModule,
