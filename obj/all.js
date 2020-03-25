@@ -586,6 +586,18 @@
 	{
 		tags: "",
 		category: "Learn",
+		subCategory: "DigitalLibrary",
+		name: "JSTOR",
+		links: [
+			"https://about.jstor.org/oa-and-free/"
+		],
+		dateCreated: "2020-03-25T09:26:58.856Z",
+		description: "",
+		id: "JSTOR_DIGITALLIBRARY_LEARN"
+	},
+	{
+		tags: "",
+		category: "Learn",
 		subCategory: "Museums",
 		name: "Multiple",
 		links: [
