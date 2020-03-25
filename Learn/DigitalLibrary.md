@@ -49,3 +49,13 @@ https://www.scribd.com/readfree
 
 ### Tags
 books
+
+## JSTOR
+
+### Links
+https://about.jstor.org/oa-and-free/
+
+### Description
+
+### Tags
+books
