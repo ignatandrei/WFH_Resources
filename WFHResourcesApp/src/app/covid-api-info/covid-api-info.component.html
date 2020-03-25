@@ -1,4 +1,9 @@
-<div class="row">
+<nav class="form-inline navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Work From Home: Resources</a>
+
+  <button class="btn btn-dark" (click)="changeDarkMode()"></button>
+</nav>
+<div class="row mt-2">
   <div class="col-sm-12">
     <select [ngModel]="statusSelected" (ngModelChange)="changeStatus($event)">
       <option *ngFor="let s of status" [ngValue]="s">{{ s }}</option>
