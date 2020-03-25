@@ -3,6 +3,14 @@
     display: none;
   }
   .sizeText {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
+}
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }

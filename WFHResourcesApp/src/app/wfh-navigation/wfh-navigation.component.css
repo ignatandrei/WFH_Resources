@@ -44,6 +44,15 @@
 
 @media only screen and (max-width: 768px) {
   .phoneMenu {
-    width: fit-content;
+    width: 100%;
+    border-right: 0px;
   }
+}
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }

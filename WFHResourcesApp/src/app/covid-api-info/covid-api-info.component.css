@@ -1,6 +1,14 @@
 #content {
-    margin: auto;
-    width: 1024px;
-    background-color: #FFFFFF;
-    padding: 20px;
+  margin: auto;
+  width: 1024px;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }

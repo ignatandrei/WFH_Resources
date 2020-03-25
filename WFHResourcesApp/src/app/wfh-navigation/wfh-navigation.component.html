@@ -1,104 +1,106 @@
-<div class="row width-100 ml-0 mr-0 phoneMenu">
-  <div class="col-sm-1 pl-0 pr-0 border-right">
-    <div class="">
-      <div class="card border-0">
-        <a
-          class="btn btn-secondary card-header active text-left border-0 rounded-0"
-          routerLink="about"
-          >About</a
-        >
-        <button
-          class="btn btn-secondary card-header active text-left border-0 rounded-0"
-          id="headingTwo"
-          type="button"
-          (click)="isCategoriesCollapsed = !isCategoriesCollapsed"
-          [attr.aria-expanded]="!isCategoriesCollapsed"
-          aria-controls="collapseCategories"
-        >
-          Categories
-        </button>
-
-        <div id="collapseCategories" [ngbCollapse]="isCategoriesCollapsed">
-          <div class="card-body">
-            <a
-              class="list-group-item list-group-item-action"
-              *ngFor="let cat of Categories | keyvalue"
-              role="tab"
-              routerLink="/resources"
-              [queryParams]="{ category: cat.key }"
-              ><svg
-                class="bi bi-stop"
-                width="2em"
-                height="2em"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
-                  clip-rule="evenodd"
-                /></svg
-              >{{ cat.key }}</a
-            >
-          </div>
-        </div>
-      </div>
-      <div class="card border-0">
-        <button
-          class="btn btn-secondary card-header active text-left border-0 rounded-0"
-          id="headingThree"
-          type="button"
-          (click)="isSubCategoriesCollapsed = !isSubCategoriesCollapsed"
-          [attr.aria-expanded]="!isSubCategoriesCollapsed"
-          aria-controls="collapseSubCategories"
-        >
-          Subcategory
-        </button>
-
-        <div
-          id="collapseSubCategories"
-          class=""
-          [ngbCollapse]="isSubCategoriesCollapsed"
-        >
-          <div class="card-body" *ngFor="let cat of Categories | keyvalue">
-            <a
-              class="list-group-item list-group-item-action"
-              *ngFor="let subCat of Categories.get(cat.key).sort()"
-              role="tab"
-              routerLink="/resources"
-              [queryParams]="{ subcategory: subCat }"
-              ><svg
-                class="bi bi-stop"
-                width="2em"
-                height="2em"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
-                  clip-rule="evenodd"
-                /></svg
-              >{{ subCat }}
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="card border-0">
-        <a
-          class="btn btn-secondary card-header active text-left border-0 rounded-0"
-          id="headingThree"
-          type="button"
-          routerLink="/covidData"
+<div class="container pl=0 pr-0">
+  <div class="row width-100 ml-0 mr-0 phoneMenu">
+    <div class="col-sm-1 pl-0 pr-0 border-right phoneMenu">
+      <div class="">
+        <div class="card border-0">
+          <a
+            class="btn btn-secondary card-header active text-left border-0 rounded-0"
+            routerLink="about"
+            >About</a
           >
-          Covid Data
-        </a>
+          <button
+            class="btn btn-secondary card-header active text-left border-0 rounded-0"
+            id="headingTwo"
+            type="button"
+            (click)="isCategoriesCollapsed = !isCategoriesCollapsed"
+            [attr.aria-expanded]="!isCategoriesCollapsed"
+            aria-controls="collapseCategories"
+          >
+            Categories
+          </button>
+
+          <div id="collapseCategories" [ngbCollapse]="isCategoriesCollapsed">
+            <div class="card-body">
+              <a
+                class="list-group-item list-group-item-action"
+                *ngFor="let cat of Categories | keyvalue"
+                role="tab"
+                routerLink="/resources"
+                [queryParams]="{ category: cat.key }"
+                ><svg
+                  class="bi bi-stop"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
+                    clip-rule="evenodd"
+                  /></svg
+                >{{ cat.key }}</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card border-0">
+          <button
+            class="btn btn-secondary card-header active text-left border-0 rounded-0"
+            id="headingThree"
+            type="button"
+            (click)="isSubCategoriesCollapsed = !isSubCategoriesCollapsed"
+            [attr.aria-expanded]="!isSubCategoriesCollapsed"
+            aria-controls="collapseSubCategories"
+          >
+            Subcategory
+          </button>
+
+          <div
+            id="collapseSubCategories"
+            class=""
+            [ngbCollapse]="isSubCategoriesCollapsed"
+          >
+            <div class="card-body" *ngFor="let cat of Categories | keyvalue">
+              <a
+                class="list-group-item list-group-item-action"
+                *ngFor="let subCat of Categories.get(cat.key).sort()"
+                role="tab"
+                routerLink="/resources"
+                [queryParams]="{ subcategory: subCat }"
+                ><svg
+                  class="bi bi-stop"
+                  width="2em"
+                  height="2em"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.5 5A1.5 1.5 0 015 3.5h6A1.5 1.5 0 0112.5 5v6a1.5 1.5 0 01-1.5 1.5H5A1.5 1.5 0 013.5 11V5zM5 4.5a.5.5 0 00-.5.5v6a.5.5 0 00.5.5h6a.5.5 0 00.5-.5V5a.5.5 0 00-.5-.5H5z"
+                    clip-rule="evenodd"
+                  /></svg
+                >{{ subCat }}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card border-0">
+          <a
+            class="btn btn-secondary card-header active text-left border-0 rounded-0"
+            id="headingThree"
+            type="button"
+            routerLink="/covidData"
+          >
+            Covid Data
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-sm-11 pl-0 pr-0 width-100">
-    <router-outlet></router-outlet>
+    <div class="col-sm-11 pl-0 pr-0 width-100">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

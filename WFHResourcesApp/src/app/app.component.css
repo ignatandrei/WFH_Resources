@@ -2,3 +2,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
