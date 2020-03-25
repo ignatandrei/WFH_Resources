@@ -89,7 +89,7 @@ export class CachingInterceptor implements HttpInterceptor {
         if (event instanceof HttpResponse) {
           CachingInterceptor.cache.set(url, event.body); // Update the cache.
           // if (CachingInterceptor.cache.size % 2 === 0) {
-          CachingInterceptor.saveData.setWithExpiry(url, event.body, 1000 * 60 * 60);
+          CachingInterceptor.saveData.setWithExpiry(url, event.body, 1000 * 60 * 10);
           // }
         }
       })
