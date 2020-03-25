@@ -1,32 +1,41 @@
+<div class="row">
+  <div class="col-sm-12">
+    <select [ngModel]="statusSelected" (ngModelChange)="changeStatus($event)">
+      <option *ngFor="let s of status" [ngValue]="s">{{ s }}</option>
+    </select>
+    <div>
+      <a href="{{ currentLink }}">{{ currentLink }} </a>
+    </div>
+    <span *ngFor="let c of countrySelected; let i = index">
+      Country {{ i + 1 }}:
+      <select
+        name="countriesFirst"
+        [ngModel]="countrySelected[i]"
+        (ngModelChange)="changeSelection(i, $event)"
+      >
+        <option [ngValue]="null">Please select</option>
+        <option
+          *ngFor="let c1 of AllCountries[i]; let j = index"
+          [ngValue]="c1"
+        >
+          {{ c1.Country }}
+        </option>
+      </select>
+      <button (click)="removeCountry(i)" *ngIf="AllCountries?.length > 2">
+        remove
+      </button>
+    </span>
 
-<select  [ngModel]="statusSelected" (ngModelChange)="changeStatus($event)">
-  <option *ngFor="let s of status" [ngValue]="s">{{s}}</option>
-</select>
-<div><a href='{{currentLink}}'>{{currentLink}} </a>
-</div>
-<span *ngFor="let c of countrySelected; let i = index">
-  Country {{ i +1 }}:
-  <select
-    name="countriesFirst"
-    [ngModel]="countrySelected[i]"
-    (ngModelChange)="changeSelection(i, $event)"
-  >
-   <option [ngValue]="null">Please select</option>
-    <option *ngFor="let c1 of AllCountries[i];let j=index" [ngValue]="c1">
-      {{c1.Country}} 
-    </option>
-  </select>
-  <button (click)="removeCountry(i)" *ngIf="AllCountries?.length>2">remove </button>
-</span>
-
-<div>
-  <button (click)="addCountry(null)" *ngIf="canAdd()" >Add</button>
-</div>
-<div id="content">
-  <canvas #chartCompare></canvas>
-</div>
-<div id="content1" style="width:90%">
-  <canvas #chartBoth></canvas>
+    <div>
+      <button (click)="addCountry(null)" *ngIf="canAdd()">Add</button>
+    </div>
+    <div id="content">
+      <canvas #chartCompare></canvas>
+    </div>
+    <div id="content1" style="width:90%">
+      <canvas #chartBoth></canvas>
+    </div>
+  </div>
 </div>
 
 <div

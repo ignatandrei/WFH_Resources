@@ -1,8 +1,9 @@
 #content {
   margin: auto;
-  width: 1024px;
+  width: 100%;
   background-color: #ffffff;
-  padding: 20px;
+  padding: 0px;
+  height: 100%;
 }
 .container {
   padding-left: 0px;
