@@ -36,7 +36,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
   private colors: string[] = ['red', 'blue', 'black', 'orange', 'green'];
   public AllCorona: Array<CovidData[]>;
-  public coronaOverallStatusData: CovidOverallStatus;
+  public coronaOverallStatusData: CovidOverallStatus = new CovidOverallStatus();
   public coronaDate: string;
   private lineChart: Chart;
   private lineChart1: Chart;
@@ -98,6 +98,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     return this.countrySelected.length < this.colors.length;
   }
   addCountry(c: CountryCovid19) {
+    // window.alert('add '+c?.Country);
+    if (c != null) {
+      if (this.countrySelected.filter(it => it.Country === c.Country).length > 0) {
+        return;
+      }
+    }
     this.AllCountries.push(this.countries);
     this.countrySelected.push(c);
     this.currentLink = this.generateURL();
@@ -106,14 +112,15 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
 
     // window.alert('asd');
-    this.covidDataService.getCovid19ApiCountries().subscribe(it => {
-      this.countries = it.filter(it => it.Country.length > 0);
+    this.covidDataService.getCovid19ApiCountries().subscribe(val => {
+      const it = [...val];
+      this.countries = it.filter(x => x?.Country?.length > 0);
       // window.alert(this.countriesFromQuery.length);
       if (this.countriesFromQuery.length > 0) {
         const fromQuery = it.filter(
           a =>
             this.countriesFromQuery.filter(
-              c => c.toLowerCase() === a.Country.toLowerCase()
+              c => c?.toLowerCase() === a?.Country?.toLowerCase()
             ).length > 0
         );
 
@@ -136,7 +143,6 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       // this.addCountry(it[10]);
       // this.addCountry(it[68]);
-      this.getCovidDataAll(this.countrySelected.map(c => c?.Slug));
     });
   }
   public changeSelection(nr: number, c: CountryCovid19) {
@@ -145,6 +151,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.currentLink = this.generateURL();
   }
   ngAfterViewInit(): void {
+    this.getCovidDataAll(this.countrySelected.map(c => c?.Slug));
     // this.getCovidData('romania', 'italy');
     this.getCovidOverallStatus();
     this.introJS = introJs();
@@ -192,7 +199,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     zip(...obs).subscribe(arr => {
       this.AllCorona = [];
       for (let i = 0; i < arr.length; i++) {
-        const f = arr[i];
+        const item =  arr[i];
+        const country = item[0];
+        const f = item[1];
         const f1 = (
           f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
@@ -219,6 +228,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         }
         arrDel.forEach(it => f1.splice(f1.indexOf(it), 1));
         this.AllCorona.push(f1);
+
       }
 
 
@@ -358,7 +368,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   }
   getCovidOverallStatus() {
     this.covidDataService.getCovidStatusData().subscribe(data => {
-      this.coronaOverallStatusData = data;
+      for (const f of data.results) {
+      this.coronaOverallStatusData.results.push(f);
+      };
     });
   }
 }
