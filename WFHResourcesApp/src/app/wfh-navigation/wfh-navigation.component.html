@@ -22,6 +22,39 @@
     </app-table-wfh>
   </form> -->
 </nav>
+
+<div class="ticker-wrap bg-danger text-white pt-3 pb-3 font-weight-bold">
+  <div class="ticker" *ngFor="let coronaTicker of covidTickerData.results">
+    <div class="ticker-item">
+      COVID-19 Daily Status -->>
+    </div>
+    <div class="ticker-item">
+      There are {{ coronaTicker.total_cases }} total cases
+    </div>
+    <div class="ticker-item">
+      {{ coronaTicker.total_recovered }} people have recovered.
+    </div>
+    <div class="ticker-item">
+      There are {{ coronaTicker.total_unresolved }} unresolved cases.
+    </div>
+    <div class="ticker-item">
+      {{ coronaTicker.total_deaths }} people have died.
+    </div>
+    <div class="ticker-item">
+      There are {{ coronaTicker.total_new_cases_today }} new cases today.
+    </div>
+    <div class="ticker-item">
+      {{ coronaTicker.total_new_deaths_today }} people have died today.
+    </div>
+    <div class="ticker-item">
+      Total active cases: {{ coronaTicker.total_active_cases }}
+    </div>
+    <div class="ticker-item">
+      Total serious cases: {{ coronaTicker.total_serious_cases }}
+    </div>
+  </div>
+</div>
+
 <div class="pl-0 pr-0 width-100">
   <div class="row width-100 ml-0 mr-0">
     <div

@@ -28,16 +28,25 @@ export class WfhNavigationComponent implements OnInit {
       map(result => result.matches),
       shareReplay()
     );
+  covidTickerData: any;
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private Cat: LoadDataService
+    private Cat: LoadDataService,
+    private covidDataService: CovidDataService
   ) {}
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
     this.Cat.Category$.subscribe(it => {
       this.Dates = it.Dates();
       this.Categories = it.Categories();
+    });
+    this.getCovidTickerData();
+  }
+
+  getCovidTickerData() {
+    this.covidDataService.getCovidStatusData().subscribe(data => {
+      this.covidTickerData = data;
     });
   }
 }
