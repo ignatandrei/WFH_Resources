@@ -1,18 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Work From Home: Resources</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- <form class="form-inline">
+    <app-table-wfh [formControl]="filter"
+      ><input
+        class="form-control"
+        type="text"
+        placeholder="Search through resources"
+        aria-label="Search"
+      />
+    </app-table-wfh>
+  </form> -->
+</nav>
 <div class="pl-0 pr-0 width-100">
-  <div class="row width-100 ml-0 mr-0 phoneMenu">
-    <div class="col-sm-1 pl-0 pr-0 border-right phoneMenu">
-      <div class="">
-        <div class="card border-0">
+  <div class="row width-100 ml-0 mr-0">
+    <div
+      class="col-sm-1 pl-0 pr-0 border-right collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li
+          class="card border-0 nav-item active"
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+        >
           <a
             class="btn btn-secondary card-header active text-left border-0 rounded-0"
             routerLink="/"
             >Home</a
           >
+        </li>
+        <li
+          class="card border-0 nav-item"
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+        >
           <a
             class="btn btn-secondary card-header active text-left border-0 rounded-0"
-            routerLink="about" id="about"
+            routerLink="about"
+            id="about"
             >About</a
           >
+        </li>
+        <li class="card border-0 nav-item">
           <button
             class="btn btn-secondary card-header active text-left border-0 rounded-0"
             id="headingTwo"
@@ -49,8 +89,8 @@
               >
             </div>
           </div>
-        </div>
-        <div class="card border-0">
+        </li>
+        <li class="card border-0 nav-item">
           <button
             class="btn btn-secondary card-header active text-left border-0 rounded-0"
             id="headingThree"
@@ -91,8 +131,13 @@
               </a>
             </div>
           </div>
-        </div>
-        <div class="card border-0">
+        </li>
+
+        <li
+          class="card border-0 nav-item"
+          data-toggle="collapse"
+          data-target=".navbar-collapse.show"
+        >
           <a
             class="btn btn-secondary card-header active text-left border-0 rounded-0"
             id="headingThree"
@@ -101,8 +146,8 @@
           >
             COVID-19 Tracker
           </a>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
     <div class="col-sm-11 pl-0 pr-0 width-100">
       <router-outlet></router-outlet>

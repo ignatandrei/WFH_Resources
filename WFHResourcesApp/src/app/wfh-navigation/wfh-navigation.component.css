@@ -47,7 +47,11 @@
     width: 100%;
     border-right: 0px;
   }
+  .collapse:not(.show) {
+    display: none;
+  }
 }
+
 .container {
   padding-left: 0px;
   padding-right: 0px;
@@ -55,4 +59,10 @@
 .row {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.navbar-collapse {
+  display: block;
+  height: auto !important;
+  visibility: visible;
 }

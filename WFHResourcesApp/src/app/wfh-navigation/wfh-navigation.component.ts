@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map, shareReplay } from "rxjs/operators";
@@ -7,6 +7,8 @@ import * as moment from "moment";
 import { CovidDataService } from "src/covid-data.service";
 import { CovidData } from "src/codvid";
 import { CovidOverallStatus } from "src/covidOverallStatus";
+import { FormControl } from "@angular/forms";
+// import { formControl } from "../table-wfh/table-wfh.component";
 
 @Component({
   selector: "app-wfh-navigation",
@@ -14,6 +16,8 @@ import { CovidOverallStatus } from "src/covidOverallStatus";
   styleUrls: ["./wfh-navigation.component.css"]
 })
 export class WfhNavigationComponent implements OnInit {
+  @Input()
+  formControl: string;
   public isCategoriesCollapsed = true;
   public isSubCategoriesCollapsed = true;
   public Dates: moment.Moment[];
@@ -35,6 +39,5 @@ export class WfhNavigationComponent implements OnInit {
       this.Dates = it.Dates();
       this.Categories = it.Categories();
     });
-      }
-
+  }
 }
