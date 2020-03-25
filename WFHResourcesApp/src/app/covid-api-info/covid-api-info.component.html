@@ -27,7 +27,7 @@
             {{ c1.Country }}
           </option>
         </select>
-        <button (click)="removeCountry(i)" *ngIf="AllCountries?.length > 2">
+        <button (click)="removeCountry(i)" *ngIf="countrySelected?.length > 2">
           remove
         </button>
       </span>

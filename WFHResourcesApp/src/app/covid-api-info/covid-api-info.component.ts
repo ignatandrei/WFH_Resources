@@ -76,12 +76,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   changeStatus(s: string) {
     this.statusSelected = s;
     // window.alert(this.statusSelected);
-    this.getCovidData(this.countrySelected.map(it => it.Slug));
+    this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
 
   }
   removeCountry(i: number) {
     this.countrySelected.splice(i, 1);
-    this.getCovidData(this.countrySelected.map(it => it.Slug));
+    this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
 
     this.currentLink = this.generateURL();
   }
@@ -132,12 +132,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       // this.addCountry(it[10]);
       // this.addCountry(it[68]);
-      this.getCovidData(this.countrySelected.map(c => c?.Slug));
+      this.getCovidDataAll(this.countrySelected.map(c => c?.Slug));
     });
   }
   public changeSelection(nr: number, c: CountryCovid19) {
     this.countrySelected[nr] = c;
-    this.getCovidData(this.countrySelected.map(it => it.Slug));
+    this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
     this.currentLink = this.generateURL();
   }
   ngAfterViewInit(): void {
@@ -177,7 +177,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
   }
 
-  getCovidData(slugs: string[]) {
+  getCovidDataAll(slugs: string[]) {
     if (!slugs.every(it => it != null)) {
       return;
     }
