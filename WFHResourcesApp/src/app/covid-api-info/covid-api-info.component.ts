@@ -43,7 +43,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   public countrySelected: CountryCovid19[];
   public AllCountries: Array<CountryCovid19[]>;
   private countries: CountryCovid19[];
-  private countriesFromQuery: string[];
+  private countriesFromQuery: string[] = [];
   public currentLink: string;
   public status = ['confirmed', 'recovered', 'deaths'];
   public statusSelected = 'confirmed';
@@ -59,10 +59,10 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.AllCountries = [];
     this.route.paramMap.subscribe(it => {
       if (it.has('id?')) {
-        this.countriesFromQuery = it
-          .get('id?')
-          .toString()
-          .split('-');
+        const data = it.get('id?')?.trim();
+        if (data && data.length > 0) {
+        this.countriesFromQuery = data.split('-');
+        }
       }
     });
   }
@@ -107,7 +107,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
     // window.alert('asd');
     this.covidDataService.getCovid19ApiCountries().subscribe(it => {
-      this.countries = it.filter(it=>it.Country.length > 0);
+      this.countries = it.filter(it => it.Country.length > 0);
       // window.alert(this.countriesFromQuery.length);
       if (this.countriesFromQuery.length > 0) {
         const fromQuery = it.filter(
@@ -119,13 +119,17 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
         for (const f of fromQuery) {
           if (this.canAdd()) {
-              this.addCountry(f);
+            // window.alert(this.countriesFromQuery.length );
+            this.addCountry(f);
           }
         }
       }
       if (this.countrySelected.length === 0) {
+        // window.alert(1);
         this.addCountry(null);
+        // window.alert(2);
         this.addCountry(null);
+        // window.alert(3);
       }
       // this.addCountry(it.find(c => c.Country === 'Austria'));
       // this.addCountry(it.find(c => c.Country === 'Germany'));
@@ -156,7 +160,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         intro: 'You can choose one country',
         position: 'right'
       },
-      
+
       {
         element: '#addCountry',
         intro: 'or add more countries',
@@ -178,16 +182,15 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   }
 
   getCovidDataAll(slugs: string[]) {
-    if (!slugs.every(it => it != null)) {
+    if (!slugs.every(it => it?.length > 0)) {
       return;
     }
     // const obs1 = this.covidDataService.getCovidData(slugs[0]);
     // const obs2 = this.covidDataService.getCovidData(slugs[1]);
     this.AllCorona = [];
     const obs = slugs.map(it => this.covidDataService.getCovidData(it, this.statusSelected));
-    const obs1 = obs[0];
-    const obs2 = obs[1];
     zip(...obs).subscribe(arr => {
+      this.AllCorona = [];
       for (let i = 0; i < arr.length; i++) {
         const f = arr[i];
         const f1 = (
