@@ -107,7 +107,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
     // window.alert('asd');
     this.covidDataService.getCovid19ApiCountries().subscribe(it => {
-      this.countries = it;
+      this.countries = it.filter(it=>it.Country.length > 0);
       // window.alert(this.countriesFromQuery.length);
       if (this.countriesFromQuery.length > 0) {
         const fromQuery = it.filter(
@@ -123,7 +123,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           }
         }
       }
-      if (this.countrySelected.length == 0) {
+      if (this.countrySelected.length === 0) {
         this.addCountry(null);
         this.addCountry(null);
       }
