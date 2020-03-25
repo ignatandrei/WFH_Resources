@@ -17,7 +17,7 @@ import { ThrowStmt } from '@angular/compiler';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { shareReplay, map } from 'rxjs/operators';
-
+import * as introJs from 'intro.js/intro.js';
 @Component({
   selector: 'app-covid-api-info',
   templateUrl: './covid-api-info.component.html',
@@ -47,7 +47,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   public currentLink: string;
   public status = ['confirmed', 'recovered', 'deaths'];
   public statusSelected = 'confirmed';
-
+  public introJS: any;
   constructor(
     private covidDataService: CovidDataService,
     private route: ActivatedRoute,
@@ -75,8 +75,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
   changeStatus(s: string) {
     this.statusSelected = s;
-    //window.alert(this.statusSelected);
-      this.getCovidData(this.countrySelected.map(it => it.Slug));
+    // window.alert(this.statusSelected);
+    this.getCovidData(this.countrySelected.map(it => it.Slug));
 
   }
   removeCountry(i: number) {
@@ -103,6 +103,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.currentLink = this.generateURL();
   }
   public ngOnInit() {
+
+
+    // window.alert('asd');
     this.covidDataService.getCovid19ApiCountries().subscribe(it => {
       this.countries = it;
       // window.alert(this.countriesFromQuery.length);
@@ -122,13 +125,14 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
       if (this.countrySelected.length == 0) {
         this.addCountry(null);
+        this.addCountry(null);
       }
       // this.addCountry(it.find(c => c.Country === 'Austria'));
       // this.addCountry(it.find(c => c.Country === 'Germany'));
 
       // this.addCountry(it[10]);
       // this.addCountry(it[68]);
-      this.getCovidData(this.countrySelected.map(c => c.Slug));
+      this.getCovidData(this.countrySelected.map(c => c?.Slug));
     });
   }
   public changeSelection(nr: number, c: CountryCovid19) {
@@ -139,6 +143,38 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // this.getCovidData('romania', 'italy');
     this.getCovidOverallStatus();
+    this.introJS = introJs();
+    this.introJS.setOptions({
+      steps: [
+      {
+         element: '#wfh',
+         intro: 'Welcome to the covid tracker!',
+         position: 'right'
+      },
+      {
+        element: '#allCountries',
+        intro: 'You can choose one country',
+        position: 'right'
+      },
+      
+      {
+        element: '#addCountry',
+        intro: 'or add more countries',
+        position: 'right'
+      },
+      {
+         element: '#status',
+         intro: 'Here you can change the status',
+         position: 'right'
+      },
+      {
+        element: '#copyLink',
+        intro: 'here you can see the current selected countries to can forward it'
+      }
+   ],
+   showProgress: true
+  }).start();
+
   }
 
   getCovidData(slugs: string[]) {

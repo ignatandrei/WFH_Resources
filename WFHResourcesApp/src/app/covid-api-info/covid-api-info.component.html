@@ -1,38 +1,46 @@
 <nav class="form-inline navbar navbar-dark bg-dark">
-  <a class="navbar-brand" routerLink="/">Work From Home: Resources</a>
+  <a class="navbar-brand" routerLink="/" id="wfh">Work From Home: Resources</a>
 
   <!-- <button class="btn btn-dark" (click)="changeDarkMode()"></button> -->
 </nav>
 <div class="row mt-2">
   <div class="col-sm-12">
-    <select [ngModel]="statusSelected" (ngModelChange)="changeStatus($event)">
+    <select
+      [ngModel]="statusSelected"
+      (ngModelChange)="changeStatus($event)"
+      id="status"
+    >
       <option *ngFor="let s of status" [ngValue]="s">{{ s }}</option>
     </select>
     <div>
-      <a href="{{ currentLink }}">{{ currentLink }} </a>
+      <a href="{{ currentLink }}" id="copyLink">{{ currentLink }} </a>
     </div>
-    <span *ngFor="let c of countrySelected; let i = index">
-      Country {{ i + 1 }}:
-      <select
-        name="countriesFirst"
-        [ngModel]="countrySelected[i]"
-        (ngModelChange)="changeSelection(i, $event)"
-      >
-        <option [ngValue]="null">Please select</option>
-        <option
-          *ngFor="let c1 of AllCountries[i]; let j = index"
-          [ngValue]="c1"
+    <span id="allCountries">
+      <span *ngFor="let c of countrySelected; let i = index">
+        Country {{ i + 1 }}:
+        <select
+          name="countriesFirst"
+          [ngModel]="countrySelected[i]"
+          (ngModelChange)="changeSelection(i, $event)"
+          id="countries{{ i }}"
         >
-          {{ c1.Country }}
-        </option>
-      </select>
-      <button (click)="removeCountry(i)" *ngIf="AllCountries?.length > 2">
-        remove
-      </button>
+          <option [ngValue]="null">Please select</option>
+          <option
+            *ngFor="let c1 of AllCountries[i]; let j = index"
+            [ngValue]="c1"
+          >
+            {{ c1.Country }}
+          </option>
+        </select>
+        <button (click)="removeCountry(i)" *ngIf="AllCountries?.length > 2">
+          remove
+        </button>
+      </span>
     </span>
-
     <div>
-      <button (click)="addCountry(null)" *ngIf="canAdd()">Add</button>
+      <button id="addCountry" (click)="addCountry(null)" *ngIf="canAdd()">
+        Add
+      </button>
     </div>
     <div id="content">
       <canvas #chartCompare></canvas>
