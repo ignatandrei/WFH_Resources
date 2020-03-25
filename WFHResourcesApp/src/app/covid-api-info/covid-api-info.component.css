@@ -3,7 +3,13 @@
   width: 100%;
   background-color: #ffffff;
   padding: 0px;
-  height: 100%;
+}
+#content1 {
+  width: 100%;
+}
+#chartBoth {
+  width: auto;
+  height: auto;
 }
 .container {
   padding-left: 0px;
