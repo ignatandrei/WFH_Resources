@@ -83,7 +83,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.countrySelected.splice(i, 1);
     this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
 
-    this.currentLink = this.generateURL();
+    this.currentLink = this.generateURL(); 
   }
   private generateURL() {
 
@@ -91,8 +91,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     const url = this.route.routeConfig.path;
     const path =  this.countrySelected.filter(it => it != null).map(it => it.Country).join('-');
     const baseRoot = document.getElementsByTagName('base')[0].href;
-
-    return baseRoot +  url.replace(':id?', path) ;
+    const lnk = baseRoot +  url.replace(':id?', path) ;
+    window.history.pushState(lnk, path, lnk);
+    return lnk;
   }
   canAdd(): boolean {
     return this.countrySelected.length < this.colors.length;
@@ -107,6 +108,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.AllCountries.push(this.countries);
     this.countrySelected.push(c);
     this.currentLink = this.generateURL();
+    this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
   }
   public ngOnInit() {
 
@@ -206,6 +208,22 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
         );
+        if (f1.length === 0) {
+          // only province -so I need to do the sum
+          f.reduce((res, value) => {
+            if (!res[value.Date]) {
+              const newVal = new CovidData( value);
+              newVal.Cases = 0;
+              res[value.Date] = newVal;
+              f1.push(res[value.Date]);
+            }
+            // console.log(value.Cases);
+            res[value.Date].Cases += value.Cases;
+
+            return res;
+          }, {});
+        }
+        f1.length = f1.length - 1;
         const arrDel = [];
         for (let j = 0; j < f1.length - 1; j++) {
           f1[j].RealDate = moment(f1[j].Date).toDate();
@@ -249,28 +267,32 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       const dataForChartFromDay0: Array<any> = [];
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
-        if(dataValue.length === 0)
+        if (dataValue.length === 0) {
             continue;
+        }
         const dataFirst = {
           label: dataValue[0].Country,
           data: dataValue.slice(0, min).map(it => it.Cases),
           lineTension: 0,
           fill: false,
-          borderColor: this.colors[data]
+          borderColor: this.colors[data],
+          orig: dataValue.slice(0, min)
         };
         dataForChartFromDay0.push(dataFirst);
       }
 
       this.chartData = {
-        labels: [...Array(min).keys()].map(it => {
-          const all = this.AllCorona.map(
-            data =>
-              data[it].Country.slice(0, 2) +
-              ':' +
-              moment(data[it].Date).format('MM DD')
-          );
-          return all.join('-');
-        }),
+        labels: [...Array(min).keys()]
+        // .map(it => {
+        //   const all = this.AllCorona.map(
+        //     data =>
+        //       data[it].Country.slice(0, 2) +
+        //       ':' +
+        //       moment(data[it].Date).format('MM DD')
+        //   );
+        //   return all.join('-');
+        // })
+        ,
         datasets: dataForChartFromDay0
       };
       if (this.lineChart) {
@@ -285,7 +307,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         data: this.chartData,
         options: this.getChartOptions(
           maxValue,
-          `${this.statusSelected} cases from the day 0 to day :${min} `
+          `${this.statusSelected} cases from the day 0 to day : ${min} `
         )
       });
 
@@ -293,14 +315,16 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
-        if(dataValue.length === 0)
+        if (dataValue.length === 0) {
           continue;
+        }
         const dataFirst = {
           label: dataValue[0].Country + `(${dataValue.length} days)`,
           data: dataValue.map(it => it.Cases),
           lineTension: 0,
           fill: false,
-          borderColor: this.colors[data]
+          borderColor: this.colors[data],
+          orig: dataValue
         };
         dataForChart.push(dataFirst);
       }
@@ -332,6 +356,45 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       title: {
         display: true,
         text: title
+      },
+      tooltips: {
+        backgroundColor: 'rgba(192,192,192, 1)',
+        callbacks: {
+
+          labelTextColor: (tooltipItem, chart) => {
+            return this.colors[tooltipItem.datasetIndex];
+          },
+            label(tooltipItem, data) {
+                const label = [];
+                const dsIndex = tooltipItem.datasetIndex;
+                const index = tooltipItem.index;
+
+                for (let i = 0; i < data.datasets.length; i++) {
+
+                  const orig = data.datasets[i].orig;
+
+                  if (orig.length <= index) {
+                      continue;
+                  }
+                  const covid = orig[index]  as CovidData;
+                  let country = covid.Country;
+                  if (i === tooltipItem.datasetIndex) {
+                    country = country.toUpperCase();
+                  }
+                  label.push(`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${covid.Cases}`);
+                }
+                if (dsIndex !== 0) {
+                  const a = label[dsIndex];
+                  label[dsIndex] = label[0];
+                  label[0] = a;
+                }
+
+                // label += Math.round(tooltipItem.yLabel * 100) / 100;
+                // label += JSON.stringify(tooltipItem);
+                // console.log(data);
+                return label.join(' ');
+            }
+        }
       },
       legend: {
         display: true,
@@ -374,7 +437,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.covidDataService.getCovidStatusData().subscribe(data => {
       for (const f of data.results) {
       this.coronaOverallStatusData.results.push(f);
-      };
+      }
     });
   }
 }
