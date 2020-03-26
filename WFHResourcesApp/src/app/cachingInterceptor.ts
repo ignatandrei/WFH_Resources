@@ -16,6 +16,7 @@ class SaveOnLocalStorage {
         localStorage.setItem(key, JSON.stringify(item));
       }
       public getWithExpiry(key: string): any {
+        return null;
         const itemStr = localStorage.getItem(key);
         // if the item doesn't exist, return null
         if (!itemStr) {
