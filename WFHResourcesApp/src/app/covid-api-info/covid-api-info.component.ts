@@ -249,6 +249,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       const dataForChartFromDay0: Array<any> = [];
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
+        if(dataValue.length === 0)
+            continue;
         const dataFirst = {
           label: dataValue[0].Country,
           data: dataValue.slice(0, min).map(it => it.Cases),
@@ -291,6 +293,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       for (let data = 0; data < this.AllCorona.length; data++) {
         const dataValue = this.AllCorona[data];
+        if(dataValue.length === 0)
+          continue;
         const dataFirst = {
           label: dataValue[0].Country + `(${dataValue.length} days)`,
           data: dataValue.map(it => it.Cases),

@@ -43,11 +43,7 @@ import { CachingInterceptor } from './cachingInterceptor';
     HttpClientModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: CachingInterceptor,
-      multi: true
-  },
+    
   ],
   bootstrap: [AppComponent]
 })
