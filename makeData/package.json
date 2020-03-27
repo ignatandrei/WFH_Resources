@@ -5,7 +5,8 @@
   "author": "Andrei Ignat",
   "scripts": {
     "start": "node server.js",
-    "start:dev": "nodemon"
+    "start:dev": "nodemon",
+    "buildImport":"tsc importData.ts -outdir js"
   },
   "dependencies": {
     "@types/papaparse": "^5.0.3",

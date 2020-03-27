@@ -17,12 +17,12 @@ export class CovidDataService {
     const url = this.covidApi + `countries`;
     return this.http.get<CountryCovid19[]>(url);
   }
-  getCovidData(country: string, status: string): Observable<[string,CovidData[]]> {
+  getCovidData(country: string, status: string): Observable<[string, CovidData[]]> {
     const url = this.covidApi + `dayone/country/${country}/status/${status}/live`;
     return this.http.get<CovidData[]>(url)
     .pipe(
-      map(t =>[country,[...t.map(it=>new CovidData(it))]])
-    )
+      map(t => [country, [...t.map(it => new CovidData(it))]])
+    );
   }
   getCovidStatusData(): Observable<CovidOverallStatus> {
     return this.http.get<CovidOverallStatus>(this.covidStatusApi);
