@@ -4,10 +4,19 @@
   "description": "print on Docker",
   "author": "Andrei Ignat",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:dev": "nodemon"
   },
   "dependencies": {
+    "@types/papaparse": "^5.0.3",
     "marked": "0.8.0",
+    "papaparse": "^5.1.1",
     "recursive-readdir-async": "1.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.31",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
   }
 }
