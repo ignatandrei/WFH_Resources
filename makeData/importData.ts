@@ -28,6 +28,23 @@ async function main() {
   await loadFromGitHub(dt);
   var mp= await loadImports(dt);
   await Verify(mp);
+  await WriteCountries(mp);
+}
+async function WriteCountries(mp:Map<string,JH[]>){
+  // var country='China';
+  // var allValues=Array.from( mp.values());
+  // var arr= ([] as JH[]).concat(...allValues);
+  // var arrCountry= arr.filter(it=>it.Country_Region==country);
+  // console.log(arrCountry.length);
+  // const fs = require("fs");
+  // fs.writeFileSync(`../${country}.js`,JSON.stringify(arrCountry));
+  var data=Array.from(mp.entries());
+  var js = JSON.stringify(data, null, "\t").replace(
+    /\"([^(\")"]+)\":/g,
+    "$1:"
+  );
+
+  fs.writeFileSync(`../all.js`, "export const a="+ js);
 }
 async function loadImports(dt: Date):Promise< Map<string,JH[]>> {
   var moment = require("moment");

@@ -204,10 +204,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         const item =  arr[i];
         const country = item[0];
         const f = item[1];
+        
         const f1 = (
           f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
         );
+        //window.alert(`${f.length} --- ${f1.length}`);
         if (f1.length === 0) {
           // only province -so I need to do the sum
           f.reduce((res, value) => {
@@ -223,28 +225,32 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             return res;
           }, {});
         }
-        f1.length = f1.length - 1;
-        const arrDel = [];
         for (let j = 0; j < f1.length - 1; j++) {
           f1[j].RealDate = moment(f1[j].Date).toDate();
-          f1[j + 1].RealDate = moment(f1[j + 1].Date).toDate();
-          const diffTime = Math.abs(f1[j + 1].RealDate.setHours(0, 0, 0, 0) - f1[j ].RealDate.setHours(0, 0, 0, 0) );
-          const diffDays = (diffTime / (1000 * 60 * 60 * 24));
-          if (diffDays > 1) {
-            console.log('gap' + diffDays);
-            console.log(f1[j]);
-            console.log(f1[j + 1]);
-          }
-          if (diffDays < 1) {
-            console.log('duplicate date');
-            console.log(f1[j]);
-            console.log(f1[j + 1]);
-
-            arrDel.push(f1[j]);
-          }
-
         }
-        arrDel.forEach(it => f1.splice(f1.indexOf(it), 1));
+        //f1.length = f1.length - 1;
+        // const arrDel = [];
+        // for (let j = 0; j < f1.length - 1; j++) {
+        //   f1[j].RealDate = moment(f1[j].Date).toDate();
+        //   f1[j + 1].RealDate = moment(f1[j + 1].Date).toDate();
+        //   const diffTime = Math.abs(f1[j + 1].RealDate.setHours(0, 0, 0, 0) - f1[j ].RealDate.setHours(0, 0, 0, 0) );
+        //   const diffDays = (diffTime / (1000 * 60 * 60 * 24));
+        //   if (diffDays > 1) {
+        //     console.log('gap' + diffDays);
+        //     console.log(f1[j]);
+        //     console.log(f1[j + 1]);
+        //   }
+        //   if (diffDays < 1) {
+        //     console.log('duplicate date');
+        //     console.log(f1[j]);
+        //     console.log(f1[j + 1]);
+
+        //     arrDel.push(f1[j]);
+        //   }
+
+        // }
+        // arrDel.forEach(it => f1.splice(f1.indexOf(it), 1));
+        //window.alert(f1.length);
         this.AllCorona.push(f1);
 
       }
