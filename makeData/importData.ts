@@ -4,6 +4,7 @@ import { JH } from "./jh";
 import { parentPort } from "worker_threads";
 import { close } from "fs";
 import { addListener } from "cluster";
+import { dirname } from "path";
 var fs = require("fs");
 
 let definitionCountries = Countries;
@@ -50,10 +51,15 @@ async function load(dt: Date) {
   var dtFormat = dtRequired.format("MM-DD-YYYY");
   const path = require("path");
   const fs = require("fs");
-  let directoryJS = path.join(__dirname + "/..", "obj", nameFile);
-  // directoryJS = path.join(__dirname, nameFile);
-  if (fs.existsSync(directoryJS)) {
-    console.log(`${directoryJS} exists`);
+  const arrFolders :string[]=[
+    __dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`
+  ]
+  let dirName= path.join(__dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`);
+  let fileNameJS = path.join(__dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`,nameFile);
+  
+  // fileNameJS = path.join(__dirname, nameFile);
+  if (fs.existsSync(fileNameJS)) {
+    console.log(`${fileNameJS} exists`);
     return; 
   }
 
@@ -125,7 +131,20 @@ async function load(dt: Date) {
         "Faroe Islands",
         "Gibraltar",
         "Hong Kong SAR",
-        "Taipei and environs"
+        "Taipei and environs",
+        "Macao SAR",
+        "Channel Islands",
+        "Cayman Islands",
+        "Guadeloupe",
+        "Aruba",
+        "Jersey",
+        "Curacao",
+        "Guernsey",
+        "Guam",
+        "Puerto Rico",
+        "Greenland",
+        "Mayotte",
+        "West Bank and Gaza"
       ]
       parseArr = parseArr.filter(it=>!NotCountry.includes(it.Country_Region) );
       console.log("loaded " + parseArr.length);
@@ -137,7 +156,7 @@ async function load(dt: Date) {
           }).length == 0
         ) {
           console.log(
-            `not found country ${it.Country_Region} ${JSON.stringify(it)}`
+            `at ${fileName}  not found country ${it.Country_Region} ${JSON.stringify(it)}`
           );
           throw `not found country ${JSON.stringify(it)}`;
         }
@@ -199,7 +218,13 @@ async function load(dt: Date) {
       );
       
       js = `//${fileName} \r\n export const JH${dtRequired.format("YYYYMMDD")} : []=` + js;
-      fs.writeFileSync(directoryJS, js);
+      console.log(`aaa`);
+      console.log(`${dirName}, ${fs.existsSync(dirName)}`)
+      if (!fs.existsSync(dirName)) {
+        console.log('create');
+        fs.mkdirSync(dirName, { recursive: true });
+      }
+      fs.writeFileSync(fileNameJS, js);
       
     }
   });
