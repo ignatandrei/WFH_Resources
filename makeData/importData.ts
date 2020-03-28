@@ -39,7 +39,8 @@ let definitionCountries = Countries;
 async function load(dt:Date){
     console.log('start');
     var moment = require('moment');
-    var dtFormat=moment(dt).format("MM-DD-YYYY");
+    var dtRequired =moment(dt);
+    var dtFormat=dtRequired.format("MM-DD-YYYY");
     console.log(dtFormat);
     
     //const file:string="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-26-2020.csv"//
@@ -126,35 +127,38 @@ async function load(dt:Date){
          const difference = allCountries.filter(x => !arrCountries.includes(x));
          if(difference.length>0){
            difference.map(countryNotFound=>{
-              var jh=new JH();
+              let jh=new JH();
               jh.Province_State='';
               jh.Country_Region=countryNotFound;
               jh.initialize();
             parseArr.forEach(it=>{
                 if(difference.includes(it.Country_Region)){
-                  console.log(`${jh.Confirmed} ${it.Confirmed}`);
-                  jh.Confirmed += it.Confirmed;
-                  console.log(`${jh.Confirmed} ${it.Confirmed}`);
-                  jh.Deaths += it.Deaths;
-                  jh.Active += it.Active;
+                  jh.Confirmed = jh.Confirmed + +it.Confirmed;
+                  jh.Deaths += +it.Deaths;
+                  jh.Active += +it.Active;
+                  jh.Recovered += +it.Recovered;
                   jh.Last_Update = it.Last_Update; 
                 }
                   
             });
+            console.log('pushing');
+            console.log(jh);
             parseArr.push(jh);
           });
            data=parseArr.filter(it=>it.Country_Region.length>0 && ( it.Province_State =='' || it.Country_Region==it.Province_State));
            console.log('to write : ' + data.length);
          }
          
+         data.forEach(it=>it.Country_Region = 
+              definitionCountries.filter(cnt=>cnt.alternateNames.filter(alt => alt === it.Country_Region).length>0)[0].name);
 
          var js=JSON.stringify(data, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:");
 
          const path = require("path");
          const fs = require("fs");
          let directoryJS = path.join(__dirname + "/..", "obj","all.js");
-         directoryJS = path.join(__dirname ,"all.txt");
-         js=`export const JH : []=`+ js;
+         directoryJS = path.join(__dirname ,`${dtRequired.format("YYYYMMDD")}JH.txt`);
+         js=`export const JH${dtRequired.format("YYYYMMDD")} : []=`+ js;
          fs.writeFileSync(directoryJS,js);
 
 
