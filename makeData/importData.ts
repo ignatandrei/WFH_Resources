@@ -32,16 +32,28 @@ async function loadImportsAndVerify(dt: Date){
   // var x=await import("../obj/2020/01/20200122JH");
   // console.log(x["JH20200122"].length);
   var moment = require("moment");
-  var dtRequired = moment(dt);
-  var nameFile = `${dtRequired.format("YYYYMMDD")}JH.js`;
-  var dtFormat = dtRequired.format("MM-DD-YYYY");
   const path = require("path");
   const fs = require("fs");
-  let fullPath= path.join(__dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`,nameFile);
-  
-  var x=await import(fullPath);
-  
-  console.log(x[`JH${dtRequired.format("YYYYMMDD")}`].length);
+  var now = new Date();
+  var mp=new Map<string,JH[]>();
+  while (dt < now) {
+    var dtRequired = moment(now);
+    now.setDate(now.getDate() - 1);
+    var nameFile = `${dtRequired.format("YYYYMMDD")}JH.js`;
+
+    var dtFormat = dtRequired.format("MM-DD-YYYY");
+    let fullPath= path.join(__dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`,nameFile);
+    console.log(`loading ${fullPath} ${fs.existsSync(fullPath)}`);
+
+    if(!fs.existsSync(fullPath))
+      continue;
+
+    var x=await import(fullPath);
+    mp.set(dtRequired.format("YYYYMMDD"),x[`JH${dtRequired.format("YYYYMMDD")}`]);
+    console.log(x[`JH${dtRequired.format("YYYYMMDD")}`].length);
+    // return;  
+    }
+
 }
 async function loadFromGitHub(dt:Date){
   console.log(dt);
