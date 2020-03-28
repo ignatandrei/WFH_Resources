@@ -5,8 +5,8 @@ import { parentPort } from "worker_threads";
 import { close } from "fs";
 import { addListener } from "cluster";
 import { dirname } from "path";
-import { JH20200122 } from "../obj/2020/01/20200122JH";
-import * as data from "../obj/2020/01/20200122JH";
+// import { JH20200122 } from "../obj/2020/01/20200122JH";
+// import * as data from "../obj/2020/01/20200122JH";
 
 var fs = require("fs");
 
@@ -26,16 +26,16 @@ async function main() {
 
   var dt = new Date(2020, 0, 22);
   await loadFromGitHub(dt);
-  await loadImportsAndVerify(dt);
+  var mp= await loadImports(dt);
+  await Verify(mp);
 }
-async function loadImportsAndVerify(dt: Date){
-  // var x=await import("../obj/2020/01/20200122JH");
-  // console.log(x["JH20200122"].length);
+async function loadImports(dt: Date):Promise< Map<string,JH[]>> {
   var moment = require("moment");
   const path = require("path");
   const fs = require("fs");
   var now = new Date();
   var mp=new Map<string,JH[]>();
+  var last = 0;
   while (dt < now) {
     var dtRequired = moment(now);
     now.setDate(now.getDate() - 1);
@@ -43,16 +43,73 @@ async function loadImportsAndVerify(dt: Date){
 
     var dtFormat = dtRequired.format("MM-DD-YYYY");
     let fullPath= path.join(__dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`,nameFile);
-    console.log(`loading ${fullPath} ${fs.existsSync(fullPath)}`);
+    // console.log(`loading ${fullPath} ${fs.existsSync(fullPath)}`);
 
     if(!fs.existsSync(fullPath))
       continue;
 
+    if(last == 0)
+      last= +(moment(now).format("YYYYMMDD"));
+
     var x=await import(fullPath);
+    
     mp.set(dtRequired.format("YYYYMMDD"),x[`JH${dtRequired.format("YYYYMMDD")}`]);
-    console.log(x[`JH${dtRequired.format("YYYYMMDD")}`].length);
+    // console.log(x[`JH${dtRequired.format("YYYYMMDD")}`].length);
     // return;  
     }
+    return mp;
+}
+async function Verify(mp: Map<string,JH[]>){
+  // var x=await import("../obj/2020/01/20200122JH");
+  // console.log(x["JH20200122"].length);
+    var arrKeys=Array.from(mp.keys()).map(it=>+it);
+    var last=Math.max(...arrKeys);
+    var keyFirst =Math.min(...arrKeys);
+
+    console.log(`last item ${last}`);
+        // console.log(mp.get(keyFirst.toString()).length);
+    // console.log(mp.get(last.toString()).length);
+    
+
+    while(keyFirst<last){
+      
+      if(!mp.has(keyFirst.toString())){
+        keyFirst++;
+        continue;
+      }
+
+      console.log(`finding for ${keyFirst} to ${last}`);  
+      
+      var covidVerify=mp.get(keyFirst.toString());
+       
+      
+       for(var iDate=keyFirst+1;iDate<last;iDate++){
+          console.log(`finding diff between ${keyFirst} and ${iDate}`);
+          if(!mp.has(iDate.toString()))
+            continue;
+
+          var covidIterator = mp.get(iDate.toString());
+          
+          covidVerify.forEach(element => {
+            //console.log(`verifying `,element);
+            var corresponding= covidIterator.find(it=>it.Country_Region == element.Country_Region);
+            if(corresponding == null && element.Active>0){
+              var err= `cannot find country ${element.Country_Region} for ${iDate}`;
+              console.log(err);
+              throw err;
+            }
+            // if(corresponding.Confirmed == element.Confirmed)
+            //   {
+            //     var err= `country ${element.Country_Region} has same value for  ${corresponding.Last_Update} and ${element.Last_Update}`;
+            //     console.log(err);
+            //     //throw err;
+              
+            //   }
+          });
+       }
+       keyFirst++;
+    }
+    //console.log(mp.get('20200122'));
 
 }
 async function loadFromGitHub(dt:Date){
@@ -81,7 +138,7 @@ async function getData(url: string) {
   }
 }
 async function load(dt: Date) {
-  console.log("start");
+  //console.log("start");
   var moment = require("moment");
   var dtRequired = moment(dt);
   var nameFile = `${dtRequired.format("YYYYMMDD")}JH.js`;
@@ -198,7 +255,7 @@ async function load(dt: Date) {
           throw `not found country ${JSON.stringify(it)}`;
         }
       });
-      parseArr = parseArr.map(it => new JH(it));
+      parseArr = parseArr.map(it => new JH(it));//.filter(it=>it.Exists());
       //console.log(parseArr);
       let data = parseArr.filter(
         it =>

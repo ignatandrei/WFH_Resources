@@ -1,1444 +1,1444 @@
 //https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-22-2020.csv 
  export const JH20200322 =[
 	{
+		Confirmed: 59138,
+		Deaths: 5476,
+		Recovered: 7024,
+		Active: 46638,
 		Province_State: "",
-		Confirmed: "59138",
-		Active: "46638",
 		Country_Region: "Italy",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "5476",
-		Recovered: "7024"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 28603,
+		Deaths: 1756,
+		Recovered: 2125,
+		Active: 24722,
 		Province_State: "",
-		Confirmed: "28603",
-		Active: "24722",
 		Country_Region: "Spain",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1756",
-		Recovered: "2125"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 24873,
+		Deaths: 94,
+		Recovered: 266,
+		Active: 24513,
 		Province_State: "",
-		Confirmed: "24873",
-		Active: "24513",
 		Country_Region: "Germany",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "94",
-		Recovered: "266"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 21638,
+		Deaths: 1685,
+		Recovered: 7635,
+		Active: 12318,
 		Province_State: "",
-		Confirmed: "21638",
-		Active: "12318",
 		Country_Region: "Iran",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1685",
-		Recovered: "7635"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 16018,
+		Deaths: 674,
+		Recovered: 2200,
+		Active: 13144,
 		Province_State: "",
-		Confirmed: "16018",
-		Active: "13144",
 		Country_Region: "France",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "674",
-		Recovered: "2200"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 8897,
+		Deaths: 104,
+		Recovered: 2909,
+		Active: 5884,
 		Province_State: "",
-		Confirmed: "8897",
-		Active: "5884",
 		Country_Region: "South Korea",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "104",
-		Recovered: "2909"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 7474,
+		Deaths: 98,
+		Recovered: 131,
+		Active: 7245,
 		Province_State: "",
-		Confirmed: "7474",
-		Active: "7245",
 		Country_Region: "Switzerland",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "98",
-		Recovered: "131"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 5683,
+		Deaths: 281,
+		Recovered: 93,
+		Active: 5309,
 		Province_State: "",
-		Confirmed: "5683",
-		Active: "5309",
 		Country_Region: "United Kingdom",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "281",
-		Recovered: "93"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 4204,
+		Deaths: 179,
+		Recovered: 2,
+		Active: 4023,
 		Province_State: "",
-		Confirmed: "4204",
-		Active: "4023",
 		Country_Region: "Netherlands",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "179",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3580,
+		Deaths: 16,
+		Recovered: 9,
+		Active: 3555,
 		Province_State: "",
-		Confirmed: "3580",
-		Active: "3555",
 		Country_Region: "Austria",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "16",
-		Recovered: "9"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3401,
+		Deaths: 75,
+		Recovered: 263,
+		Active: 3063,
 		Province_State: "",
-		Confirmed: "3401",
-		Active: "3063",
 		Country_Region: "Belgium",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "75",
-		Recovered: "263"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2263,
+		Deaths: 7,
+		Recovered: 6,
+		Active: 2250,
 		Province_State: "",
-		Confirmed: "2263",
-		Active: "2250",
 		Country_Region: "Norway",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "7",
-		Recovered: "6"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1931,
+		Deaths: 21,
+		Recovered: 16,
+		Active: 1894,
 		Province_State: "",
-		Confirmed: "1931",
-		Active: "1894",
 		Country_Region: "Sweden",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "21",
-		Recovered: "16"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1600,
+		Deaths: 14,
+		Recovered: 5,
+		Active: 1581,
 		Province_State: "",
-		Confirmed: "1600",
-		Active: "1581",
 		Country_Region: "Portugal",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "14",
-		Recovered: "5"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1546,
+		Deaths: 25,
+		Recovered: 2,
+		Active: 1519,
 		Province_State: "",
-		Confirmed: "1546",
-		Active: "1519",
 		Country_Region: "Brazil",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "25",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1395,
+		Deaths: 13,
+		Recovered: 1,
+		Active: 1381,
 		Province_State: "",
-		Confirmed: "1395",
-		Active: "1381",
 		Country_Region: "Denmark",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "13",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1306,
+		Deaths: 10,
+		Recovered: 139,
+		Active: 1157,
 		Province_State: "",
-		Confirmed: "1306",
-		Active: "1157",
 		Country_Region: "Malaysia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "10",
-		Recovered: "139"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1236,
+		Deaths: 30,
+		Recovered: 0,
+		Active: 1206,
 		Province_State: "",
-		Confirmed: "1236",
-		Active: "1206",
 		Country_Region: "Turkey",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "30",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1120,
+		Deaths: 1,
+		Recovered: 6,
+		Active: 1113,
 		Province_State: "",
-		Confirmed: "1120",
-		Active: "1113",
 		Country_Region: "Czechia (Czech Republic)",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "6"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1086,
+		Deaths: 36,
+		Recovered: 235,
+		Active: 815,
 		Province_State: "",
-		Confirmed: "1086",
-		Active: "815",
 		Country_Region: "Japan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "36",
-		Recovered: "235"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1071,
+		Deaths: 1,
+		Recovered: 37,
+		Active: 1033,
 		Province_State: "",
-		Confirmed: "1071",
-		Active: "1033",
 		Country_Region: "Israel",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "37"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 906,
+		Deaths: 4,
+		Recovered: 5,
+		Active: 897,
 		Province_State: "",
-		Confirmed: "906",
-		Active: "897",
 		Country_Region: "Ireland",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "4",
-		Recovered: "5"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 798,
+		Deaths: 8,
+		Recovered: 6,
+		Active: 784,
 		Province_State: "",
-		Confirmed: "798",
-		Active: "784",
 		Country_Region: "Luxembourg",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "8",
-		Recovered: "6"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 789,
+		Deaths: 14,
+		Recovered: 3,
+		Active: 772,
 		Province_State: "",
-		Confirmed: "789",
-		Active: "772",
 		Country_Region: "Ecuador",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "14",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 776,
+		Deaths: 4,
+		Recovered: 13,
+		Active: 759,
 		Province_State: "",
-		Confirmed: "776",
-		Active: "759",
 		Country_Region: "Pakistan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "4",
-		Recovered: "13"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 634,
+		Deaths: 7,
+		Recovered: 13,
+		Active: 614,
 		Province_State: "",
-		Confirmed: "634",
-		Active: "614",
 		Country_Region: "Poland",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "7",
-		Recovered: "13"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 632,
+		Deaths: 1,
+		Recovered: 8,
+		Active: 623,
 		Province_State: "",
-		Confirmed: "632",
-		Active: "623",
 		Country_Region: "Chile",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "8"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 626,
+		Deaths: 1,
+		Recovered: 10,
+		Active: 615,
 		Province_State: "",
-		Confirmed: "626",
-		Active: "615",
 		Country_Region: "Finland",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "10"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 624,
+		Deaths: 15,
+		Recovered: 19,
+		Active: 590,
 		Province_State: "",
-		Confirmed: "624",
-		Active: "590",
 		Country_Region: "Greece",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "15",
-		Recovered: "19"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 599,
+		Deaths: 1,
+		Recovered: 44,
+		Active: 554,
 		Province_State: "",
-		Confirmed: "599",
-		Active: "554",
 		Country_Region: "Thailand",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "44"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 568,
+		Deaths: 1,
+		Recovered: 5,
+		Active: 562,
 		Province_State: "",
-		Confirmed: "568",
-		Active: "562",
 		Country_Region: "Iceland",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "5"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 514,
+		Deaths: 48,
+		Recovered: 29,
+		Active: 437,
 		Province_State: "",
-		Confirmed: "514",
-		Active: "437",
 		Country_Region: "Indonesia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "48",
-		Recovered: "29"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 511,
+		Deaths: 0,
+		Recovered: 17,
+		Active: 494,
 		Province_State: "",
-		Confirmed: "511",
-		Active: "494",
 		Country_Region: "Saudi Arabia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "17"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 494,
+		Deaths: 0,
+		Recovered: 33,
+		Active: 461,
 		Province_State: "",
-		Confirmed: "494",
-		Active: "461",
 		Country_Region: "Qatar",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "33"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 455,
+		Deaths: 2,
+		Recovered: 144,
+		Active: 309,
 		Province_State: "",
-		Confirmed: "455",
-		Active: "309",
 		Country_Region: "Singapore",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "144"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 433,
+		Deaths: 3,
+		Recovered: 64,
+		Active: 366,
 		Province_State: "",
-		Confirmed: "433",
-		Active: "366",
 		Country_Region: "Romania",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "3",
-		Recovered: "64"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 414,
+		Deaths: 2,
+		Recovered: 0,
+		Active: 412,
 		Province_State: "",
-		Confirmed: "414",
-		Active: "412",
 		Country_Region: "Slovenia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 396,
+		Deaths: 7,
+		Recovered: 24,
+		Active: 365,
 		Province_State: "",
-		Confirmed: "396",
-		Active: "365",
 		Country_Region: "India",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "7",
-		Recovered: "24"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 380,
+		Deaths: 25,
+		Recovered: 15,
+		Active: 340,
 		Province_State: "",
-		Confirmed: "380",
-		Active: "340",
 		Country_Region: "Philippines",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "25",
-		Recovered: "15"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 367,
+		Deaths: 1,
+		Recovered: 16,
+		Active: 350,
 		Province_State: "",
-		Confirmed: "367",
-		Active: "350",
 		Country_Region: "Russia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "16"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 363,
+		Deaths: 5,
+		Recovered: 1,
+		Active: 357,
 		Province_State: "",
-		Confirmed: "363",
-		Active: "357",
 		Country_Region: "Peru",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "5",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 334,
+		Deaths: 2,
+		Recovered: 149,
+		Active: 183,
 		Province_State: "",
-		Confirmed: "334",
-		Active: "183",
 		Country_Region: "Bahrain",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "149"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 327,
+		Deaths: 14,
+		Recovered: 56,
+		Active: 257,
 		Province_State: "",
-		Confirmed: "327",
-		Active: "257",
 		Country_Region: "Egypt",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "14",
-		Recovered: "56"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 326,
+		Deaths: 0,
+		Recovered: 4,
+		Active: 322,
 		Province_State: "",
-		Confirmed: "326",
-		Active: "322",
 		Country_Region: "Estonia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "4"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 313,
+		Deaths: 3,
+		Recovered: 1,
+		Active: 309,
 		Province_State: "",
-		Confirmed: "313",
-		Active: "309",
 		Country_Region: "Panama",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "3",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 274,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 272,
 		Province_State: "",
-		Confirmed: "274",
-		Active: "272",
 		Country_Region: "South Africa",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 266,
+		Deaths: 4,
+		Recovered: 27,
+		Active: 235,
 		Province_State: "",
-		Confirmed: "266",
-		Active: "235",
 		Country_Region: "Argentina",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "4",
-		Recovered: "27"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 254,
+		Deaths: 1,
+		Recovered: 5,
+		Active: 248,
 		Province_State: "",
-		Confirmed: "254",
-		Active: "248",
 		Country_Region: "Croatia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "5"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 251,
+		Deaths: 2,
+		Recovered: 4,
+		Active: 245,
 		Province_State: "",
-		Confirmed: "251",
-		Active: "245",
 		Country_Region: "Mexico",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "4"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 248,
+		Deaths: 4,
+		Recovered: 8,
+		Active: 236,
 		Province_State: "",
-		Confirmed: "248",
-		Active: "236",
 		Country_Region: "Lebanon",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "4",
-		Recovered: "8"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 233,
+		Deaths: 20,
+		Recovered: 57,
+		Active: 156,
 		Province_State: "",
-		Confirmed: "233",
-		Active: "156",
 		Country_Region: "Iraq",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "20",
-		Recovered: "57"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 231,
+		Deaths: 2,
+		Recovered: 3,
+		Active: 226,
 		Province_State: "",
-		Confirmed: "231",
-		Active: "226",
 		Country_Region: "Colombia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 222,
+		Deaths: 2,
+		Recovered: 2,
+		Active: 218,
 		Province_State: "",
-		Confirmed: "222",
-		Active: "218",
 		Country_Region: "Serbia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 202,
+		Deaths: 3,
+		Recovered: 0,
+		Active: 199,
 		Province_State: "",
-		Confirmed: "202",
-		Active: "199",
 		Country_Region: "Dominican Republic",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "3",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 201,
+		Deaths: 17,
+		Recovered: 65,
+		Active: 119,
 		Province_State: "",
-		Confirmed: "201",
-		Active: "119",
 		Country_Region: "Algeria",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "17",
-		Recovered: "65"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 194,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 192,
 		Province_State: "",
-		Confirmed: "194",
-		Active: "192",
 		Country_Region: "Armenia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 188,
+		Deaths: 0,
+		Recovered: 30,
+		Active: 158,
 		Province_State: "",
-		Confirmed: "188",
-		Active: "158",
 		Country_Region: "Kuwait",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "30"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 187,
+		Deaths: 3,
+		Recovered: 3,
+		Active: 181,
 		Province_State: "",
-		Confirmed: "187",
-		Active: "181",
 		Country_Region: "Bulgaria",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "3",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 185,
+		Deaths: 0,
+		Recovered: 7,
+		Active: 178,
 		Province_State: "",
-		Confirmed: "185",
-		Active: "178",
 		Country_Region: "Slovakia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "7"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 175,
+		Deaths: 20,
+		Recovered: 4,
+		Active: 151,
 		Province_State: "",
-		Confirmed: "175",
-		Active: "151",
 		Country_Region: "San Marino",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "20",
-		Recovered: "4"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 153,
+		Deaths: 2,
+		Recovered: 38,
+		Active: 113,
 		Province_State: "",
-		Confirmed: "153",
-		Active: "113",
 		Country_Region: "United Arab Emirates",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "38"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 139,
+		Deaths: 0,
+		Recovered: 1,
+		Active: 138,
 		Province_State: "",
-		Confirmed: "139",
-		Active: "138",
 		Country_Region: "Latvia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 135,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 135,
 		Province_State: "",
-		Confirmed: "135",
-		Active: "135",
 		Country_Region: "Uruguay",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 134,
+		Deaths: 2,
+		Recovered: 2,
+		Active: 130,
 		Province_State: "",
-		Confirmed: "134",
-		Active: "130",
 		Country_Region: "Costa Rica",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 131,
+		Deaths: 6,
+		Recovered: 16,
+		Active: 109,
 		Province_State: "",
-		Confirmed: "131",
-		Active: "109",
 		Country_Region: "Hungary",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "6",
-		Recovered: "16"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 129,
+		Deaths: 1,
+		Recovered: 1,
+		Active: 127,
 		Province_State: "",
-		Confirmed: "129",
-		Active: "127",
 		Country_Region: "Lithuania",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 126,
+		Deaths: 1,
+		Recovered: 2,
+		Active: 123,
 		Province_State: "",
-		Confirmed: "126",
-		Active: "123",
 		Country_Region: "Bosnia and Herzegovina",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 115,
+		Deaths: 4,
+		Recovered: 3,
+		Active: 108,
 		Province_State: "",
-		Confirmed: "115",
-		Active: "108",
 		Country_Region: "Morocco",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "4",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 115,
+		Deaths: 1,
+		Recovered: 1,
+		Active: 113,
 		Province_State: "",
-		Confirmed: "115",
-		Active: "113",
 		Country_Region: "North Macedonia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 113,
+		Deaths: 1,
+		Recovered: 1,
+		Active: 111,
 		Province_State: "",
-		Confirmed: "113",
-		Active: "111",
 		Country_Region: "Andorra",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 113,
+		Deaths: 0,
+		Recovered: 17,
+		Active: 96,
 		Province_State: "",
-		Confirmed: "113",
-		Active: "96",
 		Country_Region: "Vietnam",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "17"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 112,
+		Deaths: 0,
+		Recovered: 1,
+		Active: 111,
 		Province_State: "",
-		Confirmed: "112",
-		Active: "111",
 		Country_Region: "Jordan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 102,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 102,
 		Province_State: "",
-		Confirmed: "102",
-		Active: "102",
 		Country_Region: "New Zealand",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 95,
+		Deaths: 1,
+		Recovered: 3,
+		Active: 91,
 		Province_State: "",
-		Confirmed: "95",
-		Active: "91",
 		Country_Region: "Cyprus",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 94,
+		Deaths: 1,
+		Recovered: 1,
+		Active: 92,
 		Province_State: "",
-		Confirmed: "94",
-		Active: "92",
 		Country_Region: "Moldova",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 90,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 88,
 		Province_State: "",
-		Confirmed: "90",
-		Active: "88",
 		Country_Region: "Malta",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 89,
+		Deaths: 2,
+		Recovered: 2,
+		Active: 85,
 		Province_State: "",
-		Confirmed: "89",
-		Active: "85",
 		Country_Region: "Albania",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 88,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 86,
 		Province_State: "",
-		Confirmed: "88",
-		Active: "86",
 		Country_Region: "Brunei",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 84,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 82,
 		Province_State: "",
-		Confirmed: "84",
-		Active: "82",
 		Country_Region: "Cambodia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 82,
+		Deaths: 0,
+		Recovered: 3,
+		Active: 79,
 		Province_State: "",
-		Confirmed: "82",
-		Active: "79",
 		Country_Region: "Sri Lanka",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 76,
+		Deaths: 0,
+		Recovered: 15,
+		Active: 61,
 		Province_State: "",
-		Confirmed: "76",
-		Active: "61",
 		Country_Region: "Belarus",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "15"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 75,
+		Deaths: 4,
+		Recovered: 5,
+		Active: 66,
 		Province_State: "",
-		Confirmed: "75",
-		Active: "66",
 		Country_Region: "Burkina Faso",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "4",
-		Recovered: "5"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 75,
+		Deaths: 3,
+		Recovered: 1,
+		Active: 71,
 		Province_State: "",
-		Confirmed: "75",
-		Active: "71",
 		Country_Region: "Tunisia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "3",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 73,
+		Deaths: 3,
+		Recovered: 1,
+		Active: 69,
 		Province_State: "",
-		Confirmed: "73",
-		Active: "69",
 		Country_Region: "Ukraine",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "3",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 70,
+		Deaths: 0,
+		Recovered: 15,
+		Active: 55,
 		Province_State: "",
-		Confirmed: "70",
-		Active: "55",
 		Country_Region: "Venezuela",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "15"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 67,
+		Deaths: 0,
+		Recovered: 5,
+		Active: 62,
 		Province_State: "",
-		Confirmed: "67",
-		Active: "62",
 		Country_Region: "Senegal",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "5"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 65,
+		Deaths: 1,
+		Recovered: 11,
+		Active: 53,
 		Province_State: "",
-		Confirmed: "65",
-		Active: "53",
 		Country_Region: "Azerbaijan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "11"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 59,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 59,
 		Province_State: "",
-		Confirmed: "59",
-		Active: "59",
 		Country_Region: "Kazakhstan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 55,
+		Deaths: 0,
+		Recovered: 17,
+		Active: 38,
 		Province_State: "",
-		Confirmed: "55",
-		Active: "38",
 		Country_Region: "Oman",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "17"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 54,
+		Deaths: 0,
+		Recovered: 1,
+		Active: 53,
 		Province_State: "",
-		Confirmed: "54",
-		Active: "53",
 		Country_Region: "Georgia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 50,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 50,
 		Province_State: "",
-		Confirmed: "50",
-		Active: "50",
 		Country_Region: "Trinidad and Tobago",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 43,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 43,
 		Province_State: "",
-		Confirmed: "43",
-		Active: "43",
 		Country_Region: "Uzbekistan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 40,
+		Deaths: 1,
+		Recovered: 1,
+		Active: 38,
 		Province_State: "",
-		Confirmed: "40",
-		Active: "38",
 		Country_Region: "Afghanistan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 40,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 38,
 		Province_State: "",
-		Confirmed: "40",
-		Active: "38",
 		Country_Region: "Cameroon",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 37,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 37,
 		Province_State: "",
-		Confirmed: "37",
-		Active: "37",
 		Country_Region: "Liechtenstein",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 35,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 34,
 		Province_State: "",
-		Confirmed: "35",
-		Active: "34",
 		Country_Region: "Cuba",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 30,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 28,
 		Province_State: "",
-		Confirmed: "30",
-		Active: "28",
 		Country_Region: "Nigeria",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 28,
+		Deaths: 2,
+		Recovered: 0,
+		Active: 26,
 		Province_State: "",
-		Confirmed: "28",
-		Active: "26",
 		Country_Region: "Mauritius",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 27,
+		Deaths: 2,
+		Recovered: 3,
+		Active: 22,
 		Province_State: "",
-		Confirmed: "27",
-		Active: "22",
 		Country_Region: "Bangladesh",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "2",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 26,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 26,
 		Province_State: "",
-		Confirmed: "26",
-		Active: "26",
 		Country_Region: "Honduras",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 24,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 24,
 		Province_State: "",
-		Confirmed: "24",
-		Active: "24",
 		Country_Region: "Bolivia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 23,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 22,
 		Province_State: "",
-		Confirmed: "23",
-		Active: "22",
 		Country_Region: "Ghana",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 23,
+		Deaths: 0,
+		Recovered: 1,
+		Active: 22,
 		Province_State: "",
-		Confirmed: "23",
-		Active: "22",
 		Country_Region: "Monaco",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 22,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 21,
 		Province_State: "",
-		Confirmed: "22",
-		Active: "21",
 		Country_Region: "Paraguay",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 21,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 21,
 		Province_State: "",
-		Confirmed: "21",
-		Active: "21",
 		Country_Region: "Montenegro",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 19,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 18,
 		Province_State: "",
-		Confirmed: "19",
-		Active: "18",
 		Country_Region: "Guatemala",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 19,
+		Deaths: 1,
+		Recovered: 2,
+		Active: 16,
 		Province_State: "",
-		Confirmed: "19",
-		Active: "16",
 		Country_Region: "Jamaica",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "2"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 19,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 19,
 		Province_State: "",
-		Confirmed: "19",
-		Active: "19",
 		Country_Region: "Rwanda",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 18,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 17,
 		Province_State: "",
-		Confirmed: "18",
-		Active: "17",
 		Country_Region: "Guyana",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 16,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 16,
 		Province_State: "",
-		Confirmed: "16",
-		Active: "16",
 		Country_Region: "Togo",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 15,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 15,
 		Province_State: "",
-		Confirmed: "15",
-		Active: "15",
 		Country_Region: "Kenya",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 14,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 14,
 		Province_State: "",
-		Confirmed: "14",
-		Active: "14",
 		Country_Region: "Barbados",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 14,
+		Deaths: 0,
+		Recovered: 1,
+		Active: 13,
 		Province_State: "",
-		Confirmed: "14",
-		Active: "13",
 		Country_Region: "Côte d'Ivoire",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 14,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 14,
 		Province_State: "",
-		Confirmed: "14",
-		Active: "14",
 		Country_Region: "Kyrgyzstan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 13,
+		Deaths: 0,
+		Recovered: 3,
+		Active: 10,
 		Province_State: "",
-		Confirmed: "13",
-		Active: "10",
 		Country_Region: "Maldives",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "3"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 12,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 12,
 		Province_State: "",
-		Confirmed: "12",
-		Active: "12",
 		Country_Region: "Tanzania",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 11,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 11,
 		Province_State: "",
-		Confirmed: "11",
-		Active: "11",
 		Country_Region: "Ethiopia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 10,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 10,
 		Province_State: "",
-		Confirmed: "10",
-		Active: "10",
 		Country_Region: "Mongolia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 7,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 7,
 		Province_State: "",
-		Confirmed: "7",
-		Active: "7",
 		Country_Region: "Seychelles",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 6,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 6,
 		Province_State: "",
-		Confirmed: "6",
-		Active: "6",
 		Country_Region: "Equatorial Guinea",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 5,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 4,
 		Province_State: "",
-		Confirmed: "5",
-		Active: "4",
 		Country_Region: "Gabon",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 5,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 5,
 		Province_State: "",
-		Confirmed: "5",
-		Active: "5",
 		Country_Region: "Suriname",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 4,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 4,
 		Province_State: "",
-		Confirmed: "4",
-		Active: "4",
 		Country_Region: "Bahamas",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 4,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 4,
 		Province_State: "",
-		Confirmed: "4",
-		Active: "4",
 		Country_Region: "Eswatini (fmr. \"Swaziland\")",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Cabo Verde",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Central African Republic",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Congo (Congo-Brazzaville)",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "El Salvador",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Liberia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Madagascar",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Namibia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Zambia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 3,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 3,
 		Province_State: "",
-		Confirmed: "3",
-		Active: "3",
 		Country_Region: "Zimbabwe",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 1,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "1",
 		Country_Region: "Sudan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "1",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Angola",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Benin",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Bhutan",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Fiji",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Guinea",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Haiti",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Mauritania",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Nicaragua",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Niger",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 2,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 2,
 		Province_State: "",
-		Confirmed: "2",
-		Active: "2",
 		Country_Region: "Saint Lucia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 1,
+		Active: 0,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "0",
 		Country_Region: "Nepal",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "1"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Antigua and Barbuda",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Chad",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Djibouti",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Dominica",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Eritrea",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Gambia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Grenada",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Holy See",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Mozambique",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Papua New Guinea",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Saint Vincent and the Grenadines",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Somalia",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Syria",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Timor-Leste",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
+		Confirmed: 1,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 1,
 		Province_State: "",
-		Confirmed: "1",
-		Active: "1",
 		Country_Region: "Uganda",
-		Last_Update: "3/22/20 23:45",
-		Deaths: "0",
-		Recovered: "0"
+		Last_Update: "3/22/20 23:45"
 	},
 	{
 		Confirmed: 33746,
