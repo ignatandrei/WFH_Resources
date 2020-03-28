@@ -5,13 +5,13 @@ export class JH {
         if (c == null) {
           return;
         }
-        this.Province_State=c.Province_State;
+        this.Province_State=c.Province_State??'';
         this.Confirmed=c.Confirmed;
-        this.Active=c.Active;
-        this.Country_Region=c.Country_Region;
+        this.Active=c.Active??0;
+        this.Country_Region=c.Country_Region??'';
         this.Last_Update=c.Last_Update;
-        this.Deaths=c.Deaths;
-        this.Recovered=c.Recovered;
+        this.Deaths=c.Deaths??0;
+        this.Recovered=c.Recovered??0;
         
       }
     public Province_State: string;
@@ -21,4 +21,10 @@ export class JH {
     public Deaths: number;
     public Recovered: number;
     public Active: number;
+
+    public initialize():void{
+      this.Confirmed=0;
+      this.Deaths=0;
+      this.Recovered=0;
+    }
 }

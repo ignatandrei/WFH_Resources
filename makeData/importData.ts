@@ -2,6 +2,7 @@ import {country,Countries} from './countryList';
 import { parse, Parser } from 'papaparse';
 import { JH } from './jh'
 import { parentPort } from 'worker_threads';
+import { close } from 'fs';
 var fs = require('fs');
 
 let definitionCountries = Countries;
@@ -20,7 +21,9 @@ let definitionCountries = Countries;
   async function main(){
       await load(new Date(2020,0,22)) ;
   }
-
+  function onlyUnique(value, index, self) :boolean{ 
+    return self.indexOf(value) === index;
+  }
   async function  getData(url :string){
     try {
       const fetch = require("node-fetch");
@@ -53,12 +56,12 @@ async function load(dt:Date){
       
       header: true, 
       transformHeader:h => {
-        switch(h){
-          case 'Province/State':
+        switch(h.trim().toLowerCase()){
+          case 'province/state':
             return 'Province_State';
-          case 'Country/Region':
+          case 'country/region':
             return 'Country_Region';
-          case 'Last Update':
+          case 'last update':
             return 'Last_Update';
         }
         
@@ -92,6 +95,8 @@ async function load(dt:Date){
           .filter(it=>it.Country_Region != "Congo (Kinshasa)")
           .filter(it=>it.Country_Region != "Taiwan*")
           .filter(it=>it.Country_Region != "Hong Kong")
+          .filter(it=>it.Country_Region != "Macau")
+          .filter(it=>it.Country_Region != "Taiwan")
           .filter(it=>it.Country_Region != "Cruise Ship")
           .filter(it=>it.Country_Region != "French Guiana")
           .filter(it=>it.Country_Region != "Martinique")
@@ -99,6 +104,7 @@ async function load(dt:Date){
           .filter(it=>it.Country_Region != "occupied Palestinian territory")
           .filter(it=>it.Country_Region != 'Diamond Princess');
          console.log('loaded ' + parseArr.length);
+         
          parseArr.forEach(it=>{
           if(alternates.filter(name=>{
             return name == it.Country_Region;
@@ -110,7 +116,38 @@ async function load(dt:Date){
 
          });
          parseArr=parseArr.map(it=>new JH(it));
-         const data=parseArr.filter(it=>it.Country_Region.length>0 && ( it.Province_State =='' || it.Country_Region==it.Province_State));
+         //console.log(parseArr);
+         let data=parseArr.filter(it=>it.Country_Region.length>0 && ( it.Province_State =='' || it.Country_Region==it.Province_State));
+         console.log('to write : ' + data.length);
+         
+         //find all that have not have been reported globally
+         const arrCountries=data.map(it=>it.Country_Region).filter(onlyUnique);
+         const allCountries=parseArr.map(it=>it.Country_Region).filter(onlyUnique);
+         const difference = allCountries.filter(x => !arrCountries.includes(x));
+         if(difference.length>0){
+           difference.map(countryNotFound=>{
+              var jh=new JH();
+              jh.Province_State='';
+              jh.Country_Region=countryNotFound;
+              jh.initialize();
+            parseArr.forEach(it=>{
+                if(difference.includes(it.Country_Region)){
+                  console.log(`${jh.Confirmed} ${it.Confirmed}`);
+                  jh.Confirmed += it.Confirmed;
+                  console.log(`${jh.Confirmed} ${it.Confirmed}`);
+                  jh.Deaths += it.Deaths;
+                  jh.Active += it.Active;
+                  jh.Last_Update = it.Last_Update; 
+                }
+                  
+            });
+            parseArr.push(jh);
+          });
+           data=parseArr.filter(it=>it.Country_Region.length>0 && ( it.Province_State =='' || it.Country_Region==it.Province_State));
+           console.log('to write : ' + data.length);
+         }
+         
+
          var js=JSON.stringify(data, null, '\t').replace(/\"([^(\")"]+)\":/g,"$1:");
 
          const path = require("path");
