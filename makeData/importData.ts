@@ -36,7 +36,7 @@ async function getData(url: string) {
     const fetch = require("node-fetch");
     const response = await fetch(url);
     const json = await response.text();
-    console.log(json);
+    //console.log(json);
     return json;
   } catch (error) {
     console.log(error);
@@ -218,7 +218,7 @@ async function load(dt: Date) {
       );
       
       js = `//${fileName} \r\n export const JH${dtRequired.format("YYYYMMDD")} : []=` + js;
-      console.log(`aaa`);
+      //console.log(`aaa`);
       console.log(`${dirName}, ${fs.existsSync(dirName)}`)
       if (!fs.existsSync(dirName)) {
         console.log('create');
