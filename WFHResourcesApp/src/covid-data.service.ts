@@ -7,7 +7,6 @@ import { CountryCovid19 } from './CountryCovid19';
 import { map } from 'rxjs/operators';
 import * as  data from './assets/all';
 import { JH } from './jh';
-import { stat } from 'fs';
 @Injectable({
   providedIn: 'root'
 })
