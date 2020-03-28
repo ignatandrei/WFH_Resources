@@ -17,11 +17,34 @@ let definitionCountries = Countries;
       console.log("Error" + JSON.stringify(e));
     }
   })();
+  async function main(){
+      await load(new Date(2020,0,22)) ;
+  }
 
-async function main(){
+  async function  getData(url :string){
+    try {
+      const fetch = require("node-fetch");
+      const response = await fetch(url);
+      const json = await response.text();
+      console.log(json);
+      return json;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  }; 
+async function load(dt:Date){
     console.log('start');
+    var moment = require('moment');
+    var dtFormat=moment(dt).format("MM-DD-YYYY");
+    console.log(dtFormat);
+    
     //const file:string="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-26-2020.csv"//
-    const file = fs.createReadStream(__dirname +'\\test.csv');
+    const fileName=  `https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/${dtFormat}.csv`
+    console.log(fileName);
+    
+    const file= await getData(fileName);
+    //const file = fs.createReadStream(__dirname +'\\test.csv');
     //console.log(file);
     const namesArr=definitionCountries.map(it=>it.alternateNames);
     const alternates= ([] as string[]).concat(...namesArr);
@@ -68,6 +91,7 @@ async function main(){
          parseArr=parseArr
           .filter(it=>it.Country_Region != "Congo (Kinshasa)")
           .filter(it=>it.Country_Region != "Taiwan*")
+          .filter(it=>it.Country_Region != "Hong Kong")
           .filter(it=>it.Country_Region != "Cruise Ship")
           .filter(it=>it.Country_Region != "French Guiana")
           .filter(it=>it.Country_Region != "Martinique")
@@ -93,7 +117,7 @@ async function main(){
          const fs = require("fs");
          let directoryJS = path.join(__dirname + "/..", "obj","all.js");
          directoryJS = path.join(__dirname ,"all.txt");
-   
+         js=`export const JH : []=`+ js;
          fs.writeFileSync(directoryJS,js);
 
 
