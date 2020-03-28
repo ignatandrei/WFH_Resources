@@ -5,6 +5,9 @@ import { parentPort } from "worker_threads";
 import { close } from "fs";
 import { addListener } from "cluster";
 import { dirname } from "path";
+import { JH20200122 } from "../obj/2020/01/20200122JH";
+import * as data from "../obj/2020/01/20200122JH";
+
 var fs = require("fs");
 
 let definitionCountries = Countries;
@@ -15,16 +18,38 @@ let definitionCountries = Countries;
   } catch (e) {
     console.log(e);
     console.log("Error" + JSON.stringify(e));
+    throw e;
   }
 })();
+
 async function main() {
+
   var dt = new Date(2020, 0, 22);
+  await loadFromGitHub(dt);
+  await loadImportsAndVerify(dt);
+}
+async function loadImportsAndVerify(dt: Date){
+  // var x=await import("../obj/2020/01/20200122JH");
+  // console.log(x["JH20200122"].length);
+  var moment = require("moment");
+  var dtRequired = moment(dt);
+  var nameFile = `${dtRequired.format("YYYYMMDD")}JH.js`;
+  var dtFormat = dtRequired.format("MM-DD-YYYY");
+  const path = require("path");
+  const fs = require("fs");
+  let fullPath= path.join(__dirname + "/..", "obj",`${dtRequired.format("YYYY")}`,`${dtRequired.format("MM")}`,nameFile);
+  
+  var x=await import(fullPath);
+  
+  console.log(x[`JH${dtRequired.format("YYYYMMDD")}`].length);
+}
+async function loadFromGitHub(dt:Date){
   console.log(dt);
   var now = new Date();
   while (dt < now) {
     console.log(dt);
-    await load(dt);
-    dt.setDate(dt.getDate() + 1);
+    await load(now);
+    now.setDate(now.getDate() - 1);
     // return;
   }
 }
@@ -47,7 +72,7 @@ async function load(dt: Date) {
   console.log("start");
   var moment = require("moment");
   var dtRequired = moment(dt);
-  var nameFile = `${dtRequired.format("YYYYMMDD")}JH.txt`;
+  var nameFile = `${dtRequired.format("YYYYMMDD")}JH.js`;
   var dtFormat = dtRequired.format("MM-DD-YYYY");
   const path = require("path");
   const fs = require("fs");
@@ -59,7 +84,7 @@ async function load(dt: Date) {
   
   // fileNameJS = path.join(__dirname, nameFile);
   if (fs.existsSync(fileNameJS)) {
-    console.log(`${fileNameJS} exists`);
+    console.log(`exists ${fileNameJS} `);
     return; 
   }
 
@@ -211,13 +236,14 @@ async function load(dt: Date) {
                 .length > 0
           )[0].name)
       );
-
+      if(data.length == 0)
+            return;
       var js = JSON.stringify(data, null, "\t").replace(
         /\"([^(\")"]+)\":/g,
         "$1:"
       );
       
-      js = `//${fileName} \r\n export const JH${dtRequired.format("YYYYMMDD")} : []=` + js;
+      js = `//${fileName} \r\n export const JH${dtRequired.format("YYYYMMDD")} =` + js;
       //console.log(`aaa`);
       console.log(`${dirName}, ${fs.existsSync(dirName)}`)
       if (!fs.existsSync(dirName)) {

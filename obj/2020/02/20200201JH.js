@@ -1,0 +1,219 @@
+//https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/02-01-2020.csv 
+ export const JH20200201 =[
+	{
+		Province_State: "",
+		Confirmed: "20",
+		Active: 0,
+		Country_Region: "Japan",
+		Last_Update: "2/1/2020 18:53",
+		Deaths: "0",
+		Recovered: "1"
+	},
+	{
+		Province_State: "",
+		Confirmed: "19",
+		Active: 0,
+		Country_Region: "Thailand",
+		Last_Update: "1/31/2020 10:37",
+		Deaths: "0",
+		Recovered: "5"
+	},
+	{
+		Province_State: "",
+		Confirmed: "16",
+		Active: 0,
+		Country_Region: "Singapore",
+		Last_Update: "2/1/2020 5:37",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "12",
+		Active: 0,
+		Country_Region: "South Korea",
+		Last_Update: "2/1/2020 10:43",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "8",
+		Active: 0,
+		Country_Region: "Malaysia",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "8",
+		Active: 0,
+		Country_Region: "Germany",
+		Last_Update: "2/1/2020 18:33",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "6",
+		Active: 0,
+		Country_Region: "France",
+		Last_Update: "2/1/2020 1:52",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "6",
+		Active: 0,
+		Country_Region: "Vietnam",
+		Last_Update: "2/1/2020 7:38",
+		Deaths: "0",
+		Recovered: "1"
+	},
+	{
+		Province_State: "",
+		Confirmed: "4",
+		Active: 0,
+		Country_Region: "United Arab Emirates",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "2",
+		Active: 0,
+		Country_Region: "Italy",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "2",
+		Active: 0,
+		Country_Region: "Russia",
+		Last_Update: "1/31/2020 16:13",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "2",
+		Active: 0,
+		Country_Region: "United Kingdom",
+		Last_Update: "2/1/2020 1:52",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Cambodia",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Finland",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "India",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Nepal",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Philippines",
+		Last_Update: "2/1/2020 17:43",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Spain",
+		Last_Update: "2/1/2020 2:13",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Sri Lanka",
+		Last_Update: "1/31/2020 8:15",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Province_State: "",
+		Confirmed: "1",
+		Active: 0,
+		Country_Region: "Sweden",
+		Last_Update: "2/1/2020 2:13",
+		Deaths: "0",
+		Recovered: "0"
+	},
+	{
+		Confirmed: 11871,
+		Deaths: 259,
+		Recovered: 275,
+		Active: 0,
+		Province_State: "",
+		Country_Region: "China",
+		Last_Update: "2/1/2020 1:52"
+	},
+	{
+		Confirmed: 12,
+		Deaths: 0,
+		Recovered: 2,
+		Active: 0,
+		Province_State: "",
+		Country_Region: "Australia",
+		Last_Update: "2/1/2020 18:12"
+	},
+	{
+		Confirmed: 4,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 0,
+		Province_State: "",
+		Country_Region: "Canada",
+		Last_Update: "2/1/2020 18:12"
+	},
+	{
+		Confirmed: 8,
+		Deaths: 0,
+		Recovered: 0,
+		Active: 0,
+		Province_State: "",
+		Country_Region: "United States of America",
+		Last_Update: "2/1/2020 19:43"
+	}
+]
