@@ -135,9 +135,18 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
       if (this.countrySelected.length === 0) {
         // window.alert(1);
-        this.addCountry(null);
+        //this.addCountry(null);
         // window.alert(2);
-        this.addCountry(null);
+        this.covidDataService.findMyCountry().subscribe(
+          it => {
+            const countryFind = this.countries.find(c => c.Country.toLowerCase() === it.country.toLowerCase());
+            
+            if (countryFind != null){
+              this.addCountry(countryFind);
+              this.addCountry(null); 
+            }
+          }
+        );
         // window.alert(3);
       }
       // this.addCountry(it.find(c => c.Country === 'Austria'));
@@ -370,6 +379,20 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           labelTextColor: (tooltipItem, chart) => {
             return this.colors[tooltipItem.datasetIndex];
           },
+            title(tooltipItem, data) {
+              const dsIndex = tooltipItem[0].datasetIndex;
+              const index = tooltipItem[0].index;
+              console.log(tooltipItem);
+              console.log(dsIndex);
+              console.log(data.datasets);
+              const orig = data.datasets[dsIndex].orig;
+              const covid = orig[index]  as CovidData;
+              const country = covid.Country;
+
+              const label=(`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${covid.Cases}`);
+
+              return label;
+            },
             label(tooltipItem, data) {
                 const label = [];
                 const dsIndex = tooltipItem.datasetIndex;
@@ -398,7 +421,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
                 // label += Math.round(tooltipItem.yLabel * 100) / 100;
                 // label += JSON.stringify(tooltipItem);
                 // console.log(data);
-                return label.join(' ');
+                return label;
             }
         }
       },
