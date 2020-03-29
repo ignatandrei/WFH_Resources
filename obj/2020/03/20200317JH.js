@@ -1149,7 +1149,7 @@
 		Recovered: 0,
 		Active: null,
 		Province_State: "",
-		Country_Region: "Holy See",
+		Country_Region: "Vatican",
 		Last_Update: "2020-03-13T22:22:02"
 	},
 	{

@@ -600,7 +600,7 @@
 		Recovered: 0,
 		Active: 4,
 		Province_State: "",
-		Country_Region: "Holy See",
+		Country_Region: "Vatican",
 		Last_Update: "2020-03-26 23:48:18"
 	},
 	{
