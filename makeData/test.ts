@@ -13,8 +13,14 @@ import { country, Countries } from "./countryList";
 async function main() {
     let definitionCountries = Countries;
     definitionCountries.forEach(it=>{
-        if(findCountryCode(it.name) == null)
-                console.log(it.name);
+        var cc= findCountryCode(it.name);
+        if(cc == null)
+          console.log(it.name);
+        else
+          console.log(it.countryCode == cc);
+          
+        // console.log(it);
+        // console.log(",");
     })
 }
 
