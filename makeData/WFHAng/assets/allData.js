@@ -611,7 +611,7 @@ export const a=[
 				Recovered: 0,
 				Active: 6,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-28 23:05:25"
 			},
 			{
@@ -2164,7 +2164,7 @@ export const a=[
 				Recovered: 0,
 				Active: 4,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-27 23:23:03"
 			},
 			{
@@ -3708,7 +3708,7 @@ export const a=[
 				Recovered: 0,
 				Active: 4,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-26 23:48:18"
 			},
 			{
@@ -5252,7 +5252,7 @@ export const a=[
 				Recovered: 0,
 				Active: 4,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-25 23:33:04"
 			},
 			{
@@ -6778,7 +6778,7 @@ export const a=[
 				Recovered: 0,
 				Active: 4,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-24 23:37:15"
 			},
 			{
@@ -8277,7 +8277,7 @@ export const a=[
 				Recovered: 0,
 				Active: 1,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-23 23:19:21"
 			},
 			{
@@ -10559,7 +10559,7 @@ export const a=[
 				Recovered: 0,
 				Active: 1,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "3/22/20 23:45"
 			},
 			{
@@ -12031,7 +12031,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -13476,7 +13476,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -14876,7 +14876,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -16213,7 +16213,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -17496,7 +17496,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -18770,7 +18770,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -19999,7 +19999,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -21174,7 +21174,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-13T22:22:02"
 			},
 			{
@@ -22115,7 +22115,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-11T20:00:00"
 			},
 			{
@@ -23245,7 +23245,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-10T19:13:21"
 			},
 			{
@@ -24213,7 +24213,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-10T19:13:21"
 			},
 			{
@@ -25154,7 +25154,7 @@ export const a=[
 				Recovered: 0,
 				Active: null,
 				Province_State: "",
-				Country_Region: "Holy See",
+				Country_Region: "Vatican",
 				Last_Update: "2020-03-10T19:13:21"
 			},
 			{
