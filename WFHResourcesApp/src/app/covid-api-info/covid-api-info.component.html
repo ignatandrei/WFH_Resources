@@ -8,7 +8,10 @@
       <option *ngFor="let s of status" [ngValue]="s">{{ s }}</option>
     </select>
     <div class="width-100">
-      <a href="{{ currentLink }}" id="copyLink">{{ currentLink }} </a>
+      <!-- <a href="{{ currentLink }}" id="copyLink">{{ currentLink }} </a> -->
+      <label>
+      <input type="checkbox"  [(ngModel)]="PerPopulation"/>Per population (1/ 100.000)
+    </label>
     </div>
     <span id="allCountries">
       <span *ngFor="let c of countrySelected; let i = index">

@@ -60,7 +60,7 @@ export class CovidDataService {
         it.Last_Update.substr(4, 2) +
         '-' +
         it.Last_Update.substr(6, 2);
-      console.log(it.Last_Update + ' ==' + n.Date);
+      // console.log(it.Last_Update + ' ==' + n.Date);
       n.Status = status;
       n.Province = '';
       switch (status.toLowerCase()) {
@@ -80,7 +80,7 @@ export class CovidDataService {
       return n;
     });
     // window.alert(`${country} ${ret.length}`);
-    return of([status, ret]);
+    return of([country, ret]);
     // const url = this.covidApi + `dayone/country/${country}/status/${status}/live`;
     // return this.http.get<CovidData[]>(url)
     // .pipe(

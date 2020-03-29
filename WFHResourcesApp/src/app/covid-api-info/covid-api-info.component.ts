@@ -19,6 +19,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { shareReplay, map } from 'rxjs/operators';
 import * as introJs from 'intro.js/intro.js';
 import * as CountryImport from '../../countryList';
+import { notDeepEqual } from 'assert';
 @Component({
   selector: 'app-covid-api-info',
   templateUrl: './covid-api-info.component.html',
@@ -49,6 +50,14 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   public status = ['confirmed', 'recovered', 'deaths'];
   public statusSelected = 'confirmed';
   public introJS: any;
+  private perPopulation = false;
+  get PerPopulation(): boolean {
+    return this.perPopulation;
+  }
+  set PerPopulation(val: boolean) {
+    this.perPopulation = val;
+    this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
+  }
   constructor(
     private covidDataService: CovidDataService,
     private route: ActivatedRoute,
@@ -219,7 +228,11 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         const item =  arr[i];
         const country = item[0];
         const f = item[1];
-
+        if(this.perPopulation){
+          console.log(`trying to find ${country}`);
+          const c = CountryImport.Countries.find(it => it.name === country);
+          f.forEach(val => val.Cases = (val.Cases * 100000) / c.population2020);
+        }
         const f1 = (
           f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
@@ -388,14 +401,17 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             title(tooltipItem, data) {
               const dsIndex = tooltipItem[0].datasetIndex;
               const index = tooltipItem[0].index;
-              console.log(tooltipItem);
-              console.log(dsIndex);
-              console.log(data.datasets);
+              // console.log(tooltipItem);
+              // console.log(dsIndex);
+              // console.log(data.datasets);
               const orig = data.datasets[dsIndex].orig;
               const covid = orig[index]  as CovidData;
               const country = covid.Country;
-
-              const label = (`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${covid.Cases}`);
+              let nrDisplay  = covid.Cases;
+              if( Math.ceil(nrDisplay) !==  nrDisplay){
+                 nrDisplay = +nrDisplay.toFixed(2);
+              }
+              const label = (`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${nrDisplay}`);
 
               return label;
             },
@@ -403,8 +419,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
                 const label = [];
                 const dsIndex = tooltipItem.datasetIndex;
                 const index = tooltipItem.index;
-
-                for (let i = 0; i < data.datasets.length; i++) {
+                const max = data.datasets.length;
+                for (let i = 0; i < max; i++) {
 
                   const orig = data.datasets[i].orig;
 
@@ -416,7 +432,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
                   if (i === tooltipItem.datasetIndex) {
                     country = country.toUpperCase();
                   }
-                  label.push(`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${covid.Cases}`);
+                  let nrDisplay = covid.Cases;
+                  if( Math.ceil(nrDisplay) !==  nrDisplay){
+                    nrDisplay = +nrDisplay.toFixed(2);
+                  }
+              
+                  label.push(`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${nrDisplay}`);
                 }
                 if (dsIndex !== 0) {
                   const a = label[dsIndex];
@@ -427,6 +448,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
                 // label += Math.round(tooltipItem.yLabel * 100) / 100;
                 // label += JSON.stringify(tooltipItem);
                 // console.log(data);
+                while (label.length < max) {
+                  label.push('');
+                }
                 return label;
             }
         }
