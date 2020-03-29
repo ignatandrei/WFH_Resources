@@ -3,7 +3,8 @@ name: AddData
 on:
  schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '5 2 * * *'
+    # - cron:  '5 2 * * *'
+    - cron:  '*/1 * * * *'
       
 jobs:
 
@@ -13,7 +14,8 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: generate all
-      run: |        
+      run: |
+        echo 'start generate'        
         chmod +x ./makeData/addNew.bat
         cd makeData        
         ./addNew.bat
