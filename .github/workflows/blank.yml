@@ -39,7 +39,7 @@ jobs:
         rm ../docs/*.html
         ls -lh ../docs/*
         ls -lh WFHAng/*
-        cp WFHAng/* ../docs/ 
+        cp -r WFHAng/* ../docs/ 
         cp data.ts ../WFHResourcesApp/src/app/table-wfh/data.ts
         cp data.ts ../docs/data.ts 
         cp ../docs/index.html ../docs/404.html  
