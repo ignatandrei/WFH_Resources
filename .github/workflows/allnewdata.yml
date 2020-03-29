@@ -19,6 +19,7 @@ jobs:
         chmod +x ./makeData/addNew.bat
         cd makeData        
         ./addNew.bat
+        cp ../obj/allData.js ../WFHResourcesApp/src/assets/
         echo 'finish generate all'
 
     - name: Commit files
