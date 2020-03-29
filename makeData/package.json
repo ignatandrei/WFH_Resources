@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon",
-    "buildImport": "tsc importData.ts -outdir js"
+    "buildImport": "tsc importData.ts"
   },
   "dependencies": {
     "@types/papaparse": "^5.0.3",

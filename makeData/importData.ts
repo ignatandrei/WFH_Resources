@@ -44,7 +44,7 @@ async function WriteCountries(mp:Map<string,JH[]>){
     "$1:"
   );
 
-  fs.writeFileSync(`../all.js`, "export const a="+ js);
+  fs.writeFileSync(`../obj/allData.js`, "export const a="+ js);
 }
 async function loadImports(dt: Date):Promise< Map<string,JH[]>> {
   var moment = require("moment");
