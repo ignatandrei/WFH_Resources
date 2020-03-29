@@ -18,6 +18,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { shareReplay, map } from 'rxjs/operators';
 import * as introJs from 'intro.js/intro.js';
+import * as CountryImport from '../../countryList';
 @Component({
   selector: 'app-covid-api-info',
   templateUrl: './covid-api-info.component.html',
@@ -83,7 +84,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.countrySelected.splice(i, 1);
     this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
 
-    this.currentLink = this.generateURL(); 
+    this.currentLink = this.generateURL();
   }
   private generateURL() {
 
@@ -135,15 +136,20 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
       if (this.countrySelected.length === 0) {
         // window.alert(1);
-        //this.addCountry(null);
+        // this.addCountry(null);
         // window.alert(2);
         this.covidDataService.findMyCountry().subscribe(
           it => {
-            const countryFind = this.countries.find(c => c.Country.toLowerCase() === it.country.toLowerCase());
-            
-            if (countryFind != null){
+            let countryFind = this.countries.find(c => c.Country.toLowerCase() === it.country.toLowerCase());
+            if (countryFind == null) {
+              const cc = CountryImport.Countries.find(c => c.countryCode === it.countryCode);
+              if (cc != null) {
+                countryFind  = this.countries.find(c => c.Country.toLowerCase() === cc.name.toLowerCase());
+              }
+            }
+            if (countryFind != null) {
               this.addCountry(countryFind);
-              this.addCountry(null); 
+              this.addCountry(null);
             }
           }
         );
@@ -213,12 +219,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         const item =  arr[i];
         const country = item[0];
         const f = item[1];
-        
+
         const f1 = (
           f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
         );
-        //window.alert(`${f.length} --- ${f1.length}`);
+        // window.alert(`${f.length} --- ${f1.length}`);
         if (f1.length === 0) {
           // only province -so I need to do the sum
           f.reduce((res, value) => {
@@ -237,7 +243,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         for (let j = 0; j < f1.length - 1; j++) {
           f1[j].RealDate = moment(f1[j].Date).toDate();
         }
-        //f1.length = f1.length - 1;
+        // f1.length = f1.length - 1;
         // const arrDel = [];
         // for (let j = 0; j < f1.length - 1; j++) {
         //   f1[j].RealDate = moment(f1[j].Date).toDate();
@@ -259,7 +265,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
         // }
         // arrDel.forEach(it => f1.splice(f1.indexOf(it), 1));
-        //window.alert(f1.length);
+        // window.alert(f1.length);
         this.AllCorona.push(f1);
 
       }
@@ -389,7 +395,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
               const covid = orig[index]  as CovidData;
               const country = covid.Country;
 
-              const label=(`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${covid.Cases}`);
+              const label = (`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${covid.Cases}`);
 
               return label;
             },
