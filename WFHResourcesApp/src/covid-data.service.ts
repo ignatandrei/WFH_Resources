@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { CovidOverallStatus } from './covidOverallStatus';
 import { CountryCovid19 } from './CountryCovid19';
 import { map } from 'rxjs/operators';
-import * as  data from './assets/all';
+import * as  data from './assets/allData';
 import { JH } from './jh';
 @Injectable({
   providedIn: 'root'

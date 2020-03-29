@@ -3,7 +3,5 @@ WORKDIR /usr/src/
 COPY makeData/package.json ./makeData/
 RUN (cd makeData && npm install )
 COPY . .
-RUN (cd makeData  && npm run buildImport)
-RUN (cd makeData  &&  node importData.js)
-RUN (cd makeData  &&  node importData.js)
+RUN (cd makeData  && npm run runImport)
 CMD tail -f /dev/null
