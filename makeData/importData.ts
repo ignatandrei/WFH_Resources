@@ -255,7 +255,8 @@ async function load(dt: Date) {
         "Puerto Rico",
         "Greenland",
         "Mayotte",
-        "West Bank and Gaza"
+        "West Bank and Gaza",
+        "MS Zaandam"
       ]
       parseArr = parseArr.filter(it=>!NotCountry.includes(it.Country_Region) );
       console.log("loaded " + parseArr.length);
