@@ -7,8 +7,8 @@
     "start": "node server.js",
     "start:dev": "nodemon",
     "buildImport": "tsc importData.ts",
-	"runImport": "ts-node importData.ts"
-	
+    "runImport": "ts-node importData.ts",
+    "testInternal": "ts-node test.ts"
   },
   "dependencies": {
     "@types/papaparse": "^5.0.3",
