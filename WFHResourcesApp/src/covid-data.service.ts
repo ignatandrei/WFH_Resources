@@ -25,6 +25,7 @@ export class CovidDataService {
     });
     const all = Array.from(myMap.values());
     this.mp = ([] as JH[]).concat(...all);
+    
     this.dataCountry = this.findCountries();
   }
   public findMyCountry(): Observable<Ip2Country> {
@@ -50,8 +51,8 @@ export class CovidDataService {
     country: string,
     status: string
   ): Observable<[string, CovidData[]]> {
-    const data = this.mp.filter(it => it.Country_Region === country);
-    const ret = data.map(it => {
+    const dataCountry = this.mp.filter(it => it.Country_Region === country);
+    const ret = dataCountry.map(it => {
       const n = new CovidData();
       n.Country = it.Country_Region;
       n.Date =
@@ -80,6 +81,7 @@ export class CovidDataService {
       return n;
     });
     // window.alert(`${country} ${ret.length}`);
+    // console.log(ret.find(it=>it.Country==="France" && it.Cases===40174));
     return of([country, ret]);
     // const url = this.covidApi + `dayone/country/${country}/status/${status}/live`;
     // return this.http.get<CovidData[]>(url)

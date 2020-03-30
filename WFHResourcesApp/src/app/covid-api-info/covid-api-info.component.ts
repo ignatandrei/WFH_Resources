@@ -253,7 +253,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             return res;
           }, {});
         }
-        for (let j = 0; j < f1.length - 1; j++) {
+        for (let j = 0; j < f1.length ; j++) {
           f1[j].RealDate = moment(f1[j].Date).toDate();
         }
         // f1.length = f1.length - 1;

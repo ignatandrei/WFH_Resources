@@ -6,14 +6,13 @@ export class CovidData {
     // tslint:disable-next-line: forin
     for (const k in c) { this[k] = c[k]; }
   }
-  Country: string;
-  Province: string;
-  Lat: number;
-  Lon: number;
-  Date: string;
-  Cases: number;
-  Status: string;
-
-  RealDate: Date;
+  public Country = '';
+  public Province = '';
+  public Lat = 0;
+  public Lon = 0;
+  public Date = '';
+  public Cases = 0;
+  public Status = '';
+  public RealDate: Date = new Date();
 
 }
