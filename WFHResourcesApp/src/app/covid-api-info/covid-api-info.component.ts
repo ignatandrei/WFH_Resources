@@ -75,6 +75,45 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         }
       }
     });
+    const verticalLinePlugin = {
+      getLinePosition (chart, pointIndex) {
+          const meta = chart.getDatasetMeta(0); // first dataset is used to discover X coordinate of a point
+          const data = meta.data;          
+          return data[pointIndex]._model.x;
+      },
+      getDta(chart, pointIndex) {
+        const meta = chart.getDatasetMeta(0); // first dataset is used to discover X coordinate of a point
+        const data = meta.data;
+        return data;
+    },
+      renderVerticalLine (chartInstance, pointIndex) {
+          const lineLeftOffset = this.getLinePosition(chartInstance, pointIndex);
+          const data1=this.getDta(chartInstance,pointIndex);
+          //window.alert(JSON.stringify(data1[pointIndex]._model)) ;
+          const scale = chartInstance.scales['y-axis-0'];
+          const context = chartInstance.chart.ctx;
+
+          // render vertical line
+          context.beginPath();
+          context.strokeStyle = '#ff0000';
+          context.moveTo(lineLeftOffset, scale.top);
+          context.lineTo(lineLeftOffset, scale.bottom);
+          context.stroke();
+
+          // write label
+          context.fillStyle = '#ff0000';
+          context.textAlign = 'center';
+          context.fillText('MY TEXT', lineLeftOffset, (scale.bottom - scale.top) / 2 + scale.top);
+      },
+
+      afterDatasetsDraw (chart, easing) {
+          if (chart.config.lineAtIndex) {
+              chart.config.lineAtIndex.forEach(pointIndex => this.renderVerticalLine(chart, pointIndex));
+          }
+      }
+      };
+
+    Chart.plugins.register(verticalLinePlugin);
   }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -228,7 +267,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         const item =  arr[i];
         const country = item[0];
         const f = item[1];
-        if(this.perPopulation){
+        if (this.perPopulation) {
           console.log(`trying to find ${country}`);
           const c = CountryImport.Countries.find(it => it.name === country);
           f.forEach(val => val.Cases = (val.Cases * 100000) / c.population2020);
@@ -338,6 +377,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       this.lineChart = new Chart(ctx, {
         type: 'line',
+        //lineAtIndex: [2,4,8],
         data: this.chartData,
         options: this.getChartOptions(
           maxValue,
@@ -403,12 +443,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
               const index = tooltipItem[0].index;
               // console.log(tooltipItem);
               // console.log(dsIndex);
-              // console.log(data.datasets);
+              console.log(index);
               const orig = data.datasets[dsIndex].orig;
               const covid = orig[index]  as CovidData;
               const country = covid.Country;
               let nrDisplay  = covid.Cases;
-              if( Math.ceil(nrDisplay) !==  nrDisplay){
+              if ( Math.ceil(nrDisplay) !==  nrDisplay) {
                  nrDisplay = +nrDisplay.toFixed(2);
               }
               const label = (`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${nrDisplay}`);
@@ -423,7 +463,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
                 for (let i = 0; i < max; i++) {
 
                   const orig = data.datasets[i].orig;
-
+                  // console.log(orig);
                   if (orig.length <= index) {
                       continue;
                   }
@@ -433,10 +473,10 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
                     country = country.toUpperCase();
                   }
                   let nrDisplay = covid.Cases;
-                  if( Math.ceil(nrDisplay) !==  nrDisplay){
+                  if ( Math.ceil(nrDisplay) !==  nrDisplay) {
                     nrDisplay = +nrDisplay.toFixed(2);
                   }
-              
+
                   label.push(`${country}:${moment(covid.RealDate).format('YYYY MMM DD')}:cases ${nrDisplay}`);
                 }
                 if (dsIndex !== 0) {
