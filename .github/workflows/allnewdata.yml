@@ -20,6 +20,7 @@ jobs:
         cd makeData        
         ./addNew.bat
         cp ../obj/allData.js ../WFHResourcesApp/src/assets/
+        cp ../obj/allData.js ../docs/assets/
         echo 'finish generate all'
 
     - name: Commit files
