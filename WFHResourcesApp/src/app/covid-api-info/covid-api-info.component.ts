@@ -58,6 +58,15 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.perPopulation = val;
     this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
   }
+  private startWith = 1;
+  get StartWith(): number {
+    return this.startWith;
+  }
+  set StartWith(val: number) {
+    this.startWith = val;
+    this.getCovidDataAll(this.countrySelected.map(it => it?.Slug));
+  }
+
   constructor(
     private covidDataService: CovidDataService,
     private route: ActivatedRoute,
@@ -76,9 +85,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
     });
     const verticalLinePlugin = {
-      getLinePosition (chart, pointIndex) {
+      getLinePosition(chart, pointIndex) {
           const meta = chart.getDatasetMeta(0); // first dataset is used to discover X coordinate of a point
-          const data = meta.data;          
+          const data = meta.data;
           return data[pointIndex]._model.x;
       },
       getDta(chart, pointIndex) {
@@ -86,10 +95,10 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         const data = meta.data;
         return data;
     },
-      renderVerticalLine (chartInstance, pointIndex) {
+      renderVerticalLine(chartInstance, pointIndex) {
           const lineLeftOffset = this.getLinePosition(chartInstance, pointIndex);
-          const data1=this.getDta(chartInstance,pointIndex);
-          //window.alert(JSON.stringify(data1[pointIndex]._model)) ;
+          const data1 = this.getDta(chartInstance, pointIndex);
+          // window.alert(JSON.stringify(data1[pointIndex]._model)) ;
           const scale = chartInstance.scales['y-axis-0'];
           const context = chartInstance.chart.ctx;
 
@@ -106,7 +115,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           context.fillText('MY TEXT', lineLeftOffset, (scale.bottom - scale.top) / 2 + scale.top);
       },
 
-      afterDatasetsDraw (chart, easing) {
+      afterDatasetsDraw(chart, easing) {
           if (chart.config.lineAtIndex) {
               chart.config.lineAtIndex.forEach(pointIndex => this.renderVerticalLine(chart, pointIndex));
           }
@@ -276,6 +285,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           f.filter(it => (it.Cases > 0 ) && (it.Province === ''))
             .sort((a, b) => a.Date.localeCompare(b.Date))
         );
+
         // window.alert(`${f.length} --- ${f1.length}`);
         if (f1.length === 0) {
           // only province -so I need to do the sum
@@ -292,6 +302,13 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             return res;
           }, {});
         }
+        console.log('before '+f1.length, f1[0] , this.StartWith);
+        while (f1.length > 0 && f1[0].Cases < this.StartWith) {
+          f1.shift();
+          //break;
+        }
+        console.log('after'+f1.length , f1[0] , this.StartWith);
+
         for (let j = 0; j < f1.length ; j++) {
           f1[j].RealDate = moment(f1[j].Date).toDate();
         }
@@ -377,7 +394,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       this.lineChart = new Chart(ctx, {
         type: 'line',
-        //lineAtIndex: [2,4,8],
+        // lineAtIndex: [2,4,8],
         data: this.chartData,
         options: this.getChartOptions(
           maxValue,
