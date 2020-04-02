@@ -3,203 +3,244 @@ export class  country {
   public name:string='';    
   public alternateNames:Array<string>=[];
   public countryCode :string='';
+  public Dead2017Per1000:number=0;
+
   }
 export const Countries : country[] = [
 
-  { countryCode: 'AF',
+{ countryCode: 'AF',
   population2020: 38928346,
   name: 'Afghanistan',
-  alternateNames: [ 'Afghanistan' ] }
+  alternateNames: [ 'Afghanistan' ],
+  Dead2017Per1000: 13.4 }
 ,
 { countryCode: 'AL',
   population2020: 2877797,
   name: 'Albania',
-  alternateNames: [ 'Albania' ] }
+  alternateNames: [ 'Albania' ],
+  Dead2017Per1000: 6.470000000000001 }
 ,
 { countryCode: 'DZ',
   population2020: 43851044,
   name: 'Algeria',
-  alternateNames: [ 'Algeria' ] }
+  alternateNames: [ 'Algeria' ],
+  Dead2017Per1000: 4.3100000000000005 }
 ,
 { countryCode: 'AD',
   population2020: 77265,
   name: 'Andorra',
-  alternateNames: [ 'Andorra' ] }
+  alternateNames: [ 'Andorra' ],
+  Dead2017Per1000: 6.82 }
 ,
 { countryCode: 'AO',
   population2020: 32866272,
   name: 'Angola',
-  alternateNames: [ 'Angola' ] }
+  alternateNames: [ 'Angola' ],
+  Dead2017Per1000: 9.2 }
 ,
 { countryCode: 'AG',
   population2020: 97929,
   name: 'Antigua and Barbuda',
-  alternateNames: [ 'Antigua and Barbuda' ] }
+  alternateNames: [ 'Antigua and Barbuda' ],
+  Dead2017Per1000: 5.7 }
 ,
 { countryCode: 'AR',
   population2020: 45195774,
   name: 'Argentina',
-  alternateNames: [ 'Argentina' ] }
+  alternateNames: [ 'Argentina' ],
+  Dead2017Per1000: 7.340000000000001 }
 ,
 { countryCode: 'AM',
   population2020: 2963243,
   name: 'Armenia',
-  alternateNames: [ 'Armenia' ] }
+  alternateNames: [ 'Armenia' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'AU',
   population2020: 25499884,
   name: 'Australia',
-  alternateNames: [ 'Australia' ] }
+  alternateNames: [ 'Australia' ],
+  Dead2017Per1000: 7.07 }
 ,
 { countryCode: 'AT',
   population2020: 9006398,
   name: 'Austria',
-  alternateNames: [ 'Austria' ] }
+  alternateNames: [ 'Austria' ],
+  Dead2017Per1000: 9.6 }
 ,
 { countryCode: 'AZ',
   population2020: 10139177,
   name: 'Azerbaijan',
-  alternateNames: [ 'Azerbaijan' ] }
+  alternateNames: [ 'Azerbaijan' ],
+  Dead2017Per1000: 7.090000000000001 }
 ,
 { countryCode: 'BS',
   population2020: 393244,
   name: 'Bahamas',
-  alternateNames: [ 'Bahamas', 'The Bahamas', 'Bahamas, The' ] }
+  alternateNames: [ 'Bahamas', 'The Bahamas', 'Bahamas, The' ],
+  Dead2017Per1000: 7 }
 ,
 { countryCode: 'BH',
   population2020: 1701575,
   name: 'Bahrain',
-  alternateNames: [ 'Bahrain' ] }
+  alternateNames: [ 'Bahrain' ],
+  Dead2017Per1000: 2.67 }
 ,
 { countryCode: 'BD',
   population2020: 164689383,
   name: 'Bangladesh',
-  alternateNames: [ 'Bangladesh' ] }
+  alternateNames: [ 'Bangladesh' ],
+  Dead2017Per1000: 5.64 }
 ,
 { countryCode: 'BB',
   population2020: 287375,
   name: 'Barbados',
-  alternateNames: [ 'Barbados' ] }
+  alternateNames: [ 'Barbados' ],
+  Dead2017Per1000: 8.41 }
 ,
 { countryCode: 'BY',
   population2020: 9449323,
   name: 'Belarus',
-  alternateNames: [ 'Belarus' ] }
+  alternateNames: [ 'Belarus' ],
+  Dead2017Per1000: 13.2 }
 ,
 { countryCode: 'BE',
   population2020: 11589623,
   name: 'Belgium',
-  alternateNames: [ 'Belgium' ] }
+  alternateNames: [ 'Belgium' ],
+  Dead2017Per1000: 9.7 }
 ,
 { countryCode: 'BZ',
   population2020: 397628,
   name: 'Belize',
-  alternateNames: [ 'Belize' ] }
+  alternateNames: [ 'Belize' ],
+  Dead2017Per1000: 5.95 }
 ,
 { countryCode: 'BJ',
   population2020: 12123200,
   name: 'Benin',
-  alternateNames: [ 'Benin' ] }
+  alternateNames: [ 'Benin' ],
+  Dead2017Per1000: 8.39 }
 ,
 { countryCode: 'BT',
   population2020: 771608,
   name: 'Bhutan',
-  alternateNames: [ 'Bhutan' ] }
+  alternateNames: [ 'Bhutan' ],
+  Dead2017Per1000: 6.779999999999999 }
 ,
 { countryCode: 'BO',
   population2020: 11673021,
   name: 'Bolivia',
-  alternateNames: [ 'Bolivia' ] }
+  alternateNames: [ 'Bolivia' ],
+  Dead2017Per1000: 6.590000000000001 }
 ,
 { countryCode: 'BA',
   population2020: 3280819,
   name: 'Bosnia and Herzegovina',
-  alternateNames: [ 'Bosnia and Herzegovina' ] }
+  alternateNames: [ 'Bosnia and Herzegovina' ],
+  Dead2017Per1000: 10 }
 ,
 { countryCode: 'BW',
   population2020: 2351627,
   name: 'Botswana',
-  alternateNames: [ 'Botswana' ] }
+  alternateNames: [ 'Botswana' ],
+  Dead2017Per1000: 9.6 }
 ,
 { countryCode: 'BR',
   population2020: 212559417,
   name: 'Brazil',
-  alternateNames: [ 'Brazil' ] }
+  alternateNames: [ 'Brazil' ],
+  Dead2017Per1000: 6.540000000000001 }
 ,
 { countryCode: 'BN',
   population2020: 437479,
   name: 'Brunei',
-  alternateNames: [ 'Brunei' ] }
+  alternateNames: [ 'Brunei' ],
+  Dead2017Per1000: 3.47 }
 ,
 { countryCode: 'BG',
   population2020: 6948445,
   name: 'Bulgaria',
-  alternateNames: [ 'Bulgaria' ] }
+  alternateNames: [ 'Bulgaria' ],
+  Dead2017Per1000: 14.5 }
 ,
 { countryCode: 'BF',
   population2020: 20903273,
   name: 'Burkina Faso',
-  alternateNames: [ 'Burkina Faso' ] }
+  alternateNames: [ 'Burkina Faso' ],
+  Dead2017Per1000: 11.2 }
 ,
 { countryCode: 'BI',
   population2020: 11890784,
   name: 'Burundi',
-  alternateNames: [ 'Burundi' ] }
+  alternateNames: [ 'Burundi' ],
+  Dead2017Per1000: 8.8 }
 ,
 { countryCode: 'CI',
   population2020: 26378274,
   name: 'Côte d\'Ivoire',
-  alternateNames: [ 'Côte d\'Ivoire', 'Cote d\'Ivoire', 'Ivory Coast' ] }
+  alternateNames: [ 'Côte d\'Ivoire', 'Cote d\'Ivoire', 'Ivory Coast' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'CV',
   population2020: 555987,
   name: 'Cabo Verde',
-  alternateNames: [ 'Cabo Verde', 'Cape Verde' ] }
+  alternateNames: [ 'Cabo Verde', 'Cape Verde' ],
+  Dead2017Per1000: 8.309999999999999 }
 ,
 { countryCode: 'KH',
   population2020: 16718965,
   name: 'Cambodia',
-  alternateNames: [ 'Cambodia' ] }
+  alternateNames: [ 'Cambodia' ],
+  Dead2017Per1000: 6.17 }
 ,
 { countryCode: 'CM',
   population2020: 26545863,
   name: 'Cameroon',
-  alternateNames: [ 'Cameroon' ] }
+  alternateNames: [ 'Cameroon' ],
+  Dead2017Per1000: 9.6 }
 ,
 { countryCode: 'CA',
   population2020: 37742154,
   name: 'Canada',
-  alternateNames: [ 'Canada' ] }
+  alternateNames: [ 'Canada' ],
+  Dead2017Per1000: 8.7 }
 ,
 { countryCode: 'CF',
   population2020: 4829767,
   name: 'Central African Republic',
-  alternateNames: [ 'Central African Republic' ] }
+  alternateNames: [ 'Central African Republic' ],
+  Dead2017Per1000: 13.2 }
 ,
 { countryCode: 'TD',
   population2020: 16425864,
   name: 'Chad',
-  alternateNames: [ 'Chad' ] }
+  alternateNames: [ 'Chad' ],
+  Dead2017Per1000: 13.8 }
 ,
 { countryCode: 'CL',
   population2020: 19116201,
   name: 'Chile',
-  alternateNames: [ 'Chile' ] }
+  alternateNames: [ 'Chile' ],
+  Dead2017Per1000: 5.93 }
 ,
 { countryCode: 'CN',
   population2020: 1439323776,
   name: 'China',
-  alternateNames: [ 'China', 'Mainland China' ] }
+  alternateNames: [ 'China', 'Mainland China' ],
+  Dead2017Per1000: 7.44 }
 ,
 { countryCode: 'CO',
   population2020: 50882891,
   name: 'Colombia',
-  alternateNames: [ 'Colombia' ] }
+  alternateNames: [ 'Colombia' ],
+  Dead2017Per1000: 5.36 }
 ,
 { countryCode: 'KM',
   population2020: 869601,
   name: 'Comoros',
-  alternateNames: [ 'Comoros' ] }
+  alternateNames: [ 'Comoros' ],
+  Dead2017Per1000: 7.76 }
 ,
 { countryCode: 'CG',
   population2020: 5518087,
@@ -208,792 +249,949 @@ export const Countries : country[] = [
    [ 'Congo (Congo-Brazzaville)',
      'Congo (Brazzaville)',
      'Republic of Congo',
-     'Republic of the Congo' ] }
+     'Republic of the Congo' ],
+  Dead2017Per1000: 9.5 }
 ,
 { countryCode: 'CR',
   population2020: 5094118,
   name: 'Costa Rica',
-  alternateNames: [ 'Costa Rica' ] }
+  alternateNames: [ 'Costa Rica' ],
+  Dead2017Per1000: 4.49 }
 ,
 { countryCode: 'HR',
   population2020: 4105267,
   name: 'Croatia',
-  alternateNames: [ 'Croatia' ] }
+  alternateNames: [ 'Croatia' ],
+  Dead2017Per1000: 12.2 }
 ,
 { countryCode: 'CU',
   population2020: 11326616,
   name: 'Cuba',
-  alternateNames: [ 'Cuba' ] }
+  alternateNames: [ 'Cuba' ],
+  Dead2017Per1000: 7.640000000000001 }
 ,
 { countryCode: 'CY',
   population2020: 1207359,
   name: 'Cyprus',
-  alternateNames: [ 'Cyprus' ] }
+  alternateNames: [ 'Cyprus' ],
+  Dead2017Per1000: 6.57 }
 ,
 { countryCode: 'CZ',
   population2020: 10708981,
   name: 'Czechia (Czech Republic)',
-  alternateNames: [ 'Czech Republic', 'Czechia (Czech Republic)', 'Czechia' ] }
+  alternateNames: [ 'Czech Republic', 'Czechia (Czech Republic)', 'Czechia' ],
+  Dead2017Per1000: 10.5 }
 ,
 { countryCode: 'CD',
   population2020: 89561403,
   name: 'Democratic Republic of the Congo',
-  alternateNames: [ 'Democratic Republic of the Congo' ] }
+  alternateNames: [ 'Democratic Republic of the Congo' ],
+  Dead2017Per1000: 9.6 }
 ,
 { countryCode: 'DK',
   population2020: 5792202,
   name: 'Denmark',
-  alternateNames: [ 'Denmark' ] }
+  alternateNames: [ 'Denmark' ],
+  Dead2017Per1000: 10.3 }
 ,
 { countryCode: 'DJ',
   population2020: 988000,
   name: 'Djibouti',
-  alternateNames: [ 'Djibouti' ] }
+  alternateNames: [ 'Djibouti' ],
+  Dead2017Per1000: 7.840000000000001 }
 ,
 { countryCode: 'DM',
   population2020: 71986,
   name: 'Dominica',
-  alternateNames: [ 'Dominica' ] }
+  alternateNames: [ 'Dominica' ],
+  Dead2017Per1000: 7.94 }
 ,
 { countryCode: 'DO',
   population2020: 10847910,
   name: 'Dominican Republic',
-  alternateNames: [ 'Dominican Republic' ] }
+  alternateNames: [ 'Dominican Republic' ],
+  Dead2017Per1000: 4.5 }
 ,
 { countryCode: 'EC',
   population2020: 17643054,
   name: 'Ecuador',
-  alternateNames: [ 'Ecuador' ] }
+  alternateNames: [ 'Ecuador' ],
+  Dead2017Per1000: 5.04 }
 ,
 { countryCode: 'EG',
   population2020: 102334404,
   name: 'Egypt',
-  alternateNames: [ 'Egypt' ] }
+  alternateNames: [ 'Egypt' ],
+  Dead2017Per1000: 4.7700000000000005 }
 ,
 { countryCode: 'SV',
   population2020: 6486205,
   name: 'El Salvador',
-  alternateNames: [ 'El Salvador' ] }
+  alternateNames: [ 'El Salvador' ],
+  Dead2017Per1000: 5.67 }
 ,
 { countryCode: 'GQ',
   population2020: 1402985,
   name: 'Equatorial Guinea',
-  alternateNames: [ 'Equatorial Guinea' ] }
+  alternateNames: [ 'Equatorial Guinea' ],
+  Dead2017Per1000: 8.39 }
 ,
 { countryCode: 'ER',
   population2020: 3546421,
   name: 'Eritrea',
-  alternateNames: [ 'Eritrea' ] }
+  alternateNames: [ 'Eritrea' ],
+  Dead2017Per1000: 7.65 }
 ,
 { countryCode: 'EE',
   population2020: 1326535,
   name: 'Estonia',
-  alternateNames: [ 'Estonia' ] }
+  alternateNames: [ 'Estonia' ],
+  Dead2017Per1000: 12.6 }
 ,
 { countryCode: 'SZ',
   population2020: 1160164,
   name: 'Eswatini (fmr. "Swaziland")',
-  alternateNames: [ 'Eswatini (fmr. "Swaziland")', 'Eswatini' ] }
+  alternateNames: [ 'Eswatini (fmr. "Swaziland")', 'Eswatini' ],
+  Dead2017Per1000: 13.2 }
 ,
 { countryCode: 'ET',
   population2020: 114963588,
   name: 'Ethiopia',
-  alternateNames: [ 'Ethiopia' ] }
+  alternateNames: [ 'Ethiopia' ],
+  Dead2017Per1000: 8.52 }
 ,
 { countryCode: 'FJ',
   population2020: 896445,
   name: 'Fiji',
-  alternateNames: [ 'Fiji' ] }
+  alternateNames: [ 'Fiji' ],
+  Dead2017Per1000: 6 }
 ,
 { countryCode: 'FI',
   population2020: 5540720,
   name: 'Finland',
-  alternateNames: [ 'Finland' ] }
+  alternateNames: [ 'Finland' ],
+  Dead2017Per1000: 10 }
 ,
 { countryCode: 'FR',
   population2020: 65273511,
   name: 'France',
-  alternateNames: [ 'France' ] }
+  alternateNames: [ 'France' ],
+  Dead2017Per1000: 9.3 }
 ,
 { countryCode: 'GA',
   population2020: 2225734,
   name: 'Gabon',
-  alternateNames: [ 'Gabon' ] }
+  alternateNames: [ 'Gabon' ],
+  Dead2017Per1000: 13 }
 ,
 { countryCode: 'GM',
   population2020: 2416668,
   name: 'Gambia',
-  alternateNames: [ 'Gambia', 'The Gambia', 'Gambia, The' ] }
+  alternateNames: [ 'Gambia', 'The Gambia', 'Gambia, The' ],
+  Dead2017Per1000: 7.26 }
 ,
 { countryCode: 'GE',
   population2020: 3989167,
   name: 'Georgia',
-  alternateNames: [ 'Georgia' ] }
+  alternateNames: [ 'Georgia' ],
+  Dead2017Per1000: 10.9 }
 ,
 { countryCode: 'DE',
   population2020: 83783942,
   name: 'Germany',
-  alternateNames: [ 'Germany' ] }
+  alternateNames: [ 'Germany' ],
+  Dead2017Per1000: 11.7 }
 ,
 { countryCode: 'GH',
   population2020: 31072940,
   name: 'Ghana',
-  alternateNames: [ 'Ghana' ] }
+  alternateNames: [ 'Ghana' ],
+  Dead2017Per1000: 7.37 }
 ,
 { countryCode: 'GR',
   population2020: 10423054,
   name: 'Greece',
-  alternateNames: [ 'Greece' ] }
+  alternateNames: [ 'Greece' ],
+  Dead2017Per1000: 11.3 }
 ,
 { countryCode: 'GD',
   population2020: 112523,
   name: 'Grenada',
-  alternateNames: [ 'Grenada' ] }
+  alternateNames: [ 'Grenada' ],
+  Dead2017Per1000: 8.040000000000001 }
 ,
 { countryCode: 'GT',
   population2020: 17915568,
   name: 'Guatemala',
-  alternateNames: [ 'Guatemala' ] }
+  alternateNames: [ 'Guatemala' ],
+  Dead2017Per1000: 4.82 }
 ,
 { countryCode: 'GN',
   population2020: 13132795,
   name: 'Guinea',
-  alternateNames: [ 'Guinea' ] }
+  alternateNames: [ 'Guinea' ],
+  Dead2017Per1000: 9 }
 ,
 { countryCode: 'GW',
   population2020: 1968001,
   name: 'Guinea-Bissau',
-  alternateNames: [ 'Guinea-Bissau' ] }
+  alternateNames: [ 'Guinea-Bissau' ],
+  Dead2017Per1000: 13.9 }
 ,
 { countryCode: 'GY',
   population2020: 786552,
   name: 'Guyana',
-  alternateNames: [ 'Guyana' ] }
+  alternateNames: [ 'Guyana' ],
+  Dead2017Per1000: 7.3 }
 ,
 { countryCode: 'HT',
   population2020: 11402528,
   name: 'Haiti',
-  alternateNames: [ 'Haiti' ] }
+  alternateNames: [ 'Haiti' ],
+  Dead2017Per1000: 7.909999999999999 }
 ,
 { countryCode: 'VA',
   population2020: 1000,
   name: 'Vatican',
-  alternateNames: [ 'Holy See', 'Vatican', 'Vatican City' ] }
+  alternateNames: [ 'Holy See', 'Vatican', 'Vatican City' ],
+  Dead2017Per1000: -0.1 }
 ,
 { countryCode: 'HN',
   population2020: 9904607,
   name: 'Honduras',
-  alternateNames: [ 'Honduras' ] }
+  alternateNames: [ 'Honduras' ],
+  Dead2017Per1000: 5.13 }
 ,
 { countryCode: 'HU',
   population2020: 9660351,
   name: 'Hungary',
-  alternateNames: [ 'Hungary' ] }
+  alternateNames: [ 'Hungary' ],
+  Dead2017Per1000: 12.8 }
 ,
 { countryCode: 'IS',
   population2020: 341243,
   name: 'Iceland',
-  alternateNames: [ 'Iceland' ] }
+  alternateNames: [ 'Iceland' ],
+  Dead2017Per1000: 7.13 }
 ,
 { countryCode: 'IN',
   population2020: 1380004385,
   name: 'India',
-  alternateNames: [ 'India' ] }
+  alternateNames: [ 'India' ],
+  Dead2017Per1000: 7.35 }
 ,
 { countryCode: 'ID',
   population2020: 273523615,
   name: 'Indonesia',
-  alternateNames: [ 'Indonesia' ] }
+  alternateNames: [ 'Indonesia' ],
+  Dead2017Per1000: 6.34 }
 ,
 { countryCode: 'IR',
   population2020: 83992949,
   name: 'Iran',
-  alternateNames: [ 'Iran', 'Iran (Islamic Republic of)' ] }
+  alternateNames: [ 'Iran', 'Iran (Islamic Republic of)' ],
+  Dead2017Per1000: 5.9399999999999995 }
 ,
 { countryCode: 'IQ',
   population2020: 40222493,
   name: 'Iraq',
-  alternateNames: [ 'Iraq' ] }
+  alternateNames: [ 'Iraq' ],
+  Dead2017Per1000: 4.57 }
 ,
 { countryCode: 'IE',
   population2020: 4937786,
   name: 'Ireland',
-  alternateNames: [ 'Ireland', 'Republic of Ireland' ] }
+  alternateNames: [ 'Ireland', 'Republic of Ireland' ],
+  Dead2017Per1000: 6.45 }
 ,
 { countryCode: 'IL',
   population2020: 8655535,
   name: 'Israel',
-  alternateNames: [ 'Israel' ] }
+  alternateNames: [ 'Israel' ],
+  Dead2017Per1000: 5.54 }
 ,
 { countryCode: 'IT',
   population2020: 60461826,
   name: 'Italy',
-  alternateNames: [ 'Italy' ] }
+  alternateNames: [ 'Italy' ],
+  Dead2017Per1000: 10.4 }
 ,
 { countryCode: 'JM',
   population2020: 2961167,
   name: 'Jamaica',
-  alternateNames: [ 'Jamaica' ] }
+  alternateNames: [ 'Jamaica' ],
+  Dead2017Per1000: 6.67 }
 ,
 { countryCode: 'JP',
   population2020: 126476461,
   name: 'Japan',
-  alternateNames: [ 'Japan' ] }
+  alternateNames: [ 'Japan' ],
+  Dead2017Per1000: 9.8 }
 ,
 { countryCode: 'JO',
   population2020: 10203134,
   name: 'Jordan',
-  alternateNames: [ 'Jordan' ] }
+  alternateNames: [ 'Jordan' ],
+  Dead2017Per1000: 3.8 }
 ,
 { countryCode: 'KZ',
   population2020: 18776707,
   name: 'Kazakhstan',
-  alternateNames: [ 'Kazakhstan' ] }
+  alternateNames: [ 'Kazakhstan' ],
+  Dead2017Per1000: 8.309999999999999 }
 ,
 { countryCode: 'KE',
   population2020: 53771296,
   name: 'Kenya',
-  alternateNames: [ 'Kenya' ] }
+  alternateNames: [ 'Kenya' ],
+  Dead2017Per1000: 7 }
 ,
 { countryCode: 'KI',
   population2020: 119449,
   name: 'Kiribati',
-  alternateNames: [ 'Kiribati' ] }
+  alternateNames: [ 'Kiribati' ],
+  Dead2017Per1000: 7.18 }
 ,
 { countryCode: 'XK',
   population2020: 1810463,
   name: 'Kosovo',
-  alternateNames: [ 'Kosovo' ] }
+  alternateNames: [ 'Kosovo' ],
+  Dead2017Per1000: 0 }
 ,
 { countryCode: 'KW',
   population2020: 4270571,
   name: 'Kuwait',
-  alternateNames: [ 'Kuwait' ] }
+  alternateNames: [ 'Kuwait' ],
+  Dead2017Per1000: 2.16 }
 ,
 { countryCode: 'KG',
   population2020: 6524195,
   name: 'Kyrgyzstan',
-  alternateNames: [ 'Kyrgyzstan' ] }
+  alternateNames: [ 'Kyrgyzstan' ],
+  Dead2017Per1000: 6.74 }
 ,
 { countryCode: 'LA',
   population2020: 7275560,
   name: 'Laos',
-  alternateNames: [ 'Laos' ] }
+  alternateNames: [ 'Laos' ],
+  Dead2017Per1000: 7.74 }
 ,
 { countryCode: 'LV',
   population2020: 1886198,
   name: 'Latvia',
-  alternateNames: [ 'Latvia' ] }
+  alternateNames: [ 'Latvia' ],
+  Dead2017Per1000: 14.5 }
 ,
 { countryCode: 'LB',
   population2020: 6825445,
   name: 'Lebanon',
-  alternateNames: [ 'Lebanon' ] }
+  alternateNames: [ 'Lebanon' ],
+  Dead2017Per1000: 4.95 }
 ,
 { countryCode: 'LS',
   population2020: 2142249,
   name: 'Lesotho',
-  alternateNames: [ 'Lesotho' ] }
+  alternateNames: [ 'Lesotho' ],
+  Dead2017Per1000: 15 }
 ,
 { countryCode: 'LR',
   population2020: 5057681,
   name: 'Liberia',
-  alternateNames: [ 'Liberia' ] }
+  alternateNames: [ 'Liberia' ],
+  Dead2017Per1000: 9.9 }
 ,
 { countryCode: 'LY',
   population2020: 6871292,
   name: 'Libya',
-  alternateNames: [ 'Libya' ] }
+  alternateNames: [ 'Libya' ],
+  Dead2017Per1000: 3.5700000000000003 }
 ,
 { countryCode: 'LI',
   population2020: 38128,
   name: 'Liechtenstein',
-  alternateNames: [ 'Liechtenstein' ] }
+  alternateNames: [ 'Liechtenstein' ],
+  Dead2017Per1000: 7.0200000000000005 }
 ,
 { countryCode: 'LT',
   population2020: 2722289,
   name: 'Lithuania',
-  alternateNames: [ 'Lithuania' ] }
+  alternateNames: [ 'Lithuania' ],
+  Dead2017Per1000: 14.6 }
 ,
 { countryCode: 'LU',
   population2020: 625978,
   name: 'Luxembourg',
-  alternateNames: [ 'Luxembourg' ] }
+  alternateNames: [ 'Luxembourg' ],
+  Dead2017Per1000: 8.53 }
 ,
 { countryCode: 'MG',
   population2020: 27691018,
   name: 'Madagascar',
-  alternateNames: [ 'Madagascar' ] }
+  alternateNames: [ 'Madagascar' ],
+  Dead2017Per1000: 6.95 }
 ,
 { countryCode: 'MW',
   population2020: 19129952,
   name: 'Malawi',
-  alternateNames: [ 'Malawi' ] }
+  alternateNames: [ 'Malawi' ],
+  Dead2017Per1000: 8.74 }
 ,
 { countryCode: 'MY',
   population2020: 32365999,
   name: 'Malaysia',
-  alternateNames: [ 'Malaysia' ] }
+  alternateNames: [ 'Malaysia' ],
+  Dead2017Per1000: 5 }
 ,
 { countryCode: 'MV',
   population2020: 540544,
   name: 'Maldives',
-  alternateNames: [ 'Maldives' ] }
+  alternateNames: [ 'Maldives' ],
+  Dead2017Per1000: 3.84 }
 ,
 { countryCode: 'ML',
   population2020: 20250833,
   name: 'Mali',
-  alternateNames: [ 'Mali' ] }
+  alternateNames: [ 'Mali' ],
+  Dead2017Per1000: 9.8 }
 ,
 { countryCode: 'MT',
   population2020: 441543,
   name: 'Malta',
-  alternateNames: [ 'Malta' ] }
+  alternateNames: [ 'Malta' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'MH',
   population2020: 59190,
   name: 'Marshall Islands',
-  alternateNames: [ 'Marshall Islands' ] }
+  alternateNames: [ 'Marshall Islands' ],
+  Dead2017Per1000: 4.24 }
 ,
 { countryCode: 'MR',
   population2020: 4649658,
   name: 'Mauritania',
-  alternateNames: [ 'Mauritania' ] }
+  alternateNames: [ 'Mauritania' ],
+  Dead2017Per1000: 8.35 }
 ,
 { countryCode: 'MU',
   population2020: 1271768,
   name: 'Mauritius',
-  alternateNames: [ 'Mauritius' ] }
+  alternateNames: [ 'Mauritius' ],
+  Dead2017Per1000: 6.85 }
 ,
 { countryCode: 'MX',
   population2020: 128932753,
   name: 'Mexico',
-  alternateNames: [ 'Mexico' ] }
+  alternateNames: [ 'Mexico' ],
+  Dead2017Per1000: 5.24 }
 ,
 { countryCode: 'FM',
   population2020: 115023,
   name: 'Micronesia',
-  alternateNames: [ 'Micronesia' ] }
+  alternateNames: [ 'Micronesia' ],
+  Dead2017Per1000: -0.1 }
 ,
 { countryCode: 'MD',
   population2020: 4033963,
   name: 'Moldova',
-  alternateNames: [ 'Moldova', 'Republic of Moldova' ] }
+  alternateNames: [ 'Moldova', 'Republic of Moldova' ],
+  Dead2017Per1000: 12.6 }
 ,
 { countryCode: 'MC',
   population2020: 39242,
   name: 'Monaco',
-  alternateNames: [ 'Monaco' ] }
+  alternateNames: [ 'Monaco' ],
+  Dead2017Per1000: 9.8 }
 ,
 { countryCode: 'MN',
   population2020: 3278290,
   name: 'Mongolia',
-  alternateNames: [ 'Mongolia' ] }
+  alternateNames: [ 'Mongolia' ],
+  Dead2017Per1000: 6.38 }
 ,
 { countryCode: 'ME',
   population2020: 628066,
   name: 'Montenegro',
-  alternateNames: [ 'Montenegro' ] }
+  alternateNames: [ 'Montenegro' ],
+  Dead2017Per1000: 9.7 }
 ,
 { countryCode: 'MA',
   population2020: 36910560,
   name: 'Morocco',
-  alternateNames: [ 'Morocco' ] }
+  alternateNames: [ 'Morocco' ],
+  Dead2017Per1000: 4.79 }
 ,
 { countryCode: 'MZ',
   population2020: 31255435,
   name: 'Mozambique',
-  alternateNames: [ 'Mozambique' ] }
+  alternateNames: [ 'Mozambique' ],
+  Dead2017Per1000: 11.6 }
 ,
 { countryCode: 'MM',
   population2020: 54409800,
   name: 'Myanmar (formerly Burma)',
-  alternateNames: [ 'Myanmar (formerly Burma)', 'Burma' ] }
+  alternateNames: [ 'Myanmar (formerly Burma)', 'Burma' ],
+  Dead2017Per1000: 8.01 }
 ,
 { countryCode: 'NA',
   population2020: 2540905,
   name: 'Namibia',
-  alternateNames: [ 'Namibia' ] }
+  alternateNames: [ 'Namibia' ],
+  Dead2017Per1000: 7.9 }
 ,
 { countryCode: 'NR',
   population2020: 10824,
   name: 'Nauru',
-  alternateNames: [ 'Nauru' ] }
+  alternateNames: [ 'Nauru' ],
+  Dead2017Per1000: 5.9 }
 ,
 { countryCode: 'NP',
   population2020: 29136808,
   name: 'Nepal',
-  alternateNames: [ 'Nepal' ] }
+  alternateNames: [ 'Nepal' ],
+  Dead2017Per1000: 6.62 }
 ,
 { countryCode: 'NL',
   population2020: 17134872,
   name: 'Netherlands',
-  alternateNames: [ 'Netherlands' ] }
+  alternateNames: [ 'Netherlands' ],
+  Dead2017Per1000: 8.9 }
 ,
 { countryCode: 'NZ',
   population2020: 4822233,
   name: 'New Zealand',
-  alternateNames: [ 'New Zealand' ] }
+  alternateNames: [ 'New Zealand' ],
+  Dead2017Per1000: 7.3 }
 ,
 { countryCode: 'NI',
   population2020: 6624554,
   name: 'Nicaragua',
-  alternateNames: [ 'Nicaragua' ] }
+  alternateNames: [ 'Nicaragua' ],
+  Dead2017Per1000: 5.07 }
 ,
 { countryCode: 'NE',
   population2020: 24206644,
   name: 'Niger',
-  alternateNames: [ 'Niger' ] }
+  alternateNames: [ 'Niger' ],
+  Dead2017Per1000: 11.8 }
 ,
 { countryCode: 'NG',
   population2020: 206139589,
   name: 'Nigeria',
-  alternateNames: [ 'Nigeria' ] }
+  alternateNames: [ 'Nigeria' ],
+  Dead2017Per1000: 12.4 }
 ,
 { countryCode: 'KP',
   population2020: 25778816,
   name: 'North Korea',
-  alternateNames: [ 'North Korea' ] }
+  alternateNames: [ 'North Korea' ],
+  Dead2017Per1000: 9.3 }
 ,
 { countryCode: 'MK',
   population2020: 2083374,
   name: 'North Macedonia',
-  alternateNames: [ 'North Macedonia' ] }
+  alternateNames: [ 'North Macedonia' ],
+  Dead2017Per1000: -0.1 }
 ,
 { countryCode: 'NO',
   population2020: 5421241,
   name: 'Norway',
-  alternateNames: [ 'Norway' ] }
+  alternateNames: [ 'Norway' ],
+  Dead2017Per1000: 8.190000000000001 }
 ,
 { countryCode: 'OM',
   population2020: 5106626,
   name: 'Oman',
-  alternateNames: [ 'Oman' ] }
+  alternateNames: [ 'Oman' ],
+  Dead2017Per1000: 3.38 }
 ,
 { countryCode: 'PK',
   population2020: 220892340,
   name: 'Pakistan',
-  alternateNames: [ 'Pakistan' ] }
+  alternateNames: [ 'Pakistan' ],
+  Dead2017Per1000: 6.58 }
 ,
 { countryCode: 'PW',
   population2020: 18094,
   name: 'Palau',
-  alternateNames: [ 'Palau' ] }
+  alternateNames: [ 'Palau' ],
+  Dead2017Per1000: 7.93 }
 ,
 { countryCode: 'PS',
   population2020: 5101414,
   name: 'Palestine State',
-  alternateNames: [ 'Palestine State', 'Palestine' ] }
+  alternateNames: [ 'Palestine State', 'Palestine' ],
+  Dead2017Per1000: -0.1 }
 ,
 { countryCode: 'PA',
   population2020: 4314767,
   name: 'Panama',
-  alternateNames: [ 'Panama' ] }
+  alternateNames: [ 'Panama' ],
+  Dead2017Per1000: 4.7700000000000005 }
 ,
 { countryCode: 'PG',
   population2020: 8947024,
   name: 'Papua New Guinea',
-  alternateNames: [ 'Papua New Guinea' ] }
+  alternateNames: [ 'Papua New Guinea' ],
+  Dead2017Per1000: 6.529999999999999 }
 ,
 { countryCode: 'PY',
   population2020: 7132538,
   name: 'Paraguay',
-  alternateNames: [ 'Paraguay' ] }
+  alternateNames: [ 'Paraguay' ],
+  Dead2017Per1000: 4.64 }
 ,
 { countryCode: 'PE',
   population2020: 32971854,
   name: 'Peru',
-  alternateNames: [ 'Peru' ] }
+  alternateNames: [ 'Peru' ],
+  Dead2017Per1000: 5.99 }
 ,
 { countryCode: 'PH',
   population2020: 109581078,
   name: 'Philippines',
-  alternateNames: [ 'Philippines' ] }
+  alternateNames: [ 'Philippines' ],
+  Dead2017Per1000: 4.92 }
 ,
 { countryCode: 'PL',
   population2020: 37846611,
   name: 'Poland',
-  alternateNames: [ 'Poland' ] }
+  alternateNames: [ 'Poland' ],
+  Dead2017Per1000: 10.4 }
 ,
 { countryCode: 'PT',
   population2020: 10196709,
   name: 'Portugal',
-  alternateNames: [ 'Portugal' ] }
+  alternateNames: [ 'Portugal' ],
+  Dead2017Per1000: 11.1 }
 ,
 { countryCode: 'QA',
   population2020: 2881053,
   name: 'Qatar',
-  alternateNames: [ 'Qatar' ] }
+  alternateNames: [ 'Qatar' ],
+  Dead2017Per1000: 1.53 }
 ,
 { countryCode: 'RO',
   population2020: 19237691,
   name: 'Romania',
-  alternateNames: [ 'Romania' ] }
+  alternateNames: [ 'Romania' ],
+  Dead2017Per1000: 12 }
 ,
 { countryCode: 'RU',
   population2020: 145934462,
   name: 'Russia',
-  alternateNames: [ 'Russia', 'Russian Federation' ] }
+  alternateNames: [ 'Russia', 'Russian Federation' ],
+  Dead2017Per1000: 13.5 }
 ,
 { countryCode: 'RW',
   population2020: 12952218,
   name: 'Rwanda',
-  alternateNames: [ 'Rwanda' ] }
+  alternateNames: [ 'Rwanda' ],
+  Dead2017Per1000: 9.18 }
 ,
 { countryCode: 'KN',
   population2020: 53199,
   name: 'Saint Kitts and Nevis',
-  alternateNames: [ 'Saint Kitts and Nevis' ] }
+  alternateNames: [ 'Saint Kitts and Nevis' ],
+  Dead2017Per1000: 7.08 }
 ,
 { countryCode: 'LC',
   population2020: 183627,
   name: 'Saint Lucia',
-  alternateNames: [ 'Saint Lucia' ] }
+  alternateNames: [ 'Saint Lucia' ],
+  Dead2017Per1000: 7.32 }
 ,
 { countryCode: 'MF',
   population2020: 77741,
   name: 'Saint Martin',
-  alternateNames: [ 'Saint Martin', 'St. Martin' ] }
+  alternateNames: [ 'Saint Martin', 'St. Martin' ],
+  Dead2017Per1000: 0 }
 ,
 { countryCode: 'VC',
   population2020: 110940,
   name: 'Saint Vincent and the Grenadines',
-  alternateNames: [ 'Saint Vincent and the Grenadines' ] }
+  alternateNames: [ 'Saint Vincent and the Grenadines' ],
+  Dead2017Per1000: 7.12 }
 ,
 { countryCode: 'WS',
   population2020: 198414,
   name: 'Samoa',
-  alternateNames: [ 'Samoa' ] }
+  alternateNames: [ 'Samoa' ],
+  Dead2017Per1000: 5.32 }
 ,
 { countryCode: 'SM',
   population2020: 33931,
   name: 'San Marino',
-  alternateNames: [ 'San Marino' ] }
+  alternateNames: [ 'San Marino' ],
+  Dead2017Per1000: 8.7 }
 ,
 { countryCode: 'ST',
   population2020: 219159,
   name: 'Sao Tome and Principe',
-  alternateNames: [ 'Sao Tome and Principe' ] }
+  alternateNames: [ 'Sao Tome and Principe' ],
+  Dead2017Per1000: -0.1 }
 ,
 { countryCode: 'SA',
   population2020: 34813871,
   name: 'Saudi Arabia',
-  alternateNames: [ 'Saudi Arabia' ] }
+  alternateNames: [ 'Saudi Arabia' ],
+  Dead2017Per1000: 3.3200000000000003 }
 ,
 { countryCode: 'SN',
   population2020: 16743927,
   name: 'Senegal',
-  alternateNames: [ 'Senegal' ] }
+  alternateNames: [ 'Senegal' ],
+  Dead2017Per1000: 8.65 }
 ,
 { countryCode: 'RS',
   population2020: 8737371,
   name: 'Serbia',
-  alternateNames: [ 'Serbia' ] }
+  alternateNames: [ 'Serbia' ],
+  Dead2017Per1000: 13.6 }
 ,
 { countryCode: 'SC',
   population2020: 98347,
   name: 'Seychelles',
-  alternateNames: [ 'Seychelles' ] }
+  alternateNames: [ 'Seychelles' ],
+  Dead2017Per1000: 6.9 }
 ,
 { countryCode: 'SL',
   population2020: 7976983,
   name: 'Sierra Leone',
-  alternateNames: [ 'Sierra Leone' ] }
+  alternateNames: [ 'Sierra Leone' ],
+  Dead2017Per1000: 10.4 }
 ,
 { countryCode: 'SG',
   population2020: 5850342,
   name: 'Singapore',
-  alternateNames: [ 'Singapore' ] }
+  alternateNames: [ 'Singapore' ],
+  Dead2017Per1000: 3.4200000000000004 }
 ,
 { countryCode: 'SK',
   population2020: 5459642,
   name: 'Slovakia',
-  alternateNames: [ 'Slovakia' ] }
+  alternateNames: [ 'Slovakia' ],
+  Dead2017Per1000: 9.9 }
 ,
 { countryCode: 'SI',
   population2020: 2078938,
   name: 'Slovenia',
-  alternateNames: [ 'Slovenia' ] }
+  alternateNames: [ 'Slovenia' ],
+  Dead2017Per1000: 11.6 }
 ,
 { countryCode: 'SB',
   population2020: 686884,
   name: 'Solomon Islands',
-  alternateNames: [ 'Solomon Islands' ] }
+  alternateNames: [ 'Solomon Islands' ],
+  Dead2017Per1000: 3.8600000000000003 }
 ,
 { countryCode: 'SO',
   population2020: 15893222,
   name: 'Somalia',
-  alternateNames: [ 'Somalia' ] }
+  alternateNames: [ 'Somalia' ],
+  Dead2017Per1000: 13.1 }
 ,
 { countryCode: 'ZA',
   population2020: 59308690,
   name: 'South Africa',
-  alternateNames: [ 'South Africa' ] }
+  alternateNames: [ 'South Africa' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'KR',
   population2020: 51269185,
   name: 'South Korea',
-  alternateNames: [ 'South Korea', 'Korea, South', 'Republic of Korea' ] }
+  alternateNames: [ 'South Korea', 'Korea, South', 'Republic of Korea' ],
+  Dead2017Per1000: 6.63 }
 ,
 { countryCode: 'SS',
   population2020: 11193725,
   name: 'South Sudan',
-  alternateNames: [ 'South Sudan' ] }
+  alternateNames: [ 'South Sudan' ],
+  Dead2017Per1000: 8.42 }
 ,
 { countryCode: 'ES',
   population2020: 46754778,
   name: 'Spain',
-  alternateNames: [ 'Spain' ] }
+  alternateNames: [ 'Spain' ],
+  Dead2017Per1000: 9.1 }
 ,
 { countryCode: 'LK',
   population2020: 21413249,
   name: 'Sri Lanka',
-  alternateNames: [ 'Sri Lanka' ] }
+  alternateNames: [ 'Sri Lanka' ],
+  Dead2017Per1000: 6.0600000000000005 }
 ,
 { countryCode: 'SD',
   population2020: 43849260,
   name: 'Sudan',
-  alternateNames: [ 'Sudan' ] }
+  alternateNames: [ 'Sudan' ],
+  Dead2017Per1000: 7.87 }
 ,
 { countryCode: 'SR',
   population2020: 586632,
   name: 'Suriname',
-  alternateNames: [ 'Suriname' ] }
+  alternateNames: [ 'Suriname' ],
+  Dead2017Per1000: 6.13 }
 ,
 { countryCode: 'SE',
   population2020: 10099265,
   name: 'Sweden',
-  alternateNames: [ 'Sweden' ] }
+  alternateNames: [ 'Sweden' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'CH',
   population2020: 8654622,
   name: 'Switzerland',
-  alternateNames: [ 'Switzerland' ] }
+  alternateNames: [ 'Switzerland' ],
+  Dead2017Per1000: 8.1 }
 ,
 { countryCode: 'SY',
   population2020: 17500658,
   name: 'Syria',
-  alternateNames: [ 'Syria' ] }
+  alternateNames: [ 'Syria' ],
+  Dead2017Per1000: 6.51 }
 ,
 { countryCode: 'TJ',
   population2020: 9537645,
   name: 'Tajikistan',
-  alternateNames: [ 'Tajikistan' ] }
+  alternateNames: [ 'Tajikistan' ],
+  Dead2017Per1000: 6.279999999999999 }
 ,
 { countryCode: 'TZ',
   population2020: 59734218,
   name: 'Tanzania',
-  alternateNames: [ 'Tanzania' ] }
+  alternateNames: [ 'Tanzania' ],
+  Dead2017Per1000: 8.2 }
 ,
 { countryCode: 'TH',
   population2020: 69799978,
   name: 'Thailand',
-  alternateNames: [ 'Thailand' ] }
+  alternateNames: [ 'Thailand' ],
+  Dead2017Per1000: 7.720000000000001 }
 ,
 { countryCode: 'TL',
   population2020: 1318445,
   name: 'Timor-Leste',
-  alternateNames: [ 'Timor-Leste', 'East Timor' ] }
+  alternateNames: [ 'Timor-Leste', 'East Timor' ],
+  Dead2017Per1000: 6.18 }
 ,
 { countryCode: 'TG',
   population2020: 8278724,
   name: 'Togo',
-  alternateNames: [ 'Togo' ] }
+  alternateNames: [ 'Togo' ],
+  Dead2017Per1000: 7.43 }
 ,
 { countryCode: 'TO',
   population2020: 105695,
   name: 'Tonga',
-  alternateNames: [ 'Tonga' ] }
+  alternateNames: [ 'Tonga' ],
+  Dead2017Per1000: 4.86 }
 ,
 { countryCode: 'TT',
   population2020: 1399488,
   name: 'Trinidad and Tobago',
-  alternateNames: [ 'Trinidad and Tobago' ] }
+  alternateNames: [ 'Trinidad and Tobago' ],
+  Dead2017Per1000: 8.8 }
 ,
 { countryCode: 'TN',
   population2020: 11818619,
   name: 'Tunisia',
-  alternateNames: [ 'Tunisia' ] }
+  alternateNames: [ 'Tunisia' ],
+  Dead2017Per1000: 5.9399999999999995 }
 ,
 { countryCode: 'TR',
   population2020: 84339067,
   name: 'Turkey',
-  alternateNames: [ 'Turkey' ] }
+  alternateNames: [ 'Turkey' ],
+  Dead2017Per1000: 6.12 }
 ,
 { countryCode: 'TM',
   population2020: 6031200,
   name: 'Turkmenistan',
-  alternateNames: [ 'Turkmenistan' ] }
+  alternateNames: [ 'Turkmenistan' ],
+  Dead2017Per1000: 6.16 }
 ,
 { countryCode: 'TV',
   population2020: 11792,
   name: 'Tuvalu',
-  alternateNames: [ 'Tuvalu' ] }
+  alternateNames: [ 'Tuvalu' ],
+  Dead2017Per1000: 8.9 }
 ,
 { countryCode: 'UG',
   population2020: 45741007,
   name: 'Uganda',
-  alternateNames: [ 'Uganda' ] }
+  alternateNames: [ 'Uganda' ],
+  Dead2017Per1000: 10.2 }
 ,
 { countryCode: 'UA',
   population2020: 43733762,
   name: 'Ukraine',
-  alternateNames: [ 'Ukraine' ] }
+  alternateNames: [ 'Ukraine' ],
+  Dead2017Per1000: 14.4 }
 ,
 { countryCode: 'AE',
   population2020: 9890402,
   name: 'United Arab Emirates',
-  alternateNames: [ 'United Arab Emirates' ] }
+  alternateNames: [ 'United Arab Emirates' ],
+  Dead2017Per1000: 1.9899999999999998 }
 ,
 { countryCode: 'GB',
   population2020: 67886011,
   name: 'United Kingdom',
-  alternateNames: [ 'United Kingdom', 'UK' ] }
+  alternateNames: [ 'United Kingdom', 'UK' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'US',
   population2020: 331002651,
   name: 'United States of America',
-  alternateNames: [ 'United States of America', 'US' ] }
+  alternateNames: [ 'United States of America', 'US' ],
+  Dead2017Per1000: 8.15 }
 ,
 { countryCode: 'UY',
   population2020: 3473730,
   name: 'Uruguay',
-  alternateNames: [ 'Uruguay' ] }
+  alternateNames: [ 'Uruguay' ],
+  Dead2017Per1000: 9.4 }
 ,
 { countryCode: 'UZ',
   population2020: 33469203,
   name: 'Uzbekistan',
-  alternateNames: [ 'Uzbekistan' ] }
+  alternateNames: [ 'Uzbekistan' ],
+  Dead2017Per1000: 5.29 }
 ,
 { countryCode: 'VU',
   population2020: 307145,
   name: 'Vanuatu',
-  alternateNames: [ 'Vanuatu' ] }
+  alternateNames: [ 'Vanuatu' ],
+  Dead2017Per1000: 4.14 }
 ,
 { countryCode: 'VE',
   population2020: 28435940,
   name: 'Venezuela',
-  alternateNames: [ 'Venezuela' ] }
+  alternateNames: [ 'Venezuela' ],
+  Dead2017Per1000: 5.2700000000000005 }
 ,
 { countryCode: 'VN',
   population2020: 97338579,
   name: 'Vietnam',
-  alternateNames: [ 'Vietnam', 'Viet Nam' ] }
+  alternateNames: [ 'Vietnam', 'Viet Nam' ],
+  Dead2017Per1000: 5.93 }
 ,
 { countryCode: 'YE',
   population2020: 29825964,
   name: 'Yemen',
-  alternateNames: [ 'Yemen' ] }
+  alternateNames: [ 'Yemen' ],
+  Dead2017Per1000: 6.45 }
 ,
 { countryCode: 'ZM',
   population2020: 18383955,
   name: 'Zambia',
-  alternateNames: [ 'Zambia' ] }
+  alternateNames: [ 'Zambia' ],
+  Dead2017Per1000: 12.2 }
 ,
 { countryCode: 'ZW',
   population2020: 14862924,
   name: 'Zimbabwe',
-  alternateNames: [ 'Zimbabwe' ] }
+  alternateNames: [ 'Zimbabwe' ],
+  Dead2017Per1000: 10.2 }
 
-
-  ];
+];  
