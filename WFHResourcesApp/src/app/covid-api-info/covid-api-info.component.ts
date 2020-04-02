@@ -302,12 +302,12 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             return res;
           }, {});
         }
-        console.log('before ' + f1.length, f1[0] , this.StartWith);
+        // console.log('before ' + f1.length, f1[0] , this.StartWith);
         while (f1.length > 0 && f1[0].Cases < this.StartWith) {
           f1.shift();
           // break;
         }
-        console.log('after' + f1.length , f1[0] , this.StartWith);
+        // console.log('after' + f1.length , f1[0] , this.StartWith);
 
         for (let j = 0; j < f1.length ; j++) {
           f1[j].RealDate = moment(f1[j].Date).toDate();
