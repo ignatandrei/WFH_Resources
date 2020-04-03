@@ -50,3 +50,9 @@ https://www.businessinsider.com/free-online-courses-from-best-colleges
 
 ### Links
 https://osherove.com/blog/2020/3/19/covid19-free-unit-testing-training
+
+## Pluralsight
+
+### Links
+https://www.pluralsight.com/offer/2020/free-april-month
+
