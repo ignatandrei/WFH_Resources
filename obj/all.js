@@ -526,6 +526,18 @@
 	{
 		tags: "",
 		category: "Learn",
+		subCategory: "Courses",
+		name: "Pluralsight",
+		links: [
+			"https://www.pluralsight.com/offer/2020/free-april-month"
+		],
+		dateCreated: "2020-04-03T04:06:30.926Z",
+		description: "",
+		id: "PLURALSIGHT_COURSES_LEARN"
+	},
+	{
+		tags: "",
+		category: "Learn",
 		subCategory: "DigitalLibrary",
 		name: "World digital library",
 		links: [
