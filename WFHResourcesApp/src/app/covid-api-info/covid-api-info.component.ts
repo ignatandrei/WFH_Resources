@@ -561,7 +561,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             // label += JSON.stringify(tooltipItem);
             // console.log(data);
             while (label.length < max) {
-              label.push('');
+              label.push('---');
             }
             return label;
           }
