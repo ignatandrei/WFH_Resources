@@ -47,7 +47,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   private countries: CountryCovid19[];
   private countriesFromQuery: string[] = [];
   public currentLink: string;
-  public status = ['confirmed', 'recovered', 'deaths', 'covid deaths vs 2017 deaths'];
+  public status = ['confirmed', 'recovered', 'deaths', '% confirmed rate', '% recovered rate', '% deaths rate', 'covid deaths vs 2017 deaths'];
   public statusSelected = 'confirmed';
   public introJS: any;
   private perPopulation = false;
@@ -278,6 +278,16 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     switch (stat) {
       case 'covid deaths vs 2017 deaths':
           return 'deaths';
+      case '% confirmed rate':
+          return 'confirmed';
+
+      case '% deaths rate':
+            return 'deaths';
+
+      case '% recovered rate':
+            return 'recovered';
+
+
     }
     return stat;
   }
@@ -330,10 +340,19 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           // break;
         }
         // console.log('after' + f1.length , f1[0] , this.StartWith);
+        if (this.statusSelected.indexOf('%') > -1) {
+          for (let iF1 = f1.length - 1; iF1 > 0; iF1--) {
+            const first = f1[iF1 - 1];
+            const second = f1[iF1];
+            second.Cases = (second.Cases - first.Cases) / first.Cases * 100;
 
+          }
+          f1.shift();
+        }
         for (const itemF1 of f1) {
           itemF1.RealDate = moment(itemF1.Date).toDate();
         }
+
         // f1.length = f1.length - 1;
         // const arrDel = [];
         // for (let j = 0; j < f1.length - 1; j++) {
