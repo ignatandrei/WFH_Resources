@@ -645,6 +645,18 @@
 	},
 	{
 		tags: "",
+		category: "MapsAndData",
+		subCategory: "Romania",
+		name: "Covid Tracker",
+		links: [
+			"http://chestiiautomate.ro:8070/"
+		],
+		dateCreated: "2020-04-05T15:58:14.846Z",
+		description: "",
+		id: "COVID TRACKER_ROMANIA_MAPSANDDATA"
+	},
+	{
+		tags: "",
 		category: "NotParsed",
 		subCategory: "Multiple",
 		name: "Multiple",
