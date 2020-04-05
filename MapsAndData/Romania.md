@@ -3,16 +3,17 @@
 ### Links
 https://instnsp.maps.arcgis.com/apps/opsdashboard/index.html#/5eced796595b4ee585bcdba03e30c127
 
-#### Description
+### Description
 Harta interactiva
 
-#### Tags
 
-### Covid Tracker
+## Covid Tracker
+
+### Links
 http://chestiiautomate.ro:8070/
 
 
-#### Description
+### Description
 O aplicatie de urmarire a evolutiei COVID-19 in lume si in Romania
 
 
