@@ -13,7 +13,7 @@ import { NagivationTableControlService } from "src/nagivation-table-control.serv
 @Component({
   selector: "app-wfh-navigation",
   templateUrl: "./wfh-navigation.component.html",
-  styleUrls: ["./wfh-navigation.component.css"]
+  styleUrls: ["./wfh-navigation.component.css"],
 })
 export class WfhNavigationComponent implements OnInit {
   @Input()
@@ -25,10 +25,10 @@ export class WfhNavigationComponent implements OnInit {
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
-      map(result => result.matches),
+      map((result) => result.matches),
       shareReplay()
     );
-  covidTickerData: any;
+  covidTickerData: CovidOverallStatus;
   public filterSource: any;
 
   constructor(
@@ -39,19 +39,20 @@ export class WfhNavigationComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     // throw new Error("Method not implemented.");
-    this.Cat.Category$.subscribe(it => {
+    this.Cat.Category$.subscribe((it) => {
       this.Dates = it.Dates();
       this.Categories = it.Categories();
     });
     this.getCovidTickerData();
     this.navTableSource.navTableObservable.subscribe(
-      filterSource => (this.filterSource = filterSource)
+      (filterSource) => (this.filterSource = filterSource)
     );
   }
 
   getCovidTickerData() {
-    this.covidDataService.getCovidStatusData().subscribe(data => {
+    this.covidDataService.getCovidStatusData().subscribe((data) => {
       this.covidTickerData = data;
+      console.log("test " + data);
     });
   }
 }

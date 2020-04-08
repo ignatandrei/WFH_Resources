@@ -1,47 +1,17 @@
-<div class="ticker-wrap bg-danger text-white pt-3 pb-3 font-weight-bold">
-  <div class="ticker" *ngFor="let coronaTicker of covidTickerData?.results">
-    <div class="ticker-item">
-      <svg
-        class="bi bi-exclamation-triangle-fill"
-        width="1.5em"
-        height="1.5em"
-        viewBox="0 0 16 16"
-        fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M8.982 1.566a1.13 1.13 0 00-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5a.905.905 0 00-.9.995l.35 3.507a.552.552 0 001.1 0l.35-3.507A.905.905 0 008 5zm.002 6a1 1 0 100 2 1 1 0 000-2z"
-          clip-rule="evenodd"
-        />
-      </svg>
-      COVID-19 Daily Status
-    </div>
-    <div class="ticker-item">
-      There are {{ coronaTicker.total_cases }} total cases
-    </div>
-    <div class="ticker-item">
-      {{ coronaTicker.total_recovered }} people have recovered.
-    </div>
-    <div class="ticker-item">
-      There are {{ coronaTicker.total_unresolved }} unresolved cases.
-    </div>
-    <div class="ticker-item">
-      {{ coronaTicker.total_deaths }} people have died.
-    </div>
-    <div class="ticker-item">
-      There are {{ coronaTicker.total_new_cases_today }} new cases today.
-    </div>
-    <div class="ticker-item">
-      {{ coronaTicker.total_new_deaths_today }} people have died today.
-    </div>
-    <div class="ticker-item">
-      Total active cases: {{ coronaTicker.total_active_cases }}
-    </div>
-    <div class="ticker-item">
-      Total serious cases: {{ coronaTicker.total_serious_cases }}
-    </div>
-  </div>
+<div class="bg-danger text-white font-weight-bold">
+  <marquee
+    class="pt-3 pb-2"
+    *ngFor="let coronaTicker of covidTickerData.results"
+  >
+    COVID-19 Daily Status --> There are {{ coronaTicker.total_cases }} total
+    cases. // {{ coronaTicker.total_recovered }} people have recovered. // There
+    are {{ coronaTicker.total_unresolved }} unresolved cases. //
+    {{ coronaTicker.total_deaths }} people have died. // There are
+    {{ coronaTicker.total_new_cases_today }} new cases today. //
+    {{ coronaTicker.total_new_deaths_today }} people have died today. // Total
+    active cases: {{ coronaTicker.total_active_cases }} // Total serious cases:
+    {{ coronaTicker.total_serious_cases }} // Source: TheVirusTracker.com
+  </marquee>
 </div>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <a class="navbar-brand" routerLink="/">Work From Home: Resources</a>

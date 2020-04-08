@@ -1,39 +1,39 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CovidData } from './codvid';
-import { Observable, of } from 'rxjs';
-import { CovidOverallStatus } from './covidOverallStatus';
-import { CountryCovid19 } from './CountryCovid19';
-import { map, pluck } from 'rxjs/operators';
-import * as data from './assets/allData';
-import { JH } from './jh';
-import { Ip2Country } from './Ip2Country';
- 
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { CovidData } from "./codvid";
+import { Observable, of } from "rxjs";
+import { CovidOverallStatus } from "./covidOverallStatus";
+import { CountryCovid19 } from "./CountryCovid19";
+import { map, pluck } from "rxjs/operators";
+import * as data from "./assets/allData";
+import { JH } from "./jh";
+import { Ip2Country } from "./Ip2Country";
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CovidDataService {
-  covidApi = 'https://api.covid19api.com/';
-  covidStatusApi = 'https://thevirustracker.com/free-api?global=stats';
+  covidApi = "https://api.covid19api.com/";
+  covidStatusApi = "https://api.thevirustracker.com/free-api?global=stats";
   private mp: JH[];
   private dataCountry: CountryCovid19[];
 
   constructor(private http: HttpClient) {
     const myMap = new Map<string, JH[]>(data.a);
     myMap.forEach((value: JH[], key: string) => {
-      value.forEach(it => (it.Last_Update = key));
+      value.forEach((it) => (it.Last_Update = key));
     });
     const all = Array.from(myMap.values());
     this.mp = ([] as JH[]).concat(...all);
-    
+
     this.dataCountry = this.findCountries();
   }
   public findMyCountry(): Observable<Ip2Country> {
-    return this.http.get<Ip2Country>('http://ip-api.com/json');
+    return this.http.get<Ip2Country>("http://ip-api.com/json");
   }
   private findCountries(): CountryCovid19[] {
-    const arr = Array.from(new Set(this.mp.map(it => it.Country_Region)));
-    const dataCountry = arr.map(it => {
+    const arr = Array.from(new Set(this.mp.map((it) => it.Country_Region)));
+    const dataCountry = arr.map((it) => {
       const n = new CountryCovid19();
       n.Country = it;
       n.Slug = it;
@@ -51,27 +51,27 @@ export class CovidDataService {
     country: string,
     status: string
   ): Observable<[string, CovidData[]]> {
-    const dataCountry = this.mp.filter(it => it.Country_Region === country);
-    const ret = dataCountry.map(it => {
+    const dataCountry = this.mp.filter((it) => it.Country_Region === country);
+    const ret = dataCountry.map((it) => {
       const n = new CovidData();
       n.Country = it.Country_Region;
       n.Date =
         it.Last_Update.substr(0, 4) +
-        '-' +
+        "-" +
         it.Last_Update.substr(4, 2) +
-        '-' +
+        "-" +
         it.Last_Update.substr(6, 2);
       // console.log(it.Last_Update + ' ==' + n.Date);
       n.Status = status;
-      n.Province = '';
+      n.Province = "";
       switch (status.toLowerCase()) {
-        case 'confirmed':
+        case "confirmed":
           n.Cases = it.Confirmed;
           break;
-        case 'deaths':
+        case "deaths":
           n.Cases = it.Deaths;
           break;
-        case 'recovered':
+        case "recovered":
           n.Cases = it.Recovered;
           break;
         default:
