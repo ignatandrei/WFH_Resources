@@ -17,6 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { AboutComponent } from "./about/about.component";
 import { CovidApiInfoComponent } from './covid-api-info/covid-api-info.component';
 import { CachingInterceptor } from './cachingInterceptor';
+import { CovidTableDataComponent } from './covid-table-data/covid-table-data.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CachingInterceptor } from './cachingInterceptor';
     WfhNavigationComponent,
     AboutComponent,
     CovidApiInfoComponent,
+    CovidTableDataComponent,
   ],
   imports: [
     BrowserModule,

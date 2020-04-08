@@ -4,6 +4,7 @@ import { WfhNavigationComponent } from './wfh-navigation/wfh-navigation.componen
 import { AboutComponent } from './about/about.component';
 import { TableWFHComponent } from './table-wfh/table-wfh.component';
 import { CovidApiInfoComponent } from './covid-api-info/covid-api-info.component';
+import { CovidTableDataComponent } from './covid-table-data/covid-table-data.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   {path: 'covidData', redirectTo: 'covidData/', pathMatch: 'full'},
   { path: 'covidData/:id?', component: CovidApiInfoComponent},
-
+  { path: 'covidDataTable', component: CovidTableDataComponent},
+  
 ];
 
 @NgModule({
