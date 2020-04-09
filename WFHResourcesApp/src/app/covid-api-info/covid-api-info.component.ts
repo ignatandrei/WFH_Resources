@@ -4,39 +4,39 @@ import {
   ElementRef,
   ViewChild,
   AfterViewInit,
-} from "@angular/core";
-import { CovidDataService } from "src/covid-data.service";
-import { CovidData } from "src/codvid";
-import { CovidOverallStatus } from "src/covidOverallStatus";
-import * as moment from "moment";
-import Chart from "chart.js";
-import { zip, Observable } from "rxjs";
-import { CountryCovid19 } from "src/CountryCovid19";
-import { JsonPipe } from "@angular/common";
-import { ThrowStmt } from "@angular/compiler";
-import { ActivatedRoute, Route, Router } from "@angular/router";
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
-import { shareReplay, map } from "rxjs/operators";
-import * as introJs from "intro.js/intro.js";
-import * as CountryImport from "../../countryList";
-import { notDeepEqual } from "assert";
+} from '@angular/core';
+import { CovidDataService } from 'src/covid-data.service';
+import { CovidData } from 'src/codvid';
+import { CovidOverallStatus } from 'src/covidOverallStatus';
+import * as moment from 'moment';
+import Chart from 'chart.js';
+import { zip, Observable } from 'rxjs';
+import { CountryCovid19 } from 'src/CountryCovid19';
+import { JsonPipe } from '@angular/common';
+import { ThrowStmt } from '@angular/compiler';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { shareReplay, map } from 'rxjs/operators';
+import * as introJs from 'intro.js/intro.js';
+import * as CountryImport from '../../countryList';
+import { notDeepEqual } from 'assert';
 @Component({
-  selector: "app-covid-api-info",
-  templateUrl: "./covid-api-info.component.html",
-  styleUrls: ["./covid-api-info.component.css"],
+  selector: 'app-covid-api-info',
+  templateUrl: './covid-api-info.component.html',
+  styleUrls: ['./covid-api-info.component.css'],
 })
 export class CovidApiInfoComponent implements OnInit, AfterViewInit {
-  @ViewChild("chartCompare")
+  @ViewChild('chartCompare')
   public refChart: ElementRef;
 
-  @ViewChild("chartBoth")
+  @ViewChild('chartBoth')
   public refChart1: ElementRef;
 
   public chartData: any;
 
   public chartData1: any;
 
-  private colors: string[] = ["red", "blue", "black", "orange", "green"];
+  private colors: string[] = ['red', 'blue', 'black', 'orange', 'green'];
   public AllCorona: Array<CovidData[]>;
   public coronaOverallStatusData: CovidOverallStatus;
   public coronaDate: string;
@@ -48,15 +48,15 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   private countriesFromQuery: string[] = [];
   public currentLink: string;
   public status = [
-    "confirmed",
-    "recovered",
-    "deaths",
-    "% confirmed rate",
-    "% recovered rate",
-    "% deaths rate",
-    "covid deaths vs 2017 deaths",
+    'confirmed',
+    'recovered',
+    'deaths',
+    '% confirmed rate(prev day)',
+    '% recovered rate(prev day)',
+    '% deaths rate(prev day)',
+    'covid deaths vs 2017 deaths',
   ];
-  public statusSelected = "confirmed";
+  public statusSelected = 'confirmed';
   public introJS: any;
   private perPopulation = false;
   get PerPopulation(): boolean {
@@ -84,10 +84,10 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     this.countrySelected = [];
     this.AllCountries = [];
     this.route.paramMap.subscribe((it) => {
-      if (it.has("id?")) {
-        const data = it.get("id?")?.trim();
+      if (it.has('id?')) {
+        const data = it.get('id?')?.trim();
         if (data && data.length > 0) {
-          this.countriesFromQuery = data.split("-");
+          this.countriesFromQuery = data.split('-');
         }
       }
     });
@@ -106,21 +106,21 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         const lineLeftOffset = this.getLinePosition(chartInstance, pointIndex);
         const data1 = this.getDta(chartInstance, pointIndex);
         // window.alert(JSON.stringify(data1[pointIndex]._model)) ;
-        const scale = chartInstance.scales["y-axis-0"];
+        const scale = chartInstance.scales['y-axis-0'];
         const context = chartInstance.chart.ctx;
 
         // render vertical line
         context.beginPath();
-        context.strokeStyle = "#ff0000";
+        context.strokeStyle = '#ff0000';
         context.moveTo(lineLeftOffset, scale.top);
         context.lineTo(lineLeftOffset, scale.bottom);
         context.stroke();
 
         // write label
-        context.fillStyle = "#ff0000";
-        context.textAlign = "center";
+        context.fillStyle = '#ff0000';
+        context.textAlign = 'center';
         context.fillText(
-          "MY TEXT",
+          'MY TEXT',
           lineLeftOffset,
           (scale.bottom - scale.top) / 2 + scale.top
         );
@@ -162,9 +162,9 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     const path = this.countrySelected
       .filter((it) => it != null)
       .map((it) => it.Country)
-      .join("-");
-    const baseRoot = document.getElementsByTagName("base")[0].href;
-    const lnk = baseRoot + url.replace(":id?", path);
+      .join('-');
+    const baseRoot = document.getElementsByTagName('base')[0].href;
+    const lnk = baseRoot + url.replace(':id?', path);
     window.history.pushState(lnk, path, lnk);
     return lnk;
   }
@@ -252,30 +252,30 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       .setOptions({
         steps: [
           {
-            element: "#wfh",
-            intro: "Welcome to the covid tracker!",
-            position: "right",
+            element: '#wfh',
+            intro: 'Welcome to the covid tracker!',
+            position: 'right',
           },
           {
-            element: "#allCountries",
-            intro: "You can choose one country",
-            position: "right",
+            element: '#allCountries',
+            intro: 'You can choose one country',
+            position: 'right',
           },
 
           {
-            element: "#addCountry",
-            intro: "or add more countries",
-            position: "right",
+            element: '#addCountry',
+            intro: 'or add more countries',
+            position: 'right',
           },
           {
-            element: "#status",
-            intro: "Here you can change the status",
-            position: "right",
+            element: '#status',
+            intro: 'Here you can change the status',
+            position: 'right',
           },
           {
-            element: "#copyLink",
+            element: '#copyLink',
             intro:
-              "here you can see the current selected countries to can forward it",
+              'here you can see the current selected countries to can forward it',
           },
         ],
         showProgress: true,
@@ -284,16 +284,16 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
   }
   getDataFromStatus(stat: string): string {
     switch (stat) {
-      case "covid deaths vs 2017 deaths":
-        return "deaths";
-      case "% confirmed rate":
-        return "confirmed";
+      case 'covid deaths vs 2017 deaths':
+        return 'deaths';
+      case '% confirmed rate(prev day)':
+        return 'confirmed';
 
-      case "% deaths rate":
-        return "deaths";
+      case '% deaths rate(prev day)':
+        return 'deaths';
 
-      case "% recovered rate":
-        return "recovered";
+      case '% recovered rate(prev day)':
+        return 'recovered';
     }
     return stat;
   }
@@ -324,7 +324,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           );
         }
         const f1 = f
-          .filter((it) => it.Cases > 0 && it.Province === "")
+          .filter((it) => it.Cases > 0 && it.Province === '')
           .sort((a, b) => a.Date.localeCompare(b.Date));
 
         // window.alert(`${f.length} --- ${f1.length}`);
@@ -349,7 +349,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           // break;
         }
         // console.log('after' + f1.length , f1[0] , this.StartWith);
-        if (this.statusSelected.indexOf("%") > -1) {
+        if (this.statusSelected.indexOf('%') > -1) {
           for (let iF1 = f1.length - 1; iF1 > 0; iF1--) {
             const first = f1[iF1 - 1];
             const second = f1[iF1];
@@ -417,7 +417,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           order: 0,
         };
         dataForChartFromDay0.push(dataFirst);
-        if (this.statusSelected === "covid deaths vs 2017 deaths") {
+        if (this.statusSelected === 'covid deaths vs 2017 deaths') {
           const val0 = dataValue[0];
           const c0 = CountryImport.Countries.find(
             (it) => it.name === val0.Country
@@ -441,7 +441,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
               return ret;
             }),
             backgroundColor: this.colors[data],
-            type: "bar",
+            type: 'bar',
             order: 1,
           };
           dataForChartFromDay0.push(DataDeaths);
@@ -466,10 +466,10 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
       }
 
       const chart = this.refChart.nativeElement;
-      const ctx = chart.getContext("2d");
+      const ctx = chart.getContext('2d');
 
       this.lineChart = new Chart(ctx, {
-        type: "line",
+        type: 'line',
         // lineAtIndex: [2,4,8],
         data: this.chartData,
         options: this.getChartOptions(
@@ -505,10 +505,10 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         this.lineChart1.destroy();
       }
       const chart1 = this.refChart1.nativeElement;
-      const ctx1 = chart1.getContext("2d");
+      const ctx1 = chart1.getContext('2d');
 
       this.lineChart1 = new Chart(ctx1, {
-        type: "line",
+        type: 'line',
         data: this.chartData1,
         options: this.getChartOptions(
           maxValue,
@@ -525,7 +525,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
         text: title,
       },
       tooltips: {
-        backgroundColor: "rgba(192,192,192, 1)",
+        backgroundColor: 'rgba(192,192,192, 1)',
         callbacks: {
           labelTextColor: (tooltipItem, chart) => {
             return this.colors[tooltipItem.datasetIndex];
@@ -545,7 +545,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
               nrDisplay = +nrDisplay.toFixed(2);
             }
             const label = `${country}:${moment(covid.RealDate).format(
-              "YYYY MMM DD"
+              'YYYY MMM DD'
             )}:cases ${nrDisplay}`;
 
             return label;
@@ -559,6 +559,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
               const orig = data.datasets[i].orig;
               // console.log(orig);
               if (orig.length <= index) {
+                label.push('---');
                 continue;
               }
               const covid = orig[index] as CovidData;
@@ -573,10 +574,11 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
               label.push(
                 `${country}:${moment(covid.RealDate).format(
-                  "YYYY MMM DD"
+                  'YYYY MMM DD'
                 )}:cases ${nrDisplay}`
               );
             }
+
             if (dsIndex !== 0) {
               const a = label[dsIndex];
               label[dsIndex] = label[0];
@@ -586,19 +588,16 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
             // label += Math.round(tooltipItem.yLabel * 100) / 100;
             // label += JSON.stringify(tooltipItem);
             // console.log(data);
-            while (label.length < max) {
-              label.push("---");
-            }
             return label;
           },
         },
       },
       legend: {
         display: true,
-        position: "top",
+        position: 'top',
         labels: {
           boxWidth: 10,
-          fontColor: "black",
+          fontColor: 'black',
         },
       },
       scaleShowValues: true,
@@ -607,7 +606,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           {
             scaleLabel: {
               display: true,
-              labelString: "Number",
+              labelString: 'Number',
             },
             ticks: {
               beginAtZero: true,
@@ -620,7 +619,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
           {
             scaleLabel: {
               display: true,
-              labelString: "Days",
+              labelString: 'Days',
             },
             ticks: {
               autoSkip: false,
