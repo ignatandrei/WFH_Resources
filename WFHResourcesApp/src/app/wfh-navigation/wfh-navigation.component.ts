@@ -52,7 +52,6 @@ export class WfhNavigationComponent implements OnInit {
   getCovidTickerData() {
     this.covidDataService.getCovidStatusData().subscribe((data) => {
       this.covidTickerData = data;
-      console.log("test " + data);
     });
   }
 }
