@@ -1,8 +1,30 @@
-
 <!-- <div *ngFor="let mapEntry of displayData | keyvalue">
     {{mapEntry | json }}
 </div> -->
 
-<div *ngFor="let data of lastItems">
-    {{data.Country}} {{ data.Date}} {{ data.Status}} {{ data.Cases}}
-</div>
+<!-- <div *ngFor="let data of lastItems">
+  {{ data.Country }} {{ data.Date }} {{ data.Status }} {{ data.Cases }}
+</div> -->
+
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Country</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Cases</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of lastItems; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{ data.Country }}
+      </td>
+      <td>{{ data.Date }}</td>
+      <td>{{ data.Status }}</td>
+      <td>{{ data.Cases }}</td>
+    </tr>
+  </tbody>
+</table>
