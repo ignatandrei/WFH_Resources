@@ -55,6 +55,7 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
     '% recovered rate(prev day)',
     '% deaths rate(prev day)',
     'covid deaths vs 2017 deaths',
+    'deaths/(deaths + recovered)',
   ];
   public statusSelected = 'confirmed';
   public introJS: any;
@@ -294,6 +295,8 @@ export class CovidApiInfoComponent implements OnInit, AfterViewInit {
 
       case '% recovered rate(prev day)':
         return 'recovered';
+      case 'deaths/(deaths + recovered)':
+        return 'd/(d+r)';
     }
     return stat;
   }
