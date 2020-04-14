@@ -1,7 +1,7 @@
 <div class="bg-danger text-white font-weight-bold">
   <marquee
     class="pt-3 pb-2"
-    *ngFor="let coronaTicker of covidTickerData.results"
+    *ngFor="let coronaTicker of covidTickerData?.results"
   >
     COVID-19 Daily Status --> There are {{ coronaTicker.total_cases }} total
     cases. // {{ coronaTicker.total_recovered }} people have recovered. // There
