@@ -281,7 +281,7 @@ async function load(dt: Date) {
           it.Country_Region.length > 0 &&
           (it.Province_State == "" || it.Country_Region == it.Province_State)
       );
-      console.log("to write : " + data.length);
+      console.log("to write in data: " + data.length);
 
       //find all that have not have been reported globally
       const arrCountries = data.map(it => it.Country_Region).filter(onlyUnique);
@@ -313,7 +313,7 @@ async function load(dt: Date) {
             it.Country_Region.length > 0 &&
             (it.Province_State == "" || it.Country_Region == it.Province_State)
         );
-        console.log("to write : " + data.length);
+        console.log("to write after filter: " + data.length);
       }
 
       data.forEach(
