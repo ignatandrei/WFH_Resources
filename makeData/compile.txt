@@ -1,8 +1,8 @@
 FROM node:10
 WORKDIR /usr/src/
 COPY makeData/package.json ./makeData/
-RUN npm install ./makeData/
-RUN npm i -g @angular/cli
+RUN (cd ./makeData  && npm install )
+RUN npm i -g @angular/cli@9.0.7
 COPY ./WFHResourcesApp/package.json  ./WFHResourcesApp/
 RUN (cd WFHResourcesApp  && npm install )
 COPY . .
