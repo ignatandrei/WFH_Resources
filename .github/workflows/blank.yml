@@ -37,7 +37,7 @@ jobs:
         pwd
         ls -lh ../docs/*
         pwd
-        rm ../docs/*.*
+        # rm ../docs/*.*
         ls -lh ../docs/*
         ls -lh WFHAng/*
         cp -r WFHAng/* ../docs/ 
