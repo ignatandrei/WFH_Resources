@@ -10,6 +10,6 @@ RUN ls -l makeData/*.*
 RUN node makeData/server.js
 # RUN ls -lh WFHResourcesApp/*.* 
 # RUN ls -R WFHResourcesApp/ 
-#RUN (cd WFHResourcesApp  && ng build --base-href /WFH_Resources/ --aot=true --buildOptimizer=true --configuration=production --outputPath=../obj/WFHAng)
-RUN (cd WFHResourcesApp  && ng build --base-href /WFH_Resources/ --aot=false --buildOptimizer=false  --outputPath=../obj/WFHAng)
+RUN (cd WFHResourcesApp  && ng build --base-href /WFH_Resources/ --aot=true --buildOptimizer=true --configuration=production --outputPath=../obj/WFHAng)
+#RUN (cd WFHResourcesApp  && ng build --base-href /WFH_Resources/ --aot=false --buildOptimizer=false  --outputPath=../obj/WFHAng)
 CMD tail -f /dev/null
