@@ -38,8 +38,7 @@ jobs:
         ls -lh ../docs/*
         pwd
         rm -rf ../docs
-        mkdir ../docs
-        ls -lh ../docs/*
+        mkdir ../docs/
         ls -lh WFHAng/*
         cp -r WFHAng/* ../docs/ 
         cp data.ts ../WFHResourcesApp/src/app/table-wfh/data.ts
