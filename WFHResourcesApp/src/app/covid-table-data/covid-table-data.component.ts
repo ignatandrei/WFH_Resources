@@ -16,14 +16,27 @@ export class CovidTableDataComponent implements OnInit {
   public Countries: CountryCovid19[] = [];
   public displayData = new  Map<string , CovidData[]>();
   public lastItems :  CovidData[] = [];
-  
+  public status = [
+    'confirmed',
+    'recovered',
+    'deaths'
+  ];
+  public statusSelected = 'confirmed';
   constructor(    private covidDataService: CovidDataService) { }
-
-  ngOnInit(): void {
+  changeStatus(s: string) {
+    this.statusSelected = s;
+    window.alert(this.statusSelected);
+    this.reloadData();
+    window.alert(this.statusSelected);
+    // window.alert(this.statusSelected);
+    //this.getCovidDataAll(this.countrySelected.map((it) => it?.Slug));
+  }
+  reloadData(){
+    this.lastItems.length=0;
     this.covidDataService.getCovid19ApiCountries()
     .pipe(
       tap(it=>this.Countries=it),
-      map(res => res.map(cnt => this.covidDataService.getCovidData(cnt.Country, 'confirmed'))),
+      map(res => res.map(cnt => this.covidDataService.getCovidData(cnt.Country, this.statusSelected))),
       mergeMap(it=> forkJoin(it)),
       tap(dict=> {
         
@@ -34,10 +47,14 @@ export class CovidTableDataComponent implements OnInit {
           var last=item[1][0];
           this.lastItems.push(last);
         }
+        this.lastItems  = this.lastItems.sort((a,b)=>  b.Cases - a.Cases);
         // window.alert(this.displayData.size);
       })
     )
     .subscribe();
+  }
+  ngOnInit(): void {
+    this.reloadData();
   }
 
 }

@@ -6,6 +6,14 @@
   {{ data.Country }} {{ data.Date }} {{ data.Status }} {{ data.Cases }}
 </div> -->
 
+<select
+  [ngModel]="statusSelected"
+  (ngModelChange)="changeStatus($event)"
+  id="status"
+>
+  <option *ngFor="let s of status" [ngValue]="s">{{ s }}</option>
+</select>
+
 <table class="table table-hover">
   <thead class="thead-dark">
     <tr>
