@@ -20,8 +20,9 @@
       <th scope="col">#</th>
       <th scope="col">Country</th>
       <th scope="col">Date</th>
-      <th scope="col">Status</th>
       <th scope="col">Cases</th>
+      <th scope="col">Cases Per Million Population </th>
+      <th>Population2020</th>
     </tr>
   </thead>
   <tbody>
@@ -31,8 +32,9 @@
         {{ data.Country }}
       </td>
       <td>{{ data.Date }}</td>
-      <td>{{ data.Status }}</td>
       <td>{{ data.Cases }}</td>
+      <td>{{ data['CasesPerPopulation'].toFixed(2) }}</td>
+      <td>{{ data['population'] }}</td>
     </tr>
   </tbody>
 </table>
