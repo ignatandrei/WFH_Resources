@@ -14,7 +14,7 @@
     "@types/papaparse": "5.0.3",
     "marked": "0.8.0",
     "moment": "2.24.0",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "papaparse": "5.1.1",
     "recursive-readdir-async": "1.1.6"
   },
