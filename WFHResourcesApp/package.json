@@ -28,7 +28,7 @@
     "bootstrap-icons": "1.0.0-alpha3",
     "chart.js": "2.9.3",
     "intro.js": "2.9.3",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "rxjs": "6.5.4",
     "tslib": "1.10.0",
     "zone.js": "0.10.2"
